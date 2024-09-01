@@ -167,7 +167,7 @@
             this.subMenuRegistrarVenta.IconColor = System.Drawing.Color.Black;
             this.subMenuRegistrarVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.subMenuRegistrarVenta.Name = "subMenuRegistrarVenta";
-            this.subMenuRegistrarVenta.Size = new System.Drawing.Size(180, 24);
+            this.subMenuRegistrarVenta.Size = new System.Drawing.Size(170, 24);
             this.subMenuRegistrarVenta.Text = "Registrar venta";
             this.subMenuRegistrarVenta.Click += new System.EventHandler(this.subMenuRegistrarVenta_Click);
             // 
@@ -177,7 +177,7 @@
             this.subMenuVerDetalleVenta.IconColor = System.Drawing.Color.Black;
             this.subMenuVerDetalleVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.subMenuVerDetalleVenta.Name = "subMenuVerDetalleVenta";
-            this.subMenuVerDetalleVenta.Size = new System.Drawing.Size(180, 24);
+            this.subMenuVerDetalleVenta.Size = new System.Drawing.Size(170, 24);
             this.subMenuVerDetalleVenta.Text = "Ver detalle";
             this.subMenuVerDetalleVenta.Click += new System.EventHandler(this.subMenuVerDetalleVenta_Click);
             // 
@@ -288,7 +288,7 @@
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contenedor.Location = new System.Drawing.Point(0, 163);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(1037, 394);
+            this.contenedor.Size = new System.Drawing.Size(1037, 560);
             this.contenedor.TabIndex = 5;
             // 
             // LUsuario
@@ -331,7 +331,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1037, 557);
+            this.ClientSize = new System.Drawing.Size(1037, 723);
             this.Controls.Add(this.LNomUsuario);
             this.Controls.Add(this.LUsuario);
             this.Controls.Add(this.contenedor);
