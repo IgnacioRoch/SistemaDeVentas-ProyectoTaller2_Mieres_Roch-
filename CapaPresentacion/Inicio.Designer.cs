@@ -80,7 +80,7 @@
             this.menu_informacion});
             this.menuStrip2.Location = new System.Drawing.Point(0, 90);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(1037, 73);
+            this.menuStrip2.Size = new System.Drawing.Size(1257, 73);
             this.menuStrip2.TabIndex = 2;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -279,7 +279,7 @@
             this.menuTitulo.Location = new System.Drawing.Point(0, 0);
             this.menuTitulo.Name = "menuTitulo";
             this.menuTitulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuTitulo.Size = new System.Drawing.Size(1037, 90);
+            this.menuTitulo.Size = new System.Drawing.Size(1257, 90);
             this.menuTitulo.TabIndex = 3;
             this.menuTitulo.Text = "menuStrip1";
             // 
@@ -288,7 +288,7 @@
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contenedor.Location = new System.Drawing.Point(0, 163);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(1037, 560);
+            this.contenedor.Size = new System.Drawing.Size(1257, 560);
             this.contenedor.TabIndex = 5;
             // 
             // LUsuario
@@ -297,7 +297,7 @@
             this.LUsuario.BackColor = System.Drawing.SystemColors.Highlight;
             this.LUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LUsuario.ForeColor = System.Drawing.Color.Snow;
-            this.LUsuario.Location = new System.Drawing.Point(813, 40);
+            this.LUsuario.Location = new System.Drawing.Point(1073, 43);
             this.LUsuario.Name = "LUsuario";
             this.LUsuario.Size = new System.Drawing.Size(53, 15);
             this.LUsuario.TabIndex = 0;
@@ -309,7 +309,7 @@
             this.LNomUsuario.BackColor = System.Drawing.SystemColors.Highlight;
             this.LNomUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LNomUsuario.ForeColor = System.Drawing.Color.Snow;
-            this.LNomUsuario.Location = new System.Drawing.Point(888, 40);
+            this.LNomUsuario.Location = new System.Drawing.Point(1132, 43);
             this.LNomUsuario.Name = "LNomUsuario";
             this.LNomUsuario.Size = new System.Drawing.Size(96, 15);
             this.LNomUsuario.TabIndex = 0;
@@ -331,7 +331,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1037, 723);
+            this.ClientSize = new System.Drawing.Size(1257, 723);
             this.Controls.Add(this.LNomUsuario);
             this.Controls.Add(this.LUsuario);
             this.Controls.Add(this.contenedor);

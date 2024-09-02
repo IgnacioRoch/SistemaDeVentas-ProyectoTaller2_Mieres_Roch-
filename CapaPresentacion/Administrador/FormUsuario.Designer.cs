@@ -402,7 +402,7 @@
             // 
             // IBLimpiar
             // 
-            this.IBLimpiar.BackColor = System.Drawing.Color.Orange;
+            this.IBLimpiar.BackColor = System.Drawing.Color.White;
             this.IBLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.IBLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.IBLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
