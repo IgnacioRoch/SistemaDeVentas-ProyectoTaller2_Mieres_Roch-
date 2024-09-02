@@ -40,6 +40,11 @@
             this.LBuscarPor = new System.Windows.Forms.Label();
             this.LListaUsuarios = new System.Windows.Forms.Label();
             this.dataGridDatos = new System.Windows.Forms.DataGridView();
+            this.BSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.IdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IBBuscar = new FontAwesome.Sharp.IconButton();
             this.CBEstado = new System.Windows.Forms.ComboBox();
             this.TxtDocumento = new System.Windows.Forms.TextBox();
@@ -47,11 +52,6 @@
             this.LDescripcion = new System.Windows.Forms.Label();
             this.LEstado = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.BSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.IdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDatos)).BeginInit();
             this.SuspendLayout();
@@ -217,6 +217,40 @@
             this.dataGridDatos.Size = new System.Drawing.Size(932, 347);
             this.dataGridDatos.TabIndex = 34;
             // 
+            // BSeleccionar
+            // 
+            this.BSeleccionar.HeaderText = "";
+            this.BSeleccionar.Name = "BSeleccionar";
+            this.BSeleccionar.ReadOnly = true;
+            this.BSeleccionar.Width = 30;
+            // 
+            // IdUsuario
+            // 
+            this.IdUsuario.HeaderText = "Id";
+            this.IdUsuario.Name = "IdUsuario";
+            this.IdUsuario.ReadOnly = true;
+            this.IdUsuario.Visible = false;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 150;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            // 
+            // EstadoValor
+            // 
+            this.EstadoValor.HeaderText = "Estado Valor";
+            this.EstadoValor.Name = "EstadoValor";
+            this.EstadoValor.ReadOnly = true;
+            this.EstadoValor.Visible = false;
+            // 
             // IBBuscar
             // 
             this.IBBuscar.BackColor = System.Drawing.Color.Gold;
@@ -292,40 +326,6 @@
             this.label1.Size = new System.Drawing.Size(305, 571);
             this.label1.TabIndex = 6;
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // BSeleccionar
-            // 
-            this.BSeleccionar.HeaderText = "";
-            this.BSeleccionar.Name = "BSeleccionar";
-            this.BSeleccionar.ReadOnly = true;
-            this.BSeleccionar.Width = 30;
-            // 
-            // IdUsuario
-            // 
-            this.IdUsuario.HeaderText = "Id";
-            this.IdUsuario.Name = "IdUsuario";
-            this.IdUsuario.ReadOnly = true;
-            this.IdUsuario.Visible = false;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripción";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 150;
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            // 
-            // EstadoValor
-            // 
-            this.EstadoValor.HeaderText = "Estado Valor";
-            this.EstadoValor.Name = "EstadoValor";
-            this.EstadoValor.ReadOnly = true;
-            this.EstadoValor.Visible = false;
             // 
             // textBox1
             // 
