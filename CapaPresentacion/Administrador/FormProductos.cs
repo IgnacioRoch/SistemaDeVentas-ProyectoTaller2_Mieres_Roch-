@@ -16,5 +16,6 @@ namespace CapaPresentacion.Administrador
         {
             InitializeComponent();
         }
+
     }
 }
