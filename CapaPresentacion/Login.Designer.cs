@@ -46,8 +46,9 @@
             this.label1.BackColor = System.Drawing.SystemColors.Highlight;
             this.label1.Dock = System.Windows.Forms.DockStyle.Left;
             this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(315, 335);
+            this.label1.Size = new System.Drawing.Size(420, 412);
             this.label1.TabIndex = 0;
             // 
             // LSistemaVentas
@@ -55,9 +56,10 @@
             this.LSistemaVentas.AutoSize = true;
             this.LSistemaVentas.BackColor = System.Drawing.SystemColors.Highlight;
             this.LSistemaVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LSistemaVentas.Location = new System.Drawing.Point(12, 196);
+            this.LSistemaVentas.Location = new System.Drawing.Point(16, 241);
+            this.LSistemaVentas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LSistemaVentas.Name = "LSistemaVentas";
-            this.LSistemaVentas.Size = new System.Drawing.Size(276, 29);
+            this.LSistemaVentas.Size = new System.Drawing.Size(343, 36);
             this.LSistemaVentas.TabIndex = 1;
             this.LSistemaVentas.Text = "SISTEMA DE VENTAS";
             // 
@@ -66,17 +68,19 @@
             this.LNroDni.AutoSize = true;
             this.LNroDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LNroDni.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LNroDni.Location = new System.Drawing.Point(345, 71);
+            this.LNroDni.Location = new System.Drawing.Point(460, 87);
+            this.LNroDni.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LNroDni.Name = "LNroDni";
-            this.LNroDni.Size = new System.Drawing.Size(154, 17);
+            this.LNroDni.Size = new System.Drawing.Size(186, 20);
             this.LNroDni.TabIndex = 4;
-            this.LNroDni.Text = "Número de Documento";
+            this.LNroDni.Text = "Número De Documento";
             // 
             // TxtDocumento
             // 
-            this.TxtDocumento.Location = new System.Drawing.Point(348, 105);
+            this.TxtDocumento.Location = new System.Drawing.Point(464, 129);
+            this.TxtDocumento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtDocumento.Name = "TxtDocumento";
-            this.TxtDocumento.Size = new System.Drawing.Size(211, 20);
+            this.TxtDocumento.Size = new System.Drawing.Size(280, 22);
             this.TxtDocumento.TabIndex = 5;
             // 
             // label3
@@ -84,28 +88,31 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(345, 128);
+            this.label3.Location = new System.Drawing.Point(460, 158);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 17);
+            this.label3.Size = new System.Drawing.Size(95, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Contraseña";
             // 
             // TxtClave
             // 
             this.TxtClave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TxtClave.Location = new System.Drawing.Point(348, 154);
+            this.TxtClave.Location = new System.Drawing.Point(464, 190);
+            this.TxtClave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtClave.Name = "TxtClave";
             this.TxtClave.PasswordChar = '*';
-            this.TxtClave.Size = new System.Drawing.Size(211, 20);
+            this.TxtClave.Size = new System.Drawing.Size(280, 22);
             this.TxtClave.TabIndex = 5;
             // 
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.BackColor = System.Drawing.SystemColors.Highlight;
             this.pictureBoxLogo.Image = global::CapaPresentacion.Properties.Resources.Frame_1;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(79, 46);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(105, 57);
+            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(141, 128);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(188, 158);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxLogo.TabIndex = 2;
             this.pictureBoxLogo.TabStop = false;
@@ -120,9 +127,10 @@
             this.BCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BCancelar.IconSize = 21;
             this.BCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BCancelar.Location = new System.Drawing.Point(472, 227);
+            this.BCancelar.Location = new System.Drawing.Point(629, 279);
+            this.BCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BCancelar.Name = "BCancelar";
-            this.BCancelar.Size = new System.Drawing.Size(103, 30);
+            this.BCancelar.Size = new System.Drawing.Size(137, 37);
             this.BCancelar.TabIndex = 7;
             this.BCancelar.Text = "Cancelar";
             this.BCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -140,9 +148,10 @@
             this.BIngresar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BIngresar.IconSize = 21;
             this.BIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BIngresar.Location = new System.Drawing.Point(348, 227);
+            this.BIngresar.Location = new System.Drawing.Point(464, 279);
+            this.BIngresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BIngresar.Name = "BIngresar";
-            this.BIngresar.Size = new System.Drawing.Size(103, 30);
+            this.BIngresar.Size = new System.Drawing.Size(137, 37);
             this.BIngresar.TabIndex = 7;
             this.BIngresar.Text = "Iniciar sesión";
             this.BIngresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -155,17 +164,18 @@
             this.LIniciarSesion.AutoSize = true;
             this.LIniciarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LIniciarSesion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LIniciarSesion.Location = new System.Drawing.Point(393, 28);
+            this.LIniciarSesion.Location = new System.Drawing.Point(524, 34);
+            this.LIniciarSesion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LIniciarSesion.Name = "LIniciarSesion";
-            this.LIniciarSesion.Size = new System.Drawing.Size(106, 17);
+            this.LIniciarSesion.Size = new System.Drawing.Size(124, 20);
             this.LIniciarSesion.TabIndex = 8;
             this.LIniciarSesion.Text = "Iniciar Sesión";
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(650, 335);
+            this.ClientSize = new System.Drawing.Size(867, 412);
             this.Controls.Add(this.LIniciarSesion);
             this.Controls.Add(this.BIngresar);
             this.Controls.Add(this.BCancelar);
@@ -178,6 +188,7 @@
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
