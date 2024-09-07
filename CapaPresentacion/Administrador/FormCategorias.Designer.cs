@@ -38,7 +38,7 @@
             this.TxtBusqueda = new System.Windows.Forms.TextBox();
             this.TxtSeleccionId = new System.Windows.Forms.TextBox();
             this.LBuscarPor = new System.Windows.Forms.Label();
-            this.LListaUsuarios = new System.Windows.Forms.Label();
+            this.LListaCategoria = new System.Windows.Forms.Label();
             this.dataGridDatos = new System.Windows.Forms.DataGridView();
             this.BSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.IdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,12 +48,14 @@
             this.IBBuscar = new FontAwesome.Sharp.IconButton();
             this.CBEstado = new System.Windows.Forms.ComboBox();
             this.TxtDocumento = new System.Windows.Forms.TextBox();
-            this.LDetalleUsuario = new System.Windows.Forms.Label();
+            this.LDetalleCategoria = new System.Windows.Forms.Label();
             this.LDescripcion = new System.Windows.Forms.Label();
             this.LEstado = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panelFormulario = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDatos)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // IBLimpiar
@@ -170,17 +172,18 @@
             this.LBuscarPor.TabIndex = 13;
             this.LBuscarPor.Text = "Buscar por:";
             // 
-            // LListaUsuarios
+            // LListaCategoria
             // 
-            this.LListaUsuarios.BackColor = System.Drawing.Color.White;
-            this.LListaUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LListaUsuarios.ForeColor = System.Drawing.Color.Black;
-            this.LListaUsuarios.Location = new System.Drawing.Point(321, 9);
-            this.LListaUsuarios.Name = "LListaUsuarios";
-            this.LListaUsuarios.Size = new System.Drawing.Size(931, 47);
-            this.LListaUsuarios.TabIndex = 14;
-            this.LListaUsuarios.Text = "Lista de categorías";
-            this.LListaUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LListaCategoria.AutoSize = true;
+            this.LListaCategoria.BackColor = System.Drawing.Color.White;
+            this.LListaCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LListaCategoria.ForeColor = System.Drawing.Color.Black;
+            this.LListaCategoria.Location = new System.Drawing.Point(3, 11);
+            this.LListaCategoria.Name = "LListaCategoria";
+            this.LListaCategoria.Size = new System.Drawing.Size(175, 25);
+            this.LListaCategoria.TabIndex = 14;
+            this.LListaCategoria.Text = "Lista de categorías";
+            this.LListaCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dataGridDatos
             // 
@@ -285,16 +288,16 @@
             this.TxtDocumento.Size = new System.Drawing.Size(240, 20);
             this.TxtDocumento.TabIndex = 18;
             // 
-            // LDetalleUsuario
+            // LDetalleCategoria
             // 
-            this.LDetalleUsuario.AutoSize = true;
-            this.LDetalleUsuario.BackColor = System.Drawing.Color.White;
-            this.LDetalleUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LDetalleUsuario.Location = new System.Drawing.Point(39, 9);
-            this.LDetalleUsuario.Name = "LDetalleUsuario";
-            this.LDetalleUsuario.Size = new System.Drawing.Size(194, 25);
-            this.LDetalleUsuario.TabIndex = 16;
-            this.LDetalleUsuario.Text = "Detalle de categorías";
+            this.LDetalleCategoria.AutoSize = true;
+            this.LDetalleCategoria.BackColor = System.Drawing.Color.White;
+            this.LDetalleCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LDetalleCategoria.Location = new System.Drawing.Point(39, 9);
+            this.LDetalleCategoria.Name = "LDetalleCategoria";
+            this.LDetalleCategoria.Size = new System.Drawing.Size(194, 25);
+            this.LDetalleCategoria.TabIndex = 16;
+            this.LDetalleCategoria.Text = "Detalle de categorías";
             // 
             // LDescripcion
             // 
@@ -316,17 +319,6 @@
             this.LEstado.TabIndex = 12;
             this.LEstado.Text = "Estado:";
             // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(305, 571);
-            this.label1.TabIndex = 6;
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(232, 32);
@@ -335,6 +327,23 @@
             this.textBox1.TabIndex = 23;
             this.textBox1.Text = "0";
             this.textBox1.Visible = false;
+            // 
+            // panelFormulario
+            // 
+            this.panelFormulario.BackColor = System.Drawing.Color.White;
+            this.panelFormulario.Location = new System.Drawing.Point(0, 0);
+            this.panelFormulario.Name = "panelFormulario";
+            this.panelFormulario.Size = new System.Drawing.Size(305, 571);
+            this.panelFormulario.TabIndex = 35;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.LListaCategoria);
+            this.panel1.Location = new System.Drawing.Point(321, 9);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(931, 47);
+            this.panel1.TabIndex = 36;
             // 
             // FormCategorias
             // 
@@ -354,14 +363,16 @@
             this.Controls.Add(this.IBBuscar);
             this.Controls.Add(this.CBEstado);
             this.Controls.Add(this.TxtDocumento);
-            this.Controls.Add(this.LDetalleUsuario);
+            this.Controls.Add(this.LDetalleCategoria);
             this.Controls.Add(this.LDescripcion);
             this.Controls.Add(this.LEstado);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.LListaUsuarios);
+            this.Controls.Add(this.panelFormulario);
+            this.Controls.Add(this.panel1);
             this.Name = "FormCategorias";
             this.Text = "FormCategorias";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDatos)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -376,20 +387,21 @@
         private System.Windows.Forms.TextBox TxtBusqueda;
         private System.Windows.Forms.TextBox TxtSeleccionId;
         private System.Windows.Forms.Label LBuscarPor;
-        private System.Windows.Forms.Label LListaUsuarios;
+        private System.Windows.Forms.Label LListaCategoria;
         private System.Windows.Forms.DataGridView dataGridDatos;
         private FontAwesome.Sharp.IconButton IBBuscar;
         private System.Windows.Forms.ComboBox CBEstado;
         private System.Windows.Forms.TextBox TxtDocumento;
-        private System.Windows.Forms.Label LDetalleUsuario;
+        private System.Windows.Forms.Label LDetalleCategoria;
         private System.Windows.Forms.Label LDescripcion;
         private System.Windows.Forms.Label LEstado;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewButtonColumn BSeleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoValor;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panelFormulario;
+        private System.Windows.Forms.Panel panel1;
     }
 }

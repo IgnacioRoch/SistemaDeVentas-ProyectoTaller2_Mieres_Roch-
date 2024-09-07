@@ -30,7 +30,6 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label1 = new System.Windows.Forms.Label();
             this.LApellido = new System.Windows.Forms.Label();
             this.LNombre = new System.Windows.Forms.Label();
             this.L_NroDocumento = new System.Windows.Forms.Label();
@@ -70,19 +69,11 @@
             this.IBEliminar = new FontAwesome.Sharp.IconButton();
             this.IBBuscar = new FontAwesome.Sharp.IconButton();
             this.IBGuardar = new FontAwesome.Sharp.IconButton();
+            this.panelFormulario = new System.Windows.Forms.Panel();
+            this.panelBusqueda = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDatos)).BeginInit();
+            this.panelBusqueda.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(305, 569);
-            this.label1.TabIndex = 0;
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // LApellido
             // 
@@ -354,12 +345,13 @@
             // 
             // LListaUsuarios
             // 
+            this.LListaUsuarios.AutoSize = true;
             this.LListaUsuarios.BackColor = System.Drawing.Color.White;
             this.LListaUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LListaUsuarios.ForeColor = System.Drawing.Color.Black;
-            this.LListaUsuarios.Location = new System.Drawing.Point(321, 9);
+            this.LListaUsuarios.Location = new System.Drawing.Point(3, 11);
             this.LListaUsuarios.Name = "LListaUsuarios";
-            this.LListaUsuarios.Size = new System.Drawing.Size(931, 47);
+            this.LListaUsuarios.Size = new System.Drawing.Size(159, 25);
             this.LListaUsuarios.TabIndex = 1;
             this.LListaUsuarios.Text = "Lista de usuarios";
             this.LListaUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -496,6 +488,23 @@
             this.IBGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.IBGuardar.UseVisualStyleBackColor = false;
             // 
+            // panelFormulario
+            // 
+            this.panelFormulario.BackColor = System.Drawing.Color.White;
+            this.panelFormulario.Location = new System.Drawing.Point(0, 0);
+            this.panelFormulario.Name = "panelFormulario";
+            this.panelFormulario.Size = new System.Drawing.Size(305, 569);
+            this.panelFormulario.TabIndex = 6;
+            // 
+            // panelBusqueda
+            // 
+            this.panelBusqueda.BackColor = System.Drawing.Color.White;
+            this.panelBusqueda.Controls.Add(this.LListaUsuarios);
+            this.panelBusqueda.Location = new System.Drawing.Point(321, 9);
+            this.panelBusqueda.Name = "panelBusqueda";
+            this.panelBusqueda.Size = new System.Drawing.Size(931, 47);
+            this.panelBusqueda.TabIndex = 7;
+            // 
             // FormUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -528,19 +537,19 @@
             this.Controls.Add(this.LContrasenia);
             this.Controls.Add(this.LCorreo);
             this.Controls.Add(this.LApellido);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.LListaUsuarios);
+            this.Controls.Add(this.panelBusqueda);
+            this.Controls.Add(this.panelFormulario);
             this.Name = "FormUsuario";
             this.Text = "FormUsuario";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDatos)).EndInit();
+            this.panelBusqueda.ResumeLayout(false);
+            this.panelBusqueda.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label LApellido;
         private System.Windows.Forms.Label LNombre;
         private System.Windows.Forms.Label L_NroDocumento;
@@ -580,5 +589,7 @@
         private System.Windows.Forms.TextBox TxtBusqueda;
         private FontAwesome.Sharp.IconButton IBBuscar;
         private FontAwesome.Sharp.IconButton IBLimpiar;
+        private System.Windows.Forms.Panel panelFormulario;
+        private System.Windows.Forms.Panel panelBusqueda;
     }
 }

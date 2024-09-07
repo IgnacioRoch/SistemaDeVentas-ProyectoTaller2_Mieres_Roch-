@@ -111,7 +111,7 @@
             this.menu_productos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.menu_productos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menu_productos.Name = "menu_productos";
-            this.menu_productos.Size = new System.Drawing.Size(122, 69);
+            this.menu_productos.Size = new System.Drawing.Size(100, 69);
             this.menu_productos.Text = "Productos";
             this.menu_productos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
@@ -121,7 +121,7 @@
             this.SubmenuProductos.IconColor = System.Drawing.Color.Black;
             this.SubmenuProductos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.SubmenuProductos.Name = "SubmenuProductos";
-            this.SubmenuProductos.Size = new System.Drawing.Size(143, 24);
+            this.SubmenuProductos.Size = new System.Drawing.Size(180, 24);
             this.SubmenuProductos.Text = "Productos";
             this.SubmenuProductos.Click += new System.EventHandler(this.SubmenuProductos_Click);
             // 
@@ -131,7 +131,7 @@
             this.SubmenuCategorias.IconColor = System.Drawing.Color.Black;
             this.SubmenuCategorias.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.SubmenuCategorias.Name = "SubmenuCategorias";
-            this.SubmenuCategorias.Size = new System.Drawing.Size(143, 24);
+            this.SubmenuCategorias.Size = new System.Drawing.Size(180, 24);
             this.SubmenuCategorias.Text = "Categorías";
             this.SubmenuCategorias.Click += new System.EventHandler(this.SubmenuCategorias_Click);
             // 
@@ -141,7 +141,7 @@
             this.SubmenuMarcas.IconColor = System.Drawing.Color.Black;
             this.SubmenuMarcas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.SubmenuMarcas.Name = "SubmenuMarcas";
-            this.SubmenuMarcas.Size = new System.Drawing.Size(143, 24);
+            this.SubmenuMarcas.Size = new System.Drawing.Size(180, 24);
             this.SubmenuMarcas.Text = "Marcas";
             this.SubmenuMarcas.Click += new System.EventHandler(this.SubmenuMarcas_Click);
             // 
@@ -157,7 +157,7 @@
             this.menu_ventas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.menu_ventas.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menu_ventas.Name = "menu_ventas";
-            this.menu_ventas.Size = new System.Drawing.Size(122, 69);
+            this.menu_ventas.Size = new System.Drawing.Size(100, 69);
             this.menu_ventas.Text = "Ventas";
             this.menu_ventas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
@@ -167,7 +167,7 @@
             this.subMenuRegistrarVenta.IconColor = System.Drawing.Color.Black;
             this.subMenuRegistrarVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.subMenuRegistrarVenta.Name = "subMenuRegistrarVenta";
-            this.subMenuRegistrarVenta.Size = new System.Drawing.Size(170, 24);
+            this.subMenuRegistrarVenta.Size = new System.Drawing.Size(180, 24);
             this.subMenuRegistrarVenta.Text = "Registrar venta";
             this.subMenuRegistrarVenta.Click += new System.EventHandler(this.subMenuRegistrarVenta_Click);
             // 
@@ -177,7 +177,7 @@
             this.subMenuVerDetalleVenta.IconColor = System.Drawing.Color.Black;
             this.subMenuVerDetalleVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.subMenuVerDetalleVenta.Name = "subMenuVerDetalleVenta";
-            this.subMenuVerDetalleVenta.Size = new System.Drawing.Size(170, 24);
+            this.subMenuVerDetalleVenta.Size = new System.Drawing.Size(180, 24);
             this.subMenuVerDetalleVenta.Text = "Ver detalle";
             this.subMenuVerDetalleVenta.Click += new System.EventHandler(this.subMenuVerDetalleVenta_Click);
             // 
@@ -240,7 +240,7 @@
             this.menu_Proveedores.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.menu_Proveedores.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menu_Proveedores.Name = "menu_Proveedores";
-            this.menu_Proveedores.Size = new System.Drawing.Size(85, 69);
+            this.menu_Proveedores.Size = new System.Drawing.Size(100, 69);
             this.menu_Proveedores.Text = "Proveedores";
             this.menu_Proveedores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.menu_Proveedores.Click += new System.EventHandler(this.menu_Proveedores_Click);

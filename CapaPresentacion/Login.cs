@@ -36,5 +36,7 @@ namespace CapaPresentacion
             TxtClave.Text = "";
             this.Show();
         }
+
+        
     }
 }
