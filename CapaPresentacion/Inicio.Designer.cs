@@ -121,7 +121,7 @@
             this.SubmenuProductos.IconColor = System.Drawing.Color.Black;
             this.SubmenuProductos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.SubmenuProductos.Name = "SubmenuProductos";
-            this.SubmenuProductos.Size = new System.Drawing.Size(180, 24);
+            this.SubmenuProductos.Size = new System.Drawing.Size(143, 24);
             this.SubmenuProductos.Text = "Productos";
             this.SubmenuProductos.Click += new System.EventHandler(this.SubmenuProductos_Click);
             // 
@@ -131,7 +131,7 @@
             this.SubmenuCategorias.IconColor = System.Drawing.Color.Black;
             this.SubmenuCategorias.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.SubmenuCategorias.Name = "SubmenuCategorias";
-            this.SubmenuCategorias.Size = new System.Drawing.Size(180, 24);
+            this.SubmenuCategorias.Size = new System.Drawing.Size(143, 24);
             this.SubmenuCategorias.Text = "Categorías";
             this.SubmenuCategorias.Click += new System.EventHandler(this.SubmenuCategorias_Click);
             // 
@@ -141,7 +141,7 @@
             this.SubmenuMarcas.IconColor = System.Drawing.Color.Black;
             this.SubmenuMarcas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.SubmenuMarcas.Name = "SubmenuMarcas";
-            this.SubmenuMarcas.Size = new System.Drawing.Size(180, 24);
+            this.SubmenuMarcas.Size = new System.Drawing.Size(143, 24);
             this.SubmenuMarcas.Text = "Marcas";
             this.SubmenuMarcas.Click += new System.EventHandler(this.SubmenuMarcas_Click);
             // 
@@ -167,7 +167,7 @@
             this.subMenuRegistrarVenta.IconColor = System.Drawing.Color.Black;
             this.subMenuRegistrarVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.subMenuRegistrarVenta.Name = "subMenuRegistrarVenta";
-            this.subMenuRegistrarVenta.Size = new System.Drawing.Size(180, 24);
+            this.subMenuRegistrarVenta.Size = new System.Drawing.Size(170, 24);
             this.subMenuRegistrarVenta.Text = "Registrar venta";
             this.subMenuRegistrarVenta.Click += new System.EventHandler(this.subMenuRegistrarVenta_Click);
             // 
@@ -177,7 +177,7 @@
             this.subMenuVerDetalleVenta.IconColor = System.Drawing.Color.Black;
             this.subMenuVerDetalleVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.subMenuVerDetalleVenta.Name = "subMenuVerDetalleVenta";
-            this.subMenuVerDetalleVenta.Size = new System.Drawing.Size(180, 24);
+            this.subMenuVerDetalleVenta.Size = new System.Drawing.Size(170, 24);
             this.subMenuVerDetalleVenta.Text = "Ver detalle";
             this.subMenuVerDetalleVenta.Click += new System.EventHandler(this.subMenuVerDetalleVenta_Click);
             // 
@@ -342,6 +342,7 @@
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CeluStore - Gestión de ventas";
+            this.Load += new System.EventHandler(this.Inicio_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
