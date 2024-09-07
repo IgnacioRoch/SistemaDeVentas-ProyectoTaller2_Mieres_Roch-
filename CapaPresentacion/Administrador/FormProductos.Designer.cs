@@ -200,7 +200,7 @@
             this.IBLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.IBLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.IBLimpiar.ForeColor = System.Drawing.Color.Black;
-            this.IBLimpiar.IconChar = FontAwesome.Sharp.IconChar.Broom;
+            this.IBLimpiar.IconChar = FontAwesome.Sharp.IconChar.Eraser;
             this.IBLimpiar.IconColor = System.Drawing.Color.Black;
             this.IBLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBLimpiar.IconSize = 16;
@@ -218,7 +218,7 @@
             this.IBVaciar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.IBVaciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.IBVaciar.ForeColor = System.Drawing.Color.White;
-            this.IBVaciar.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            this.IBVaciar.IconChar = FontAwesome.Sharp.IconChar.Eraser;
             this.IBVaciar.IconColor = System.Drawing.Color.White;
             this.IBVaciar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBVaciar.IconSize = 16;
@@ -226,7 +226,7 @@
             this.IBVaciar.Name = "IBVaciar";
             this.IBVaciar.Size = new System.Drawing.Size(192, 28);
             this.IBVaciar.TabIndex = 32;
-            this.IBVaciar.Text = "Vaciar";
+            this.IBVaciar.Text = "Limpiar";
             this.IBVaciar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IBVaciar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.IBVaciar.UseVisualStyleBackColor = false;

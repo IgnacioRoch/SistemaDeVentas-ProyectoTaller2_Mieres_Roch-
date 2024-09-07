@@ -46,7 +46,7 @@
             this.BSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dataGridDatos = new System.Windows.Forms.DataGridView();
             this.IBLimpiar = new FontAwesome.Sharp.IconButton();
-            this.IBEditar = new FontAwesome.Sharp.IconButton();
+            this.IBVaciar = new FontAwesome.Sharp.IconButton();
             this.IBEliminar = new FontAwesome.Sharp.IconButton();
             this.IBGuardar = new FontAwesome.Sharp.IconButton();
             this.CBBusqueda = new System.Windows.Forms.ComboBox();
@@ -230,7 +230,7 @@
             this.IBLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.IBLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.IBLimpiar.ForeColor = System.Drawing.Color.Black;
-            this.IBLimpiar.IconChar = FontAwesome.Sharp.IconChar.Broom;
+            this.IBLimpiar.IconChar = FontAwesome.Sharp.IconChar.Eraser;
             this.IBLimpiar.IconColor = System.Drawing.Color.Black;
             this.IBLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBLimpiar.IconSize = 16;
@@ -241,25 +241,25 @@
             this.IBLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IBLimpiar.UseVisualStyleBackColor = false;
             // 
-            // IBEditar
+            // IBVaciar
             // 
-            this.IBEditar.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.IBEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.IBEditar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.IBEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBEditar.ForeColor = System.Drawing.Color.White;
-            this.IBEditar.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            this.IBEditar.IconColor = System.Drawing.Color.White;
-            this.IBEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IBEditar.IconSize = 16;
-            this.IBEditar.Location = new System.Drawing.Point(44, 189);
-            this.IBEditar.Name = "IBEditar";
-            this.IBEditar.Size = new System.Drawing.Size(192, 28);
-            this.IBEditar.TabIndex = 50;
-            this.IBEditar.Text = "Editar";
-            this.IBEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.IBEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.IBEditar.UseVisualStyleBackColor = false;
+            this.IBVaciar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.IBVaciar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.IBVaciar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.IBVaciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IBVaciar.ForeColor = System.Drawing.Color.White;
+            this.IBVaciar.IconChar = FontAwesome.Sharp.IconChar.Eraser;
+            this.IBVaciar.IconColor = System.Drawing.Color.White;
+            this.IBVaciar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IBVaciar.IconSize = 16;
+            this.IBVaciar.Location = new System.Drawing.Point(44, 189);
+            this.IBVaciar.Name = "IBVaciar";
+            this.IBVaciar.Size = new System.Drawing.Size(192, 28);
+            this.IBVaciar.TabIndex = 50;
+            this.IBVaciar.Text = "Limpiar";
+            this.IBVaciar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.IBVaciar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.IBVaciar.UseVisualStyleBackColor = false;
             // 
             // IBEliminar
             // 
@@ -359,7 +359,7 @@
             this.Controls.Add(this.LEstado);
             this.Controls.Add(this.dataGridDatos);
             this.Controls.Add(this.IBLimpiar);
-            this.Controls.Add(this.IBEditar);
+            this.Controls.Add(this.IBVaciar);
             this.Controls.Add(this.IBEliminar);
             this.Controls.Add(this.IBGuardar);
             this.Controls.Add(this.CBBusqueda);
@@ -396,7 +396,7 @@
         private System.Windows.Forms.DataGridViewButtonColumn BSeleccionar;
         private System.Windows.Forms.DataGridView dataGridDatos;
         private FontAwesome.Sharp.IconButton IBLimpiar;
-        private FontAwesome.Sharp.IconButton IBEditar;
+        private FontAwesome.Sharp.IconButton IBVaciar;
         private FontAwesome.Sharp.IconButton IBEliminar;
         private FontAwesome.Sharp.IconButton IBGuardar;
         private System.Windows.Forms.ComboBox CBBusqueda;

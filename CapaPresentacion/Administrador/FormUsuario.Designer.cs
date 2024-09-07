@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LApellido = new System.Windows.Forms.Label();
             this.LNombre = new System.Windows.Forms.Label();
             this.L_NroDocumento = new System.Windows.Forms.Label();
@@ -65,7 +65,7 @@
             this.CBBusqueda = new System.Windows.Forms.ComboBox();
             this.TxtBusqueda = new System.Windows.Forms.TextBox();
             this.IBLimpiar = new FontAwesome.Sharp.IconButton();
-            this.IBEditar = new FontAwesome.Sharp.IconButton();
+            this.IBVaciar = new FontAwesome.Sharp.IconButton();
             this.IBEliminar = new FontAwesome.Sharp.IconButton();
             this.IBBuscar = new FontAwesome.Sharp.IconButton();
             this.IBGuardar = new FontAwesome.Sharp.IconButton();
@@ -229,15 +229,15 @@
             // dataGridDatos
             // 
             this.dataGridDatos.AllowUserToAddRows = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.BSeleccionar,
@@ -255,14 +255,14 @@
             this.dataGridDatos.MultiSelect = false;
             this.dataGridDatos.Name = "dataGridDatos";
             this.dataGridDatos.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridDatos.RowTemplate.Height = 28;
             this.dataGridDatos.Size = new System.Drawing.Size(932, 488);
             this.dataGridDatos.TabIndex = 5;
@@ -399,7 +399,7 @@
             this.IBLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.IBLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.IBLimpiar.ForeColor = System.Drawing.Color.Black;
-            this.IBLimpiar.IconChar = FontAwesome.Sharp.IconChar.Broom;
+            this.IBLimpiar.IconChar = FontAwesome.Sharp.IconChar.Eraser;
             this.IBLimpiar.IconColor = System.Drawing.Color.Black;
             this.IBLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBLimpiar.IconSize = 16;
@@ -410,25 +410,25 @@
             this.IBLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IBLimpiar.UseVisualStyleBackColor = false;
             // 
-            // IBEditar
+            // IBVaciar
             // 
-            this.IBEditar.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.IBEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.IBEditar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.IBEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBEditar.ForeColor = System.Drawing.Color.White;
-            this.IBEditar.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            this.IBEditar.IconColor = System.Drawing.Color.White;
-            this.IBEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IBEditar.IconSize = 16;
-            this.IBEditar.Location = new System.Drawing.Point(44, 488);
-            this.IBEditar.Name = "IBEditar";
-            this.IBEditar.Size = new System.Drawing.Size(192, 28);
-            this.IBEditar.TabIndex = 4;
-            this.IBEditar.Text = "Editar";
-            this.IBEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.IBEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.IBEditar.UseVisualStyleBackColor = false;
+            this.IBVaciar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.IBVaciar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.IBVaciar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.IBVaciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IBVaciar.ForeColor = System.Drawing.Color.White;
+            this.IBVaciar.IconChar = FontAwesome.Sharp.IconChar.Eraser;
+            this.IBVaciar.IconColor = System.Drawing.Color.White;
+            this.IBVaciar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IBVaciar.IconSize = 16;
+            this.IBVaciar.Location = new System.Drawing.Point(44, 488);
+            this.IBVaciar.Name = "IBVaciar";
+            this.IBVaciar.Size = new System.Drawing.Size(192, 28);
+            this.IBVaciar.TabIndex = 4;
+            this.IBVaciar.Text = "Limpiar";
+            this.IBVaciar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.IBVaciar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.IBVaciar.UseVisualStyleBackColor = false;
             // 
             // IBEliminar
             // 
@@ -512,7 +512,7 @@
             this.ClientSize = new System.Drawing.Size(1264, 569);
             this.Controls.Add(this.dataGridDatos);
             this.Controls.Add(this.IBLimpiar);
-            this.Controls.Add(this.IBEditar);
+            this.Controls.Add(this.IBVaciar);
             this.Controls.Add(this.IBEliminar);
             this.Controls.Add(this.IBBuscar);
             this.Controls.Add(this.IBGuardar);
@@ -567,7 +567,7 @@
         private System.Windows.Forms.Label LRol;
         private System.Windows.Forms.Label LEstado;
         private FontAwesome.Sharp.IconButton IBGuardar;
-        private FontAwesome.Sharp.IconButton IBEditar;
+        private FontAwesome.Sharp.IconButton IBVaciar;
         private FontAwesome.Sharp.IconButton IBEliminar;
         private System.Windows.Forms.Label LDetalleUsuario;
         private System.Windows.Forms.DataGridView dataGridDatos;
