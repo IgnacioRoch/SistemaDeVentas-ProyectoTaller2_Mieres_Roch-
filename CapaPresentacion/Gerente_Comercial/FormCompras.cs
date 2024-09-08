@@ -16,5 +16,6 @@ namespace CapaPresentacion.Gerente_Comercial
         {
             InitializeComponent();
         }
+
     }
 }
