@@ -36,6 +36,7 @@ namespace CapaPresentacion.Administrador
             }
         }
 
+
         /*private void IBGuardar_Click(object sender, EventArgs e)
         {
             // Obtener los valores de los TextBox  

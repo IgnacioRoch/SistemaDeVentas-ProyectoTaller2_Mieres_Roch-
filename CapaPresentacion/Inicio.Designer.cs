@@ -45,6 +45,8 @@
             this.menu_Proveedores = new FontAwesome.Sharp.IconMenuItem();
             this.menu_Reportes = new FontAwesome.Sharp.IconMenuItem();
             this.menu_informacion = new FontAwesome.Sharp.IconMenuItem();
+            this.SubMenuInformacion = new FontAwesome.Sharp.IconMenuItem();
+            this.SubMenuNegocio = new FontAwesome.Sharp.IconMenuItem();
             this.menuTitulo = new System.Windows.Forms.MenuStrip();
             this.contenedor = new System.Windows.Forms.Panel();
             this.LUsuario = new System.Windows.Forms.Label();
@@ -262,15 +264,37 @@
             // menu_informacion
             // 
             this.menu_informacion.AutoSize = false;
+            this.menu_informacion.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SubMenuInformacion,
+            this.SubMenuNegocio});
             this.menu_informacion.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.menu_informacion.IconChar = FontAwesome.Sharp.IconChar.Info;
             this.menu_informacion.IconColor = System.Drawing.Color.Black;
             this.menu_informacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.menu_informacion.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menu_informacion.Name = "menu_informacion";
-            this.menu_informacion.Size = new System.Drawing.Size(85, 69);
+            this.menu_informacion.Size = new System.Drawing.Size(122, 69);
             this.menu_informacion.Text = "Acerca de";
             this.menu_informacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // SubMenuInformacion
+            // 
+            this.SubMenuInformacion.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.SubMenuInformacion.IconColor = System.Drawing.Color.Black;
+            this.SubMenuInformacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.SubMenuInformacion.Name = "SubMenuInformacion";
+            this.SubMenuInformacion.Size = new System.Drawing.Size(205, 24);
+            this.SubMenuInformacion.Text = "Información Negocio";
+            // 
+            // SubMenuNegocio
+            // 
+            this.SubMenuNegocio.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.SubMenuNegocio.IconColor = System.Drawing.Color.Black;
+            this.SubMenuNegocio.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.SubMenuNegocio.Name = "SubMenuNegocio";
+            this.SubMenuNegocio.Size = new System.Drawing.Size(205, 24);
+            this.SubMenuNegocio.Text = "Editar Negocio";
+            this.SubMenuNegocio.Click += new System.EventHandler(this.SubMenuNegocio_Click);
             // 
             // menuTitulo
             // 
@@ -342,7 +366,6 @@
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CeluStore - Gestión de ventas";
-            this.Load += new System.EventHandler(this.Inicio_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -374,6 +397,8 @@
         private FontAwesome.Sharp.IconMenuItem subMenuVerDetalleVenta;
         private FontAwesome.Sharp.IconMenuItem subMenuRegistrarCompra;
         private FontAwesome.Sharp.IconMenuItem subMenuVerDetalleCompra;
+        private FontAwesome.Sharp.IconMenuItem SubMenuInformacion;
+        private FontAwesome.Sharp.IconMenuItem SubMenuNegocio;
     }
 }
 

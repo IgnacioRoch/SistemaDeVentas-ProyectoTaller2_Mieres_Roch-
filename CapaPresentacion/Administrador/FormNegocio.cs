@@ -8,15 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaPresentacion.Vendedor
+namespace CapaPresentacion.Administrador
 {
-    public partial class FormClientes : Form
+    public partial class FormNegocio : Form
     {
-        public FormClientes()
+        public FormNegocio()
         {
             InitializeComponent();
         }
-
-
     }
 }

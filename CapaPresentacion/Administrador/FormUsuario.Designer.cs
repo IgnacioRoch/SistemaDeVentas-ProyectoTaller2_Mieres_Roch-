@@ -72,6 +72,7 @@
             this.panelFormulario = new System.Windows.Forms.Panel();
             this.panelBusqueda = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDatos)).BeginInit();
+            this.panelFormulario.SuspendLayout();
             this.panelBusqueda.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -370,7 +371,7 @@
             this.LBuscarPor.AutoSize = true;
             this.LBuscarPor.BackColor = System.Drawing.Color.White;
             this.LBuscarPor.ForeColor = System.Drawing.Color.Black;
-            this.LBuscarPor.Location = new System.Drawing.Point(614, 29);
+            this.LBuscarPor.Location = new System.Drawing.Point(290, 20);
             this.LBuscarPor.Name = "LBuscarPor";
             this.LBuscarPor.Size = new System.Drawing.Size(61, 13);
             this.LBuscarPor.TabIndex = 1;
@@ -380,14 +381,14 @@
             // 
             this.CBBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBBusqueda.FormattingEnabled = true;
-            this.CBBusqueda.Location = new System.Drawing.Point(681, 26);
+            this.CBBusqueda.Location = new System.Drawing.Point(357, 17);
             this.CBBusqueda.Name = "CBBusqueda";
             this.CBBusqueda.Size = new System.Drawing.Size(146, 21);
             this.CBBusqueda.TabIndex = 3;
             // 
             // TxtBusqueda
             // 
-            this.TxtBusqueda.Location = new System.Drawing.Point(843, 26);
+            this.TxtBusqueda.Location = new System.Drawing.Point(519, 17);
             this.TxtBusqueda.Name = "TxtBusqueda";
             this.TxtBusqueda.Size = new System.Drawing.Size(183, 20);
             this.TxtBusqueda.TabIndex = 2;
@@ -403,7 +404,7 @@
             this.IBLimpiar.IconColor = System.Drawing.Color.Black;
             this.IBLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBLimpiar.IconSize = 16;
-            this.IBLimpiar.Location = new System.Drawing.Point(1115, 21);
+            this.IBLimpiar.Location = new System.Drawing.Point(791, 12);
             this.IBLimpiar.Name = "IBLimpiar";
             this.IBLimpiar.Size = new System.Drawing.Size(41, 28);
             this.IBLimpiar.TabIndex = 4;
@@ -461,7 +462,7 @@
             this.IBBuscar.IconColor = System.Drawing.Color.Black;
             this.IBBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBBuscar.IconSize = 16;
-            this.IBBuscar.Location = new System.Drawing.Point(1059, 21);
+            this.IBBuscar.Location = new System.Drawing.Point(735, 12);
             this.IBBuscar.Name = "IBBuscar";
             this.IBBuscar.Size = new System.Drawing.Size(41, 28);
             this.IBBuscar.TabIndex = 4;
@@ -491,6 +492,27 @@
             // panelFormulario
             // 
             this.panelFormulario.BackColor = System.Drawing.Color.White;
+            this.panelFormulario.Controls.Add(this.LDetalleUsuario);
+            this.panelFormulario.Controls.Add(this.LApellido);
+            this.panelFormulario.Controls.Add(this.IBVaciar);
+            this.panelFormulario.Controls.Add(this.LCorreo);
+            this.panelFormulario.Controls.Add(this.IBEliminar);
+            this.panelFormulario.Controls.Add(this.LContrasenia);
+            this.panelFormulario.Controls.Add(this.LNombre);
+            this.panelFormulario.Controls.Add(this.IBGuardar);
+            this.panelFormulario.Controls.Add(this.LConfirmarContrasenia);
+            this.panelFormulario.Controls.Add(this.CBEstado);
+            this.panelFormulario.Controls.Add(this.LRol);
+            this.panelFormulario.Controls.Add(this.LEstado);
+            this.panelFormulario.Controls.Add(this.CBRol);
+            this.panelFormulario.Controls.Add(this.L_NroDocumento);
+            this.panelFormulario.Controls.Add(this.TxtConfClave);
+            this.panelFormulario.Controls.Add(this.TxtDocumento);
+            this.panelFormulario.Controls.Add(this.TxtSeleccionId);
+            this.panelFormulario.Controls.Add(this.TxtClave);
+            this.panelFormulario.Controls.Add(this.TxtNombre);
+            this.panelFormulario.Controls.Add(this.TxtCorreo);
+            this.panelFormulario.Controls.Add(this.TxtApellido);
             this.panelFormulario.Location = new System.Drawing.Point(0, 0);
             this.panelFormulario.Name = "panelFormulario";
             this.panelFormulario.Size = new System.Drawing.Size(305, 569);
@@ -500,6 +522,11 @@
             // 
             this.panelBusqueda.BackColor = System.Drawing.Color.White;
             this.panelBusqueda.Controls.Add(this.LListaUsuarios);
+            this.panelBusqueda.Controls.Add(this.IBLimpiar);
+            this.panelBusqueda.Controls.Add(this.IBBuscar);
+            this.panelBusqueda.Controls.Add(this.LBuscarPor);
+            this.panelBusqueda.Controls.Add(this.CBBusqueda);
+            this.panelBusqueda.Controls.Add(this.TxtBusqueda);
             this.panelBusqueda.Location = new System.Drawing.Point(321, 9);
             this.panelBusqueda.Name = "panelBusqueda";
             this.panelBusqueda.Size = new System.Drawing.Size(931, 47);
@@ -511,41 +538,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 569);
             this.Controls.Add(this.dataGridDatos);
-            this.Controls.Add(this.IBLimpiar);
-            this.Controls.Add(this.IBVaciar);
-            this.Controls.Add(this.IBEliminar);
-            this.Controls.Add(this.IBBuscar);
-            this.Controls.Add(this.IBGuardar);
-            this.Controls.Add(this.CBEstado);
-            this.Controls.Add(this.CBBusqueda);
-            this.Controls.Add(this.CBRol);
-            this.Controls.Add(this.TxtConfClave);
-            this.Controls.Add(this.TxtBusqueda);
-            this.Controls.Add(this.TxtClave);
-            this.Controls.Add(this.TxtCorreo);
-            this.Controls.Add(this.TxtApellido);
-            this.Controls.Add(this.TxtNombre);
-            this.Controls.Add(this.TxtSeleccionId);
-            this.Controls.Add(this.TxtDocumento);
-            this.Controls.Add(this.LDetalleUsuario);
-            this.Controls.Add(this.LBuscarPor);
-            this.Controls.Add(this.L_NroDocumento);
-            this.Controls.Add(this.LEstado);
-            this.Controls.Add(this.LRol);
-            this.Controls.Add(this.LConfirmarContrasenia);
-            this.Controls.Add(this.LNombre);
-            this.Controls.Add(this.LContrasenia);
-            this.Controls.Add(this.LCorreo);
-            this.Controls.Add(this.LApellido);
             this.Controls.Add(this.panelBusqueda);
             this.Controls.Add(this.panelFormulario);
             this.Name = "FormUsuario";
             this.Text = "FormUsuario";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDatos)).EndInit();
+            this.panelFormulario.ResumeLayout(false);
+            this.panelFormulario.PerformLayout();
             this.panelBusqueda.ResumeLayout(false);
             this.panelBusqueda.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

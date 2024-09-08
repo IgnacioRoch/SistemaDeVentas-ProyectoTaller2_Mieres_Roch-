@@ -47,7 +47,7 @@
             this.LSistemaVentas.AutoSize = true;
             this.LSistemaVentas.BackColor = System.Drawing.SystemColors.Highlight;
             this.LSistemaVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LSistemaVentas.Location = new System.Drawing.Point(12, 196);
+            this.LSistemaVentas.Location = new System.Drawing.Point(14, 195);
             this.LSistemaVentas.Name = "LSistemaVentas";
             this.LSistemaVentas.Size = new System.Drawing.Size(276, 29);
             this.LSistemaVentas.TabIndex = 1;
@@ -157,16 +157,17 @@
             // 
             this.panelLogin.BackColor = System.Drawing.SystemColors.Highlight;
             this.panelLogin.Controls.Add(this.pictureBoxLogo);
+            this.panelLogin.Controls.Add(this.LSistemaVentas);
             this.panelLogin.Location = new System.Drawing.Point(-2, -1);
             this.panelLogin.Name = "panelLogin";
-            this.panelLogin.Size = new System.Drawing.Size(328, 345);
+            this.panelLogin.Size = new System.Drawing.Size(311, 345);
             this.panelLogin.TabIndex = 9;
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(633, 299);
+            this.ClientSize = new System.Drawing.Size(608, 283);
             this.Controls.Add(this.LIniciarSesion);
             this.Controls.Add(this.BIngresar);
             this.Controls.Add(this.BCancelar);
@@ -174,7 +175,6 @@
             this.Controls.Add(this.TxtDocumento);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.LNroDni);
-            this.Controls.Add(this.LSistemaVentas);
             this.Controls.Add(this.panelLogin);
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -183,6 +183,7 @@
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.panelLogin.ResumeLayout(false);
+            this.panelLogin.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
