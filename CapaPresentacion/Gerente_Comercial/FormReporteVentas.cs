@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion.Gerente_Comercial
 {
-    public partial class FormDetalleCompra : Form
+    public partial class FormReporteVentas : Form
     {
-        public FormDetalleCompra()
+        public FormReporteVentas()
         {
             InitializeComponent();
         }
-
     }
 }

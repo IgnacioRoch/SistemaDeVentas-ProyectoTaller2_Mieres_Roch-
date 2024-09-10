@@ -1,5 +1,6 @@
 ﻿using CapaPresentacion.Administrador;
 using CapaPresentacion.Gerente_Comercial;
+using CapaPresentacion.Modales;
 using CapaPresentacion.Vendedor;
 using FontAwesome.Sharp;
 using System;
@@ -97,14 +98,36 @@ namespace CapaPresentacion
             abrirFormulario((IconMenuItem)sender, new FormProveedores());
         }
 
-        private void menu_Reportes_Click(object sender, EventArgs e)
+        private void subMenuReporteCompras_Click(object sender, EventArgs e)
         {
-            abrirFormulario((IconMenuItem)sender, new FormReportes());
+            abrirFormulario(menu_Reportes, new FormReporteCompras());
         }
 
-        private void SubMenuNegocio_Click(object sender, EventArgs e)
+        private void subMenuReporteVentas_Click(object sender, EventArgs e)
         {
-            abrirFormulario(menu_informacion, new FormNegocio());
+            abrirFormulario(menu_Reportes, new FormReporteVentas());
         }
+
+        private void menu_Negocio_Click(object sender, EventArgs e)
+        {
+            abrirFormulario((IconMenuItem)sender, new FormNegocio());
+        }
+
+        private void menu_informacion_Click(object sender, EventArgs e)
+        {
+            using (var modal = new mdAcercaDe())
+            {
+                var result = modal.ShowDialog();
+            }
+        }
+
+        private void IBSalirInicio_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("¿Desea salir?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
     }
 }

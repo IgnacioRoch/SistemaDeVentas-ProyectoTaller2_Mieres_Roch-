@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaPresentacion.Gerente_Comercial
+namespace CapaPresentacion.Modales
 {
-    public partial class FormDetalleCompra : Form
+    public partial class mdProducto : Form
     {
-        public FormDetalleCompra()
+        public mdProducto()
         {
             InitializeComponent();
         }
-
     }
 }
