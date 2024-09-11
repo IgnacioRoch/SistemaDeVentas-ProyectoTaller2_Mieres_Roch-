@@ -242,6 +242,9 @@
     <EmbeddedResource Include="Vendedor\FormClientes.resx">
       <DependentUpon>FormClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vendedor\FormDetalleVenta.resx">
+      <DependentUpon>FormDetalleVenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vendedor\FormVentas.resx">
       <DependentUpon>FormVentas.cs</DependentUpon>
     </EmbeddedResource>
