@@ -30,12 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.menuTitulo = new System.Windows.Forms.MenuStrip();
-            this.contenedor = new System.Windows.Forms.Panel();
-            this.LUsuario = new System.Windows.Forms.Label();
-            this.LNomUsuario = new System.Windows.Forms.Label();
-            this.IBSalirInicio = new FontAwesome.Sharp.IconButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menu_Usuario = new FontAwesome.Sharp.IconMenuItem();
             this.menu_productos = new FontAwesome.Sharp.IconMenuItem();
             this.SubmenuProductos = new FontAwesome.Sharp.IconMenuItem();
@@ -54,8 +48,17 @@
             this.subMenuReporteVentas = new FontAwesome.Sharp.IconMenuItem();
             this.menu_Negocio = new FontAwesome.Sharp.IconMenuItem();
             this.menu_informacion = new FontAwesome.Sharp.IconMenuItem();
+            this.contenedor = new System.Windows.Forms.Panel();
+            this.LUsuario = new System.Windows.Forms.Label();
+            this.LNomUsuario = new System.Windows.Forms.Label();
+            this.IBSalirInicio = new FontAwesome.Sharp.IconButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.CBDatosUsuario = new System.Windows.Forms.GroupBox();
+            this.LRol = new System.Windows.Forms.Label();
+            this.menuTitulo = new System.Windows.Forms.MenuStrip();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.CBDatosUsuario.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -88,81 +91,6 @@
             this.menuStrip2.Size = new System.Drawing.Size(1257, 73);
             this.menuStrip2.TabIndex = 2;
             this.menuStrip2.Text = "menuStrip2";
-            // 
-            // menuTitulo
-            // 
-            this.menuTitulo.AutoSize = false;
-            this.menuTitulo.BackColor = System.Drawing.SystemColors.Highlight;
-            this.menuTitulo.Location = new System.Drawing.Point(0, 0);
-            this.menuTitulo.Name = "menuTitulo";
-            this.menuTitulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuTitulo.Size = new System.Drawing.Size(1257, 90);
-            this.menuTitulo.TabIndex = 3;
-            this.menuTitulo.Text = "menuStrip1";
-            // 
-            // contenedor
-            // 
-            this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contenedor.Location = new System.Drawing.Point(0, 163);
-            this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(1257, 560);
-            this.contenedor.TabIndex = 5;
-            // 
-            // LUsuario
-            // 
-            this.LUsuario.AutoSize = true;
-            this.LUsuario.BackColor = System.Drawing.SystemColors.Highlight;
-            this.LUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LUsuario.ForeColor = System.Drawing.Color.Snow;
-            this.LUsuario.Location = new System.Drawing.Point(920, 43);
-            this.LUsuario.Name = "LUsuario";
-            this.LUsuario.Size = new System.Drawing.Size(53, 15);
-            this.LUsuario.TabIndex = 0;
-            this.LUsuario.Text = "Usuario:";
-            // 
-            // LNomUsuario
-            // 
-            this.LNomUsuario.AutoSize = true;
-            this.LNomUsuario.BackColor = System.Drawing.SystemColors.Highlight;
-            this.LNomUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LNomUsuario.ForeColor = System.Drawing.Color.Snow;
-            this.LNomUsuario.Location = new System.Drawing.Point(979, 43);
-            this.LNomUsuario.Name = "LNomUsuario";
-            this.LNomUsuario.Size = new System.Drawing.Size(96, 15);
-            this.LNomUsuario.TabIndex = 0;
-            this.LNomUsuario.Text = "Nombre usuario";
-            // 
-            // IBSalirInicio
-            // 
-            this.IBSalirInicio.BackColor = System.Drawing.Color.Firebrick;
-            this.IBSalirInicio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.IBSalirInicio.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.IBSalirInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBSalirInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IBSalirInicio.ForeColor = System.Drawing.Color.White;
-            this.IBSalirInicio.IconChar = FontAwesome.Sharp.IconChar.SignOut;
-            this.IBSalirInicio.IconColor = System.Drawing.Color.White;
-            this.IBSalirInicio.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IBSalirInicio.IconSize = 30;
-            this.IBSalirInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.IBSalirInicio.Location = new System.Drawing.Point(1143, 12);
-            this.IBSalirInicio.Name = "IBSalirInicio";
-            this.IBSalirInicio.Size = new System.Drawing.Size(102, 31);
-            this.IBSalirInicio.TabIndex = 6;
-            this.IBSalirInicio.Text = "Salir";
-            this.IBSalirInicio.UseVisualStyleBackColor = false;
-            this.IBSalirInicio.Click += new System.EventHandler(this.IBSalirInicio_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.Frame_1;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(86, 82);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // menu_Usuario
             // 
@@ -389,15 +317,113 @@
             this.menu_informacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.menu_informacion.Click += new System.EventHandler(this.menu_informacion_Click);
             // 
+            // contenedor
+            // 
+            this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contenedor.Location = new System.Drawing.Point(0, 163);
+            this.contenedor.Name = "contenedor";
+            this.contenedor.Size = new System.Drawing.Size(1257, 560);
+            this.contenedor.TabIndex = 5;
+            // 
+            // LUsuario
+            // 
+            this.LUsuario.AutoSize = true;
+            this.LUsuario.BackColor = System.Drawing.SystemColors.Highlight;
+            this.LUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LUsuario.ForeColor = System.Drawing.Color.Snow;
+            this.LUsuario.Location = new System.Drawing.Point(20, 26);
+            this.LUsuario.Name = "LUsuario";
+            this.LUsuario.Size = new System.Drawing.Size(64, 18);
+            this.LUsuario.TabIndex = 0;
+            this.LUsuario.Text = "Usuario:";
+            // 
+            // LNomUsuario
+            // 
+            this.LNomUsuario.AutoSize = true;
+            this.LNomUsuario.BackColor = System.Drawing.SystemColors.Highlight;
+            this.LNomUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LNomUsuario.ForeColor = System.Drawing.Color.Snow;
+            this.LNomUsuario.Location = new System.Drawing.Point(90, 26);
+            this.LNomUsuario.Name = "LNomUsuario";
+            this.LNomUsuario.Size = new System.Drawing.Size(115, 18);
+            this.LNomUsuario.TabIndex = 0;
+            this.LNomUsuario.Text = "Nombre usuario";
+            // 
+            // IBSalirInicio
+            // 
+            this.IBSalirInicio.BackColor = System.Drawing.Color.Firebrick;
+            this.IBSalirInicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.IBSalirInicio.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.IBSalirInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IBSalirInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IBSalirInicio.ForeColor = System.Drawing.Color.White;
+            this.IBSalirInicio.IconChar = FontAwesome.Sharp.IconChar.SignOut;
+            this.IBSalirInicio.IconColor = System.Drawing.Color.White;
+            this.IBSalirInicio.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IBSalirInicio.IconSize = 30;
+            this.IBSalirInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.IBSalirInicio.Location = new System.Drawing.Point(1143, 12);
+            this.IBSalirInicio.Name = "IBSalirInicio";
+            this.IBSalirInicio.Size = new System.Drawing.Size(102, 31);
+            this.IBSalirInicio.TabIndex = 6;
+            this.IBSalirInicio.Text = "Salir";
+            this.IBSalirInicio.UseVisualStyleBackColor = false;
+            this.IBSalirInicio.Click += new System.EventHandler(this.IBSalirInicio_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.Frame_1;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(86, 82);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // CBDatosUsuario
+            // 
+            this.CBDatosUsuario.BackColor = System.Drawing.SystemColors.Highlight;
+            this.CBDatosUsuario.Controls.Add(this.LRol);
+            this.CBDatosUsuario.Controls.Add(this.LUsuario);
+            this.CBDatosUsuario.Controls.Add(this.LNomUsuario);
+            this.CBDatosUsuario.Location = new System.Drawing.Point(722, 12);
+            this.CBDatosUsuario.Name = "CBDatosUsuario";
+            this.CBDatosUsuario.Size = new System.Drawing.Size(368, 58);
+            this.CBDatosUsuario.TabIndex = 0;
+            this.CBDatosUsuario.TabStop = false;
+            // 
+            // LRol
+            // 
+            this.LRol.AutoSize = true;
+            this.LRol.BackColor = System.Drawing.SystemColors.Highlight;
+            this.LRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LRol.ForeColor = System.Drawing.Color.Snow;
+            this.LRol.Location = new System.Drawing.Point(211, 26);
+            this.LRol.Name = "LRol";
+            this.LRol.Size = new System.Drawing.Size(35, 18);
+            this.LRol.TabIndex = 0;
+            this.LRol.Text = "Rol:";
+            // 
+            // menuTitulo
+            // 
+            this.menuTitulo.AutoSize = false;
+            this.menuTitulo.BackColor = System.Drawing.SystemColors.Highlight;
+            this.menuTitulo.Location = new System.Drawing.Point(0, 0);
+            this.menuTitulo.Name = "menuTitulo";
+            this.menuTitulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.menuTitulo.Size = new System.Drawing.Size(1257, 90);
+            this.menuTitulo.TabIndex = 3;
+            this.menuTitulo.Text = "menuStrip1";
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1257, 723);
+            this.Controls.Add(this.CBDatosUsuario);
             this.Controls.Add(this.IBSalirInicio);
-            this.Controls.Add(this.LNomUsuario);
-            this.Controls.Add(this.LUsuario);
             this.Controls.Add(this.contenedor);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -409,6 +435,8 @@
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.CBDatosUsuario.ResumeLayout(false);
+            this.CBDatosUsuario.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -417,7 +445,6 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip2;
-        private System.Windows.Forms.MenuStrip menuTitulo;
         private FontAwesome.Sharp.IconMenuItem menu_Usuario;
         private FontAwesome.Sharp.IconMenuItem menu_productos;
         private FontAwesome.Sharp.IconMenuItem menu_ventas;
@@ -441,6 +468,9 @@
         private FontAwesome.Sharp.IconMenuItem subMenuReporteVentas;
         private FontAwesome.Sharp.IconMenuItem menu_Negocio;
         private FontAwesome.Sharp.IconButton IBSalirInicio;
+        private System.Windows.Forms.GroupBox CBDatosUsuario;
+        private System.Windows.Forms.MenuStrip menuTitulo;
+        private System.Windows.Forms.Label LRol;
     }
 }
 

@@ -177,11 +177,11 @@
             // 
             this.LListaCategoria.AutoSize = true;
             this.LListaCategoria.BackColor = System.Drawing.Color.White;
-            this.LListaCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LListaCategoria.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LListaCategoria.ForeColor = System.Drawing.Color.Black;
             this.LListaCategoria.Location = new System.Drawing.Point(3, 11);
             this.LListaCategoria.Name = "LListaCategoria";
-            this.LListaCategoria.Size = new System.Drawing.Size(175, 25);
+            this.LListaCategoria.Size = new System.Drawing.Size(197, 23);
             this.LListaCategoria.TabIndex = 14;
             this.LListaCategoria.Text = "Lista de categorías";
             this.LListaCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -293,10 +293,10 @@
             // 
             this.LDetalleCategoria.AutoSize = true;
             this.LDetalleCategoria.BackColor = System.Drawing.Color.White;
-            this.LDetalleCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LDetalleCategoria.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LDetalleCategoria.Location = new System.Drawing.Point(39, 9);
             this.LDetalleCategoria.Name = "LDetalleCategoria";
-            this.LDetalleCategoria.Size = new System.Drawing.Size(194, 25);
+            this.LDetalleCategoria.Size = new System.Drawing.Size(218, 23);
             this.LDetalleCategoria.TabIndex = 16;
             this.LDetalleCategoria.Text = "Detalle de categorías";
             // 
@@ -332,6 +332,7 @@
             // panelFormulario
             // 
             this.panelFormulario.BackColor = System.Drawing.Color.White;
+            this.panelFormulario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelFormulario.Controls.Add(this.LDetalleCategoria);
             this.panelFormulario.Controls.Add(this.IBVaciar);
             this.panelFormulario.Controls.Add(this.LEstado);
@@ -350,6 +351,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.IBLimpiar);
             this.panel1.Controls.Add(this.LListaCategoria);
             this.panel1.Controls.Add(this.CBBusqueda);

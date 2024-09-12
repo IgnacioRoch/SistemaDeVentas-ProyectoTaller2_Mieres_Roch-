@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.panelFormulario = new System.Windows.Forms.Panel();
-            this.LDetalleNegocio = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.picLogo = new System.Windows.Forms.PictureBox();
-            this.LLogo = new System.Windows.Forms.Label();
-            this.IBSubir = new FontAwesome.Sharp.IconButton();
+            this.IBGuardar = new FontAwesome.Sharp.IconButton();
             this.TxtDireccion = new System.Windows.Forms.TextBox();
             this.TxtRuc = new System.Windows.Forms.TextBox();
             this.TxtNombreNegocio = new System.Windows.Forms.TextBox();
             this.LNombreNegocio = new System.Windows.Forms.Label();
             this.LRUC = new System.Windows.Forms.Label();
             this.LDireccion = new System.Windows.Forms.Label();
-            this.IBGuardar = new FontAwesome.Sharp.IconButton();
+            this.IBSubir = new FontAwesome.Sharp.IconButton();
+            this.LLogo = new System.Windows.Forms.Label();
+            this.picLogo = new System.Windows.Forms.PictureBox();
+            this.LDetalleNegocio = new System.Windows.Forms.Label();
             this.panelFormulario.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
@@ -49,23 +49,13 @@
             // panelFormulario
             // 
             this.panelFormulario.BackColor = System.Drawing.Color.White;
+            this.panelFormulario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelFormulario.Controls.Add(this.groupBox1);
             this.panelFormulario.Controls.Add(this.LDetalleNegocio);
             this.panelFormulario.Location = new System.Drawing.Point(1, 2);
             this.panelFormulario.Name = "panelFormulario";
             this.panelFormulario.Size = new System.Drawing.Size(622, 569);
             this.panelFormulario.TabIndex = 7;
-            // 
-            // LDetalleNegocio
-            // 
-            this.LDetalleNegocio.AutoSize = true;
-            this.LDetalleNegocio.BackColor = System.Drawing.Color.White;
-            this.LDetalleNegocio.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LDetalleNegocio.Location = new System.Drawing.Point(43, 24);
-            this.LDetalleNegocio.Name = "LDetalleNegocio";
-            this.LDetalleNegocio.Size = new System.Drawing.Size(199, 25);
-            this.LDetalleNegocio.TabIndex = 2;
-            this.LDetalleNegocio.Text = "Detalle del Negocio";
             // 
             // groupBox1
             // 
@@ -86,43 +76,26 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
-            // picLogo
+            // IBGuardar
             // 
-            this.picLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picLogo.Location = new System.Drawing.Point(17, 36);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(194, 174);
-            this.picLogo.TabIndex = 0;
-            this.picLogo.TabStop = false;
-            // 
-            // LLogo
-            // 
-            this.LLogo.AutoSize = true;
-            this.LLogo.Location = new System.Drawing.Point(14, 16);
-            this.LLogo.Name = "LLogo";
-            this.LLogo.Size = new System.Drawing.Size(34, 13);
-            this.LLogo.TabIndex = 1;
-            this.LLogo.Text = "Logo:";
-            // 
-            // IBSubir
-            // 
-            this.IBSubir.BackColor = System.Drawing.Color.SkyBlue;
-            this.IBSubir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.IBSubir.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.IBSubir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBSubir.ForeColor = System.Drawing.Color.White;
-            this.IBSubir.IconChar = FontAwesome.Sharp.IconChar.Upload;
-            this.IBSubir.IconColor = System.Drawing.Color.White;
-            this.IBSubir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IBSubir.IconSize = 16;
-            this.IBSubir.Location = new System.Drawing.Point(17, 216);
-            this.IBSubir.Name = "IBSubir";
-            this.IBSubir.Size = new System.Drawing.Size(194, 36);
-            this.IBSubir.TabIndex = 5;
-            this.IBSubir.Text = "Subir";
-            this.IBSubir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.IBSubir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.IBSubir.UseVisualStyleBackColor = false;
+            this.IBGuardar.BackColor = System.Drawing.Color.CadetBlue;
+            this.IBGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.IBGuardar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.IBGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IBGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IBGuardar.ForeColor = System.Drawing.Color.White;
+            this.IBGuardar.IconChar = FontAwesome.Sharp.IconChar.Memory;
+            this.IBGuardar.IconColor = System.Drawing.Color.White;
+            this.IBGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IBGuardar.IconSize = 16;
+            this.IBGuardar.Location = new System.Drawing.Point(244, 192);
+            this.IBGuardar.Name = "IBGuardar";
+            this.IBGuardar.Size = new System.Drawing.Size(293, 36);
+            this.IBGuardar.TabIndex = 12;
+            this.IBGuardar.Text = "Guardar cambios";
+            this.IBGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.IBGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.IBGuardar.UseVisualStyleBackColor = false;
             // 
             // TxtDireccion
             // 
@@ -175,25 +148,55 @@
             this.LDireccion.TabIndex = 8;
             this.LDireccion.Text = "Dirección:";
             // 
-            // IBGuardar
+            // IBSubir
             // 
-            this.IBGuardar.BackColor = System.Drawing.Color.CadetBlue;
-            this.IBGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.IBGuardar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.IBGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBGuardar.ForeColor = System.Drawing.Color.White;
-            this.IBGuardar.IconChar = FontAwesome.Sharp.IconChar.Memory;
-            this.IBGuardar.IconColor = System.Drawing.Color.White;
-            this.IBGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IBGuardar.IconSize = 16;
-            this.IBGuardar.Location = new System.Drawing.Point(244, 192);
-            this.IBGuardar.Name = "IBGuardar";
-            this.IBGuardar.Size = new System.Drawing.Size(293, 36);
-            this.IBGuardar.TabIndex = 12;
-            this.IBGuardar.Text = "Guardar cambios";
-            this.IBGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.IBGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.IBGuardar.UseVisualStyleBackColor = false;
+            this.IBSubir.BackColor = System.Drawing.Color.SteelBlue;
+            this.IBSubir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.IBSubir.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.IBSubir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IBSubir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IBSubir.ForeColor = System.Drawing.Color.White;
+            this.IBSubir.IconChar = FontAwesome.Sharp.IconChar.Upload;
+            this.IBSubir.IconColor = System.Drawing.Color.White;
+            this.IBSubir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IBSubir.IconSize = 16;
+            this.IBSubir.Location = new System.Drawing.Point(17, 216);
+            this.IBSubir.Name = "IBSubir";
+            this.IBSubir.Size = new System.Drawing.Size(194, 36);
+            this.IBSubir.TabIndex = 5;
+            this.IBSubir.Text = "Subir";
+            this.IBSubir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.IBSubir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.IBSubir.UseVisualStyleBackColor = false;
+            // 
+            // LLogo
+            // 
+            this.LLogo.AutoSize = true;
+            this.LLogo.Location = new System.Drawing.Point(14, 16);
+            this.LLogo.Name = "LLogo";
+            this.LLogo.Size = new System.Drawing.Size(34, 13);
+            this.LLogo.TabIndex = 1;
+            this.LLogo.Text = "Logo:";
+            // 
+            // picLogo
+            // 
+            this.picLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picLogo.Location = new System.Drawing.Point(17, 36);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(194, 174);
+            this.picLogo.TabIndex = 0;
+            this.picLogo.TabStop = false;
+            // 
+            // LDetalleNegocio
+            // 
+            this.LDetalleNegocio.AutoSize = true;
+            this.LDetalleNegocio.BackColor = System.Drawing.Color.White;
+            this.LDetalleNegocio.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LDetalleNegocio.Location = new System.Drawing.Point(43, 24);
+            this.LDetalleNegocio.Name = "LDetalleNegocio";
+            this.LDetalleNegocio.Size = new System.Drawing.Size(199, 23);
+            this.LDetalleNegocio.TabIndex = 2;
+            this.LDetalleNegocio.Text = "Detalle del Negocio";
             // 
             // FormNegocio
             // 

@@ -37,6 +37,5 @@ namespace CapaPresentacion
             this.Show();
         }
 
-        
     }
 }
