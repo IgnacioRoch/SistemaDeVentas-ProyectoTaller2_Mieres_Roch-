@@ -205,7 +205,6 @@
             // panelBusqueda
             // 
             this.panelBusqueda.BackColor = System.Drawing.Color.White;
-            this.panelBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelBusqueda.Controls.Add(this.IBLimpiar);
             this.panelBusqueda.Controls.Add(this.LListaClientes);
             this.panelBusqueda.Controls.Add(this.IBBuscar);
@@ -233,7 +232,6 @@
             // panelFormulario
             // 
             this.panelFormulario.BackColor = System.Drawing.Color.White;
-            this.panelFormulario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelFormulario.Controls.Add(this.CBEstado);
             this.panelFormulario.Controls.Add(this.IBVaciar);
             this.panelFormulario.Controls.Add(this.LEstado);
