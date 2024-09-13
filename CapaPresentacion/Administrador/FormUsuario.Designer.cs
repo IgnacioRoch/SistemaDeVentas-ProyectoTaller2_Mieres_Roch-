@@ -220,10 +220,10 @@
             // 
             this.LDetalleUsuario.AutoSize = true;
             this.LDetalleUsuario.BackColor = System.Drawing.Color.White;
-            this.LDetalleUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LDetalleUsuario.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LDetalleUsuario.Location = new System.Drawing.Point(39, 9);
             this.LDetalleUsuario.Name = "LDetalleUsuario";
-            this.LDetalleUsuario.Size = new System.Drawing.Size(168, 25);
+            this.LDetalleUsuario.Size = new System.Drawing.Size(186, 23);
             this.LDetalleUsuario.TabIndex = 1;
             this.LDetalleUsuario.Text = "Detalle de usuario";
             // 
@@ -348,11 +348,11 @@
             // 
             this.LListaUsuarios.AutoSize = true;
             this.LListaUsuarios.BackColor = System.Drawing.Color.White;
-            this.LListaUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LListaUsuarios.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LListaUsuarios.ForeColor = System.Drawing.Color.Black;
             this.LListaUsuarios.Location = new System.Drawing.Point(3, 11);
             this.LListaUsuarios.Name = "LListaUsuarios";
-            this.LListaUsuarios.Size = new System.Drawing.Size(159, 25);
+            this.LListaUsuarios.Size = new System.Drawing.Size(176, 23);
             this.LListaUsuarios.TabIndex = 1;
             this.LListaUsuarios.Text = "Lista de usuarios";
             this.LListaUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -492,6 +492,7 @@
             // panelFormulario
             // 
             this.panelFormulario.BackColor = System.Drawing.Color.White;
+            this.panelFormulario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelFormulario.Controls.Add(this.LDetalleUsuario);
             this.panelFormulario.Controls.Add(this.LApellido);
             this.panelFormulario.Controls.Add(this.IBVaciar);
@@ -521,6 +522,7 @@
             // panelBusqueda
             // 
             this.panelBusqueda.BackColor = System.Drawing.Color.White;
+            this.panelBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelBusqueda.Controls.Add(this.LListaUsuarios);
             this.panelBusqueda.Controls.Add(this.IBLimpiar);
             this.panelBusqueda.Controls.Add(this.IBBuscar);

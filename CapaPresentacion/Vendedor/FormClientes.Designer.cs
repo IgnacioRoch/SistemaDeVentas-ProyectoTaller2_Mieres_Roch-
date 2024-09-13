@@ -205,6 +205,7 @@
             // panelBusqueda
             // 
             this.panelBusqueda.BackColor = System.Drawing.Color.White;
+            this.panelBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelBusqueda.Controls.Add(this.IBLimpiar);
             this.panelBusqueda.Controls.Add(this.LListaClientes);
             this.panelBusqueda.Controls.Add(this.IBBuscar);
@@ -220,11 +221,11 @@
             // 
             this.LListaClientes.AutoSize = true;
             this.LListaClientes.BackColor = System.Drawing.Color.White;
-            this.LListaClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LListaClientes.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LListaClientes.ForeColor = System.Drawing.Color.Black;
             this.LListaClientes.Location = new System.Drawing.Point(3, 11);
             this.LListaClientes.Name = "LListaClientes";
-            this.LListaClientes.Size = new System.Drawing.Size(151, 25);
+            this.LListaClientes.Size = new System.Drawing.Size(168, 23);
             this.LListaClientes.TabIndex = 1;
             this.LListaClientes.Text = "Lista de clientes";
             this.LListaClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -232,6 +233,7 @@
             // panelFormulario
             // 
             this.panelFormulario.BackColor = System.Drawing.Color.White;
+            this.panelFormulario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelFormulario.Controls.Add(this.CBEstado);
             this.panelFormulario.Controls.Add(this.IBVaciar);
             this.panelFormulario.Controls.Add(this.LEstado);
@@ -277,10 +279,10 @@
             // 
             this.LDetalleCliente.AutoSize = true;
             this.LDetalleCliente.BackColor = System.Drawing.Color.White;
-            this.LDetalleCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LDetalleCliente.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LDetalleCliente.Location = new System.Drawing.Point(38, 9);
             this.LDetalleCliente.Name = "LDetalleCliente";
-            this.LDetalleCliente.Size = new System.Drawing.Size(170, 25);
+            this.LDetalleCliente.Size = new System.Drawing.Size(189, 23);
             this.LDetalleCliente.TabIndex = 15;
             this.LDetalleCliente.Text = "Detalle de clientes";
             // 

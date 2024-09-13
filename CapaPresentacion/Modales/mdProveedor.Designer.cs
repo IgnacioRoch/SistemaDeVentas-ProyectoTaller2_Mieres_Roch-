@@ -31,13 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridDatos = new System.Windows.Forms.DataGridView();
-            this.panelBusqueda = new System.Windows.Forms.Panel();
-            this.LListaProveedor = new System.Windows.Forms.Label();
-            this.CBBusqueda = new System.Windows.Forms.ComboBox();
-            this.LBuscarPor = new System.Windows.Forms.Label();
-            this.TxtBusqueda = new System.Windows.Forms.TextBox();
-            this.IBLimpiar = new FontAwesome.Sharp.IconButton();
-            this.IBBuscar = new FontAwesome.Sharp.IconButton();
             this.BSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.IdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +39,13 @@
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelBusqueda = new System.Windows.Forms.Panel();
+            this.IBLimpiar = new FontAwesome.Sharp.IconButton();
+            this.LListaProveedor = new System.Windows.Forms.Label();
+            this.IBBuscar = new FontAwesome.Sharp.IconButton();
+            this.CBBusqueda = new System.Windows.Forms.ComboBox();
+            this.LBuscarPor = new System.Windows.Forms.Label();
+            this.TxtBusqueda = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDatos)).BeginInit();
             this.panelBusqueda.SuspendLayout();
             this.SuspendLayout();
@@ -92,96 +92,6 @@
             this.dataGridDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridDatos.Size = new System.Drawing.Size(660, 375);
             this.dataGridDatos.TabIndex = 40;
-            // 
-            // panelBusqueda
-            // 
-            this.panelBusqueda.BackColor = System.Drawing.Color.White;
-            this.panelBusqueda.Controls.Add(this.IBLimpiar);
-            this.panelBusqueda.Controls.Add(this.LListaProveedor);
-            this.panelBusqueda.Controls.Add(this.IBBuscar);
-            this.panelBusqueda.Controls.Add(this.CBBusqueda);
-            this.panelBusqueda.Controls.Add(this.LBuscarPor);
-            this.panelBusqueda.Controls.Add(this.TxtBusqueda);
-            this.panelBusqueda.Location = new System.Drawing.Point(12, 12);
-            this.panelBusqueda.Name = "panelBusqueda";
-            this.panelBusqueda.Size = new System.Drawing.Size(659, 84);
-            this.panelBusqueda.TabIndex = 41;
-            // 
-            // LListaProveedor
-            // 
-            this.LListaProveedor.AutoSize = true;
-            this.LListaProveedor.BackColor = System.Drawing.Color.White;
-            this.LListaProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LListaProveedor.ForeColor = System.Drawing.Color.Black;
-            this.LListaProveedor.Location = new System.Drawing.Point(3, 11);
-            this.LListaProveedor.Name = "LListaProveedor";
-            this.LListaProveedor.Size = new System.Drawing.Size(194, 25);
-            this.LListaProveedor.TabIndex = 1;
-            this.LListaProveedor.Text = "Lista de proveedores";
-            this.LListaProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // CBBusqueda
-            // 
-            this.CBBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CBBusqueda.FormattingEnabled = true;
-            this.CBBusqueda.Location = new System.Drawing.Point(169, 49);
-            this.CBBusqueda.Name = "CBBusqueda";
-            this.CBBusqueda.Size = new System.Drawing.Size(146, 21);
-            this.CBBusqueda.TabIndex = 27;
-            // 
-            // LBuscarPor
-            // 
-            this.LBuscarPor.AutoSize = true;
-            this.LBuscarPor.BackColor = System.Drawing.Color.White;
-            this.LBuscarPor.ForeColor = System.Drawing.Color.Black;
-            this.LBuscarPor.Location = new System.Drawing.Point(102, 52);
-            this.LBuscarPor.Name = "LBuscarPor";
-            this.LBuscarPor.Size = new System.Drawing.Size(61, 13);
-            this.LBuscarPor.TabIndex = 16;
-            this.LBuscarPor.Text = "Buscar por:";
-            // 
-            // TxtBusqueda
-            // 
-            this.TxtBusqueda.Location = new System.Drawing.Point(344, 49);
-            this.TxtBusqueda.Name = "TxtBusqueda";
-            this.TxtBusqueda.Size = new System.Drawing.Size(183, 20);
-            this.TxtBusqueda.TabIndex = 25;
-            // 
-            // IBLimpiar
-            // 
-            this.IBLimpiar.BackColor = System.Drawing.Color.White;
-            this.IBLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.IBLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.IBLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBLimpiar.ForeColor = System.Drawing.Color.Black;
-            this.IBLimpiar.IconChar = FontAwesome.Sharp.IconChar.Eraser;
-            this.IBLimpiar.IconColor = System.Drawing.Color.Black;
-            this.IBLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IBLimpiar.IconSize = 16;
-            this.IBLimpiar.Location = new System.Drawing.Point(593, 44);
-            this.IBLimpiar.Name = "IBLimpiar";
-            this.IBLimpiar.Size = new System.Drawing.Size(41, 28);
-            this.IBLimpiar.TabIndex = 33;
-            this.IBLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.IBLimpiar.UseVisualStyleBackColor = false;
-            // 
-            // IBBuscar
-            // 
-            this.IBBuscar.BackColor = System.Drawing.Color.Gold;
-            this.IBBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.IBBuscar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.IBBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBBuscar.ForeColor = System.Drawing.Color.Black;
-            this.IBBuscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.IBBuscar.IconColor = System.Drawing.Color.Black;
-            this.IBBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IBBuscar.IconSize = 16;
-            this.IBBuscar.Location = new System.Drawing.Point(546, 44);
-            this.IBBuscar.Name = "IBBuscar";
-            this.IBBuscar.Size = new System.Drawing.Size(41, 28);
-            this.IBBuscar.TabIndex = 30;
-            this.IBBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.IBBuscar.UseVisualStyleBackColor = false;
             // 
             // BSeleccionar
             // 
@@ -251,6 +161,97 @@
             this.EstadoValor.ReadOnly = true;
             this.EstadoValor.Visible = false;
             this.EstadoValor.Width = 125;
+            // 
+            // panelBusqueda
+            // 
+            this.panelBusqueda.BackColor = System.Drawing.Color.White;
+            this.panelBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelBusqueda.Controls.Add(this.IBLimpiar);
+            this.panelBusqueda.Controls.Add(this.LListaProveedor);
+            this.panelBusqueda.Controls.Add(this.IBBuscar);
+            this.panelBusqueda.Controls.Add(this.CBBusqueda);
+            this.panelBusqueda.Controls.Add(this.LBuscarPor);
+            this.panelBusqueda.Controls.Add(this.TxtBusqueda);
+            this.panelBusqueda.Location = new System.Drawing.Point(12, 12);
+            this.panelBusqueda.Name = "panelBusqueda";
+            this.panelBusqueda.Size = new System.Drawing.Size(659, 84);
+            this.panelBusqueda.TabIndex = 41;
+            // 
+            // IBLimpiar
+            // 
+            this.IBLimpiar.BackColor = System.Drawing.Color.White;
+            this.IBLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.IBLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.IBLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IBLimpiar.ForeColor = System.Drawing.Color.Black;
+            this.IBLimpiar.IconChar = FontAwesome.Sharp.IconChar.Eraser;
+            this.IBLimpiar.IconColor = System.Drawing.Color.Black;
+            this.IBLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IBLimpiar.IconSize = 16;
+            this.IBLimpiar.Location = new System.Drawing.Point(593, 44);
+            this.IBLimpiar.Name = "IBLimpiar";
+            this.IBLimpiar.Size = new System.Drawing.Size(41, 28);
+            this.IBLimpiar.TabIndex = 33;
+            this.IBLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.IBLimpiar.UseVisualStyleBackColor = false;
+            // 
+            // LListaProveedor
+            // 
+            this.LListaProveedor.AutoSize = true;
+            this.LListaProveedor.BackColor = System.Drawing.Color.White;
+            this.LListaProveedor.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LListaProveedor.ForeColor = System.Drawing.Color.Black;
+            this.LListaProveedor.Location = new System.Drawing.Point(3, 11);
+            this.LListaProveedor.Name = "LListaProveedor";
+            this.LListaProveedor.Size = new System.Drawing.Size(218, 23);
+            this.LListaProveedor.TabIndex = 1;
+            this.LListaProveedor.Text = "Lista de proveedores";
+            this.LListaProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // IBBuscar
+            // 
+            this.IBBuscar.BackColor = System.Drawing.Color.Gold;
+            this.IBBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.IBBuscar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.IBBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IBBuscar.ForeColor = System.Drawing.Color.Black;
+            this.IBBuscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.IBBuscar.IconColor = System.Drawing.Color.Black;
+            this.IBBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IBBuscar.IconSize = 16;
+            this.IBBuscar.Location = new System.Drawing.Point(546, 44);
+            this.IBBuscar.Name = "IBBuscar";
+            this.IBBuscar.Size = new System.Drawing.Size(41, 28);
+            this.IBBuscar.TabIndex = 30;
+            this.IBBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.IBBuscar.UseVisualStyleBackColor = false;
+            // 
+            // CBBusqueda
+            // 
+            this.CBBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBBusqueda.FormattingEnabled = true;
+            this.CBBusqueda.Location = new System.Drawing.Point(169, 49);
+            this.CBBusqueda.Name = "CBBusqueda";
+            this.CBBusqueda.Size = new System.Drawing.Size(146, 21);
+            this.CBBusqueda.TabIndex = 27;
+            // 
+            // LBuscarPor
+            // 
+            this.LBuscarPor.AutoSize = true;
+            this.LBuscarPor.BackColor = System.Drawing.Color.White;
+            this.LBuscarPor.ForeColor = System.Drawing.Color.Black;
+            this.LBuscarPor.Location = new System.Drawing.Point(102, 52);
+            this.LBuscarPor.Name = "LBuscarPor";
+            this.LBuscarPor.Size = new System.Drawing.Size(61, 13);
+            this.LBuscarPor.TabIndex = 16;
+            this.LBuscarPor.Text = "Buscar por:";
+            // 
+            // TxtBusqueda
+            // 
+            this.TxtBusqueda.Location = new System.Drawing.Point(344, 49);
+            this.TxtBusqueda.Name = "TxtBusqueda";
+            this.TxtBusqueda.Size = new System.Drawing.Size(183, 20);
+            this.TxtBusqueda.TabIndex = 25;
             // 
             // mdProveedor
             // 

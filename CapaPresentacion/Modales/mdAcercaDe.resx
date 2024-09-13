@@ -117,10 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Nuestro Sistema de Ventas de Escritorio está diseñado para optimizar la gestión de ventas y mejorar la eficiencia de tu negocio. Con una interfaz intuitiva, permite realizar transacciones de manera rápida y sencilla, gestionar inventarios, y generar reportes detallados para una toma de decisiones más informada.</value>
-  </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Te garantizamos un sistema seguro y confiable, con soporte técnico disponible para resolver cualquier inquietud. Con nuestro software, tu negocio no solo aumentará su productividad, sino que también mejorará la experiencia de tus clientes. ¡Transforma tu forma de vender!</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Nuestro Sistema de Ventas de Escritorio está diseñado para optimizar la gestión de ventas y mejorar la eficiencia de tu negocio. Con una interfaz intuitiva, permite realizar transacciones de manera rápida y sencilla, gestionar inventarios, y generar reportes detallados para una toma de decisiones más informada.</value>
   </data>
 </root>

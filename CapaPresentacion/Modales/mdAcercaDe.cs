@@ -16,5 +16,10 @@ namespace CapaPresentacion.Modales
         {
             InitializeComponent();
         }
+
+        private void IBVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel1 = new System.Windows.Forms.Panel();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.PanelReporteComprasSuperior = new System.Windows.Forms.Panel();
             this.IBBuscarProveedorReporteCompra = new FontAwesome.Sharp.IconButton();
             this.CBProveedorReporteCompra = new System.Windows.Forms.ComboBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -54,33 +54,34 @@
             this.PrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panelBusqueda = new System.Windows.Forms.Panel();
+            this.panelBusquedaInferior = new System.Windows.Forms.Panel();
             this.BDescargarExcel = new System.Windows.Forms.Button();
             this.IBLimpiar = new FontAwesome.Sharp.IconButton();
             this.LBuscarPor = new System.Windows.Forms.Label();
             this.TxtBusqueda = new System.Windows.Forms.TextBox();
             this.CBBusqueda = new System.Windows.Forms.ComboBox();
             this.IBBuscar = new FontAwesome.Sharp.IconButton();
-            this.panel1.SuspendLayout();
+            this.PanelReporteComprasSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDatos)).BeginInit();
-            this.panelBusqueda.SuspendLayout();
+            this.panelBusquedaInferior.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // PanelReporteComprasSuperior
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.IBBuscarProveedorReporteCompra);
-            this.panel1.Controls.Add(this.CBProveedorReporteCompra);
-            this.panel1.Controls.Add(this.dateTimePicker2);
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.LProveedorReporte);
-            this.panel1.Controls.Add(this.LFechaHasta);
-            this.panel1.Controls.Add(this.LFechaInicio);
-            this.panel1.Controls.Add(this.LReporteCompras);
-            this.panel1.Location = new System.Drawing.Point(12, 5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1224, 78);
-            this.panel1.TabIndex = 0;
+            this.PanelReporteComprasSuperior.BackColor = System.Drawing.Color.White;
+            this.PanelReporteComprasSuperior.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.PanelReporteComprasSuperior.Controls.Add(this.IBBuscarProveedorReporteCompra);
+            this.PanelReporteComprasSuperior.Controls.Add(this.CBProveedorReporteCompra);
+            this.PanelReporteComprasSuperior.Controls.Add(this.dateTimePicker2);
+            this.PanelReporteComprasSuperior.Controls.Add(this.dateTimePicker1);
+            this.PanelReporteComprasSuperior.Controls.Add(this.LProveedorReporte);
+            this.PanelReporteComprasSuperior.Controls.Add(this.LFechaHasta);
+            this.PanelReporteComprasSuperior.Controls.Add(this.LFechaInicio);
+            this.PanelReporteComprasSuperior.Controls.Add(this.LReporteCompras);
+            this.PanelReporteComprasSuperior.Location = new System.Drawing.Point(12, 5);
+            this.PanelReporteComprasSuperior.Name = "PanelReporteComprasSuperior";
+            this.PanelReporteComprasSuperior.Size = new System.Drawing.Size(1224, 78);
+            this.PanelReporteComprasSuperior.TabIndex = 0;
             // 
             // IBBuscarProveedorReporteCompra
             // 
@@ -167,15 +168,15 @@
             // 
             this.dataGridDatos.AllowUserToAddRows = false;
             this.dataGridDatos.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.FechaRegistro,
@@ -196,14 +197,14 @@
             this.dataGridDatos.MultiSelect = false;
             this.dataGridDatos.Name = "dataGridDatos";
             this.dataGridDatos.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridDatos.RowTemplate.Height = 28;
             this.dataGridDatos.Size = new System.Drawing.Size(1193, 406);
             this.dataGridDatos.TabIndex = 8;
@@ -293,20 +294,21 @@
             this.SubTotal.Name = "SubTotal";
             this.SubTotal.ReadOnly = true;
             // 
-            // panelBusqueda
+            // panelBusquedaInferior
             // 
-            this.panelBusqueda.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.panelBusqueda.Controls.Add(this.dataGridDatos);
-            this.panelBusqueda.Controls.Add(this.BDescargarExcel);
-            this.panelBusqueda.Controls.Add(this.IBLimpiar);
-            this.panelBusqueda.Controls.Add(this.LBuscarPor);
-            this.panelBusqueda.Controls.Add(this.TxtBusqueda);
-            this.panelBusqueda.Controls.Add(this.CBBusqueda);
-            this.panelBusqueda.Controls.Add(this.IBBuscar);
-            this.panelBusqueda.Location = new System.Drawing.Point(12, 89);
-            this.panelBusqueda.Name = "panelBusqueda";
-            this.panelBusqueda.Size = new System.Drawing.Size(1224, 482);
-            this.panelBusqueda.TabIndex = 37;
+            this.panelBusquedaInferior.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panelBusquedaInferior.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelBusquedaInferior.Controls.Add(this.dataGridDatos);
+            this.panelBusquedaInferior.Controls.Add(this.BDescargarExcel);
+            this.panelBusquedaInferior.Controls.Add(this.IBLimpiar);
+            this.panelBusquedaInferior.Controls.Add(this.LBuscarPor);
+            this.panelBusquedaInferior.Controls.Add(this.TxtBusqueda);
+            this.panelBusquedaInferior.Controls.Add(this.CBBusqueda);
+            this.panelBusquedaInferior.Controls.Add(this.IBBuscar);
+            this.panelBusquedaInferior.Location = new System.Drawing.Point(12, 89);
+            this.panelBusquedaInferior.Name = "panelBusquedaInferior";
+            this.panelBusquedaInferior.Size = new System.Drawing.Size(1224, 482);
+            this.panelBusquedaInferior.TabIndex = 37;
             // 
             // BDescargarExcel
             // 
@@ -388,22 +390,22 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1326, 644);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panelBusqueda);
+            this.Controls.Add(this.PanelReporteComprasSuperior);
+            this.Controls.Add(this.panelBusquedaInferior);
             this.Name = "FormReporteCompras";
             this.Text = "FormReporteCompras";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.PanelReporteComprasSuperior.ResumeLayout(false);
+            this.PanelReporteComprasSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDatos)).EndInit();
-            this.panelBusqueda.ResumeLayout(false);
-            this.panelBusqueda.PerformLayout();
+            this.panelBusquedaInferior.ResumeLayout(false);
+            this.panelBusquedaInferior.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel PanelReporteComprasSuperior;
         private System.Windows.Forms.Label LReporteCompras;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label LFechaInicio;
@@ -427,7 +429,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
-        private System.Windows.Forms.Panel panelBusqueda;
+        private System.Windows.Forms.Panel panelBusquedaInferior;
         private FontAwesome.Sharp.IconButton IBLimpiar;
         private System.Windows.Forms.Label LBuscarPor;
         private System.Windows.Forms.TextBox TxtBusqueda;

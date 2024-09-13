@@ -358,10 +358,10 @@
             // 
             this.LDetalleProducto.AutoSize = true;
             this.LDetalleProducto.BackColor = System.Drawing.Color.White;
-            this.LDetalleProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LDetalleProducto.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LDetalleProducto.Location = new System.Drawing.Point(40, 9);
             this.LDetalleProducto.Name = "LDetalleProducto";
-            this.LDetalleProducto.Size = new System.Drawing.Size(190, 25);
+            this.LDetalleProducto.Size = new System.Drawing.Size(214, 23);
             this.LDetalleProducto.TabIndex = 17;
             this.LDetalleProducto.Text = "Detalle de productos";
             // 
@@ -430,11 +430,11 @@
             // 
             this.LListaProductos.AutoSize = true;
             this.LListaProductos.BackColor = System.Drawing.Color.White;
-            this.LListaProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LListaProductos.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LListaProductos.ForeColor = System.Drawing.Color.Black;
             this.LListaProductos.Location = new System.Drawing.Point(3, 11);
             this.LListaProductos.Name = "LListaProductos";
-            this.LListaProductos.Size = new System.Drawing.Size(171, 25);
+            this.LListaProductos.Size = new System.Drawing.Size(193, 23);
             this.LListaProductos.TabIndex = 7;
             this.LListaProductos.Text = "Lista de productos";
             this.LListaProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -461,6 +461,7 @@
             // panelFormulario
             // 
             this.panelFormulario.BackColor = System.Drawing.Color.White;
+            this.panelFormulario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelFormulario.Controls.Add(this.LDetalleProducto);
             this.panelFormulario.Controls.Add(this.IBVaciar);
             this.panelFormulario.Controls.Add(this.LDescripcion);
@@ -486,6 +487,7 @@
             // panelBusqueda
             // 
             this.panelBusqueda.BackColor = System.Drawing.Color.White;
+            this.panelBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelBusqueda.Controls.Add(this.LListaProductos);
             this.panelBusqueda.Controls.Add(this.IBLimpiar);
             this.panelBusqueda.Controls.Add(this.LBuscarPor);
