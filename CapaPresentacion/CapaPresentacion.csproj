@@ -27,6 +27,8 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -121,12 +123,6 @@
     </Compile>
     <Compile Include="Gerente_Comercial\FormReporteCompras.Designer.cs">
       <DependentUpon>FormReporteCompras.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Gerente_Comercial\FormReportes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Gerente_Comercial\FormReportes.Designer.cs">
-      <DependentUpon>FormReportes.cs</DependentUpon>
     </Compile>
     <Compile Include="Gerente_Comercial\FormReporteVentas.cs">
       <SubType>Form</SubType>

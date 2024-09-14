@@ -30,23 +30,6 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.LApellido = new System.Windows.Forms.Label();
-            this.LNombre = new System.Windows.Forms.Label();
-            this.L_NroDocumento = new System.Windows.Forms.Label();
-            this.TxtDocumento = new System.Windows.Forms.TextBox();
-            this.TxtNombre = new System.Windows.Forms.TextBox();
-            this.TxtApellido = new System.Windows.Forms.TextBox();
-            this.LCorreo = new System.Windows.Forms.Label();
-            this.TxtCorreo = new System.Windows.Forms.TextBox();
-            this.LContrasenia = new System.Windows.Forms.Label();
-            this.TxtClave = new System.Windows.Forms.TextBox();
-            this.LConfirmarContrasenia = new System.Windows.Forms.Label();
-            this.TxtConfClave = new System.Windows.Forms.TextBox();
-            this.CBRol = new System.Windows.Forms.ComboBox();
-            this.CBEstado = new System.Windows.Forms.ComboBox();
-            this.LRol = new System.Windows.Forms.Label();
-            this.LEstado = new System.Windows.Forms.Label();
-            this.LDetalleUsuario = new System.Windows.Forms.Label();
             this.dataGridDatos = new System.Windows.Forms.DataGridView();
             this.BSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.IdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,172 +43,38 @@
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LListaUsuarios = new System.Windows.Forms.Label();
-            this.TxtSeleccionId = new System.Windows.Forms.TextBox();
             this.LBuscarPor = new System.Windows.Forms.Label();
             this.CBBusqueda = new System.Windows.Forms.ComboBox();
             this.TxtBusqueda = new System.Windows.Forms.TextBox();
             this.IBLimpiar = new FontAwesome.Sharp.IconButton();
-            this.IBVaciar = new FontAwesome.Sharp.IconButton();
-            this.IBEliminar = new FontAwesome.Sharp.IconButton();
             this.IBBuscar = new FontAwesome.Sharp.IconButton();
-            this.IBGuardar = new FontAwesome.Sharp.IconButton();
-            this.panelFormulario = new System.Windows.Forms.Panel();
             this.panelBusqueda = new System.Windows.Forms.Panel();
+            this.TxtApellido = new System.Windows.Forms.TextBox();
+            this.TxtCorreo = new System.Windows.Forms.TextBox();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
+            this.TxtClave = new System.Windows.Forms.TextBox();
+            this.TxtSeleccionId = new System.Windows.Forms.TextBox();
+            this.TxtDocumento = new System.Windows.Forms.TextBox();
+            this.TxtConfClave = new System.Windows.Forms.TextBox();
+            this.L_NroDocumento = new System.Windows.Forms.Label();
+            this.CBRol = new System.Windows.Forms.ComboBox();
+            this.LEstado = new System.Windows.Forms.Label();
+            this.LRol = new System.Windows.Forms.Label();
+            this.CBEstado = new System.Windows.Forms.ComboBox();
+            this.LConfirmarContrasenia = new System.Windows.Forms.Label();
+            this.IBGuardar = new FontAwesome.Sharp.IconButton();
+            this.LNombre = new System.Windows.Forms.Label();
+            this.LContrasenia = new System.Windows.Forms.Label();
+            this.IBEliminar = new FontAwesome.Sharp.IconButton();
+            this.LCorreo = new System.Windows.Forms.Label();
+            this.IBVaciar = new FontAwesome.Sharp.IconButton();
+            this.LApellido = new System.Windows.Forms.Label();
+            this.LDetalleUsuario = new System.Windows.Forms.Label();
+            this.panelFormulario = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDatos)).BeginInit();
-            this.panelFormulario.SuspendLayout();
             this.panelBusqueda.SuspendLayout();
+            this.panelFormulario.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // LApellido
-            // 
-            this.LApellido.AutoSize = true;
-            this.LApellido.BackColor = System.Drawing.Color.White;
-            this.LApellido.Location = new System.Drawing.Point(41, 142);
-            this.LApellido.Name = "LApellido";
-            this.LApellido.Size = new System.Drawing.Size(47, 13);
-            this.LApellido.TabIndex = 1;
-            this.LApellido.Text = "Apellido:";
-            // 
-            // LNombre
-            // 
-            this.LNombre.AutoSize = true;
-            this.LNombre.BackColor = System.Drawing.Color.White;
-            this.LNombre.Location = new System.Drawing.Point(41, 93);
-            this.LNombre.Name = "LNombre";
-            this.LNombre.Size = new System.Drawing.Size(47, 13);
-            this.LNombre.TabIndex = 1;
-            this.LNombre.Text = "Nombre:";
-            // 
-            // L_NroDocumento
-            // 
-            this.L_NroDocumento.AutoSize = true;
-            this.L_NroDocumento.BackColor = System.Drawing.Color.White;
-            this.L_NroDocumento.Location = new System.Drawing.Point(41, 43);
-            this.L_NroDocumento.Name = "L_NroDocumento";
-            this.L_NroDocumento.Size = new System.Drawing.Size(88, 13);
-            this.L_NroDocumento.TabIndex = 1;
-            this.L_NroDocumento.Text = "Nro. Documento:";
-            // 
-            // TxtDocumento
-            // 
-            this.TxtDocumento.Location = new System.Drawing.Point(44, 59);
-            this.TxtDocumento.Name = "TxtDocumento";
-            this.TxtDocumento.Size = new System.Drawing.Size(240, 20);
-            this.TxtDocumento.TabIndex = 2;
-            // 
-            // TxtNombre
-            // 
-            this.TxtNombre.Location = new System.Drawing.Point(44, 109);
-            this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(240, 20);
-            this.TxtNombre.TabIndex = 2;
-            // 
-            // TxtApellido
-            // 
-            this.TxtApellido.Location = new System.Drawing.Point(44, 158);
-            this.TxtApellido.Name = "TxtApellido";
-            this.TxtApellido.Size = new System.Drawing.Size(240, 20);
-            this.TxtApellido.TabIndex = 2;
-            // 
-            // LCorreo
-            // 
-            this.LCorreo.AutoSize = true;
-            this.LCorreo.BackColor = System.Drawing.Color.White;
-            this.LCorreo.Location = new System.Drawing.Point(41, 191);
-            this.LCorreo.Name = "LCorreo";
-            this.LCorreo.Size = new System.Drawing.Size(93, 13);
-            this.LCorreo.TabIndex = 1;
-            this.LCorreo.Text = "Correo electónico:";
-            // 
-            // TxtCorreo
-            // 
-            this.TxtCorreo.Location = new System.Drawing.Point(44, 207);
-            this.TxtCorreo.Name = "TxtCorreo";
-            this.TxtCorreo.Size = new System.Drawing.Size(240, 20);
-            this.TxtCorreo.TabIndex = 2;
-            // 
-            // LContrasenia
-            // 
-            this.LContrasenia.AutoSize = true;
-            this.LContrasenia.BackColor = System.Drawing.Color.White;
-            this.LContrasenia.Location = new System.Drawing.Point(41, 239);
-            this.LContrasenia.Name = "LContrasenia";
-            this.LContrasenia.Size = new System.Drawing.Size(64, 13);
-            this.LContrasenia.TabIndex = 1;
-            this.LContrasenia.Text = "Contraseña:";
-            // 
-            // TxtClave
-            // 
-            this.TxtClave.Location = new System.Drawing.Point(44, 255);
-            this.TxtClave.Name = "TxtClave";
-            this.TxtClave.Size = new System.Drawing.Size(240, 20);
-            this.TxtClave.TabIndex = 2;
-            // 
-            // LConfirmarContrasenia
-            // 
-            this.LConfirmarContrasenia.AutoSize = true;
-            this.LConfirmarContrasenia.BackColor = System.Drawing.Color.White;
-            this.LConfirmarContrasenia.Location = new System.Drawing.Point(41, 287);
-            this.LConfirmarContrasenia.Name = "LConfirmarContrasenia";
-            this.LConfirmarContrasenia.Size = new System.Drawing.Size(110, 13);
-            this.LConfirmarContrasenia.TabIndex = 1;
-            this.LConfirmarContrasenia.Text = "Confirmar contraseña:";
-            // 
-            // TxtConfClave
-            // 
-            this.TxtConfClave.Location = new System.Drawing.Point(44, 303);
-            this.TxtConfClave.Name = "TxtConfClave";
-            this.TxtConfClave.Size = new System.Drawing.Size(240, 20);
-            this.TxtConfClave.TabIndex = 2;
-            // 
-            // CBRol
-            // 
-            this.CBRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CBRol.FormattingEnabled = true;
-            this.CBRol.Location = new System.Drawing.Point(44, 354);
-            this.CBRol.Name = "CBRol";
-            this.CBRol.Size = new System.Drawing.Size(240, 21);
-            this.CBRol.TabIndex = 3;
-            // 
-            // CBEstado
-            // 
-            this.CBEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CBEstado.FormattingEnabled = true;
-            this.CBEstado.Location = new System.Drawing.Point(44, 402);
-            this.CBEstado.Name = "CBEstado";
-            this.CBEstado.Size = new System.Drawing.Size(240, 21);
-            this.CBEstado.TabIndex = 3;
-            // 
-            // LRol
-            // 
-            this.LRol.AutoSize = true;
-            this.LRol.BackColor = System.Drawing.Color.White;
-            this.LRol.Location = new System.Drawing.Point(41, 338);
-            this.LRol.Name = "LRol";
-            this.LRol.Size = new System.Drawing.Size(26, 13);
-            this.LRol.TabIndex = 1;
-            this.LRol.Text = "Rol:";
-            // 
-            // LEstado
-            // 
-            this.LEstado.AutoSize = true;
-            this.LEstado.BackColor = System.Drawing.Color.White;
-            this.LEstado.Location = new System.Drawing.Point(41, 386);
-            this.LEstado.Name = "LEstado";
-            this.LEstado.Size = new System.Drawing.Size(43, 13);
-            this.LEstado.TabIndex = 1;
-            this.LEstado.Text = "Estado:";
-            // 
-            // LDetalleUsuario
-            // 
-            this.LDetalleUsuario.AutoSize = true;
-            this.LDetalleUsuario.BackColor = System.Drawing.Color.White;
-            this.LDetalleUsuario.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LDetalleUsuario.Location = new System.Drawing.Point(39, 9);
-            this.LDetalleUsuario.Name = "LDetalleUsuario";
-            this.LDetalleUsuario.Size = new System.Drawing.Size(186, 23);
-            this.LDetalleUsuario.TabIndex = 1;
-            this.LDetalleUsuario.Text = "Detalle de usuario";
             // 
             // dataGridDatos
             // 
@@ -357,15 +206,6 @@
             this.LListaUsuarios.Text = "Lista de usuarios";
             this.LListaUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // TxtSeleccionId
-            // 
-            this.TxtSeleccionId.Location = new System.Drawing.Point(261, 26);
-            this.TxtSeleccionId.Name = "TxtSeleccionId";
-            this.TxtSeleccionId.Size = new System.Drawing.Size(23, 20);
-            this.TxtSeleccionId.TabIndex = 2;
-            this.TxtSeleccionId.Text = "0";
-            this.TxtSeleccionId.Visible = false;
-            // 
             // LBuscarPor
             // 
             this.LBuscarPor.AutoSize = true;
@@ -411,46 +251,6 @@
             this.IBLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IBLimpiar.UseVisualStyleBackColor = false;
             // 
-            // IBVaciar
-            // 
-            this.IBVaciar.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.IBVaciar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.IBVaciar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.IBVaciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBVaciar.ForeColor = System.Drawing.Color.White;
-            this.IBVaciar.IconChar = FontAwesome.Sharp.IconChar.Eraser;
-            this.IBVaciar.IconColor = System.Drawing.Color.White;
-            this.IBVaciar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IBVaciar.IconSize = 16;
-            this.IBVaciar.Location = new System.Drawing.Point(44, 488);
-            this.IBVaciar.Name = "IBVaciar";
-            this.IBVaciar.Size = new System.Drawing.Size(192, 28);
-            this.IBVaciar.TabIndex = 4;
-            this.IBVaciar.Text = "Limpiar";
-            this.IBVaciar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.IBVaciar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.IBVaciar.UseVisualStyleBackColor = false;
-            // 
-            // IBEliminar
-            // 
-            this.IBEliminar.BackColor = System.Drawing.Color.Firebrick;
-            this.IBEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.IBEliminar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.IBEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBEliminar.ForeColor = System.Drawing.Color.White;
-            this.IBEliminar.IconChar = FontAwesome.Sharp.IconChar.X;
-            this.IBEliminar.IconColor = System.Drawing.Color.White;
-            this.IBEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IBEliminar.IconSize = 16;
-            this.IBEliminar.Location = new System.Drawing.Point(44, 522);
-            this.IBEliminar.Name = "IBEliminar";
-            this.IBEliminar.Size = new System.Drawing.Size(192, 28);
-            this.IBEliminar.TabIndex = 4;
-            this.IBEliminar.Text = "Eliminar";
-            this.IBEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.IBEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.IBEliminar.UseVisualStyleBackColor = false;
-            // 
             // IBBuscar
             // 
             this.IBBuscar.BackColor = System.Drawing.Color.Gold;
@@ -469,14 +269,139 @@
             this.IBBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IBBuscar.UseVisualStyleBackColor = false;
             // 
+            // panelBusqueda
+            // 
+            this.panelBusqueda.BackColor = System.Drawing.Color.White;
+            this.panelBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelBusqueda.Controls.Add(this.LListaUsuarios);
+            this.panelBusqueda.Controls.Add(this.IBLimpiar);
+            this.panelBusqueda.Controls.Add(this.IBBuscar);
+            this.panelBusqueda.Controls.Add(this.LBuscarPor);
+            this.panelBusqueda.Controls.Add(this.CBBusqueda);
+            this.panelBusqueda.Controls.Add(this.TxtBusqueda);
+            this.panelBusqueda.Location = new System.Drawing.Point(321, 9);
+            this.panelBusqueda.Name = "panelBusqueda";
+            this.panelBusqueda.Size = new System.Drawing.Size(931, 47);
+            this.panelBusqueda.TabIndex = 7;
+            // 
+            // TxtApellido
+            // 
+            this.TxtApellido.Location = new System.Drawing.Point(44, 158);
+            this.TxtApellido.Name = "TxtApellido";
+            this.TxtApellido.Size = new System.Drawing.Size(240, 20);
+            this.TxtApellido.TabIndex = 2;
+            // 
+            // TxtCorreo
+            // 
+            this.TxtCorreo.Location = new System.Drawing.Point(44, 207);
+            this.TxtCorreo.Name = "TxtCorreo";
+            this.TxtCorreo.Size = new System.Drawing.Size(240, 20);
+            this.TxtCorreo.TabIndex = 2;
+            // 
+            // TxtNombre
+            // 
+            this.TxtNombre.Location = new System.Drawing.Point(44, 109);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(240, 20);
+            this.TxtNombre.TabIndex = 2;
+            // 
+            // TxtClave
+            // 
+            this.TxtClave.Location = new System.Drawing.Point(44, 255);
+            this.TxtClave.Name = "TxtClave";
+            this.TxtClave.Size = new System.Drawing.Size(240, 20);
+            this.TxtClave.TabIndex = 2;
+            // 
+            // TxtSeleccionId
+            // 
+            this.TxtSeleccionId.Location = new System.Drawing.Point(261, 26);
+            this.TxtSeleccionId.Name = "TxtSeleccionId";
+            this.TxtSeleccionId.Size = new System.Drawing.Size(23, 20);
+            this.TxtSeleccionId.TabIndex = 2;
+            this.TxtSeleccionId.Text = "0";
+            this.TxtSeleccionId.Visible = false;
+            // 
+            // TxtDocumento
+            // 
+            this.TxtDocumento.Location = new System.Drawing.Point(44, 59);
+            this.TxtDocumento.Name = "TxtDocumento";
+            this.TxtDocumento.Size = new System.Drawing.Size(240, 20);
+            this.TxtDocumento.TabIndex = 2;
+            // 
+            // TxtConfClave
+            // 
+            this.TxtConfClave.Location = new System.Drawing.Point(44, 303);
+            this.TxtConfClave.Name = "TxtConfClave";
+            this.TxtConfClave.Size = new System.Drawing.Size(240, 20);
+            this.TxtConfClave.TabIndex = 2;
+            // 
+            // L_NroDocumento
+            // 
+            this.L_NroDocumento.AutoSize = true;
+            this.L_NroDocumento.BackColor = System.Drawing.Color.White;
+            this.L_NroDocumento.Location = new System.Drawing.Point(41, 43);
+            this.L_NroDocumento.Name = "L_NroDocumento";
+            this.L_NroDocumento.Size = new System.Drawing.Size(88, 13);
+            this.L_NroDocumento.TabIndex = 1;
+            this.L_NroDocumento.Text = "Nro. Documento:";
+            // 
+            // CBRol
+            // 
+            this.CBRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBRol.FormattingEnabled = true;
+            this.CBRol.Location = new System.Drawing.Point(44, 354);
+            this.CBRol.Name = "CBRol";
+            this.CBRol.Size = new System.Drawing.Size(240, 21);
+            this.CBRol.TabIndex = 3;
+            // 
+            // LEstado
+            // 
+            this.LEstado.AutoSize = true;
+            this.LEstado.BackColor = System.Drawing.Color.White;
+            this.LEstado.Location = new System.Drawing.Point(41, 386);
+            this.LEstado.Name = "LEstado";
+            this.LEstado.Size = new System.Drawing.Size(43, 13);
+            this.LEstado.TabIndex = 1;
+            this.LEstado.Text = "Estado:";
+            // 
+            // LRol
+            // 
+            this.LRol.AutoSize = true;
+            this.LRol.BackColor = System.Drawing.Color.White;
+            this.LRol.Location = new System.Drawing.Point(41, 338);
+            this.LRol.Name = "LRol";
+            this.LRol.Size = new System.Drawing.Size(26, 13);
+            this.LRol.TabIndex = 1;
+            this.LRol.Text = "Rol:";
+            // 
+            // CBEstado
+            // 
+            this.CBEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBEstado.FormattingEnabled = true;
+            this.CBEstado.Location = new System.Drawing.Point(44, 402);
+            this.CBEstado.Name = "CBEstado";
+            this.CBEstado.Size = new System.Drawing.Size(240, 21);
+            this.CBEstado.TabIndex = 3;
+            // 
+            // LConfirmarContrasenia
+            // 
+            this.LConfirmarContrasenia.AutoSize = true;
+            this.LConfirmarContrasenia.BackColor = System.Drawing.Color.White;
+            this.LConfirmarContrasenia.Location = new System.Drawing.Point(41, 287);
+            this.LConfirmarContrasenia.Name = "LConfirmarContrasenia";
+            this.LConfirmarContrasenia.Size = new System.Drawing.Size(110, 13);
+            this.LConfirmarContrasenia.TabIndex = 1;
+            this.LConfirmarContrasenia.Text = "Confirmar contraseña:";
+            // 
             // IBGuardar
             // 
             this.IBGuardar.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.IBGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.IBGuardar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.IBGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IBGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IBGuardar.ForeColor = System.Drawing.Color.White;
-            this.IBGuardar.IconChar = FontAwesome.Sharp.IconChar.Memory;
+            this.IBGuardar.IconChar = FontAwesome.Sharp.IconChar.Check;
             this.IBGuardar.IconColor = System.Drawing.Color.White;
             this.IBGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBGuardar.IconSize = 16;
@@ -488,6 +413,99 @@
             this.IBGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IBGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.IBGuardar.UseVisualStyleBackColor = false;
+            // 
+            // LNombre
+            // 
+            this.LNombre.AutoSize = true;
+            this.LNombre.BackColor = System.Drawing.Color.White;
+            this.LNombre.Location = new System.Drawing.Point(41, 93);
+            this.LNombre.Name = "LNombre";
+            this.LNombre.Size = new System.Drawing.Size(47, 13);
+            this.LNombre.TabIndex = 1;
+            this.LNombre.Text = "Nombre:";
+            // 
+            // LContrasenia
+            // 
+            this.LContrasenia.AutoSize = true;
+            this.LContrasenia.BackColor = System.Drawing.Color.White;
+            this.LContrasenia.Location = new System.Drawing.Point(41, 239);
+            this.LContrasenia.Name = "LContrasenia";
+            this.LContrasenia.Size = new System.Drawing.Size(64, 13);
+            this.LContrasenia.TabIndex = 1;
+            this.LContrasenia.Text = "Contraseña:";
+            // 
+            // IBEliminar
+            // 
+            this.IBEliminar.BackColor = System.Drawing.Color.Firebrick;
+            this.IBEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.IBEliminar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.IBEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IBEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IBEliminar.ForeColor = System.Drawing.Color.White;
+            this.IBEliminar.IconChar = FontAwesome.Sharp.IconChar.X;
+            this.IBEliminar.IconColor = System.Drawing.Color.White;
+            this.IBEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IBEliminar.IconSize = 16;
+            this.IBEliminar.Location = new System.Drawing.Point(43, 488);
+            this.IBEliminar.Name = "IBEliminar";
+            this.IBEliminar.Size = new System.Drawing.Size(192, 28);
+            this.IBEliminar.TabIndex = 4;
+            this.IBEliminar.Text = "Eliminar";
+            this.IBEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.IBEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.IBEliminar.UseVisualStyleBackColor = false;
+            // 
+            // LCorreo
+            // 
+            this.LCorreo.AutoSize = true;
+            this.LCorreo.BackColor = System.Drawing.Color.White;
+            this.LCorreo.Location = new System.Drawing.Point(41, 191);
+            this.LCorreo.Name = "LCorreo";
+            this.LCorreo.Size = new System.Drawing.Size(93, 13);
+            this.LCorreo.TabIndex = 1;
+            this.LCorreo.Text = "Correo electónico:";
+            // 
+            // IBVaciar
+            // 
+            this.IBVaciar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.IBVaciar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.IBVaciar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.IBVaciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IBVaciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IBVaciar.ForeColor = System.Drawing.Color.White;
+            this.IBVaciar.IconChar = FontAwesome.Sharp.IconChar.Eraser;
+            this.IBVaciar.IconColor = System.Drawing.Color.White;
+            this.IBVaciar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IBVaciar.IconSize = 16;
+            this.IBVaciar.Location = new System.Drawing.Point(43, 520);
+            this.IBVaciar.Name = "IBVaciar";
+            this.IBVaciar.Size = new System.Drawing.Size(192, 28);
+            this.IBVaciar.TabIndex = 4;
+            this.IBVaciar.Text = "Limpiar";
+            this.IBVaciar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.IBVaciar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.IBVaciar.UseVisualStyleBackColor = false;
+            // 
+            // LApellido
+            // 
+            this.LApellido.AutoSize = true;
+            this.LApellido.BackColor = System.Drawing.Color.White;
+            this.LApellido.Location = new System.Drawing.Point(41, 142);
+            this.LApellido.Name = "LApellido";
+            this.LApellido.Size = new System.Drawing.Size(47, 13);
+            this.LApellido.TabIndex = 1;
+            this.LApellido.Text = "Apellido:";
+            // 
+            // LDetalleUsuario
+            // 
+            this.LDetalleUsuario.AutoSize = true;
+            this.LDetalleUsuario.BackColor = System.Drawing.Color.White;
+            this.LDetalleUsuario.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LDetalleUsuario.Location = new System.Drawing.Point(39, 9);
+            this.LDetalleUsuario.Name = "LDetalleUsuario";
+            this.LDetalleUsuario.Size = new System.Drawing.Size(186, 23);
+            this.LDetalleUsuario.TabIndex = 1;
+            this.LDetalleUsuario.Text = "Detalle de usuario";
             // 
             // panelFormulario
             // 
@@ -519,21 +537,6 @@
             this.panelFormulario.Size = new System.Drawing.Size(305, 569);
             this.panelFormulario.TabIndex = 6;
             // 
-            // panelBusqueda
-            // 
-            this.panelBusqueda.BackColor = System.Drawing.Color.White;
-            this.panelBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelBusqueda.Controls.Add(this.LListaUsuarios);
-            this.panelBusqueda.Controls.Add(this.IBLimpiar);
-            this.panelBusqueda.Controls.Add(this.IBBuscar);
-            this.panelBusqueda.Controls.Add(this.LBuscarPor);
-            this.panelBusqueda.Controls.Add(this.CBBusqueda);
-            this.panelBusqueda.Controls.Add(this.TxtBusqueda);
-            this.panelBusqueda.Location = new System.Drawing.Point(321, 9);
-            this.panelBusqueda.Name = "panelBusqueda";
-            this.panelBusqueda.Size = new System.Drawing.Size(931, 47);
-            this.panelBusqueda.TabIndex = 7;
-            // 
             // FormUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -545,35 +548,15 @@
             this.Name = "FormUsuario";
             this.Text = "FormUsuario";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDatos)).EndInit();
-            this.panelFormulario.ResumeLayout(false);
-            this.panelFormulario.PerformLayout();
             this.panelBusqueda.ResumeLayout(false);
             this.panelBusqueda.PerformLayout();
+            this.panelFormulario.ResumeLayout(false);
+            this.panelFormulario.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Label LApellido;
-        private System.Windows.Forms.Label LNombre;
-        private System.Windows.Forms.Label L_NroDocumento;
-        private System.Windows.Forms.TextBox TxtDocumento;
-        private System.Windows.Forms.TextBox TxtNombre;
-        private System.Windows.Forms.TextBox TxtApellido;
-        private System.Windows.Forms.Label LCorreo;
-        private System.Windows.Forms.TextBox TxtCorreo;
-        private System.Windows.Forms.Label LContrasenia;
-        private System.Windows.Forms.TextBox TxtClave;
-        private System.Windows.Forms.Label LConfirmarContrasenia;
-        private System.Windows.Forms.TextBox TxtConfClave;
-        private System.Windows.Forms.ComboBox CBRol;
-        private System.Windows.Forms.ComboBox CBEstado;
-        private System.Windows.Forms.Label LRol;
-        private System.Windows.Forms.Label LEstado;
-        private FontAwesome.Sharp.IconButton IBGuardar;
-        private FontAwesome.Sharp.IconButton IBVaciar;
-        private FontAwesome.Sharp.IconButton IBEliminar;
-        private System.Windows.Forms.Label LDetalleUsuario;
         private System.Windows.Forms.DataGridView dataGridDatos;
         private System.Windows.Forms.Label LListaUsuarios;
         private System.Windows.Forms.DataGridViewButtonColumn BSeleccionar;
@@ -587,13 +570,33 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Rol;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoValor;
-        private System.Windows.Forms.TextBox TxtSeleccionId;
         private System.Windows.Forms.Label LBuscarPor;
         private System.Windows.Forms.ComboBox CBBusqueda;
         private System.Windows.Forms.TextBox TxtBusqueda;
         private FontAwesome.Sharp.IconButton IBBuscar;
         private FontAwesome.Sharp.IconButton IBLimpiar;
-        private System.Windows.Forms.Panel panelFormulario;
         private System.Windows.Forms.Panel panelBusqueda;
+        private System.Windows.Forms.TextBox TxtApellido;
+        private System.Windows.Forms.TextBox TxtCorreo;
+        private System.Windows.Forms.TextBox TxtNombre;
+        private System.Windows.Forms.TextBox TxtClave;
+        private System.Windows.Forms.TextBox TxtSeleccionId;
+        private System.Windows.Forms.TextBox TxtDocumento;
+        private System.Windows.Forms.TextBox TxtConfClave;
+        private System.Windows.Forms.Label L_NroDocumento;
+        private System.Windows.Forms.ComboBox CBRol;
+        private System.Windows.Forms.Label LEstado;
+        private System.Windows.Forms.Label LRol;
+        private System.Windows.Forms.ComboBox CBEstado;
+        private System.Windows.Forms.Label LConfirmarContrasenia;
+        private FontAwesome.Sharp.IconButton IBGuardar;
+        private System.Windows.Forms.Label LNombre;
+        private System.Windows.Forms.Label LContrasenia;
+        private FontAwesome.Sharp.IconButton IBEliminar;
+        private System.Windows.Forms.Label LCorreo;
+        private FontAwesome.Sharp.IconButton IBVaciar;
+        private System.Windows.Forms.Label LApellido;
+        private System.Windows.Forms.Label LDetalleUsuario;
+        private System.Windows.Forms.Panel panelFormulario;
     }
 }

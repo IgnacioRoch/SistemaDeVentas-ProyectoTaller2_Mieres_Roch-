@@ -35,7 +35,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.IBVolver = new FontAwesome.Sharp.IconButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lAcercaDe
@@ -54,7 +56,7 @@
             this.LDesarolladoPor.AutoSize = true;
             this.LDesarolladoPor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LDesarolladoPor.ForeColor = System.Drawing.Color.White;
-            this.LDesarolladoPor.Location = new System.Drawing.Point(205, 395);
+            this.LDesarolladoPor.Location = new System.Drawing.Point(205, 431);
             this.LDesarolladoPor.Name = "LDesarolladoPor";
             this.LDesarolladoPor.Size = new System.Drawing.Size(227, 13);
             this.LDesarolladoPor.TabIndex = 2;
@@ -85,11 +87,12 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(12, 48);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(420, 334);
+            this.panel1.Size = new System.Drawing.Size(420, 368);
             this.panel1.TabIndex = 3;
             // 
             // IBVolver
@@ -113,12 +116,23 @@
             this.IBVolver.UseVisualStyleBackColor = false;
             this.IBVolver.Click += new System.EventHandler(this.IBVolver_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.Frame_1;
+            this.pictureBox1.Location = new System.Drawing.Point(350, 300);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(63, 61);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // mdAcercaDe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.ClientSize = new System.Drawing.Size(444, 417);
+            this.ClientSize = new System.Drawing.Size(444, 453);
             this.Controls.Add(this.IBVolver);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.LDesarolladoPor);
@@ -129,6 +143,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "mdAcercaDe";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,5 +156,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton IBVolver;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

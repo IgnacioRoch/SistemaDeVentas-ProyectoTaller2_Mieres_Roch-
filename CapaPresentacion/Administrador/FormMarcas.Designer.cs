@@ -281,6 +281,7 @@
             this.IBVaciar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.IBVaciar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.IBVaciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IBVaciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IBVaciar.ForeColor = System.Drawing.Color.White;
             this.IBVaciar.IconChar = FontAwesome.Sharp.IconChar.Eraser;
             this.IBVaciar.IconColor = System.Drawing.Color.White;
@@ -301,6 +302,7 @@
             this.IBEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.IBEliminar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.IBEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IBEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IBEliminar.ForeColor = System.Drawing.Color.White;
             this.IBEliminar.IconChar = FontAwesome.Sharp.IconChar.X;
             this.IBEliminar.IconColor = System.Drawing.Color.White;
@@ -321,8 +323,9 @@
             this.IBGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.IBGuardar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.IBGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IBGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IBGuardar.ForeColor = System.Drawing.Color.White;
-            this.IBGuardar.IconChar = FontAwesome.Sharp.IconChar.Memory;
+            this.IBGuardar.IconChar = FontAwesome.Sharp.IconChar.Check;
             this.IBGuardar.IconColor = System.Drawing.Color.White;
             this.IBGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBGuardar.IconSize = 16;

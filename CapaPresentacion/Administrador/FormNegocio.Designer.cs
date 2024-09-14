@@ -82,9 +82,9 @@
             this.IBGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.IBGuardar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.IBGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IBGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IBGuardar.ForeColor = System.Drawing.Color.White;
-            this.IBGuardar.IconChar = FontAwesome.Sharp.IconChar.Memory;
+            this.IBGuardar.IconChar = FontAwesome.Sharp.IconChar.Check;
             this.IBGuardar.IconColor = System.Drawing.Color.White;
             this.IBGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBGuardar.IconSize = 16;
@@ -154,7 +154,7 @@
             this.IBSubir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.IBSubir.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.IBSubir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBSubir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IBSubir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IBSubir.ForeColor = System.Drawing.Color.White;
             this.IBSubir.IconChar = FontAwesome.Sharp.IconChar.Upload;
             this.IBSubir.IconColor = System.Drawing.Color.White;

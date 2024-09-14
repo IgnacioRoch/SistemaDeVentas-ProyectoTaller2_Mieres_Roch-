@@ -129,5 +129,10 @@ namespace CapaPresentacion
             }
         }
 
+        private void TimerFechaHora_Tick(object sender, EventArgs e)
+        {
+            LHora.Text = DateTime.Now.ToShortTimeString();
+            LFecha.Text = DateTime.Now.ToLongDateString();
+        }
     }
 }

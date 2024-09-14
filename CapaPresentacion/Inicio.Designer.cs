@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.menu_Usuario = new FontAwesome.Sharp.IconMenuItem();
@@ -56,6 +57,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GBInfoUsuario = new System.Windows.Forms.GroupBox();
             this.LRol = new System.Windows.Forms.Label();
+            this.LFecha = new System.Windows.Forms.Label();
+            this.LHora = new System.Windows.Forms.Label();
+            this.TimerFechaHora = new System.Windows.Forms.Timer(this.components);
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GBInfoUsuario.SuspendLayout();
@@ -162,7 +166,7 @@
             this.subMenuRegistrarVenta,
             this.subMenuVerDetalleVenta});
             this.menu_ventas.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.menu_ventas.IconChar = FontAwesome.Sharp.IconChar.Coins;
+            this.menu_ventas.IconChar = FontAwesome.Sharp.IconChar.CartShopping;
             this.menu_ventas.IconColor = System.Drawing.Color.Black;
             this.menu_ventas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.menu_ventas.IconSize = 55;
@@ -349,11 +353,11 @@
             // 
             this.LUsuario.AutoSize = true;
             this.LUsuario.BackColor = System.Drawing.SystemColors.Highlight;
-            this.LUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LUsuario.ForeColor = System.Drawing.Color.Snow;
-            this.LUsuario.Location = new System.Drawing.Point(19, 28);
+            this.LUsuario.Location = new System.Drawing.Point(19, 13);
             this.LUsuario.Name = "LUsuario";
-            this.LUsuario.Size = new System.Drawing.Size(64, 18);
+            this.LUsuario.Size = new System.Drawing.Size(72, 18);
             this.LUsuario.TabIndex = 0;
             this.LUsuario.Text = "Usuario:";
             // 
@@ -363,7 +367,7 @@
             this.LNomUsuario.BackColor = System.Drawing.SystemColors.Highlight;
             this.LNomUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LNomUsuario.ForeColor = System.Drawing.Color.Snow;
-            this.LNomUsuario.Location = new System.Drawing.Point(89, 28);
+            this.LNomUsuario.Location = new System.Drawing.Point(89, 13);
             this.LNomUsuario.Name = "LNomUsuario";
             this.LNomUsuario.Size = new System.Drawing.Size(115, 18);
             this.LNomUsuario.TabIndex = 0;
@@ -404,12 +408,14 @@
             // GBInfoUsuario
             // 
             this.GBInfoUsuario.BackColor = System.Drawing.SystemColors.Highlight;
+            this.GBInfoUsuario.Controls.Add(this.LHora);
+            this.GBInfoUsuario.Controls.Add(this.LFecha);
             this.GBInfoUsuario.Controls.Add(this.LRol);
             this.GBInfoUsuario.Controls.Add(this.LUsuario);
             this.GBInfoUsuario.Controls.Add(this.LNomUsuario);
-            this.GBInfoUsuario.Location = new System.Drawing.Point(712, 12);
+            this.GBInfoUsuario.Location = new System.Drawing.Point(474, 12);
             this.GBInfoUsuario.Name = "GBInfoUsuario";
-            this.GBInfoUsuario.Size = new System.Drawing.Size(349, 59);
+            this.GBInfoUsuario.Size = new System.Drawing.Size(587, 59);
             this.GBInfoUsuario.TabIndex = 0;
             this.GBInfoUsuario.TabStop = false;
             // 
@@ -417,13 +423,42 @@
             // 
             this.LRol.AutoSize = true;
             this.LRol.BackColor = System.Drawing.SystemColors.Highlight;
-            this.LRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LRol.ForeColor = System.Drawing.Color.Snow;
-            this.LRol.Location = new System.Drawing.Point(210, 28);
+            this.LRol.Location = new System.Drawing.Point(19, 38);
             this.LRol.Name = "LRol";
-            this.LRol.Size = new System.Drawing.Size(35, 18);
+            this.LRol.Size = new System.Drawing.Size(39, 18);
             this.LRol.TabIndex = 0;
             this.LRol.Text = "Rol:";
+            // 
+            // LFecha
+            // 
+            this.LFecha.AutoSize = true;
+            this.LFecha.BackColor = System.Drawing.Color.Transparent;
+            this.LFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LFecha.ForeColor = System.Drawing.Color.White;
+            this.LFecha.Location = new System.Drawing.Point(346, 31);
+            this.LFecha.Name = "LFecha";
+            this.LFecha.Size = new System.Drawing.Size(46, 15);
+            this.LFecha.TabIndex = 0;
+            this.LFecha.Text = "Fecha";
+            // 
+            // LHora
+            // 
+            this.LHora.AutoSize = true;
+            this.LHora.BackColor = System.Drawing.Color.Transparent;
+            this.LHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LHora.ForeColor = System.Drawing.Color.White;
+            this.LHora.Location = new System.Drawing.Point(332, 13);
+            this.LHora.Name = "LHora";
+            this.LHora.Size = new System.Drawing.Size(45, 18);
+            this.LHora.TabIndex = 0;
+            this.LHora.Text = "Hora";
+            // 
+            // TimerFechaHora
+            // 
+            this.TimerFechaHora.Enabled = true;
+            this.TimerFechaHora.Tick += new System.EventHandler(this.TimerFechaHora_Tick);
             // 
             // Inicio
             // 
@@ -438,6 +473,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.menuTitulo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CeluStore - Gestión de ventas";
@@ -480,6 +516,9 @@
         private FontAwesome.Sharp.IconButton IBSalirInicio;
         private System.Windows.Forms.GroupBox GBInfoUsuario;
         private System.Windows.Forms.Label LRol;
+        private System.Windows.Forms.Label LHora;
+        private System.Windows.Forms.Label LFecha;
+        private System.Windows.Forms.Timer TimerFechaHora;
     }
 }
 

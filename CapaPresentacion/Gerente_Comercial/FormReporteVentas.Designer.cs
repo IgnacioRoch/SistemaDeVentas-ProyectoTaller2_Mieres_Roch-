@@ -85,6 +85,7 @@
             this.IBBuscarProveedorReporteCompra.Cursor = System.Windows.Forms.Cursors.Hand;
             this.IBBuscarProveedorReporteCompra.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.IBBuscarProveedorReporteCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IBBuscarProveedorReporteCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IBBuscarProveedorReporteCompra.ForeColor = System.Drawing.Color.Black;
             this.IBBuscarProveedorReporteCompra.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
             this.IBBuscarProveedorReporteCompra.IconColor = System.Drawing.Color.Black;
@@ -292,6 +293,7 @@
             // BDescargarExcel
             // 
             this.BDescargarExcel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BDescargarExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BDescargarExcel.Image = global::CapaPresentacion.Properties.Resources.icons8_ms_excel_20;
             this.BDescargarExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BDescargarExcel.Location = new System.Drawing.Point(16, 12);

@@ -28,76 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LSistemaVentas = new System.Windows.Forms.Label();
-            this.LNroDni = new System.Windows.Forms.Label();
             this.TxtDocumento = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.TxtClave = new System.Windows.Forms.TextBox();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.BCancelar = new FontAwesome.Sharp.IconButton();
             this.BIngresar = new FontAwesome.Sharp.IconButton();
             this.LIniciarSesion = new System.Windows.Forms.Label();
             this.panelLogin = new System.Windows.Forms.Panel();
+            this.GBNroDoc = new System.Windows.Forms.GroupBox();
+            this.GBContrasenia = new System.Windows.Forms.GroupBox();
+            this.TxtClave = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panelLogin.SuspendLayout();
+            this.GBNroDoc.SuspendLayout();
+            this.GBContrasenia.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // LSistemaVentas
-            // 
-            this.LSistemaVentas.AutoSize = true;
-            this.LSistemaVentas.BackColor = System.Drawing.SystemColors.Highlight;
-            this.LSistemaVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LSistemaVentas.Location = new System.Drawing.Point(30, 190);
-            this.LSistemaVentas.Name = "LSistemaVentas";
-            this.LSistemaVentas.Size = new System.Drawing.Size(256, 26);
-            this.LSistemaVentas.TabIndex = 1;
-            this.LSistemaVentas.Text = "SISTEMA DE VENTAS";
-            // 
-            // LNroDni
-            // 
-            this.LNroDni.AutoSize = true;
-            this.LNroDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LNroDni.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LNroDni.Location = new System.Drawing.Point(374, 84);
-            this.LNroDni.Name = "LNroDni";
-            this.LNroDni.Size = new System.Drawing.Size(167, 18);
-            this.LNroDni.TabIndex = 4;
-            this.LNroDni.Text = "Número De Documento";
             // 
             // TxtDocumento
             // 
-            this.TxtDocumento.Location = new System.Drawing.Point(377, 105);
+            this.TxtDocumento.Location = new System.Drawing.Point(6, 19);
             this.TxtDocumento.Name = "TxtDocumento";
-            this.TxtDocumento.Size = new System.Drawing.Size(226, 20);
+            this.TxtDocumento.Size = new System.Drawing.Size(226, 23);
             this.TxtDocumento.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(374, 145);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 18);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Contraseña";
-            // 
-            // TxtClave
-            // 
-            this.TxtClave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TxtClave.Location = new System.Drawing.Point(377, 166);
-            this.TxtClave.Name = "TxtClave";
-            this.TxtClave.PasswordChar = '*';
-            this.TxtClave.Size = new System.Drawing.Size(226, 20);
-            this.TxtClave.TabIndex = 5;
             // 
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.BackColor = System.Drawing.SystemColors.Highlight;
             this.pictureBoxLogo.Image = global::CapaPresentacion.Properties.Resources.Frame_1;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(75, 42);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(59, 42);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(158, 145);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(208, 185);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxLogo.TabIndex = 2;
             this.pictureBoxLogo.TabStop = false;
@@ -149,7 +108,7 @@
             this.LIniciarSesion.AutoSize = true;
             this.LIniciarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LIniciarSesion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LIniciarSesion.Location = new System.Drawing.Point(423, 46);
+            this.LIniciarSesion.Location = new System.Drawing.Point(422, 41);
             this.LIniciarSesion.Name = "LIniciarSesion";
             this.LIniciarSesion.Size = new System.Drawing.Size(118, 20);
             this.LIniciarSesion.TabIndex = 8;
@@ -159,24 +118,50 @@
             // 
             this.panelLogin.BackColor = System.Drawing.SystemColors.Highlight;
             this.panelLogin.Controls.Add(this.pictureBoxLogo);
-            this.panelLogin.Controls.Add(this.LSistemaVentas);
             this.panelLogin.Location = new System.Drawing.Point(-2, -1);
             this.panelLogin.Name = "panelLogin";
             this.panelLogin.Size = new System.Drawing.Size(322, 345);
             this.panelLogin.TabIndex = 9;
+            // 
+            // GBNroDoc
+            // 
+            this.GBNroDoc.Controls.Add(this.TxtDocumento);
+            this.GBNroDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GBNroDoc.Location = new System.Drawing.Point(365, 78);
+            this.GBNroDoc.Name = "GBNroDoc";
+            this.GBNroDoc.Size = new System.Drawing.Size(256, 54);
+            this.GBNroDoc.TabIndex = 10;
+            this.GBNroDoc.TabStop = false;
+            this.GBNroDoc.Text = "Número Documento";
+            // 
+            // GBContrasenia
+            // 
+            this.GBContrasenia.Controls.Add(this.TxtClave);
+            this.GBContrasenia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GBContrasenia.Location = new System.Drawing.Point(365, 138);
+            this.GBContrasenia.Name = "GBContrasenia";
+            this.GBContrasenia.Size = new System.Drawing.Size(256, 54);
+            this.GBContrasenia.TabIndex = 10;
+            this.GBContrasenia.TabStop = false;
+            this.GBContrasenia.Text = "Contraseña";
+            // 
+            // TxtClave
+            // 
+            this.TxtClave.Location = new System.Drawing.Point(6, 19);
+            this.TxtClave.Name = "TxtClave";
+            this.TxtClave.Size = new System.Drawing.Size(226, 23);
+            this.TxtClave.TabIndex = 5;
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(646, 289);
+            this.Controls.Add(this.GBContrasenia);
+            this.Controls.Add(this.GBNroDoc);
             this.Controls.Add(this.LIniciarSesion);
             this.Controls.Add(this.BIngresar);
             this.Controls.Add(this.BCancelar);
-            this.Controls.Add(this.TxtClave);
-            this.Controls.Add(this.TxtDocumento);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.LNroDni);
             this.Controls.Add(this.panelLogin);
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -185,22 +170,24 @@
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.panelLogin.ResumeLayout(false);
-            this.panelLogin.PerformLayout();
+            this.GBNroDoc.ResumeLayout(false);
+            this.GBNroDoc.PerformLayout();
+            this.GBContrasenia.ResumeLayout(false);
+            this.GBContrasenia.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label LSistemaVentas;
-        private System.Windows.Forms.Label LNroDni;
         private System.Windows.Forms.TextBox TxtDocumento;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox TxtClave;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private FontAwesome.Sharp.IconButton BCancelar;
         private FontAwesome.Sharp.IconButton BIngresar;
         private System.Windows.Forms.Label LIniciarSesion;
         private System.Windows.Forms.Panel panelLogin;
+        private System.Windows.Forms.GroupBox GBNroDoc;
+        private System.Windows.Forms.GroupBox GBContrasenia;
+        private System.Windows.Forms.TextBox TxtClave;
     }
 }

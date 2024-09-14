@@ -296,7 +296,7 @@
             this.IBCrearVenta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.IBCrearVenta.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.IBCrearVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBCrearVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IBCrearVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IBCrearVenta.ForeColor = System.Drawing.Color.White;
             this.IBCrearVenta.IconChar = FontAwesome.Sharp.IconChar.DollarSign;
             this.IBCrearVenta.IconColor = System.Drawing.Color.White;
@@ -317,7 +317,7 @@
             this.IBAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.IBAgregar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.IBAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IBAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IBAgregar.ForeColor = System.Drawing.Color.White;
             this.IBAgregar.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
             this.IBAgregar.IconColor = System.Drawing.Color.White;

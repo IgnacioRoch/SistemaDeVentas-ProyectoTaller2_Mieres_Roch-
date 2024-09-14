@@ -101,7 +101,7 @@
             this.IBRegistrarCompra.Cursor = System.Windows.Forms.Cursors.Hand;
             this.IBRegistrarCompra.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.IBRegistrarCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBRegistrarCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IBRegistrarCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IBRegistrarCompra.ForeColor = System.Drawing.Color.White;
             this.IBRegistrarCompra.IconChar = FontAwesome.Sharp.IconChar.Tags;
             this.IBRegistrarCompra.IconColor = System.Drawing.Color.White;
@@ -122,7 +122,7 @@
             this.IBAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.IBAgregar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.IBAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IBAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IBAgregar.ForeColor = System.Drawing.Color.White;
             this.IBAgregar.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
             this.IBAgregar.IconColor = System.Drawing.Color.White;
@@ -391,7 +391,7 @@
             // 
             // IBBuscarProveedor
             // 
-            this.IBBuscarProveedor.BackColor = System.Drawing.Color.Salmon;
+            this.IBBuscarProveedor.BackColor = System.Drawing.Color.Gold;
             this.IBBuscarProveedor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.IBBuscarProveedor.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.IBBuscarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
