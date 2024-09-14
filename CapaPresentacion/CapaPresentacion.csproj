@@ -281,6 +281,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\fondoCompra.jpg" />
+    <None Include="Resources\FrameLogo.png" />
     <None Include="Resources\icons8-pdf-20.png" />
     <None Include="Resources\icons8-ms-excel-20.png" />
   </ItemGroup>

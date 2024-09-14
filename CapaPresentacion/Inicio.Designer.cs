@@ -56,10 +56,11 @@
             this.IBSalirInicio = new FontAwesome.Sharp.IconButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GBInfoUsuario = new System.Windows.Forms.GroupBox();
-            this.LRol = new System.Windows.Forms.Label();
-            this.LFecha = new System.Windows.Forms.Label();
             this.LHora = new System.Windows.Forms.Label();
+            this.LFecha = new System.Windows.Forms.Label();
+            this.LRol = new System.Windows.Forms.Label();
             this.TimerFechaHora = new System.Windows.Forms.Timer(this.components);
+            this.LRolUsuario = new System.Windows.Forms.Label();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GBInfoUsuario.SuspendLayout();
@@ -353,11 +354,11 @@
             // 
             this.LUsuario.AutoSize = true;
             this.LUsuario.BackColor = System.Drawing.SystemColors.Highlight;
-            this.LUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LUsuario.ForeColor = System.Drawing.Color.Snow;
             this.LUsuario.Location = new System.Drawing.Point(19, 13);
             this.LUsuario.Name = "LUsuario";
-            this.LUsuario.Size = new System.Drawing.Size(72, 18);
+            this.LUsuario.Size = new System.Drawing.Size(69, 17);
             this.LUsuario.TabIndex = 0;
             this.LUsuario.Text = "Usuario:";
             // 
@@ -365,11 +366,11 @@
             // 
             this.LNomUsuario.AutoSize = true;
             this.LNomUsuario.BackColor = System.Drawing.SystemColors.Highlight;
-            this.LNomUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LNomUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LNomUsuario.ForeColor = System.Drawing.Color.Snow;
             this.LNomUsuario.Location = new System.Drawing.Point(89, 13);
             this.LNomUsuario.Name = "LNomUsuario";
-            this.LNomUsuario.Size = new System.Drawing.Size(115, 18);
+            this.LNomUsuario.Size = new System.Drawing.Size(96, 15);
             this.LNomUsuario.TabIndex = 0;
             this.LNomUsuario.Text = "Nombre usuario";
             // 
@@ -397,10 +398,11 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.Frame_1;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 5);
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.FrameLogo;
+            this.pictureBox1.Location = new System.Drawing.Point(0, -4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(86, 82);
+            this.pictureBox1.Size = new System.Drawing.Size(107, 94);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -412,36 +414,13 @@
             this.GBInfoUsuario.Controls.Add(this.LFecha);
             this.GBInfoUsuario.Controls.Add(this.LRol);
             this.GBInfoUsuario.Controls.Add(this.LUsuario);
+            this.GBInfoUsuario.Controls.Add(this.LRolUsuario);
             this.GBInfoUsuario.Controls.Add(this.LNomUsuario);
             this.GBInfoUsuario.Location = new System.Drawing.Point(474, 12);
             this.GBInfoUsuario.Name = "GBInfoUsuario";
             this.GBInfoUsuario.Size = new System.Drawing.Size(587, 59);
             this.GBInfoUsuario.TabIndex = 0;
             this.GBInfoUsuario.TabStop = false;
-            // 
-            // LRol
-            // 
-            this.LRol.AutoSize = true;
-            this.LRol.BackColor = System.Drawing.SystemColors.Highlight;
-            this.LRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LRol.ForeColor = System.Drawing.Color.Snow;
-            this.LRol.Location = new System.Drawing.Point(19, 38);
-            this.LRol.Name = "LRol";
-            this.LRol.Size = new System.Drawing.Size(39, 18);
-            this.LRol.TabIndex = 0;
-            this.LRol.Text = "Rol:";
-            // 
-            // LFecha
-            // 
-            this.LFecha.AutoSize = true;
-            this.LFecha.BackColor = System.Drawing.Color.Transparent;
-            this.LFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LFecha.ForeColor = System.Drawing.Color.White;
-            this.LFecha.Location = new System.Drawing.Point(346, 31);
-            this.LFecha.Name = "LFecha";
-            this.LFecha.Size = new System.Drawing.Size(46, 15);
-            this.LFecha.TabIndex = 0;
-            this.LFecha.Text = "Fecha";
             // 
             // LHora
             // 
@@ -455,10 +434,46 @@
             this.LHora.TabIndex = 0;
             this.LHora.Text = "Hora";
             // 
+            // LFecha
+            // 
+            this.LFecha.AutoSize = true;
+            this.LFecha.BackColor = System.Drawing.Color.Transparent;
+            this.LFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LFecha.ForeColor = System.Drawing.Color.White;
+            this.LFecha.Location = new System.Drawing.Point(346, 31);
+            this.LFecha.Name = "LFecha";
+            this.LFecha.Size = new System.Drawing.Size(46, 15);
+            this.LFecha.TabIndex = 0;
+            this.LFecha.Text = "Fecha";
+            // 
+            // LRol
+            // 
+            this.LRol.AutoSize = true;
+            this.LRol.BackColor = System.Drawing.SystemColors.Highlight;
+            this.LRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LRol.ForeColor = System.Drawing.Color.Snow;
+            this.LRol.Location = new System.Drawing.Point(19, 38);
+            this.LRol.Name = "LRol";
+            this.LRol.Size = new System.Drawing.Size(37, 17);
+            this.LRol.TabIndex = 0;
+            this.LRol.Text = "Rol:";
+            // 
             // TimerFechaHora
             // 
             this.TimerFechaHora.Enabled = true;
             this.TimerFechaHora.Tick += new System.EventHandler(this.TimerFechaHora_Tick);
+            // 
+            // LRolUsuario
+            // 
+            this.LRolUsuario.AutoSize = true;
+            this.LRolUsuario.BackColor = System.Drawing.SystemColors.Highlight;
+            this.LRolUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LRolUsuario.ForeColor = System.Drawing.Color.Snow;
+            this.LRolUsuario.Location = new System.Drawing.Point(62, 38);
+            this.LRolUsuario.Name = "LRolUsuario";
+            this.LRolUsuario.Size = new System.Drawing.Size(70, 15);
+            this.LRolUsuario.TabIndex = 0;
+            this.LRolUsuario.Text = "Rol usuario";
             // 
             // Inicio
             // 
@@ -519,6 +534,7 @@
         private System.Windows.Forms.Label LHora;
         private System.Windows.Forms.Label LFecha;
         private System.Windows.Forms.Timer TimerFechaHora;
+        private System.Windows.Forms.Label LRolUsuario;
     }
 }
 
