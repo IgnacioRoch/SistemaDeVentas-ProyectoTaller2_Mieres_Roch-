@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.TxtDocumento = new System.Windows.Forms.TextBox();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.BCancelar = new FontAwesome.Sharp.IconButton();
-            this.BIngresar = new FontAwesome.Sharp.IconButton();
             this.LIniciarSesion = new System.Windows.Forms.Label();
             this.panelLogin = new System.Windows.Forms.Panel();
             this.GBNroDoc = new System.Windows.Forms.GroupBox();
             this.GBContrasenia = new System.Windows.Forms.GroupBox();
             this.TxtClave = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
+            this.BIngresar = new FontAwesome.Sharp.IconButton();
+            this.BCancelar = new FontAwesome.Sharp.IconButton();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panelLogin.SuspendLayout();
             this.GBNroDoc.SuspendLayout();
             this.GBContrasenia.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // TxtDocumento
@@ -49,59 +49,6 @@
             this.TxtDocumento.Name = "TxtDocumento";
             this.TxtDocumento.Size = new System.Drawing.Size(226, 23);
             this.TxtDocumento.TabIndex = 5;
-            // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.BackColor = System.Drawing.SystemColors.Highlight;
-            this.pictureBoxLogo.Image = global::CapaPresentacion.Properties.Resources.Frame_1;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(59, 42);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(208, 185);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxLogo.TabIndex = 2;
-            this.pictureBoxLogo.TabStop = false;
-            // 
-            // BCancelar
-            // 
-            this.BCancelar.BackColor = System.Drawing.Color.Crimson;
-            this.BCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BCancelar.IconChar = FontAwesome.Sharp.IconChar.StopCircle;
-            this.BCancelar.IconColor = System.Drawing.Color.White;
-            this.BCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BCancelar.IconSize = 21;
-            this.BCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BCancelar.Location = new System.Drawing.Point(508, 217);
-            this.BCancelar.Name = "BCancelar";
-            this.BCancelar.Size = new System.Drawing.Size(123, 38);
-            this.BCancelar.TabIndex = 7;
-            this.BCancelar.Text = "Cancelar";
-            this.BCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BCancelar.UseVisualStyleBackColor = false;
-            this.BCancelar.Click += new System.EventHandler(this.BCancelar_Click);
-            // 
-            // BIngresar
-            // 
-            this.BIngresar.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.BIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BIngresar.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
-            this.BIngresar.IconColor = System.Drawing.Color.White;
-            this.BIngresar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BIngresar.IconSize = 21;
-            this.BIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BIngresar.Location = new System.Drawing.Point(355, 217);
-            this.BIngresar.Name = "BIngresar";
-            this.BIngresar.Size = new System.Drawing.Size(123, 38);
-            this.BIngresar.TabIndex = 7;
-            this.BIngresar.Text = "Iniciar sesión";
-            this.BIngresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BIngresar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BIngresar.UseVisualStyleBackColor = false;
-            this.BIngresar.Click += new System.EventHandler(this.BIngresar_Click);
             // 
             // LIniciarSesion
             // 
@@ -152,6 +99,59 @@
             this.TxtClave.Size = new System.Drawing.Size(226, 23);
             this.TxtClave.TabIndex = 5;
             // 
+            // BIngresar
+            // 
+            this.BIngresar.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.BIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BIngresar.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
+            this.BIngresar.IconColor = System.Drawing.Color.White;
+            this.BIngresar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BIngresar.IconSize = 21;
+            this.BIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BIngresar.Location = new System.Drawing.Point(355, 217);
+            this.BIngresar.Name = "BIngresar";
+            this.BIngresar.Size = new System.Drawing.Size(123, 38);
+            this.BIngresar.TabIndex = 7;
+            this.BIngresar.Text = "Iniciar sesión";
+            this.BIngresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BIngresar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BIngresar.UseVisualStyleBackColor = false;
+            this.BIngresar.Click += new System.EventHandler(this.BIngresar_Click);
+            // 
+            // BCancelar
+            // 
+            this.BCancelar.BackColor = System.Drawing.Color.Crimson;
+            this.BCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BCancelar.IconChar = FontAwesome.Sharp.IconChar.StopCircle;
+            this.BCancelar.IconColor = System.Drawing.Color.White;
+            this.BCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BCancelar.IconSize = 21;
+            this.BCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BCancelar.Location = new System.Drawing.Point(508, 217);
+            this.BCancelar.Name = "BCancelar";
+            this.BCancelar.Size = new System.Drawing.Size(123, 38);
+            this.BCancelar.TabIndex = 7;
+            this.BCancelar.Text = "Cancelar";
+            this.BCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BCancelar.UseVisualStyleBackColor = false;
+            this.BCancelar.Click += new System.EventHandler(this.BCancelar_Click);
+            // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.BackColor = System.Drawing.SystemColors.Highlight;
+            this.pictureBoxLogo.Image = global::CapaPresentacion.Properties.Resources.FrameLogo;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(29, 29);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(260, 236);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxLogo.TabIndex = 2;
+            this.pictureBoxLogo.TabStop = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -168,12 +168,12 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.panelLogin.ResumeLayout(false);
             this.GBNroDoc.ResumeLayout(false);
             this.GBNroDoc.PerformLayout();
             this.GBContrasenia.ResumeLayout(false);
             this.GBContrasenia.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
