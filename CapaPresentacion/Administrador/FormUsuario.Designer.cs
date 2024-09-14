@@ -79,8 +79,6 @@
             // dataGridDatos
             // 
             this.dataGridDatos.AllowUserToAddRows = false;
-            this.dataGridDatos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridDatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -547,7 +545,6 @@
             this.Controls.Add(this.dataGridDatos);
             this.Controls.Add(this.panelBusqueda);
             this.Controls.Add(this.panelFormulario);
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Name = "FormUsuario";
             this.Text = "FormUsuario";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDatos)).EndInit();
