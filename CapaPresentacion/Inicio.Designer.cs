@@ -59,8 +59,8 @@
             this.LHora = new System.Windows.Forms.Label();
             this.LFecha = new System.Windows.Forms.Label();
             this.LRol = new System.Windows.Forms.Label();
-            this.TimerFechaHora = new System.Windows.Forms.Timer(this.components);
             this.LRolUsuario = new System.Windows.Forms.Label();
+            this.TimerFechaHora = new System.Windows.Forms.Timer(this.components);
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GBInfoUsuario.SuspendLayout();
@@ -70,17 +70,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("OCR A Extended", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(104, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(266, 31);
+            this.label1.Size = new System.Drawing.Size(319, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Sistema de Ventas ";
             // 
             // menuStrip2
             // 
             this.menuStrip2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.menuStrip2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menu_Usuario,
             this.menu_productos,
@@ -100,7 +101,8 @@
             // menu_Usuario
             // 
             this.menu_Usuario.AutoSize = false;
-            this.menu_Usuario.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.menu_Usuario.Font = new System.Drawing.Font("OCR A Extended", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menu_Usuario.ForeColor = System.Drawing.Color.SlateGray;
             this.menu_Usuario.IconChar = FontAwesome.Sharp.IconChar.UserEdit;
             this.menu_Usuario.IconColor = System.Drawing.Color.Black;
             this.menu_Usuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -119,7 +121,8 @@
             this.SubmenuProductos,
             this.SubmenuCategorias,
             this.SubmenuMarcas});
-            this.menu_productos.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.menu_productos.Font = new System.Drawing.Font("OCR A Extended", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menu_productos.ForeColor = System.Drawing.Color.LightSlateGray;
             this.menu_productos.IconChar = FontAwesome.Sharp.IconChar.Tags;
             this.menu_productos.IconColor = System.Drawing.Color.Black;
             this.menu_productos.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -136,7 +139,7 @@
             this.SubmenuProductos.IconColor = System.Drawing.Color.Black;
             this.SubmenuProductos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.SubmenuProductos.Name = "SubmenuProductos";
-            this.SubmenuProductos.Size = new System.Drawing.Size(143, 24);
+            this.SubmenuProductos.Size = new System.Drawing.Size(180, 22);
             this.SubmenuProductos.Text = "Productos";
             this.SubmenuProductos.Click += new System.EventHandler(this.SubmenuProductos_Click);
             // 
@@ -146,7 +149,7 @@
             this.SubmenuCategorias.IconColor = System.Drawing.Color.Black;
             this.SubmenuCategorias.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.SubmenuCategorias.Name = "SubmenuCategorias";
-            this.SubmenuCategorias.Size = new System.Drawing.Size(143, 24);
+            this.SubmenuCategorias.Size = new System.Drawing.Size(180, 22);
             this.SubmenuCategorias.Text = "Categorías";
             this.SubmenuCategorias.Click += new System.EventHandler(this.SubmenuCategorias_Click);
             // 
@@ -156,7 +159,7 @@
             this.SubmenuMarcas.IconColor = System.Drawing.Color.Black;
             this.SubmenuMarcas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.SubmenuMarcas.Name = "SubmenuMarcas";
-            this.SubmenuMarcas.Size = new System.Drawing.Size(143, 24);
+            this.SubmenuMarcas.Size = new System.Drawing.Size(180, 22);
             this.SubmenuMarcas.Text = "Marcas";
             this.SubmenuMarcas.Click += new System.EventHandler(this.SubmenuMarcas_Click);
             // 
@@ -166,7 +169,8 @@
             this.menu_ventas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.subMenuRegistrarVenta,
             this.subMenuVerDetalleVenta});
-            this.menu_ventas.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.menu_ventas.Font = new System.Drawing.Font("OCR A Extended", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menu_ventas.ForeColor = System.Drawing.Color.LightSlateGray;
             this.menu_ventas.IconChar = FontAwesome.Sharp.IconChar.CartShopping;
             this.menu_ventas.IconColor = System.Drawing.Color.Black;
             this.menu_ventas.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -183,7 +187,7 @@
             this.subMenuRegistrarVenta.IconColor = System.Drawing.Color.Black;
             this.subMenuRegistrarVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.subMenuRegistrarVenta.Name = "subMenuRegistrarVenta";
-            this.subMenuRegistrarVenta.Size = new System.Drawing.Size(170, 24);
+            this.subMenuRegistrarVenta.Size = new System.Drawing.Size(209, 22);
             this.subMenuRegistrarVenta.Text = "Registrar venta";
             this.subMenuRegistrarVenta.Click += new System.EventHandler(this.subMenuRegistrarVenta_Click);
             // 
@@ -193,7 +197,7 @@
             this.subMenuVerDetalleVenta.IconColor = System.Drawing.Color.Black;
             this.subMenuVerDetalleVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.subMenuVerDetalleVenta.Name = "subMenuVerDetalleVenta";
-            this.subMenuVerDetalleVenta.Size = new System.Drawing.Size(170, 24);
+            this.subMenuVerDetalleVenta.Size = new System.Drawing.Size(209, 22);
             this.subMenuVerDetalleVenta.Text = "Ver detalle";
             this.subMenuVerDetalleVenta.Click += new System.EventHandler(this.subMenuVerDetalleVenta_Click);
             // 
@@ -203,7 +207,8 @@
             this.menu_compras.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.subMenuRegistrarCompra,
             this.subMenuVerDetalleCompra});
-            this.menu_compras.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.menu_compras.Font = new System.Drawing.Font("OCR A Extended", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menu_compras.ForeColor = System.Drawing.Color.LightSlateGray;
             this.menu_compras.IconChar = FontAwesome.Sharp.IconChar.Dolly;
             this.menu_compras.IconColor = System.Drawing.Color.Black;
             this.menu_compras.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -220,7 +225,7 @@
             this.subMenuRegistrarCompra.IconColor = System.Drawing.Color.Black;
             this.subMenuRegistrarCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.subMenuRegistrarCompra.Name = "subMenuRegistrarCompra";
-            this.subMenuRegistrarCompra.Size = new System.Drawing.Size(182, 24);
+            this.subMenuRegistrarCompra.Size = new System.Drawing.Size(218, 22);
             this.subMenuRegistrarCompra.Text = "Registrar compra";
             this.subMenuRegistrarCompra.Click += new System.EventHandler(this.subMenuRegistrarCompra_Click);
             // 
@@ -230,14 +235,15 @@
             this.subMenuVerDetalleCompra.IconColor = System.Drawing.Color.Black;
             this.subMenuVerDetalleCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.subMenuVerDetalleCompra.Name = "subMenuVerDetalleCompra";
-            this.subMenuVerDetalleCompra.Size = new System.Drawing.Size(182, 24);
+            this.subMenuVerDetalleCompra.Size = new System.Drawing.Size(218, 22);
             this.subMenuVerDetalleCompra.Text = "Ver detalle";
             this.subMenuVerDetalleCompra.Click += new System.EventHandler(this.subMenuVerDetalleCompra_Click);
             // 
             // menu_Clientes
             // 
             this.menu_Clientes.AutoSize = false;
-            this.menu_Clientes.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.menu_Clientes.Font = new System.Drawing.Font("OCR A Extended", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menu_Clientes.ForeColor = System.Drawing.Color.LightSlateGray;
             this.menu_Clientes.IconChar = FontAwesome.Sharp.IconChar.Person;
             this.menu_Clientes.IconColor = System.Drawing.Color.Black;
             this.menu_Clientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -252,14 +258,15 @@
             // menu_Proveedores
             // 
             this.menu_Proveedores.AutoSize = false;
-            this.menu_Proveedores.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.menu_Proveedores.Font = new System.Drawing.Font("OCR A Extended", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menu_Proveedores.ForeColor = System.Drawing.Color.LightSlateGray;
             this.menu_Proveedores.IconChar = FontAwesome.Sharp.IconChar.Truck;
             this.menu_Proveedores.IconColor = System.Drawing.Color.Black;
             this.menu_Proveedores.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.menu_Proveedores.IconSize = 55;
             this.menu_Proveedores.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menu_Proveedores.Name = "menu_Proveedores";
-            this.menu_Proveedores.Size = new System.Drawing.Size(100, 80);
+            this.menu_Proveedores.Size = new System.Drawing.Size(110, 80);
             this.menu_Proveedores.Text = "Proveedores";
             this.menu_Proveedores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.menu_Proveedores.Click += new System.EventHandler(this.menu_Proveedores_Click);
@@ -270,7 +277,8 @@
             this.menu_Reportes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.subMenuReporteCompras,
             this.subMenuReporteVentas});
-            this.menu_Reportes.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.menu_Reportes.Font = new System.Drawing.Font("OCR A Extended", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menu_Reportes.ForeColor = System.Drawing.Color.LightSlateGray;
             this.menu_Reportes.IconChar = FontAwesome.Sharp.IconChar.ChartBar;
             this.menu_Reportes.IconColor = System.Drawing.Color.Black;
             this.menu_Reportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -287,7 +295,7 @@
             this.subMenuReporteCompras.IconColor = System.Drawing.Color.Black;
             this.subMenuReporteCompras.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.subMenuReporteCompras.Name = "subMenuReporteCompras";
-            this.subMenuReporteCompras.Size = new System.Drawing.Size(182, 24);
+            this.subMenuReporteCompras.Size = new System.Drawing.Size(209, 22);
             this.subMenuReporteCompras.Text = "Reporte compras";
             this.subMenuReporteCompras.Click += new System.EventHandler(this.subMenuReporteCompras_Click);
             // 
@@ -297,14 +305,15 @@
             this.subMenuReporteVentas.IconColor = System.Drawing.Color.Black;
             this.subMenuReporteVentas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.subMenuReporteVentas.Name = "subMenuReporteVentas";
-            this.subMenuReporteVentas.Size = new System.Drawing.Size(182, 24);
+            this.subMenuReporteVentas.Size = new System.Drawing.Size(209, 22);
             this.subMenuReporteVentas.Text = "Reporte ventas";
             this.subMenuReporteVentas.Click += new System.EventHandler(this.subMenuReporteVentas_Click);
             // 
             // menu_Negocio
             // 
             this.menu_Negocio.AutoSize = false;
-            this.menu_Negocio.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.menu_Negocio.Font = new System.Drawing.Font("OCR A Extended", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menu_Negocio.ForeColor = System.Drawing.Color.LightSlateGray;
             this.menu_Negocio.IconChar = FontAwesome.Sharp.IconChar.Building;
             this.menu_Negocio.IconColor = System.Drawing.Color.Black;
             this.menu_Negocio.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -319,7 +328,8 @@
             // menu_informacion
             // 
             this.menu_informacion.AutoSize = false;
-            this.menu_informacion.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.menu_informacion.Font = new System.Drawing.Font("OCR A Extended", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menu_informacion.ForeColor = System.Drawing.Color.LightSlateGray;
             this.menu_informacion.IconChar = FontAwesome.Sharp.IconChar.Info;
             this.menu_informacion.IconColor = System.Drawing.Color.Black;
             this.menu_informacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -354,11 +364,11 @@
             // 
             this.LUsuario.AutoSize = true;
             this.LUsuario.BackColor = System.Drawing.SystemColors.Highlight;
-            this.LUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LUsuario.Font = new System.Drawing.Font("OCR A Extended", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LUsuario.ForeColor = System.Drawing.Color.Snow;
             this.LUsuario.Location = new System.Drawing.Point(19, 13);
             this.LUsuario.Name = "LUsuario";
-            this.LUsuario.Size = new System.Drawing.Size(69, 17);
+            this.LUsuario.Size = new System.Drawing.Size(79, 13);
             this.LUsuario.TabIndex = 0;
             this.LUsuario.Text = "Usuario:";
             // 
@@ -366,11 +376,11 @@
             // 
             this.LNomUsuario.AutoSize = true;
             this.LNomUsuario.BackColor = System.Drawing.SystemColors.Highlight;
-            this.LNomUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LNomUsuario.Font = new System.Drawing.Font("OCR A Extended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LNomUsuario.ForeColor = System.Drawing.Color.Snow;
-            this.LNomUsuario.Location = new System.Drawing.Point(89, 13);
+            this.LNomUsuario.Location = new System.Drawing.Point(104, 13);
             this.LNomUsuario.Name = "LNomUsuario";
-            this.LNomUsuario.Size = new System.Drawing.Size(96, 15);
+            this.LNomUsuario.Size = new System.Drawing.Size(105, 13);
             this.LNomUsuario.TabIndex = 0;
             this.LNomUsuario.Text = "Nombre usuario";
             // 
@@ -426,11 +436,11 @@
             // 
             this.LHora.AutoSize = true;
             this.LHora.BackColor = System.Drawing.Color.Transparent;
-            this.LHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LHora.Font = new System.Drawing.Font("OCR A Extended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LHora.ForeColor = System.Drawing.Color.White;
-            this.LHora.Location = new System.Drawing.Point(332, 13);
+            this.LHora.Location = new System.Drawing.Point(305, 13);
             this.LHora.Name = "LHora";
-            this.LHora.Size = new System.Drawing.Size(45, 18);
+            this.LHora.Size = new System.Drawing.Size(48, 17);
             this.LHora.TabIndex = 0;
             this.LHora.Text = "Hora";
             // 
@@ -438,11 +448,11 @@
             // 
             this.LFecha.AutoSize = true;
             this.LFecha.BackColor = System.Drawing.Color.Transparent;
-            this.LFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LFecha.Font = new System.Drawing.Font("OCR A Extended", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LFecha.ForeColor = System.Drawing.Color.White;
-            this.LFecha.Location = new System.Drawing.Point(346, 31);
+            this.LFecha.Location = new System.Drawing.Point(305, 38);
             this.LFecha.Name = "LFecha";
-            this.LFecha.Size = new System.Drawing.Size(46, 15);
+            this.LFecha.Size = new System.Drawing.Size(47, 13);
             this.LFecha.TabIndex = 0;
             this.LFecha.Text = "Fecha";
             // 
@@ -450,30 +460,30 @@
             // 
             this.LRol.AutoSize = true;
             this.LRol.BackColor = System.Drawing.SystemColors.Highlight;
-            this.LRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LRol.Font = new System.Drawing.Font("OCR A Extended", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LRol.ForeColor = System.Drawing.Color.Snow;
             this.LRol.Location = new System.Drawing.Point(19, 38);
             this.LRol.Name = "LRol";
-            this.LRol.Size = new System.Drawing.Size(37, 17);
+            this.LRol.Size = new System.Drawing.Size(43, 13);
             this.LRol.TabIndex = 0;
             this.LRol.Text = "Rol:";
-            // 
-            // TimerFechaHora
-            // 
-            this.TimerFechaHora.Enabled = true;
-            this.TimerFechaHora.Tick += new System.EventHandler(this.TimerFechaHora_Tick);
             // 
             // LRolUsuario
             // 
             this.LRolUsuario.AutoSize = true;
             this.LRolUsuario.BackColor = System.Drawing.SystemColors.Highlight;
-            this.LRolUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LRolUsuario.Font = new System.Drawing.Font("OCR A Extended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LRolUsuario.ForeColor = System.Drawing.Color.Snow;
             this.LRolUsuario.Location = new System.Drawing.Point(62, 38);
             this.LRolUsuario.Name = "LRolUsuario";
-            this.LRolUsuario.Size = new System.Drawing.Size(70, 15);
+            this.LRolUsuario.Size = new System.Drawing.Size(84, 13);
             this.LRolUsuario.TabIndex = 0;
             this.LRolUsuario.Text = "Rol usuario";
+            // 
+            // TimerFechaHora
+            // 
+            this.TimerFechaHora.Enabled = true;
+            this.TimerFechaHora.Tick += new System.EventHandler(this.TimerFechaHora_Tick);
             // 
             // Inicio
             // 
