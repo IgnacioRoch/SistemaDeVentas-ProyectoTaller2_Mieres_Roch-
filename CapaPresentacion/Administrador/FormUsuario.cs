@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -36,8 +37,7 @@ namespace CapaPresentacion.Administrador
             }
         }
 
-
-        /*private void IBGuardar_Click(object sender, EventArgs e)
+        private void IBGuardar_Click(object sender, EventArgs e)
         {
             // Obtener los valores de los TextBox  
             string dni = TxtDocumento.Text;
@@ -48,7 +48,7 @@ namespace CapaPresentacion.Administrador
             string ConfClave = TxtConfClave.Text;
 
             if (string.IsNullOrWhiteSpace(dni) || string.IsNullOrWhiteSpace(apellido) || string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(correo)
-                || string.IsNullOrWhiteSpace(clave) || string.IsNullOrWhiteSpace(ConfClave) )
+                || string.IsNullOrWhiteSpace(clave) || string.IsNullOrWhiteSpace(ConfClave))
             {
                 MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -86,16 +86,51 @@ namespace CapaPresentacion.Administrador
 
                 // Mostrar mensaje de información confirmando la inserción correcta  
                 MessageBox.Show($"El Usuario se insertó correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+
+                TxtDocumento.Clear();
+                TxtNombre.Clear();
+                TxtApellido.Clear();
+                TxtCorreo.Clear();
+                TxtClave.Clear();
+                TxtConfClave.Clear();
             }
-        }
+
+        }       
 
         public static bool EmailValido(string email)
         {
             // Expresión regular para validar un correo electrónico
             string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
             return Regex.IsMatch(email, pattern);
-        }*/
+        }
 
+        private void IBVaciar_Click(object sender, EventArgs e)
+        {
+            // Obtener los valores de los TextBox  
+            string dni = TxtDocumento.Text;
+            string apellido = TxtApellido.Text;
+            string nombre = TxtNombre.Text;
+            string correo = TxtCorreo.Text;
+            string clave = TxtClave.Text;
+            string ConfClave = TxtConfClave.Text;
+
+            if (string.IsNullOrWhiteSpace(dni) && string.IsNullOrWhiteSpace(apellido) && string.IsNullOrWhiteSpace(nombre) && string.IsNullOrWhiteSpace(correo)
+               && string.IsNullOrWhiteSpace(clave) && string.IsNullOrWhiteSpace(ConfClave))
+            {
+                MessageBox.Show("Los campos están vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (MessageBox.Show("¿Limpiar los campos del fomulario?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                TxtDocumento.Clear();
+                TxtNombre.Clear();
+                TxtApellido.Clear();
+                TxtCorreo.Clear();
+                TxtClave.Clear();
+                TxtConfClave.Clear();
+            }
+            
+        }
     }
 }

@@ -47,6 +47,8 @@
             this.CBBusqueda = new System.Windows.Forms.ComboBox();
             this.TxtBusqueda = new System.Windows.Forms.TextBox();
             this.panelBusqueda = new System.Windows.Forms.Panel();
+            this.IBLimpiar = new FontAwesome.Sharp.IconButton();
+            this.IBBuscar = new FontAwesome.Sharp.IconButton();
             this.TxtApellido = new System.Windows.Forms.TextBox();
             this.TxtCorreo = new System.Windows.Forms.TextBox();
             this.TxtNombre = new System.Windows.Forms.TextBox();
@@ -66,8 +68,6 @@
             this.LApellido = new System.Windows.Forms.Label();
             this.LDetalleUsuario = new System.Windows.Forms.Label();
             this.panelFormulario = new System.Windows.Forms.Panel();
-            this.IBLimpiar = new FontAwesome.Sharp.IconButton();
-            this.IBBuscar = new FontAwesome.Sharp.IconButton();
             this.IBVaciar = new FontAwesome.Sharp.IconButton();
             this.IBEliminar = new FontAwesome.Sharp.IconButton();
             this.IBGuardar = new FontAwesome.Sharp.IconButton();
@@ -248,6 +248,42 @@
             this.panelBusqueda.Name = "panelBusqueda";
             this.panelBusqueda.Size = new System.Drawing.Size(931, 47);
             this.panelBusqueda.TabIndex = 7;
+            // 
+            // IBLimpiar
+            // 
+            this.IBLimpiar.BackColor = System.Drawing.Color.White;
+            this.IBLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.IBLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.IBLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IBLimpiar.ForeColor = System.Drawing.Color.Black;
+            this.IBLimpiar.IconChar = FontAwesome.Sharp.IconChar.Eraser;
+            this.IBLimpiar.IconColor = System.Drawing.Color.Black;
+            this.IBLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IBLimpiar.IconSize = 16;
+            this.IBLimpiar.Location = new System.Drawing.Point(791, 12);
+            this.IBLimpiar.Name = "IBLimpiar";
+            this.IBLimpiar.Size = new System.Drawing.Size(41, 28);
+            this.IBLimpiar.TabIndex = 4;
+            this.IBLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.IBLimpiar.UseVisualStyleBackColor = false;
+            // 
+            // IBBuscar
+            // 
+            this.IBBuscar.BackColor = System.Drawing.Color.Gold;
+            this.IBBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.IBBuscar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.IBBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IBBuscar.ForeColor = System.Drawing.Color.Black;
+            this.IBBuscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.IBBuscar.IconColor = System.Drawing.Color.Black;
+            this.IBBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IBBuscar.IconSize = 16;
+            this.IBBuscar.Location = new System.Drawing.Point(735, 12);
+            this.IBBuscar.Name = "IBBuscar";
+            this.IBBuscar.Size = new System.Drawing.Size(41, 28);
+            this.IBBuscar.TabIndex = 4;
+            this.IBBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.IBBuscar.UseVisualStyleBackColor = false;
             // 
             // TxtApellido
             // 
@@ -449,42 +485,6 @@
             this.panelFormulario.Size = new System.Drawing.Size(305, 569);
             this.panelFormulario.TabIndex = 6;
             // 
-            // IBLimpiar
-            // 
-            this.IBLimpiar.BackColor = System.Drawing.Color.White;
-            this.IBLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.IBLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.IBLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBLimpiar.ForeColor = System.Drawing.Color.Black;
-            this.IBLimpiar.IconChar = FontAwesome.Sharp.IconChar.Eraser;
-            this.IBLimpiar.IconColor = System.Drawing.Color.Black;
-            this.IBLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IBLimpiar.IconSize = 16;
-            this.IBLimpiar.Location = new System.Drawing.Point(791, 12);
-            this.IBLimpiar.Name = "IBLimpiar";
-            this.IBLimpiar.Size = new System.Drawing.Size(41, 28);
-            this.IBLimpiar.TabIndex = 4;
-            this.IBLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.IBLimpiar.UseVisualStyleBackColor = false;
-            // 
-            // IBBuscar
-            // 
-            this.IBBuscar.BackColor = System.Drawing.Color.Gold;
-            this.IBBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.IBBuscar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.IBBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBBuscar.ForeColor = System.Drawing.Color.Black;
-            this.IBBuscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.IBBuscar.IconColor = System.Drawing.Color.Black;
-            this.IBBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IBBuscar.IconSize = 16;
-            this.IBBuscar.Location = new System.Drawing.Point(735, 12);
-            this.IBBuscar.Name = "IBBuscar";
-            this.IBBuscar.Size = new System.Drawing.Size(41, 28);
-            this.IBBuscar.TabIndex = 4;
-            this.IBBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.IBBuscar.UseVisualStyleBackColor = false;
-            // 
             // IBVaciar
             // 
             this.IBVaciar.BackColor = System.Drawing.Color.CornflowerBlue;
@@ -505,6 +505,7 @@
             this.IBVaciar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IBVaciar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.IBVaciar.UseVisualStyleBackColor = false;
+            this.IBVaciar.Click += new System.EventHandler(this.IBVaciar_Click);
             // 
             // IBEliminar
             // 
@@ -547,6 +548,7 @@
             this.IBGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IBGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.IBGuardar.UseVisualStyleBackColor = false;
+            this.IBGuardar.Click += new System.EventHandler(this.IBGuardar_Click);
             // 
             // FormUsuario
             // 
