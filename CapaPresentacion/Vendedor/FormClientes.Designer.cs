@@ -197,8 +197,8 @@
             // LBuscarPor
             // 
             this.LBuscarPor.AutoSize = true;
-            this.LBuscarPor.BackColor = System.Drawing.Color.White;
-            this.LBuscarPor.ForeColor = System.Drawing.Color.Black;
+            this.LBuscarPor.BackColor = System.Drawing.Color.Transparent;
+            this.LBuscarPor.ForeColor = System.Drawing.Color.White;
             this.LBuscarPor.Location = new System.Drawing.Point(294, 20);
             this.LBuscarPor.Name = "LBuscarPor";
             this.LBuscarPor.Size = new System.Drawing.Size(61, 13);
@@ -208,6 +208,7 @@
             // panelBusqueda
             // 
             this.panelBusqueda.BackColor = System.Drawing.Color.White;
+            this.panelBusqueda.BackgroundImage = global::CapaPresentacion.Properties.Resources.PanelLista;
             this.panelBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelBusqueda.Controls.Add(this.IBLimpiar);
             this.panelBusqueda.Controls.Add(this.LListaClientes);
@@ -223,12 +224,12 @@
             // LListaClientes
             // 
             this.LListaClientes.AutoSize = true;
-            this.LListaClientes.BackColor = System.Drawing.Color.White;
-            this.LListaClientes.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LListaClientes.ForeColor = System.Drawing.Color.Black;
+            this.LListaClientes.BackColor = System.Drawing.Color.Transparent;
+            this.LListaClientes.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LListaClientes.ForeColor = System.Drawing.Color.White;
             this.LListaClientes.Location = new System.Drawing.Point(3, 11);
             this.LListaClientes.Name = "LListaClientes";
-            this.LListaClientes.Size = new System.Drawing.Size(168, 23);
+            this.LListaClientes.Size = new System.Drawing.Size(155, 21);
             this.LListaClientes.TabIndex = 1;
             this.LListaClientes.Text = "Lista de clientes";
             this.LListaClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -236,6 +237,7 @@
             // panelFormulario
             // 
             this.panelFormulario.BackColor = System.Drawing.Color.White;
+            this.panelFormulario.BackgroundImage = global::CapaPresentacion.Properties.Resources.PanelDetalle;
             this.panelFormulario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelFormulario.Controls.Add(this.CBEstado);
             this.panelFormulario.Controls.Add(this.IBVaciar);
@@ -271,7 +273,8 @@
             // LEstado
             // 
             this.LEstado.AutoSize = true;
-            this.LEstado.BackColor = System.Drawing.Color.White;
+            this.LEstado.BackColor = System.Drawing.Color.Transparent;
+            this.LEstado.ForeColor = System.Drawing.Color.White;
             this.LEstado.Location = new System.Drawing.Point(40, 297);
             this.LEstado.Name = "LEstado";
             this.LEstado.Size = new System.Drawing.Size(43, 13);
@@ -281,18 +284,20 @@
             // LDetalleCliente
             // 
             this.LDetalleCliente.AutoSize = true;
-            this.LDetalleCliente.BackColor = System.Drawing.Color.White;
-            this.LDetalleCliente.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LDetalleCliente.BackColor = System.Drawing.Color.Transparent;
+            this.LDetalleCliente.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LDetalleCliente.ForeColor = System.Drawing.Color.White;
             this.LDetalleCliente.Location = new System.Drawing.Point(38, 9);
             this.LDetalleCliente.Name = "LDetalleCliente";
-            this.LDetalleCliente.Size = new System.Drawing.Size(189, 23);
+            this.LDetalleCliente.Size = new System.Drawing.Size(174, 21);
             this.LDetalleCliente.TabIndex = 15;
             this.LDetalleCliente.Text = "Detalle de clientes";
             // 
             // LApellido
             // 
             this.LApellido.AutoSize = true;
-            this.LApellido.BackColor = System.Drawing.Color.White;
+            this.LApellido.BackColor = System.Drawing.Color.Transparent;
+            this.LApellido.ForeColor = System.Drawing.Color.White;
             this.LApellido.Location = new System.Drawing.Point(39, 142);
             this.LApellido.Name = "LApellido";
             this.LApellido.Size = new System.Drawing.Size(47, 13);
@@ -309,7 +314,8 @@
             // LCorreo
             // 
             this.LCorreo.AutoSize = true;
-            this.LCorreo.BackColor = System.Drawing.Color.White;
+            this.LCorreo.BackColor = System.Drawing.Color.Transparent;
+            this.LCorreo.ForeColor = System.Drawing.Color.White;
             this.LCorreo.Location = new System.Drawing.Point(39, 191);
             this.LCorreo.Name = "LCorreo";
             this.LCorreo.Size = new System.Drawing.Size(93, 13);
@@ -326,7 +332,8 @@
             // LTelefono
             // 
             this.LTelefono.AutoSize = true;
-            this.LTelefono.BackColor = System.Drawing.Color.White;
+            this.LTelefono.BackColor = System.Drawing.Color.Transparent;
+            this.LTelefono.ForeColor = System.Drawing.Color.White;
             this.LTelefono.Location = new System.Drawing.Point(40, 239);
             this.LTelefono.Name = "LTelefono";
             this.LTelefono.Size = new System.Drawing.Size(52, 13);
@@ -343,7 +350,8 @@
             // LNombre
             // 
             this.LNombre.AutoSize = true;
-            this.LNombre.BackColor = System.Drawing.Color.White;
+            this.LNombre.BackColor = System.Drawing.Color.Transparent;
+            this.LNombre.ForeColor = System.Drawing.Color.White;
             this.LNombre.Location = new System.Drawing.Point(39, 93);
             this.LNombre.Name = "LNombre";
             this.LNombre.Size = new System.Drawing.Size(47, 13);
@@ -360,7 +368,8 @@
             // L_NroDocumento
             // 
             this.L_NroDocumento.AutoSize = true;
-            this.L_NroDocumento.BackColor = System.Drawing.Color.White;
+            this.L_NroDocumento.BackColor = System.Drawing.Color.Transparent;
+            this.L_NroDocumento.ForeColor = System.Drawing.Color.White;
             this.L_NroDocumento.Location = new System.Drawing.Point(39, 43);
             this.L_NroDocumento.Name = "L_NroDocumento";
             this.L_NroDocumento.Size = new System.Drawing.Size(88, 13);

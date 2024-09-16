@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaPresentacion.Modales;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,22 @@ namespace CapaPresentacion.Vendedor
         public FormVentas()
         {
             InitializeComponent();
+        }
+
+        private void IBBuscarProducto_Click(object sender, EventArgs e)
+        {
+            using (var modal = new mdProducto())
+            {
+                var result = modal.ShowDialog();
+            }
+        }
+
+        private void IBBuscarProveedor_Click(object sender, EventArgs e)
+        {
+            using (var modal = new mdCliente())
+            {
+                var result = modal.ShowDialog();
+            }
         }
     }
 }

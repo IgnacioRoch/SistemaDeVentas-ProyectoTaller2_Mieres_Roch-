@@ -105,18 +105,20 @@
             // LDetalleMarca
             // 
             this.LDetalleMarca.AutoSize = true;
-            this.LDetalleMarca.BackColor = System.Drawing.Color.White;
-            this.LDetalleMarca.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LDetalleMarca.BackColor = System.Drawing.Color.Transparent;
+            this.LDetalleMarca.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LDetalleMarca.ForeColor = System.Drawing.Color.White;
             this.LDetalleMarca.Location = new System.Drawing.Point(39, 9);
             this.LDetalleMarca.Name = "LDetalleMarca";
-            this.LDetalleMarca.Size = new System.Drawing.Size(186, 23);
+            this.LDetalleMarca.Size = new System.Drawing.Size(170, 21);
             this.LDetalleMarca.TabIndex = 40;
             this.LDetalleMarca.Text = "Detalle de Marcas";
             // 
             // LDescripcion
             // 
             this.LDescripcion.AutoSize = true;
-            this.LDescripcion.BackColor = System.Drawing.Color.White;
+            this.LDescripcion.BackColor = System.Drawing.Color.Transparent;
+            this.LDescripcion.ForeColor = System.Drawing.Color.White;
             this.LDescripcion.Location = new System.Drawing.Point(41, 43);
             this.LDescripcion.Name = "LDescripcion";
             this.LDescripcion.Size = new System.Drawing.Size(63, 13);
@@ -126,7 +128,8 @@
             // LEstado
             // 
             this.LEstado.AutoSize = true;
-            this.LEstado.BackColor = System.Drawing.Color.White;
+            this.LEstado.BackColor = System.Drawing.Color.Transparent;
+            this.LEstado.ForeColor = System.Drawing.Color.White;
             this.LEstado.Location = new System.Drawing.Point(41, 87);
             this.LEstado.Name = "LEstado";
             this.LEstado.Size = new System.Drawing.Size(43, 13);
@@ -136,6 +139,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackgroundImage = global::CapaPresentacion.Properties.Resources.PanelLista;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.IBBuscar);
             this.panel1.Controls.Add(this.LListaMarca);
@@ -151,12 +155,12 @@
             // LListaMarca
             // 
             this.LListaMarca.AutoSize = true;
-            this.LListaMarca.BackColor = System.Drawing.Color.White;
-            this.LListaMarca.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LListaMarca.ForeColor = System.Drawing.Color.Black;
+            this.LListaMarca.BackColor = System.Drawing.Color.Transparent;
+            this.LListaMarca.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LListaMarca.ForeColor = System.Drawing.Color.White;
             this.LListaMarca.Location = new System.Drawing.Point(3, 11);
             this.LListaMarca.Name = "LListaMarca";
-            this.LListaMarca.Size = new System.Drawing.Size(165, 23);
+            this.LListaMarca.Size = new System.Drawing.Size(151, 21);
             this.LListaMarca.TabIndex = 14;
             this.LListaMarca.Text = "Lista de Marcas";
             this.LListaMarca.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -191,8 +195,8 @@
             // LBuscarPor
             // 
             this.LBuscarPor.AutoSize = true;
-            this.LBuscarPor.BackColor = System.Drawing.Color.White;
-            this.LBuscarPor.ForeColor = System.Drawing.Color.Black;
+            this.LBuscarPor.BackColor = System.Drawing.Color.Transparent;
+            this.LBuscarPor.ForeColor = System.Drawing.Color.White;
             this.LBuscarPor.Location = new System.Drawing.Point(292, 20);
             this.LBuscarPor.Name = "LBuscarPor";
             this.LBuscarPor.Size = new System.Drawing.Size(61, 13);
@@ -350,6 +354,7 @@
             // panelFormulario
             // 
             this.panelFormulario.BackColor = System.Drawing.Color.White;
+            this.panelFormulario.BackgroundImage = global::CapaPresentacion.Properties.Resources.PanelDetalle;
             this.panelFormulario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelFormulario.Controls.Add(this.textBox1);
             this.panelFormulario.Controls.Add(this.LDetalleMarca);

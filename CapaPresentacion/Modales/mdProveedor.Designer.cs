@@ -165,6 +165,7 @@
             // panelBusqueda
             // 
             this.panelBusqueda.BackColor = System.Drawing.Color.White;
+            this.panelBusqueda.BackgroundImage = global::CapaPresentacion.Properties.Resources.PanelLista;
             this.panelBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelBusqueda.Controls.Add(this.IBLimpiar);
             this.panelBusqueda.Controls.Add(this.LListaProveedor);
@@ -198,9 +199,9 @@
             // LListaProveedor
             // 
             this.LListaProveedor.AutoSize = true;
-            this.LListaProveedor.BackColor = System.Drawing.Color.White;
+            this.LListaProveedor.BackColor = System.Drawing.Color.Transparent;
             this.LListaProveedor.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LListaProveedor.ForeColor = System.Drawing.Color.Black;
+            this.LListaProveedor.ForeColor = System.Drawing.Color.White;
             this.LListaProveedor.Location = new System.Drawing.Point(3, 11);
             this.LListaProveedor.Name = "LListaProveedor";
             this.LListaProveedor.Size = new System.Drawing.Size(218, 23);
@@ -238,8 +239,8 @@
             // LBuscarPor
             // 
             this.LBuscarPor.AutoSize = true;
-            this.LBuscarPor.BackColor = System.Drawing.Color.White;
-            this.LBuscarPor.ForeColor = System.Drawing.Color.Black;
+            this.LBuscarPor.BackColor = System.Drawing.Color.Transparent;
+            this.LBuscarPor.ForeColor = System.Drawing.Color.White;
             this.LBuscarPor.Location = new System.Drawing.Point(102, 52);
             this.LBuscarPor.Name = "LBuscarPor";
             this.LBuscarPor.Size = new System.Drawing.Size(61, 13);

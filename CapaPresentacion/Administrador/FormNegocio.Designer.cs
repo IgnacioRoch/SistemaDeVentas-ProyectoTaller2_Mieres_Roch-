@@ -41,6 +41,7 @@
             this.LLogo = new System.Windows.Forms.Label();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.LDetalleNegocio = new System.Windows.Forms.Label();
+            this.LInfoNegocio = new System.Windows.Forms.Label();
             this.panelFormulario.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
@@ -52,25 +53,27 @@
             this.panelFormulario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelFormulario.Controls.Add(this.groupBox1);
             this.panelFormulario.Controls.Add(this.LDetalleNegocio);
-            this.panelFormulario.Location = new System.Drawing.Point(1, 2);
+            this.panelFormulario.Location = new System.Drawing.Point(215, 3);
             this.panelFormulario.Name = "panelFormulario";
-            this.panelFormulario.Size = new System.Drawing.Size(703, 569);
+            this.panelFormulario.Size = new System.Drawing.Size(855, 569);
             this.panelFormulario.TabIndex = 7;
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.BackgroundImage = global::CapaPresentacion.Properties.Resources.PanelNegocio;
             this.groupBox1.Controls.Add(this.IBGuardar);
             this.groupBox1.Controls.Add(this.TxtDireccion);
             this.groupBox1.Controls.Add(this.TxtRuc);
             this.groupBox1.Controls.Add(this.TxtNombreNegocio);
+            this.groupBox1.Controls.Add(this.LInfoNegocio);
             this.groupBox1.Controls.Add(this.LNombreNegocio);
             this.groupBox1.Controls.Add(this.LRUC);
             this.groupBox1.Controls.Add(this.LDireccion);
             this.groupBox1.Controls.Add(this.IBSubir);
             this.groupBox1.Controls.Add(this.LLogo);
             this.groupBox1.Controls.Add(this.picLogo);
-            this.groupBox1.Location = new System.Drawing.Point(45, 31);
+            this.groupBox1.Location = new System.Drawing.Point(112, 31);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(625, 507);
             this.groupBox1.TabIndex = 3;
@@ -121,7 +124,8 @@
             // LNombreNegocio
             // 
             this.LNombreNegocio.AutoSize = true;
-            this.LNombreNegocio.BackColor = System.Drawing.Color.White;
+            this.LNombreNegocio.BackColor = System.Drawing.Color.Transparent;
+            this.LNombreNegocio.ForeColor = System.Drawing.Color.White;
             this.LNombreNegocio.Location = new System.Drawing.Point(241, 36);
             this.LNombreNegocio.Name = "LNombreNegocio";
             this.LNombreNegocio.Size = new System.Drawing.Size(107, 13);
@@ -131,7 +135,8 @@
             // LRUC
             // 
             this.LRUC.AutoSize = true;
-            this.LRUC.BackColor = System.Drawing.Color.White;
+            this.LRUC.BackColor = System.Drawing.Color.Transparent;
+            this.LRUC.ForeColor = System.Drawing.Color.White;
             this.LRUC.Location = new System.Drawing.Point(241, 86);
             this.LRUC.Name = "LRUC";
             this.LRUC.Size = new System.Drawing.Size(33, 13);
@@ -141,7 +146,8 @@
             // LDireccion
             // 
             this.LDireccion.AutoSize = true;
-            this.LDireccion.BackColor = System.Drawing.Color.White;
+            this.LDireccion.BackColor = System.Drawing.Color.Transparent;
+            this.LDireccion.ForeColor = System.Drawing.Color.White;
             this.LDireccion.Location = new System.Drawing.Point(241, 135);
             this.LDireccion.Name = "LDireccion";
             this.LDireccion.Size = new System.Drawing.Size(55, 13);
@@ -172,6 +178,8 @@
             // LLogo
             // 
             this.LLogo.AutoSize = true;
+            this.LLogo.BackColor = System.Drawing.Color.Transparent;
+            this.LLogo.ForeColor = System.Drawing.Color.White;
             this.LLogo.Location = new System.Drawing.Point(14, 16);
             this.LLogo.Name = "LLogo";
             this.LLogo.Size = new System.Drawing.Size(34, 13);
@@ -191,12 +199,24 @@
             // 
             this.LDetalleNegocio.AutoSize = true;
             this.LDetalleNegocio.BackColor = System.Drawing.Color.White;
-            this.LDetalleNegocio.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LDetalleNegocio.Location = new System.Drawing.Point(225, 5);
+            this.LDetalleNegocio.Font = new System.Drawing.Font("OCR A Extended", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LDetalleNegocio.Location = new System.Drawing.Point(270, 4);
             this.LDetalleNegocio.Name = "LDetalleNegocio";
-            this.LDetalleNegocio.Size = new System.Drawing.Size(199, 23);
+            this.LDetalleNegocio.Size = new System.Drawing.Size(257, 23);
             this.LDetalleNegocio.TabIndex = 2;
             this.LDetalleNegocio.Text = "Detalle del Negocio";
+            // 
+            // LInfoNegocio
+            // 
+            this.LInfoNegocio.BackColor = System.Drawing.Color.Transparent;
+            this.LInfoNegocio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LInfoNegocio.ForeColor = System.Drawing.Color.White;
+            this.LInfoNegocio.Location = new System.Drawing.Point(6, 443);
+            this.LInfoNegocio.Name = "LInfoNegocio";
+            this.LInfoNegocio.Size = new System.Drawing.Size(613, 61);
+            this.LInfoNegocio.TabIndex = 6;
+            this.LInfoNegocio.Text = "El siguiente apartado modifica la informacion del negocio, la cual figurará en co" +
+    "mprobantes  y/o tickets.";
             // 
             // FormNegocio
             // 
@@ -230,5 +250,6 @@
         private System.Windows.Forms.Label LNombreNegocio;
         private System.Windows.Forms.Label LRUC;
         private System.Windows.Forms.Label LDireccion;
+        private System.Windows.Forms.Label LInfoNegocio;
     }
 }

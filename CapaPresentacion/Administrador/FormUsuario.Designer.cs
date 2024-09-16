@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridDatos = new System.Windows.Forms.DataGridView();
             this.BSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.IdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,8 +46,6 @@
             this.LBuscarPor = new System.Windows.Forms.Label();
             this.CBBusqueda = new System.Windows.Forms.ComboBox();
             this.TxtBusqueda = new System.Windows.Forms.TextBox();
-            this.IBLimpiar = new FontAwesome.Sharp.IconButton();
-            this.IBBuscar = new FontAwesome.Sharp.IconButton();
             this.panelBusqueda = new System.Windows.Forms.Panel();
             this.TxtApellido = new System.Windows.Forms.TextBox();
             this.TxtCorreo = new System.Windows.Forms.TextBox();
@@ -62,15 +60,17 @@
             this.LRol = new System.Windows.Forms.Label();
             this.CBEstado = new System.Windows.Forms.ComboBox();
             this.LConfirmarContrasenia = new System.Windows.Forms.Label();
-            this.IBGuardar = new FontAwesome.Sharp.IconButton();
             this.LNombre = new System.Windows.Forms.Label();
             this.LContrasenia = new System.Windows.Forms.Label();
-            this.IBEliminar = new FontAwesome.Sharp.IconButton();
             this.LCorreo = new System.Windows.Forms.Label();
-            this.IBVaciar = new FontAwesome.Sharp.IconButton();
             this.LApellido = new System.Windows.Forms.Label();
             this.LDetalleUsuario = new System.Windows.Forms.Label();
             this.panelFormulario = new System.Windows.Forms.Panel();
+            this.IBLimpiar = new FontAwesome.Sharp.IconButton();
+            this.IBBuscar = new FontAwesome.Sharp.IconButton();
+            this.IBVaciar = new FontAwesome.Sharp.IconButton();
+            this.IBEliminar = new FontAwesome.Sharp.IconButton();
+            this.IBGuardar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDatos)).BeginInit();
             this.panelBusqueda.SuspendLayout();
             this.panelFormulario.SuspendLayout();
@@ -79,15 +79,15 @@
             // dataGridDatos
             // 
             this.dataGridDatos.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.BSeleccionar,
@@ -105,14 +105,14 @@
             this.dataGridDatos.MultiSelect = false;
             this.dataGridDatos.Name = "dataGridDatos";
             this.dataGridDatos.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridDatos.RowTemplate.Height = 28;
             this.dataGridDatos.Size = new System.Drawing.Size(932, 488);
             this.dataGridDatos.TabIndex = 5;
@@ -196,12 +196,12 @@
             // LListaUsuarios
             // 
             this.LListaUsuarios.AutoSize = true;
-            this.LListaUsuarios.BackColor = System.Drawing.Color.White;
-            this.LListaUsuarios.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LListaUsuarios.ForeColor = System.Drawing.Color.Black;
+            this.LListaUsuarios.BackColor = System.Drawing.Color.Transparent;
+            this.LListaUsuarios.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LListaUsuarios.ForeColor = System.Drawing.Color.White;
             this.LListaUsuarios.Location = new System.Drawing.Point(3, 11);
             this.LListaUsuarios.Name = "LListaUsuarios";
-            this.LListaUsuarios.Size = new System.Drawing.Size(176, 23);
+            this.LListaUsuarios.Size = new System.Drawing.Size(162, 21);
             this.LListaUsuarios.TabIndex = 1;
             this.LListaUsuarios.Text = "Lista de usuarios";
             this.LListaUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -209,8 +209,8 @@
             // LBuscarPor
             // 
             this.LBuscarPor.AutoSize = true;
-            this.LBuscarPor.BackColor = System.Drawing.Color.White;
-            this.LBuscarPor.ForeColor = System.Drawing.Color.Black;
+            this.LBuscarPor.BackColor = System.Drawing.Color.Transparent;
+            this.LBuscarPor.ForeColor = System.Drawing.Color.White;
             this.LBuscarPor.Location = new System.Drawing.Point(290, 20);
             this.LBuscarPor.Name = "LBuscarPor";
             this.LBuscarPor.Size = new System.Drawing.Size(61, 13);
@@ -233,45 +233,10 @@
             this.TxtBusqueda.Size = new System.Drawing.Size(183, 20);
             this.TxtBusqueda.TabIndex = 2;
             // 
-            // IBLimpiar
-            // 
-            this.IBLimpiar.BackColor = System.Drawing.Color.White;
-            this.IBLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.IBLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.IBLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBLimpiar.ForeColor = System.Drawing.Color.Black;
-            this.IBLimpiar.IconChar = FontAwesome.Sharp.IconChar.Eraser;
-            this.IBLimpiar.IconColor = System.Drawing.Color.Black;
-            this.IBLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IBLimpiar.IconSize = 16;
-            this.IBLimpiar.Location = new System.Drawing.Point(791, 12);
-            this.IBLimpiar.Name = "IBLimpiar";
-            this.IBLimpiar.Size = new System.Drawing.Size(41, 28);
-            this.IBLimpiar.TabIndex = 4;
-            this.IBLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.IBLimpiar.UseVisualStyleBackColor = false;
-            // 
-            // IBBuscar
-            // 
-            this.IBBuscar.BackColor = System.Drawing.Color.Gold;
-            this.IBBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.IBBuscar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.IBBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBBuscar.ForeColor = System.Drawing.Color.Black;
-            this.IBBuscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.IBBuscar.IconColor = System.Drawing.Color.Black;
-            this.IBBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IBBuscar.IconSize = 16;
-            this.IBBuscar.Location = new System.Drawing.Point(735, 12);
-            this.IBBuscar.Name = "IBBuscar";
-            this.IBBuscar.Size = new System.Drawing.Size(41, 28);
-            this.IBBuscar.TabIndex = 4;
-            this.IBBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.IBBuscar.UseVisualStyleBackColor = false;
-            // 
             // panelBusqueda
             // 
             this.panelBusqueda.BackColor = System.Drawing.Color.White;
+            this.panelBusqueda.BackgroundImage = global::CapaPresentacion.Properties.Resources.PanelLista;
             this.panelBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelBusqueda.Controls.Add(this.LListaUsuarios);
             this.panelBusqueda.Controls.Add(this.IBLimpiar);
@@ -338,7 +303,8 @@
             // L_NroDocumento
             // 
             this.L_NroDocumento.AutoSize = true;
-            this.L_NroDocumento.BackColor = System.Drawing.Color.White;
+            this.L_NroDocumento.BackColor = System.Drawing.Color.Transparent;
+            this.L_NroDocumento.ForeColor = System.Drawing.Color.White;
             this.L_NroDocumento.Location = new System.Drawing.Point(41, 43);
             this.L_NroDocumento.Name = "L_NroDocumento";
             this.L_NroDocumento.Size = new System.Drawing.Size(88, 13);
@@ -357,7 +323,8 @@
             // LEstado
             // 
             this.LEstado.AutoSize = true;
-            this.LEstado.BackColor = System.Drawing.Color.White;
+            this.LEstado.BackColor = System.Drawing.Color.Transparent;
+            this.LEstado.ForeColor = System.Drawing.Color.White;
             this.LEstado.Location = new System.Drawing.Point(41, 386);
             this.LEstado.Name = "LEstado";
             this.LEstado.Size = new System.Drawing.Size(43, 13);
@@ -367,7 +334,8 @@
             // LRol
             // 
             this.LRol.AutoSize = true;
-            this.LRol.BackColor = System.Drawing.Color.White;
+            this.LRol.BackColor = System.Drawing.Color.Transparent;
+            this.LRol.ForeColor = System.Drawing.Color.White;
             this.LRol.Location = new System.Drawing.Point(41, 338);
             this.LRol.Name = "LRol";
             this.LRol.Size = new System.Drawing.Size(26, 13);
@@ -386,38 +354,19 @@
             // LConfirmarContrasenia
             // 
             this.LConfirmarContrasenia.AutoSize = true;
-            this.LConfirmarContrasenia.BackColor = System.Drawing.Color.White;
+            this.LConfirmarContrasenia.BackColor = System.Drawing.Color.Transparent;
+            this.LConfirmarContrasenia.ForeColor = System.Drawing.Color.White;
             this.LConfirmarContrasenia.Location = new System.Drawing.Point(41, 287);
             this.LConfirmarContrasenia.Name = "LConfirmarContrasenia";
             this.LConfirmarContrasenia.Size = new System.Drawing.Size(110, 13);
             this.LConfirmarContrasenia.TabIndex = 1;
             this.LConfirmarContrasenia.Text = "Confirmar contraseña:";
             // 
-            // IBGuardar
-            // 
-            this.IBGuardar.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.IBGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.IBGuardar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.IBGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IBGuardar.ForeColor = System.Drawing.Color.White;
-            this.IBGuardar.IconChar = FontAwesome.Sharp.IconChar.Check;
-            this.IBGuardar.IconColor = System.Drawing.Color.White;
-            this.IBGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IBGuardar.IconSize = 16;
-            this.IBGuardar.Location = new System.Drawing.Point(44, 454);
-            this.IBGuardar.Name = "IBGuardar";
-            this.IBGuardar.Size = new System.Drawing.Size(192, 28);
-            this.IBGuardar.TabIndex = 4;
-            this.IBGuardar.Text = "Guardar";
-            this.IBGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.IBGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.IBGuardar.UseVisualStyleBackColor = false;
-            // 
             // LNombre
             // 
             this.LNombre.AutoSize = true;
-            this.LNombre.BackColor = System.Drawing.Color.White;
+            this.LNombre.BackColor = System.Drawing.Color.Transparent;
+            this.LNombre.ForeColor = System.Drawing.Color.White;
             this.LNombre.Location = new System.Drawing.Point(41, 93);
             this.LNombre.Name = "LNombre";
             this.LNombre.Size = new System.Drawing.Size(47, 13);
@@ -427,69 +376,30 @@
             // LContrasenia
             // 
             this.LContrasenia.AutoSize = true;
-            this.LContrasenia.BackColor = System.Drawing.Color.White;
+            this.LContrasenia.BackColor = System.Drawing.Color.Transparent;
+            this.LContrasenia.ForeColor = System.Drawing.Color.White;
             this.LContrasenia.Location = new System.Drawing.Point(41, 239);
             this.LContrasenia.Name = "LContrasenia";
             this.LContrasenia.Size = new System.Drawing.Size(64, 13);
             this.LContrasenia.TabIndex = 1;
             this.LContrasenia.Text = "Contraseña:";
             // 
-            // IBEliminar
-            // 
-            this.IBEliminar.BackColor = System.Drawing.Color.Firebrick;
-            this.IBEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.IBEliminar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.IBEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IBEliminar.ForeColor = System.Drawing.Color.White;
-            this.IBEliminar.IconChar = FontAwesome.Sharp.IconChar.X;
-            this.IBEliminar.IconColor = System.Drawing.Color.White;
-            this.IBEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IBEliminar.IconSize = 16;
-            this.IBEliminar.Location = new System.Drawing.Point(43, 488);
-            this.IBEliminar.Name = "IBEliminar";
-            this.IBEliminar.Size = new System.Drawing.Size(192, 28);
-            this.IBEliminar.TabIndex = 4;
-            this.IBEliminar.Text = "Eliminar";
-            this.IBEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.IBEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.IBEliminar.UseVisualStyleBackColor = false;
-            // 
             // LCorreo
             // 
             this.LCorreo.AutoSize = true;
-            this.LCorreo.BackColor = System.Drawing.Color.White;
+            this.LCorreo.BackColor = System.Drawing.Color.Transparent;
+            this.LCorreo.ForeColor = System.Drawing.Color.White;
             this.LCorreo.Location = new System.Drawing.Point(41, 191);
             this.LCorreo.Name = "LCorreo";
             this.LCorreo.Size = new System.Drawing.Size(93, 13);
             this.LCorreo.TabIndex = 1;
             this.LCorreo.Text = "Correo electónico:";
             // 
-            // IBVaciar
-            // 
-            this.IBVaciar.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.IBVaciar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.IBVaciar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.IBVaciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBVaciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IBVaciar.ForeColor = System.Drawing.Color.White;
-            this.IBVaciar.IconChar = FontAwesome.Sharp.IconChar.Eraser;
-            this.IBVaciar.IconColor = System.Drawing.Color.White;
-            this.IBVaciar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IBVaciar.IconSize = 16;
-            this.IBVaciar.Location = new System.Drawing.Point(43, 520);
-            this.IBVaciar.Name = "IBVaciar";
-            this.IBVaciar.Size = new System.Drawing.Size(192, 28);
-            this.IBVaciar.TabIndex = 4;
-            this.IBVaciar.Text = "Limpiar";
-            this.IBVaciar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.IBVaciar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.IBVaciar.UseVisualStyleBackColor = false;
-            // 
             // LApellido
             // 
             this.LApellido.AutoSize = true;
-            this.LApellido.BackColor = System.Drawing.Color.White;
+            this.LApellido.BackColor = System.Drawing.Color.Transparent;
+            this.LApellido.ForeColor = System.Drawing.Color.White;
             this.LApellido.Location = new System.Drawing.Point(41, 142);
             this.LApellido.Name = "LApellido";
             this.LApellido.Size = new System.Drawing.Size(47, 13);
@@ -499,17 +409,19 @@
             // LDetalleUsuario
             // 
             this.LDetalleUsuario.AutoSize = true;
-            this.LDetalleUsuario.BackColor = System.Drawing.Color.White;
-            this.LDetalleUsuario.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LDetalleUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.LDetalleUsuario.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LDetalleUsuario.ForeColor = System.Drawing.Color.White;
             this.LDetalleUsuario.Location = new System.Drawing.Point(39, 9);
             this.LDetalleUsuario.Name = "LDetalleUsuario";
-            this.LDetalleUsuario.Size = new System.Drawing.Size(186, 23);
+            this.LDetalleUsuario.Size = new System.Drawing.Size(171, 21);
             this.LDetalleUsuario.TabIndex = 1;
             this.LDetalleUsuario.Text = "Detalle de usuario";
             // 
             // panelFormulario
             // 
             this.panelFormulario.BackColor = System.Drawing.Color.White;
+            this.panelFormulario.BackgroundImage = global::CapaPresentacion.Properties.Resources.PanelDetalle;
             this.panelFormulario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelFormulario.Controls.Add(this.LDetalleUsuario);
             this.panelFormulario.Controls.Add(this.LApellido);
@@ -536,6 +448,105 @@
             this.panelFormulario.Name = "panelFormulario";
             this.panelFormulario.Size = new System.Drawing.Size(305, 569);
             this.panelFormulario.TabIndex = 6;
+            // 
+            // IBLimpiar
+            // 
+            this.IBLimpiar.BackColor = System.Drawing.Color.White;
+            this.IBLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.IBLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.IBLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IBLimpiar.ForeColor = System.Drawing.Color.Black;
+            this.IBLimpiar.IconChar = FontAwesome.Sharp.IconChar.Eraser;
+            this.IBLimpiar.IconColor = System.Drawing.Color.Black;
+            this.IBLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IBLimpiar.IconSize = 16;
+            this.IBLimpiar.Location = new System.Drawing.Point(791, 12);
+            this.IBLimpiar.Name = "IBLimpiar";
+            this.IBLimpiar.Size = new System.Drawing.Size(41, 28);
+            this.IBLimpiar.TabIndex = 4;
+            this.IBLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.IBLimpiar.UseVisualStyleBackColor = false;
+            // 
+            // IBBuscar
+            // 
+            this.IBBuscar.BackColor = System.Drawing.Color.Gold;
+            this.IBBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.IBBuscar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.IBBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IBBuscar.ForeColor = System.Drawing.Color.Black;
+            this.IBBuscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.IBBuscar.IconColor = System.Drawing.Color.Black;
+            this.IBBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IBBuscar.IconSize = 16;
+            this.IBBuscar.Location = new System.Drawing.Point(735, 12);
+            this.IBBuscar.Name = "IBBuscar";
+            this.IBBuscar.Size = new System.Drawing.Size(41, 28);
+            this.IBBuscar.TabIndex = 4;
+            this.IBBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.IBBuscar.UseVisualStyleBackColor = false;
+            // 
+            // IBVaciar
+            // 
+            this.IBVaciar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.IBVaciar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.IBVaciar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.IBVaciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IBVaciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IBVaciar.ForeColor = System.Drawing.Color.White;
+            this.IBVaciar.IconChar = FontAwesome.Sharp.IconChar.Eraser;
+            this.IBVaciar.IconColor = System.Drawing.Color.White;
+            this.IBVaciar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IBVaciar.IconSize = 16;
+            this.IBVaciar.Location = new System.Drawing.Point(43, 520);
+            this.IBVaciar.Name = "IBVaciar";
+            this.IBVaciar.Size = new System.Drawing.Size(192, 28);
+            this.IBVaciar.TabIndex = 4;
+            this.IBVaciar.Text = "Limpiar";
+            this.IBVaciar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.IBVaciar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.IBVaciar.UseVisualStyleBackColor = false;
+            // 
+            // IBEliminar
+            // 
+            this.IBEliminar.BackColor = System.Drawing.Color.Firebrick;
+            this.IBEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.IBEliminar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.IBEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IBEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IBEliminar.ForeColor = System.Drawing.Color.White;
+            this.IBEliminar.IconChar = FontAwesome.Sharp.IconChar.X;
+            this.IBEliminar.IconColor = System.Drawing.Color.White;
+            this.IBEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IBEliminar.IconSize = 16;
+            this.IBEliminar.Location = new System.Drawing.Point(43, 488);
+            this.IBEliminar.Name = "IBEliminar";
+            this.IBEliminar.Size = new System.Drawing.Size(192, 28);
+            this.IBEliminar.TabIndex = 4;
+            this.IBEliminar.Text = "Eliminar";
+            this.IBEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.IBEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.IBEliminar.UseVisualStyleBackColor = false;
+            // 
+            // IBGuardar
+            // 
+            this.IBGuardar.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.IBGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.IBGuardar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.IBGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IBGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IBGuardar.ForeColor = System.Drawing.Color.White;
+            this.IBGuardar.IconChar = FontAwesome.Sharp.IconChar.Check;
+            this.IBGuardar.IconColor = System.Drawing.Color.White;
+            this.IBGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IBGuardar.IconSize = 16;
+            this.IBGuardar.Location = new System.Drawing.Point(44, 454);
+            this.IBGuardar.Name = "IBGuardar";
+            this.IBGuardar.Size = new System.Drawing.Size(192, 28);
+            this.IBGuardar.TabIndex = 4;
+            this.IBGuardar.Text = "Guardar";
+            this.IBGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.IBGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.IBGuardar.UseVisualStyleBackColor = false;
             // 
             // FormUsuario
             // 

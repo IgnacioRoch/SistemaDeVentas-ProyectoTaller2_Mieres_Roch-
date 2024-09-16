@@ -148,6 +148,12 @@
     <Compile Include="Modales\mdAcercaDe.Designer.cs">
       <DependentUpon>mdAcercaDe.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modales\mdCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modales\mdCliente.Designer.cs">
+      <DependentUpon>mdCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modales\mdProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +225,9 @@
     <EmbeddedResource Include="Modales\mdAcercaDe.resx">
       <DependentUpon>mdAcercaDe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modales\mdCliente.resx">
+      <DependentUpon>mdCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modales\mdProducto.resx">
       <DependentUpon>mdProducto.cs</DependentUpon>
     </EmbeddedResource>
@@ -281,6 +290,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\fondoCompra.jpg" />
+    <None Include="Resources\PanelCompraVenta.png" />
+    <None Include="Resources\PanelDetallesVC.png" />
+    <None Include="Resources\PanelNegocio.png" />
+    <None Include="Resources\PanelLista.png" />
+    <None Include="Resources\PanelDetalle.png" />
     <None Include="Resources\FrameLogo.png" />
     <None Include="Resources\icons8-pdf-20.png" />
     <None Include="Resources\icons8-ms-excel-20.png" />

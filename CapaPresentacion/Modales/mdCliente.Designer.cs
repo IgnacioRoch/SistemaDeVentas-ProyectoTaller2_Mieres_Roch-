@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion.Modales
 {
-    partial class mdProducto
+    partial class mdCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -31,20 +31,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridDatos = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelBusqueda = new System.Windows.Forms.Panel();
             this.IBLimpiar = new FontAwesome.Sharp.IconButton();
-            this.LListaProducto = new System.Windows.Forms.Label();
+            this.LListaCliente = new System.Windows.Forms.Label();
             this.IBBuscar = new FontAwesome.Sharp.IconButton();
             this.CBBusqueda = new System.Windows.Forms.ComboBox();
             this.LBuscarPor = new System.Windows.Forms.Label();
             this.TxtBusqueda = new System.Windows.Forms.TextBox();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDatos)).BeginInit();
             this.panelBusqueda.SuspendLayout();
             this.SuspendLayout();
@@ -65,12 +63,10 @@
             this.dataGridDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
-            this.Codigo,
+            this.NroDocumento,
             this.Nombre,
-            this.Categoria,
-            this.Stock,
-            this.PrecioCompra,
-            this.PrecioVenta});
+            this.Apellido,
+            this.Correo});
             this.dataGridDatos.Location = new System.Drawing.Point(11, 115);
             this.dataGridDatos.MultiSelect = false;
             this.dataGridDatos.Name = "dataGridDatos";
@@ -89,67 +85,7 @@
             this.dataGridDatos.RowTemplate.Height = 28;
             this.dataGridDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridDatos.Size = new System.Drawing.Size(660, 375);
-            this.dataGridDatos.TabIndex = 42;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.MinimumWidth = 6;
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
-            this.Id.Width = 125;
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Código";
-            this.Codigo.MinimumWidth = 6;
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            this.Codigo.Width = 150;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 125;
-            // 
-            // Categoria
-            // 
-            this.Categoria.HeaderText = "Categoria";
-            this.Categoria.MinimumWidth = 6;
-            this.Categoria.Name = "Categoria";
-            this.Categoria.ReadOnly = true;
-            this.Categoria.Width = 180;
-            // 
-            // Stock
-            // 
-            this.Stock.HeaderText = "Stock";
-            this.Stock.MinimumWidth = 6;
-            this.Stock.Name = "Stock";
-            this.Stock.ReadOnly = true;
-            this.Stock.Visible = false;
-            this.Stock.Width = 150;
-            // 
-            // PrecioCompra
-            // 
-            this.PrecioCompra.HeaderText = "Precio Compra";
-            this.PrecioCompra.MinimumWidth = 6;
-            this.PrecioCompra.Name = "PrecioCompra";
-            this.PrecioCompra.ReadOnly = true;
-            this.PrecioCompra.Visible = false;
-            this.PrecioCompra.Width = 125;
-            // 
-            // PrecioVenta
-            // 
-            this.PrecioVenta.HeaderText = "Precio Venta";
-            this.PrecioVenta.MinimumWidth = 6;
-            this.PrecioVenta.Name = "PrecioVenta";
-            this.PrecioVenta.ReadOnly = true;
-            this.PrecioVenta.Visible = false;
-            this.PrecioVenta.Width = 125;
+            this.dataGridDatos.TabIndex = 44;
             // 
             // panelBusqueda
             // 
@@ -157,7 +93,7 @@
             this.panelBusqueda.BackgroundImage = global::CapaPresentacion.Properties.Resources.PanelLista;
             this.panelBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelBusqueda.Controls.Add(this.IBLimpiar);
-            this.panelBusqueda.Controls.Add(this.LListaProducto);
+            this.panelBusqueda.Controls.Add(this.LListaCliente);
             this.panelBusqueda.Controls.Add(this.IBBuscar);
             this.panelBusqueda.Controls.Add(this.CBBusqueda);
             this.panelBusqueda.Controls.Add(this.LBuscarPor);
@@ -165,7 +101,7 @@
             this.panelBusqueda.Location = new System.Drawing.Point(12, 12);
             this.panelBusqueda.Name = "panelBusqueda";
             this.panelBusqueda.Size = new System.Drawing.Size(659, 84);
-            this.panelBusqueda.TabIndex = 43;
+            this.panelBusqueda.TabIndex = 45;
             // 
             // IBLimpiar
             // 
@@ -185,18 +121,18 @@
             this.IBLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IBLimpiar.UseVisualStyleBackColor = false;
             // 
-            // LListaProducto
+            // LListaCliente
             // 
-            this.LListaProducto.AutoSize = true;
-            this.LListaProducto.BackColor = System.Drawing.Color.Transparent;
-            this.LListaProducto.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LListaProducto.ForeColor = System.Drawing.Color.White;
-            this.LListaProducto.Location = new System.Drawing.Point(3, 11);
-            this.LListaProducto.Name = "LListaProducto";
-            this.LListaProducto.Size = new System.Drawing.Size(193, 23);
-            this.LListaProducto.TabIndex = 1;
-            this.LListaProducto.Text = "Lista de productos";
-            this.LListaProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LListaCliente.AutoSize = true;
+            this.LListaCliente.BackColor = System.Drawing.Color.Transparent;
+            this.LListaCliente.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LListaCliente.ForeColor = System.Drawing.Color.White;
+            this.LListaCliente.Location = new System.Drawing.Point(3, 11);
+            this.LListaCliente.Name = "LListaCliente";
+            this.LListaCliente.Size = new System.Drawing.Size(168, 23);
+            this.LListaCliente.TabIndex = 1;
+            this.LListaCliente.Text = "Lista de clientes";
+            this.LListaCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // IBBuscar
             // 
@@ -243,15 +179,56 @@
             this.TxtBusqueda.Size = new System.Drawing.Size(183, 20);
             this.TxtBusqueda.TabIndex = 25;
             // 
-            // mdProducto
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            this.Id.Width = 125;
+            // 
+            // NroDocumento
+            // 
+            this.NroDocumento.HeaderText = "Nro. Documento";
+            this.NroDocumento.MinimumWidth = 6;
+            this.NroDocumento.Name = "NroDocumento";
+            this.NroDocumento.ReadOnly = true;
+            this.NroDocumento.Width = 150;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 6;
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 125;
+            // 
+            // Apellido
+            // 
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.MinimumWidth = 6;
+            this.Apellido.Name = "Apellido";
+            this.Apellido.ReadOnly = true;
+            this.Apellido.Width = 180;
+            // 
+            // Correo
+            // 
+            this.Correo.HeaderText = "Correo";
+            this.Correo.MinimumWidth = 6;
+            this.Correo.Name = "Correo";
+            this.Correo.ReadOnly = true;
+            this.Correo.Width = 150;
+            // 
+            // mdCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(685, 500);
+            this.ClientSize = new System.Drawing.Size(684, 501);
             this.Controls.Add(this.dataGridDatos);
             this.Controls.Add(this.panelBusqueda);
-            this.Name = "mdProducto";
-            this.Text = "mdProducto";
+            this.Name = "mdCliente";
+            this.Text = "mdCliente";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDatos)).EndInit();
             this.panelBusqueda.ResumeLayout(false);
             this.panelBusqueda.PerformLayout();
@@ -264,17 +241,15 @@
         private System.Windows.Forms.DataGridView dataGridDatos;
         private System.Windows.Forms.Panel panelBusqueda;
         private FontAwesome.Sharp.IconButton IBLimpiar;
-        private System.Windows.Forms.Label LListaProducto;
+        private System.Windows.Forms.Label LListaCliente;
         private FontAwesome.Sharp.IconButton IBBuscar;
         private System.Windows.Forms.ComboBox CBBusqueda;
         private System.Windows.Forms.Label LBuscarPor;
         private System.Windows.Forms.TextBox TxtBusqueda;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NroDocumento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioCompra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioVenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
     }
 }

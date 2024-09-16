@@ -70,6 +70,7 @@
             // panelDetalleCompra
             // 
             this.panelDetalleCompra.BackColor = System.Drawing.Color.White;
+            this.panelDetalleCompra.BackgroundImage = global::CapaPresentacion.Properties.Resources.PanelDetallesVC;
             this.panelDetalleCompra.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelDetalleCompra.Controls.Add(this.BDescaergarPdf);
             this.panelDetalleCompra.Controls.Add(this.dataGridDatos);
@@ -83,7 +84,7 @@
             this.panelDetalleCompra.Controls.Add(this.TxtBusqueda);
             this.panelDetalleCompra.Controls.Add(this.LNuevoDocumento);
             this.panelDetalleCompra.Controls.Add(this.CBNroDocumento);
-            this.panelDetalleCompra.Location = new System.Drawing.Point(202, 12);
+            this.panelDetalleCompra.Location = new System.Drawing.Point(229, 12);
             this.panelDetalleCompra.Name = "panelDetalleCompra";
             this.panelDetalleCompra.Size = new System.Drawing.Size(782, 611);
             this.panelDetalleCompra.TabIndex = 0;
@@ -141,7 +142,7 @@
             this.dataGridDatos.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridDatos.RowTemplate.Height = 28;
             this.dataGridDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridDatos.Size = new System.Drawing.Size(660, 295);
+            this.dataGridDatos.Size = new System.Drawing.Size(698, 295);
             this.dataGridDatos.TabIndex = 43;
             // 
             // Id
@@ -206,12 +207,14 @@
             // 
             // GBInformacionProveedor
             // 
+            this.GBInformacionProveedor.BackColor = System.Drawing.Color.Transparent;
             this.GBInformacionProveedor.Controls.Add(this.textBox4);
             this.GBInformacionProveedor.Controls.Add(this.TxtRazonSocial);
             this.GBInformacionProveedor.Controls.Add(this.LRazonSocial);
             this.GBInformacionProveedor.Controls.Add(this.TxtNroDocumento);
             this.GBInformacionProveedor.Controls.Add(this.LNroDocumento);
             this.GBInformacionProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GBInformacionProveedor.ForeColor = System.Drawing.Color.White;
             this.GBInformacionProveedor.Location = new System.Drawing.Point(8, 175);
             this.GBInformacionProveedor.Name = "GBInformacionProveedor";
             this.GBInformacionProveedor.Size = new System.Drawing.Size(698, 80);
@@ -265,6 +268,8 @@
             // LMontototal
             // 
             this.LMontototal.AutoSize = true;
+            this.LMontototal.BackColor = System.Drawing.Color.Transparent;
+            this.LMontototal.ForeColor = System.Drawing.Color.White;
             this.LMontototal.Location = new System.Drawing.Point(15, 575);
             this.LMontototal.Name = "LMontototal";
             this.LMontototal.Size = new System.Drawing.Size(67, 13);
@@ -281,6 +286,7 @@
             // 
             // GBInformacionCompra
             // 
+            this.GBInformacionCompra.BackColor = System.Drawing.Color.Transparent;
             this.GBInformacionCompra.Controls.Add(this.TxtUsuario);
             this.GBInformacionCompra.Controls.Add(this.LUsuario);
             this.GBInformacionCompra.Controls.Add(this.TxtTipoDocumento);
@@ -288,6 +294,7 @@
             this.GBInformacionCompra.Controls.Add(this.TxtFecha);
             this.GBInformacionCompra.Controls.Add(this.LFecha);
             this.GBInformacionCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GBInformacionCompra.ForeColor = System.Drawing.Color.White;
             this.GBInformacionCompra.Location = new System.Drawing.Point(8, 89);
             this.GBInformacionCompra.Name = "GBInformacionCompra";
             this.GBInformacionCompra.Size = new System.Drawing.Size(698, 80);
@@ -367,8 +374,9 @@
             // LDetalleCompra
             // 
             this.LDetalleCompra.AutoSize = true;
-            this.LDetalleCompra.BackColor = System.Drawing.Color.White;
+            this.LDetalleCompra.BackColor = System.Drawing.Color.Transparent;
             this.LDetalleCompra.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LDetalleCompra.ForeColor = System.Drawing.Color.White;
             this.LDetalleCompra.Location = new System.Drawing.Point(3, 10);
             this.LDetalleCompra.Name = "LDetalleCompra";
             this.LDetalleCompra.Size = new System.Drawing.Size(162, 23);
@@ -405,8 +413,8 @@
             // LNuevoDocumento
             // 
             this.LNuevoDocumento.AutoSize = true;
-            this.LNuevoDocumento.BackColor = System.Drawing.Color.White;
-            this.LNuevoDocumento.ForeColor = System.Drawing.Color.Black;
+            this.LNuevoDocumento.BackColor = System.Drawing.Color.Transparent;
+            this.LNuevoDocumento.ForeColor = System.Drawing.Color.White;
             this.LNuevoDocumento.Location = new System.Drawing.Point(93, 49);
             this.LNuevoDocumento.Name = "LNuevoDocumento";
             this.LNuevoDocumento.Size = new System.Drawing.Size(98, 13);
@@ -427,7 +435,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1067, 649);
+            this.ClientSize = new System.Drawing.Size(1176, 649);
             this.Controls.Add(this.panelDetalleCompra);
             this.Name = "FormDetalleCompra";
             this.Text = "FormDetalleCompra";

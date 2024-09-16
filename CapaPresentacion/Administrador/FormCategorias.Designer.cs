@@ -168,8 +168,8 @@
             // LBuscarPor
             // 
             this.LBuscarPor.AutoSize = true;
-            this.LBuscarPor.BackColor = System.Drawing.Color.White;
-            this.LBuscarPor.ForeColor = System.Drawing.Color.Black;
+            this.LBuscarPor.BackColor = System.Drawing.Color.Transparent;
+            this.LBuscarPor.ForeColor = System.Drawing.Color.White;
             this.LBuscarPor.Location = new System.Drawing.Point(296, 20);
             this.LBuscarPor.Name = "LBuscarPor";
             this.LBuscarPor.Size = new System.Drawing.Size(61, 13);
@@ -179,12 +179,12 @@
             // LListaCategoria
             // 
             this.LListaCategoria.AutoSize = true;
-            this.LListaCategoria.BackColor = System.Drawing.Color.White;
-            this.LListaCategoria.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LListaCategoria.ForeColor = System.Drawing.Color.Black;
+            this.LListaCategoria.BackColor = System.Drawing.Color.Transparent;
+            this.LListaCategoria.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LListaCategoria.ForeColor = System.Drawing.Color.White;
             this.LListaCategoria.Location = new System.Drawing.Point(3, 11);
             this.LListaCategoria.Name = "LListaCategoria";
-            this.LListaCategoria.Size = new System.Drawing.Size(197, 23);
+            this.LListaCategoria.Size = new System.Drawing.Size(180, 21);
             this.LListaCategoria.TabIndex = 14;
             this.LListaCategoria.Text = "Lista de categorías";
             this.LListaCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -295,18 +295,20 @@
             // LDetalleCategoria
             // 
             this.LDetalleCategoria.AutoSize = true;
-            this.LDetalleCategoria.BackColor = System.Drawing.Color.White;
-            this.LDetalleCategoria.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LDetalleCategoria.BackColor = System.Drawing.Color.Transparent;
+            this.LDetalleCategoria.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LDetalleCategoria.ForeColor = System.Drawing.Color.White;
             this.LDetalleCategoria.Location = new System.Drawing.Point(39, 9);
             this.LDetalleCategoria.Name = "LDetalleCategoria";
-            this.LDetalleCategoria.Size = new System.Drawing.Size(218, 23);
+            this.LDetalleCategoria.Size = new System.Drawing.Size(199, 21);
             this.LDetalleCategoria.TabIndex = 16;
             this.LDetalleCategoria.Text = "Detalle de categorías";
             // 
             // LDescripcion
             // 
             this.LDescripcion.AutoSize = true;
-            this.LDescripcion.BackColor = System.Drawing.Color.White;
+            this.LDescripcion.BackColor = System.Drawing.Color.Transparent;
+            this.LDescripcion.ForeColor = System.Drawing.Color.White;
             this.LDescripcion.Location = new System.Drawing.Point(41, 43);
             this.LDescripcion.Name = "LDescripcion";
             this.LDescripcion.Size = new System.Drawing.Size(63, 13);
@@ -316,7 +318,8 @@
             // LEstado
             // 
             this.LEstado.AutoSize = true;
-            this.LEstado.BackColor = System.Drawing.Color.White;
+            this.LEstado.BackColor = System.Drawing.Color.Transparent;
+            this.LEstado.ForeColor = System.Drawing.Color.White;
             this.LEstado.Location = new System.Drawing.Point(41, 87);
             this.LEstado.Name = "LEstado";
             this.LEstado.Size = new System.Drawing.Size(43, 13);
@@ -335,6 +338,7 @@
             // panelFormulario
             // 
             this.panelFormulario.BackColor = System.Drawing.Color.White;
+            this.panelFormulario.BackgroundImage = global::CapaPresentacion.Properties.Resources.PanelDetalle;
             this.panelFormulario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelFormulario.Controls.Add(this.LDetalleCategoria);
             this.panelFormulario.Controls.Add(this.IBVaciar);
@@ -354,6 +358,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackgroundImage = global::CapaPresentacion.Properties.Resources.PanelLista;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.IBLimpiar);
             this.panel1.Controls.Add(this.LListaCategoria);
