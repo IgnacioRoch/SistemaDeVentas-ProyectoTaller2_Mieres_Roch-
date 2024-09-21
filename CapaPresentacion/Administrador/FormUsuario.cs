@@ -10,6 +10,12 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using CapaPresentacion.Utilidades;
+using CapaEntidades;
+using CapaNegocio;
+using System.Net.Http.Headers;
+
+
 namespace CapaPresentacion.Administrador
 {
     public partial class FormUsuario : Form
@@ -24,7 +30,7 @@ namespace CapaPresentacion.Administrador
             if (e.RowIndex < 0)
                 return;
 
-            if(e.ColumnIndex < 0) 
+            if(e.ColumnIndex == 0) 
             {
                 e.Paint(e.CellBounds, DataGridViewPaintParts.All);
                 var w = Properties.Resources.iconCheck.Width;
@@ -68,12 +74,21 @@ namespace CapaPresentacion.Administrador
                 return;
             }
 
-            //Validacion si el correo tiene el formatio correcto
-            if (EmailValido(correo))
+            string mensaje = string.Empty;
+
+            Usuario objUsuario = new Usuario()
             {
-                MessageBox.Show("El correo tiene un formato incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+                Id_usuario = Convert.ToInt32(TxtSeleccionId.Text),
+                Documento_usuario = TxtDocumento.Text,
+                Nombre_usuario = TxtNombre.Text,
+                Apellido_usuario = TxtApellido.Text,
+                Correo_usuario = TxtCorreo.Text,
+                Clave_usuario = TxtClave.Text,
+                objRol = new Rol() { ID_rol = Convert.ToInt32(((Opcion_combo)CBRol.SelectedItem).Valor) },
+                Estado_usuario = Convert.ToInt32(((Opcion_combo)CBEstado.SelectedItem).Valor) == 1 ? true : false,
+            };
+
+            int idUsuarioGenerado = new CN_Usuario().Registrar_Usuario(objUsuario, out mensaje);
 
             // Mostrar mensaje de consulta sobre la inserción  
             DialogResult ask = MessageBox.Show("¿Seguro que desea insertar un nuevo Cliente?", "Confirmar Inserción", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
@@ -84,25 +99,28 @@ namespace CapaPresentacion.Administrador
                 // Aquí iría la lógica para insertar el nuevo cliente  
                 // Por ejemplo, llamar a una función para insertar en la base de datos
 
-                // Mostrar mensaje de información confirmando la inserción correcta  
-                MessageBox.Show($"El Usuario se insertó correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (idUsuarioGenerado != 0)
+                {
+                    dataGridDatos.Rows.Add(new object[] {"", idUsuarioGenerado, TxtDocumento.Text, TxtNombre.Text, TxtApellido.Text, TxtCorreo.Text, TxtClave.Text,
+                    ((Opcion_combo)CBRol.SelectedItem).Valor.ToString(),
+                    ((Opcion_combo)CBRol.SelectedItem).Texto.ToString(),
+                    ((Opcion_combo)CBEstado.SelectedItem).Valor.ToString(),
+                    ((Opcion_combo)CBEstado.SelectedItem).Texto.ToString()
+                     });
 
-                TxtDocumento.Clear();
-                TxtNombre.Clear();
-                TxtApellido.Clear();
-                TxtCorreo.Clear();
-                TxtClave.Clear();
-                TxtConfClave.Clear();
+
+                    // Mostrar mensaje de información confirmando la inserción correcta  
+                    MessageBox.Show($"El Usuario se insertó correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    limpar();
+                }
+                else
+                {
+                    MessageBox.Show(mensaje);
+                }
             }
 
         }       
-
-        public static bool EmailValido(string email)
-        {
-            // Expresión regular para validar un correo electrónico
-            string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
-            return Regex.IsMatch(email, pattern);
-        }
 
         private void IBVaciar_Click(object sender, EventArgs e)
         {
@@ -123,14 +141,108 @@ namespace CapaPresentacion.Administrador
 
             if (MessageBox.Show("¿Limpiar los campos del fomulario?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                TxtDocumento.Clear();
-                TxtNombre.Clear();
-                TxtApellido.Clear();
-                TxtCorreo.Clear();
-                TxtClave.Clear();
-                TxtConfClave.Clear();
+                limpar();
             }
             
+        }
+
+        private void FormUsuario_Load(object sender, EventArgs e)
+        {
+            CBEstado.Items.Add(new Opcion_combo() { Valor = 1, Texto = "Activo"});
+            CBEstado.Items.Add(new Opcion_combo() { Valor = 0, Texto = "No activo" });
+            CBEstado.DisplayMember = "Texto";
+            CBEstado.ValueMember = "Valor";
+            CBEstado.SelectedIndex = 0;
+
+            List<Rol> listaRol = new CN_Rol().Listar();
+            foreach (Rol item in listaRol)
+            {
+                CBRol.Items.Add(new Opcion_combo() { Valor = item.ID_rol, Texto = item.Descripcion_rol });
+                CBRol.DisplayMember = "Texto";
+                CBRol.ValueMember = "Valor";
+                CBRol.SelectedIndex = 0;
+            }
+
+            foreach (DataGridViewColumn columna in dataGridDatos.Columns)
+            {
+                if (columna.Visible == true && columna.Name != "BSeleccionar")
+                {
+                    CBBusqueda.Items.Add(new Opcion_combo() { Valor = columna.Name, Texto= columna.HeaderText});
+                }
+            }
+            CBBusqueda.DisplayMember = "Texto";
+            CBBusqueda.ValueMember = "Valor";
+            CBBusqueda.SelectedIndex = 0;
+
+            //MOSTRAR TODOS LOS USUARIOS
+            List<Usuario> listaUsuario = new CN_Usuario().Listar();
+
+            foreach (Usuario item in listaUsuario)
+            {
+                dataGridDatos.Rows.Add(new object[] {"", item.Id_usuario, item.Documento_usuario, item.Nombre_usuario, item.Apellido_usuario, item.Correo_usuario, item.Clave_usuario,
+                    item.objRol.ID_rol, 
+                    item.objRol.Descripcion_rol,
+                    item.Estado_usuario == true ? 1 : 0,
+                    item.Estado_usuario == true ? "Activo" : "No activo"
+                 });
+            }
+
+        }
+
+        private void limpar()
+        {
+            TxtDocumento.Clear();
+            TxtNombre.Clear();
+            TxtApellido.Clear();
+            TxtCorreo.Clear();
+            TxtClave.Clear();
+            TxtConfClave.Clear();
+            TxtSeleccionId.Text = "0";
+            TxtIndice.Text = "-1";
+            CBRol.SelectedIndex = 0;
+            CBEstado.SelectedIndex = 0;
+        }
+
+        private void dataGridDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridDatos.Columns[e.ColumnIndex].Name == "BSeleccionar")
+            {
+                int indice = e.RowIndex; 
+                if(indice >= 0)
+                {
+                    TxtIndice.Text = indice.ToString();
+                    TxtSeleccionId.Text = dataGridDatos.Rows[indice].Cells["Id"].Value.ToString();
+                    TxtDocumento.Text = dataGridDatos.Rows[indice].Cells["Documento"].Value.ToString();
+                    TxtNombre.Text = dataGridDatos.Rows[indice].Cells["Nombre"].Value.ToString();
+                    TxtApellido.Text = dataGridDatos.Rows[indice].Cells["Apellido"].Value.ToString();
+                    TxtCorreo.Text = dataGridDatos.Rows[indice].Cells["Correo"].Value.ToString();
+                    TxtClave.Text = dataGridDatos.Rows[indice].Cells["Clave"].Value.ToString();
+                    TxtConfClave.Text = dataGridDatos.Rows[indice].Cells["Clave"].Value.ToString();
+
+                    //TOMA EL VALOR DE LA COLUMNA ROL DEL GRID PARA AGREGARLA AL FORMULARIO PRINCIPAL
+                    foreach (Opcion_combo oc in CBRol.Items)
+                    {
+                        if (Convert.ToInt32(oc.Valor) == Convert.ToInt32(dataGridDatos.Rows[indice].Cells["IdRol"].Value))
+                        {
+                            int indice_combo = CBRol.Items.IndexOf(oc);
+                            CBRol.SelectedIndex = indice_combo;
+                            break;
+                        }
+                    }
+
+                    //TOMA EL VALOR DE LA COLUMNA ESTADO DEL GRID PARA AGREGARLA AL FORMULARIO PRINCIPAL
+                    foreach (Opcion_combo oc in CBEstado.Items)
+                    {
+                        if (Convert.ToInt32(oc.Valor) == Convert.ToInt32(dataGridDatos.Rows[indice].Cells["EstadoValor"].Value))
+                        {
+                            int indice_combo = CBEstado.Items.IndexOf(oc);
+                            CBEstado.SelectedIndex = indice_combo;
+                            break;
+                        }
+                    }
+
+                }
+            }
         }
     }
 }

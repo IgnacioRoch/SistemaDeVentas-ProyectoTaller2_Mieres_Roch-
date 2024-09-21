@@ -31,16 +31,16 @@
             this.TxtDocumento = new System.Windows.Forms.TextBox();
             this.LIniciarSesion = new System.Windows.Forms.Label();
             this.panelLogin = new System.Windows.Forms.Panel();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.GBNroDoc = new System.Windows.Forms.GroupBox();
             this.GBContrasenia = new System.Windows.Forms.GroupBox();
             this.TxtClave = new System.Windows.Forms.TextBox();
             this.BIngresar = new FontAwesome.Sharp.IconButton();
             this.BCancelar = new FontAwesome.Sharp.IconButton();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panelLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.GBNroDoc.SuspendLayout();
             this.GBContrasenia.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // TxtDocumento
@@ -70,6 +70,17 @@
             this.panelLogin.Size = new System.Drawing.Size(322, 345);
             this.panelLogin.TabIndex = 9;
             // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.BackColor = System.Drawing.SystemColors.Highlight;
+            this.pictureBoxLogo.Image = global::CapaPresentacion.Properties.Resources.FrameLogo;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(31, 16);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(263, 262);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxLogo.TabIndex = 2;
+            this.pictureBoxLogo.TabStop = false;
+            // 
             // GBNroDoc
             // 
             this.GBNroDoc.Controls.Add(this.TxtDocumento);
@@ -96,6 +107,7 @@
             // 
             this.TxtClave.Location = new System.Drawing.Point(6, 19);
             this.TxtClave.Name = "TxtClave";
+            this.TxtClave.PasswordChar = '*';
             this.TxtClave.Size = new System.Drawing.Size(226, 23);
             this.TxtClave.TabIndex = 5;
             // 
@@ -141,17 +153,6 @@
             this.BCancelar.UseVisualStyleBackColor = false;
             this.BCancelar.Click += new System.EventHandler(this.BCancelar_Click);
             // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.BackColor = System.Drawing.SystemColors.Highlight;
-            this.pictureBoxLogo.Image = global::CapaPresentacion.Properties.Resources.FrameLogo;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(31, 16);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(263, 262);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxLogo.TabIndex = 2;
-            this.pictureBoxLogo.TabStop = false;
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -169,11 +170,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.panelLogin.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.GBNroDoc.ResumeLayout(false);
             this.GBNroDoc.PerformLayout();
             this.GBContrasenia.ResumeLayout(false);
             this.GBContrasenia.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

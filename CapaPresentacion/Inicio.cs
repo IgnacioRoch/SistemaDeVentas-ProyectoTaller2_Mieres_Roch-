@@ -13,15 +13,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using CapaEntidades;
+using CapaNegocio;
+
 namespace CapaPresentacion
 {
     public partial class Inicio : Form
     {
+        private static Usuario usuarioActual; 
+
         private static IconMenuItem menuActivo = null;
         private Form formularioActivo = null;
 
-        public Inicio()
+        public Inicio(Usuario objusuario = null)
         {
+            if (objusuario == null)
+                usuarioActual = new Usuario() { Nombre_usuario = "ADMIN PREDEFINIDO", Id_usuario = 1 };
+            else
+            usuarioActual = objusuario; //usuario logeado en ese momento
+
             InitializeComponent();
         }
 
@@ -90,7 +100,7 @@ namespace CapaPresentacion
 
         private void menu_Clientes_Click(object sender, EventArgs e)
         {
-            abrirFormulario((IconMenuItem) sender, new FormClientes());
+            abrirFormulario((IconMenuItem) sender, new FormClientes(usuarioActual));
         }
 
         private void menu_Proveedores_Click(object sender, EventArgs e)
@@ -100,12 +110,12 @@ namespace CapaPresentacion
 
         private void subMenuReporteCompras_Click(object sender, EventArgs e)
         {
-            abrirFormulario(menu_Reportes, new FormReporteCompras());
+            abrirFormulario(menu_reportes, new FormReporteCompras());
         }
 
         private void subMenuReporteVentas_Click(object sender, EventArgs e)
         {
-            abrirFormulario(menu_Reportes, new FormReporteVentas());
+            abrirFormulario(menu_reportes, new FormReporteVentas());
         }
 
         private void menu_Negocio_Click(object sender, EventArgs e)
@@ -133,6 +143,35 @@ namespace CapaPresentacion
         {
             LHora.Text = DateTime.Now.ToShortTimeString();
             LFecha.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void Inicio_Load(object sender, EventArgs e)
+        {
+           /*List<Permiso> ListaPermisos = new CN_Permiso().Listar(usuarioActual.Id_usuario);
+            foreach (IconMenuItem iconmenu in MenuInicio.Items)
+            {
+                bool encontrado = ListaPermisos.Any(m => m.NombreMenu == iconmenu.Name);
+                if(encontrado == false)
+                {
+                    iconmenu.Visible = false;
+                }
+            }*/
+
+            LNomUsuario.Text = usuarioActual.Nombre_usuario + " " + usuarioActual.Apellido_usuario;
+
+            /*switch (usuarioActual.objRol.ID_rol)
+            {
+                case 1:
+                    LRolUsuario.Text = "ADMINISTRADOR";
+                    break;
+                case 2:
+                    LRolUsuario.Text = "VENDEDOR";
+                    break;
+                case 3:
+                    LRolUsuario.Text = "GERENTE COMERCIAL";
+                    break;
+            }*/
+
         }
     }
 }
