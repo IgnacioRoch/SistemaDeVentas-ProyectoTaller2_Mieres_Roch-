@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.IBLimpiar = new FontAwesome.Sharp.IconButton();
             this.IBVaciar = new FontAwesome.Sharp.IconButton();
             this.IBEliminar = new FontAwesome.Sharp.IconButton();
@@ -70,12 +70,14 @@
             this.IBLimpiar.IconColor = System.Drawing.Color.Black;
             this.IBLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBLimpiar.IconSize = 16;
-            this.IBLimpiar.Location = new System.Drawing.Point(797, 12);
+            this.IBLimpiar.Location = new System.Drawing.Point(1063, 15);
+            this.IBLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.IBLimpiar.Name = "IBLimpiar";
-            this.IBLimpiar.Size = new System.Drawing.Size(41, 28);
+            this.IBLimpiar.Size = new System.Drawing.Size(55, 34);
             this.IBLimpiar.TabIndex = 33;
             this.IBLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IBLimpiar.UseVisualStyleBackColor = false;
+            this.IBLimpiar.Click += new System.EventHandler(this.IBLimpiar_Click);
             // 
             // IBVaciar
             // 
@@ -89,14 +91,16 @@
             this.IBVaciar.IconColor = System.Drawing.Color.White;
             this.IBVaciar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBVaciar.IconSize = 16;
-            this.IBVaciar.Location = new System.Drawing.Point(44, 189);
+            this.IBVaciar.Location = new System.Drawing.Point(59, 233);
+            this.IBVaciar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.IBVaciar.Name = "IBVaciar";
-            this.IBVaciar.Size = new System.Drawing.Size(192, 28);
+            this.IBVaciar.Size = new System.Drawing.Size(256, 34);
             this.IBVaciar.TabIndex = 32;
             this.IBVaciar.Text = "Limpiar";
             this.IBVaciar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IBVaciar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.IBVaciar.UseVisualStyleBackColor = false;
+            this.IBVaciar.Click += new System.EventHandler(this.IBVaciar_Click);
             // 
             // IBEliminar
             // 
@@ -110,9 +114,10 @@
             this.IBEliminar.IconColor = System.Drawing.Color.White;
             this.IBEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBEliminar.IconSize = 16;
-            this.IBEliminar.Location = new System.Drawing.Point(44, 223);
+            this.IBEliminar.Location = new System.Drawing.Point(59, 274);
+            this.IBEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.IBEliminar.Name = "IBEliminar";
-            this.IBEliminar.Size = new System.Drawing.Size(192, 28);
+            this.IBEliminar.Size = new System.Drawing.Size(256, 34);
             this.IBEliminar.TabIndex = 31;
             this.IBEliminar.Text = "Eliminar";
             this.IBEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -131,36 +136,41 @@
             this.IBGuardar.IconColor = System.Drawing.Color.White;
             this.IBGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBGuardar.IconSize = 16;
-            this.IBGuardar.Location = new System.Drawing.Point(44, 155);
+            this.IBGuardar.Location = new System.Drawing.Point(59, 191);
+            this.IBGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.IBGuardar.Name = "IBGuardar";
-            this.IBGuardar.Size = new System.Drawing.Size(192, 28);
+            this.IBGuardar.Size = new System.Drawing.Size(256, 34);
             this.IBGuardar.TabIndex = 30;
             this.IBGuardar.Text = "Guardar";
             this.IBGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IBGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.IBGuardar.UseVisualStyleBackColor = false;
+            this.IBGuardar.Click += new System.EventHandler(this.IBGuardar_Click);
             // 
             // CBBusqueda
             // 
             this.CBBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBBusqueda.FormattingEnabled = true;
-            this.CBBusqueda.Location = new System.Drawing.Point(363, 17);
+            this.CBBusqueda.Location = new System.Drawing.Point(484, 21);
+            this.CBBusqueda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CBBusqueda.Name = "CBBusqueda";
-            this.CBBusqueda.Size = new System.Drawing.Size(146, 21);
+            this.CBBusqueda.Size = new System.Drawing.Size(193, 24);
             this.CBBusqueda.TabIndex = 28;
             // 
             // TxtBusqueda
             // 
-            this.TxtBusqueda.Location = new System.Drawing.Point(525, 17);
+            this.TxtBusqueda.Location = new System.Drawing.Point(700, 21);
+            this.TxtBusqueda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtBusqueda.Name = "TxtBusqueda";
-            this.TxtBusqueda.Size = new System.Drawing.Size(183, 20);
+            this.TxtBusqueda.Size = new System.Drawing.Size(243, 22);
             this.TxtBusqueda.TabIndex = 24;
             // 
             // TxtSeleccionId
             // 
-            this.TxtSeleccionId.Location = new System.Drawing.Point(261, 32);
+            this.TxtSeleccionId.Location = new System.Drawing.Point(348, 39);
+            this.TxtSeleccionId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtSeleccionId.Name = "TxtSeleccionId";
-            this.TxtSeleccionId.Size = new System.Drawing.Size(23, 20);
+            this.TxtSeleccionId.Size = new System.Drawing.Size(29, 22);
             this.TxtSeleccionId.TabIndex = 23;
             this.TxtSeleccionId.Text = "0";
             this.TxtSeleccionId.Visible = false;
@@ -170,9 +180,10 @@
             this.LBuscarPor.AutoSize = true;
             this.LBuscarPor.BackColor = System.Drawing.Color.Transparent;
             this.LBuscarPor.ForeColor = System.Drawing.Color.White;
-            this.LBuscarPor.Location = new System.Drawing.Point(296, 20);
+            this.LBuscarPor.Location = new System.Drawing.Point(395, 25);
+            this.LBuscarPor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBuscarPor.Name = "LBuscarPor";
-            this.LBuscarPor.Size = new System.Drawing.Size(61, 13);
+            this.LBuscarPor.Size = new System.Drawing.Size(75, 16);
             this.LBuscarPor.TabIndex = 13;
             this.LBuscarPor.Text = "Buscar por:";
             // 
@@ -182,9 +193,10 @@
             this.LListaCategoria.BackColor = System.Drawing.Color.Transparent;
             this.LListaCategoria.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LListaCategoria.ForeColor = System.Drawing.Color.White;
-            this.LListaCategoria.Location = new System.Drawing.Point(3, 11);
+            this.LListaCategoria.Location = new System.Drawing.Point(4, 14);
+            this.LListaCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LListaCategoria.Name = "LListaCategoria";
-            this.LListaCategoria.Size = new System.Drawing.Size(180, 21);
+            this.LListaCategoria.Size = new System.Drawing.Size(218, 26);
             this.LListaCategoria.TabIndex = 14;
             this.LListaCategoria.Text = "Lista de categorías";
             this.LListaCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -192,15 +204,15 @@
             // dataGridDatos
             // 
             this.dataGridDatos.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.BSeleccionar,
@@ -208,25 +220,28 @@
             this.Descripcion,
             this.Estado,
             this.EstadoValor});
-            this.dataGridDatos.Location = new System.Drawing.Point(321, 62);
+            this.dataGridDatos.Location = new System.Drawing.Point(428, 76);
+            this.dataGridDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridDatos.MultiSelect = false;
             this.dataGridDatos.Name = "dataGridDatos";
             this.dataGridDatos.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridDatos.RowHeadersWidth = 51;
             this.dataGridDatos.RowTemplate.Height = 28;
-            this.dataGridDatos.Size = new System.Drawing.Size(932, 347);
+            this.dataGridDatos.Size = new System.Drawing.Size(1243, 427);
             this.dataGridDatos.TabIndex = 34;
             // 
             // BSeleccionar
             // 
             this.BSeleccionar.HeaderText = "";
+            this.BSeleccionar.MinimumWidth = 6;
             this.BSeleccionar.Name = "BSeleccionar";
             this.BSeleccionar.ReadOnly = true;
             this.BSeleccionar.Width = 30;
@@ -234,13 +249,16 @@
             // IdUsuario
             // 
             this.IdUsuario.HeaderText = "Id";
+            this.IdUsuario.MinimumWidth = 6;
             this.IdUsuario.Name = "IdUsuario";
             this.IdUsuario.ReadOnly = true;
             this.IdUsuario.Visible = false;
+            this.IdUsuario.Width = 125;
             // 
             // Descripcion
             // 
             this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.MinimumWidth = 6;
             this.Descripcion.Name = "Descripcion";
             this.Descripcion.ReadOnly = true;
             this.Descripcion.Width = 150;
@@ -248,15 +266,19 @@
             // Estado
             // 
             this.Estado.HeaderText = "Estado";
+            this.Estado.MinimumWidth = 6;
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
+            this.Estado.Width = 125;
             // 
             // EstadoValor
             // 
             this.EstadoValor.HeaderText = "Estado Valor";
+            this.EstadoValor.MinimumWidth = 6;
             this.EstadoValor.Name = "EstadoValor";
             this.EstadoValor.ReadOnly = true;
             this.EstadoValor.Visible = false;
+            this.EstadoValor.Width = 125;
             // 
             // IBBuscar
             // 
@@ -269,27 +291,31 @@
             this.IBBuscar.IconColor = System.Drawing.Color.Black;
             this.IBBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBBuscar.IconSize = 16;
-            this.IBBuscar.Location = new System.Drawing.Point(741, 12);
+            this.IBBuscar.Location = new System.Drawing.Point(988, 15);
+            this.IBBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.IBBuscar.Name = "IBBuscar";
-            this.IBBuscar.Size = new System.Drawing.Size(41, 28);
+            this.IBBuscar.Size = new System.Drawing.Size(55, 34);
             this.IBBuscar.TabIndex = 29;
             this.IBBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IBBuscar.UseVisualStyleBackColor = false;
+            this.IBBuscar.Click += new System.EventHandler(this.IBBuscar_Click);
             // 
             // CBEstado
             // 
             this.CBEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBEstado.FormattingEnabled = true;
-            this.CBEstado.Location = new System.Drawing.Point(44, 103);
+            this.CBEstado.Location = new System.Drawing.Point(59, 127);
+            this.CBEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CBEstado.Name = "CBEstado";
-            this.CBEstado.Size = new System.Drawing.Size(240, 21);
+            this.CBEstado.Size = new System.Drawing.Size(319, 24);
             this.CBEstado.TabIndex = 27;
             // 
             // TxtDocumento
             // 
-            this.TxtDocumento.Location = new System.Drawing.Point(44, 59);
+            this.TxtDocumento.Location = new System.Drawing.Point(59, 73);
+            this.TxtDocumento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtDocumento.Name = "TxtDocumento";
-            this.TxtDocumento.Size = new System.Drawing.Size(240, 20);
+            this.TxtDocumento.Size = new System.Drawing.Size(319, 22);
             this.TxtDocumento.TabIndex = 18;
             // 
             // LDetalleCategoria
@@ -298,9 +324,10 @@
             this.LDetalleCategoria.BackColor = System.Drawing.Color.Transparent;
             this.LDetalleCategoria.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LDetalleCategoria.ForeColor = System.Drawing.Color.White;
-            this.LDetalleCategoria.Location = new System.Drawing.Point(39, 9);
+            this.LDetalleCategoria.Location = new System.Drawing.Point(52, 11);
+            this.LDetalleCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LDetalleCategoria.Name = "LDetalleCategoria";
-            this.LDetalleCategoria.Size = new System.Drawing.Size(199, 21);
+            this.LDetalleCategoria.Size = new System.Drawing.Size(241, 26);
             this.LDetalleCategoria.TabIndex = 16;
             this.LDetalleCategoria.Text = "Detalle de categorías";
             // 
@@ -309,9 +336,10 @@
             this.LDescripcion.AutoSize = true;
             this.LDescripcion.BackColor = System.Drawing.Color.Transparent;
             this.LDescripcion.ForeColor = System.Drawing.Color.White;
-            this.LDescripcion.Location = new System.Drawing.Point(41, 43);
+            this.LDescripcion.Location = new System.Drawing.Point(55, 53);
+            this.LDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LDescripcion.Name = "LDescripcion";
-            this.LDescripcion.Size = new System.Drawing.Size(63, 13);
+            this.LDescripcion.Size = new System.Drawing.Size(79, 16);
             this.LDescripcion.TabIndex = 15;
             this.LDescripcion.Text = "Descripción";
             // 
@@ -320,17 +348,19 @@
             this.LEstado.AutoSize = true;
             this.LEstado.BackColor = System.Drawing.Color.Transparent;
             this.LEstado.ForeColor = System.Drawing.Color.White;
-            this.LEstado.Location = new System.Drawing.Point(41, 87);
+            this.LEstado.Location = new System.Drawing.Point(55, 107);
+            this.LEstado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LEstado.Name = "LEstado";
-            this.LEstado.Size = new System.Drawing.Size(43, 13);
+            this.LEstado.Size = new System.Drawing.Size(53, 16);
             this.LEstado.TabIndex = 12;
             this.LEstado.Text = "Estado:";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(232, 32);
+            this.textBox1.Location = new System.Drawing.Point(309, 39);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(23, 20);
+            this.textBox1.Size = new System.Drawing.Size(29, 22);
             this.textBox1.TabIndex = 23;
             this.textBox1.Text = "0";
             this.textBox1.Visible = false;
@@ -351,8 +381,9 @@
             this.panelFormulario.Controls.Add(this.TxtSeleccionId);
             this.panelFormulario.Controls.Add(this.textBox1);
             this.panelFormulario.Location = new System.Drawing.Point(0, 0);
+            this.panelFormulario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelFormulario.Name = "panelFormulario";
-            this.panelFormulario.Size = new System.Drawing.Size(305, 571);
+            this.panelFormulario.Size = new System.Drawing.Size(405, 702);
             this.panelFormulario.TabIndex = 35;
             // 
             // panel1
@@ -366,19 +397,21 @@
             this.panel1.Controls.Add(this.TxtBusqueda);
             this.panel1.Controls.Add(this.IBBuscar);
             this.panel1.Controls.Add(this.LBuscarPor);
-            this.panel1.Location = new System.Drawing.Point(321, 9);
+            this.panel1.Location = new System.Drawing.Point(428, 11);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(931, 47);
+            this.panel1.Size = new System.Drawing.Size(1240, 57);
             this.panel1.TabIndex = 36;
             // 
             // FormCategorias
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1265, 571);
+            this.ClientSize = new System.Drawing.Size(1687, 703);
             this.Controls.Add(this.dataGridDatos);
             this.Controls.Add(this.panelFormulario);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormCategorias";
             this.Text = "FormCategorias";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDatos)).EndInit();

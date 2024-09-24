@@ -25,17 +25,23 @@ namespace CapaPresentacion.Administrador
             string nombre = TxtNombre.Text;
             string descripcion = TxtDescripcion.Text;
 
+
+            // Validación de que no se permite campos vacios
             if (string.IsNullOrWhiteSpace(codigo) || string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(descripcion))
             {
                 MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
+            // Validación de que el codigo solo contenga números  
             if (!long.TryParse(codigo, out _))
             {
                 MessageBox.Show("El Código debe contener solo números", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            // Mostrar mensaje de consulta sobre la inserción  
+            DialogResult ask = MessageBox.Show("¿Seguro que desea insertar un nuevo Producto?", "Confirmar Inserción", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
 
 
 
