@@ -173,5 +173,10 @@ namespace CapaPresentacion
             }*/
 
         }
+
+        private void SubMenuGraficas_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(menu_reportes, new FormEstadisticas());
+        }
     }
 }

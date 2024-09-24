@@ -57,6 +57,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -117,6 +118,12 @@
     </Compile>
     <Compile Include="Gerente_Comercial\FormDetalleCompra.Designer.cs">
       <DependentUpon>FormDetalleCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerente_Comercial\FormEstadisticas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerente_Comercial\FormEstadisticas.Designer.cs">
+      <DependentUpon>FormEstadisticas.cs</DependentUpon>
     </Compile>
     <Compile Include="Gerente_Comercial\FormReporteCompras.cs">
       <SubType>Form</SubType>
@@ -211,6 +218,9 @@
     <EmbeddedResource Include="Gerente_Comercial\FormDetalleCompra.resx">
       <DependentUpon>FormDetalleCompra.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Gerente_Comercial\FormEstadisticas.resx">
+      <DependentUpon>FormEstadisticas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gerente_Comercial\FormReporteCompras.resx">
       <DependentUpon>FormReporteCompras.cs</DependentUpon>
     </EmbeddedResource>
@@ -291,6 +301,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\fondoCompra.jpg" />
+    <None Include="Resources\iconsProveedores.png" />
+    <None Include="Resources\iconsUsuarios.png" />
+    <None Include="Resources\iconsClientes.png" />
+    <None Include="Resources\iconsMarcas.png" />
+    <None Include="Resources\iconsCategorias.png" />
+    <None Include="Resources\iconsProductos.png" />
+    <None Include="Resources\iconsCepo.png" />
+    <None Include="Resources\iconsBolsaDinero.png" />
     <None Include="Resources\PanelCompraVenta.png" />
     <None Include="Resources\PanelDetallesVC.png" />
     <None Include="Resources\PanelNegocio.png" />
