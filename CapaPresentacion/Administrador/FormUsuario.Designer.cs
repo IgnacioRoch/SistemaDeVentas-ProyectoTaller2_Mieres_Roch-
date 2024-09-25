@@ -105,7 +105,8 @@
             this.Rol,
             this.EstadoValor,
             this.Estado});
-            this.dataGridDatos.Location = new System.Drawing.Point(321, 62);
+            this.dataGridDatos.Location = new System.Drawing.Point(428, 76);
+            this.dataGridDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridDatos.MultiSelect = false;
             this.dataGridDatos.Name = "dataGridDatos";
             this.dataGridDatos.ReadOnly = true;
@@ -117,8 +118,9 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridDatos.RowHeadersWidth = 51;
             this.dataGridDatos.RowTemplate.Height = 28;
-            this.dataGridDatos.Size = new System.Drawing.Size(932, 488);
+            this.dataGridDatos.Size = new System.Drawing.Size(1243, 601);
             this.dataGridDatos.TabIndex = 5;
             this.dataGridDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridDatos_CellContentClick);
             this.dataGridDatos.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridDatos_CellPainting);
@@ -126,6 +128,7 @@
             // BSeleccionar
             // 
             this.BSeleccionar.HeaderText = "";
+            this.BSeleccionar.MinimumWidth = 6;
             this.BSeleccionar.Name = "BSeleccionar";
             this.BSeleccionar.ReadOnly = true;
             this.BSeleccionar.Width = 30;
@@ -133,13 +136,16 @@
             // Id
             // 
             this.Id.HeaderText = "IdUsuario";
+            this.Id.MinimumWidth = 6;
             this.Id.Name = "Id";
             this.Id.ReadOnly = true;
             this.Id.Visible = false;
+            this.Id.Width = 125;
             // 
             // Documento
             // 
             this.Documento.HeaderText = "Nro. Documento";
+            this.Documento.MinimumWidth = 6;
             this.Documento.Name = "Documento";
             this.Documento.ReadOnly = true;
             this.Documento.Width = 150;
@@ -147,6 +153,7 @@
             // Nombre
             // 
             this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 6;
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
             this.Nombre.Width = 180;
@@ -154,6 +161,7 @@
             // Apellido
             // 
             this.Apellido.HeaderText = "Apellido";
+            this.Apellido.MinimumWidth = 6;
             this.Apellido.Name = "Apellido";
             this.Apellido.ReadOnly = true;
             this.Apellido.Width = 180;
@@ -161,6 +169,7 @@
             // Correo
             // 
             this.Correo.HeaderText = "Correo";
+            this.Correo.MinimumWidth = 6;
             this.Correo.Name = "Correo";
             this.Correo.ReadOnly = true;
             this.Correo.Width = 150;
@@ -168,35 +177,45 @@
             // Clave
             // 
             this.Clave.HeaderText = "Clave";
+            this.Clave.MinimumWidth = 6;
             this.Clave.Name = "Clave";
             this.Clave.ReadOnly = true;
             this.Clave.Visible = false;
+            this.Clave.Width = 125;
             // 
             // IdRol
             // 
             this.IdRol.HeaderText = "IdRol";
+            this.IdRol.MinimumWidth = 6;
             this.IdRol.Name = "IdRol";
             this.IdRol.ReadOnly = true;
             this.IdRol.Visible = false;
+            this.IdRol.Width = 125;
             // 
             // Rol
             // 
             this.Rol.HeaderText = "Rol";
+            this.Rol.MinimumWidth = 6;
             this.Rol.Name = "Rol";
             this.Rol.ReadOnly = true;
+            this.Rol.Width = 125;
             // 
             // EstadoValor
             // 
             this.EstadoValor.HeaderText = "Estado Valor";
+            this.EstadoValor.MinimumWidth = 6;
             this.EstadoValor.Name = "EstadoValor";
             this.EstadoValor.ReadOnly = true;
             this.EstadoValor.Visible = false;
+            this.EstadoValor.Width = 125;
             // 
             // Estado
             // 
             this.Estado.HeaderText = "Estado";
+            this.Estado.MinimumWidth = 6;
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
+            this.Estado.Width = 125;
             // 
             // LListaUsuarios
             // 
@@ -204,9 +223,10 @@
             this.LListaUsuarios.BackColor = System.Drawing.Color.Transparent;
             this.LListaUsuarios.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LListaUsuarios.ForeColor = System.Drawing.Color.White;
-            this.LListaUsuarios.Location = new System.Drawing.Point(3, 11);
+            this.LListaUsuarios.Location = new System.Drawing.Point(4, 14);
+            this.LListaUsuarios.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LListaUsuarios.Name = "LListaUsuarios";
-            this.LListaUsuarios.Size = new System.Drawing.Size(162, 21);
+            this.LListaUsuarios.Size = new System.Drawing.Size(195, 26);
             this.LListaUsuarios.TabIndex = 1;
             this.LListaUsuarios.Text = "Lista de usuarios";
             this.LListaUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -216,9 +236,10 @@
             this.LBuscarPor.AutoSize = true;
             this.LBuscarPor.BackColor = System.Drawing.Color.Transparent;
             this.LBuscarPor.ForeColor = System.Drawing.Color.White;
-            this.LBuscarPor.Location = new System.Drawing.Point(290, 20);
+            this.LBuscarPor.Location = new System.Drawing.Point(387, 25);
+            this.LBuscarPor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBuscarPor.Name = "LBuscarPor";
-            this.LBuscarPor.Size = new System.Drawing.Size(61, 13);
+            this.LBuscarPor.Size = new System.Drawing.Size(75, 16);
             this.LBuscarPor.TabIndex = 1;
             this.LBuscarPor.Text = "Buscar por:";
             // 
@@ -226,16 +247,18 @@
             // 
             this.CBBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBBusqueda.FormattingEnabled = true;
-            this.CBBusqueda.Location = new System.Drawing.Point(357, 17);
+            this.CBBusqueda.Location = new System.Drawing.Point(476, 21);
+            this.CBBusqueda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CBBusqueda.Name = "CBBusqueda";
-            this.CBBusqueda.Size = new System.Drawing.Size(146, 21);
+            this.CBBusqueda.Size = new System.Drawing.Size(193, 24);
             this.CBBusqueda.TabIndex = 3;
             // 
             // TxtBusqueda
             // 
-            this.TxtBusqueda.Location = new System.Drawing.Point(519, 17);
+            this.TxtBusqueda.Location = new System.Drawing.Point(692, 21);
+            this.TxtBusqueda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtBusqueda.Name = "TxtBusqueda";
-            this.TxtBusqueda.Size = new System.Drawing.Size(183, 20);
+            this.TxtBusqueda.Size = new System.Drawing.Size(243, 22);
             this.TxtBusqueda.TabIndex = 2;
             // 
             // panelBusqueda
@@ -249,9 +272,10 @@
             this.panelBusqueda.Controls.Add(this.LBuscarPor);
             this.panelBusqueda.Controls.Add(this.CBBusqueda);
             this.panelBusqueda.Controls.Add(this.TxtBusqueda);
-            this.panelBusqueda.Location = new System.Drawing.Point(321, 9);
+            this.panelBusqueda.Location = new System.Drawing.Point(428, 11);
+            this.panelBusqueda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelBusqueda.Name = "panelBusqueda";
-            this.panelBusqueda.Size = new System.Drawing.Size(931, 47);
+            this.panelBusqueda.Size = new System.Drawing.Size(1240, 57);
             this.panelBusqueda.TabIndex = 7;
             // 
             // IBLimpiar
@@ -265,9 +289,10 @@
             this.IBLimpiar.IconColor = System.Drawing.Color.Black;
             this.IBLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBLimpiar.IconSize = 16;
-            this.IBLimpiar.Location = new System.Drawing.Point(791, 12);
+            this.IBLimpiar.Location = new System.Drawing.Point(1055, 15);
+            this.IBLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.IBLimpiar.Name = "IBLimpiar";
-            this.IBLimpiar.Size = new System.Drawing.Size(41, 28);
+            this.IBLimpiar.Size = new System.Drawing.Size(55, 34);
             this.IBLimpiar.TabIndex = 4;
             this.IBLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IBLimpiar.UseVisualStyleBackColor = false;
@@ -283,64 +308,72 @@
             this.IBBuscar.IconColor = System.Drawing.Color.Black;
             this.IBBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBBuscar.IconSize = 16;
-            this.IBBuscar.Location = new System.Drawing.Point(735, 12);
+            this.IBBuscar.Location = new System.Drawing.Point(980, 15);
+            this.IBBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.IBBuscar.Name = "IBBuscar";
-            this.IBBuscar.Size = new System.Drawing.Size(41, 28);
+            this.IBBuscar.Size = new System.Drawing.Size(55, 34);
             this.IBBuscar.TabIndex = 4;
             this.IBBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IBBuscar.UseVisualStyleBackColor = false;
             // 
             // TxtApellido
             // 
-            this.TxtApellido.Location = new System.Drawing.Point(44, 158);
+            this.TxtApellido.Location = new System.Drawing.Point(59, 194);
+            this.TxtApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtApellido.Name = "TxtApellido";
-            this.TxtApellido.Size = new System.Drawing.Size(240, 20);
+            this.TxtApellido.Size = new System.Drawing.Size(319, 22);
             this.TxtApellido.TabIndex = 2;
             // 
             // TxtCorreo
             // 
-            this.TxtCorreo.Location = new System.Drawing.Point(44, 207);
+            this.TxtCorreo.Location = new System.Drawing.Point(59, 255);
+            this.TxtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtCorreo.Name = "TxtCorreo";
-            this.TxtCorreo.Size = new System.Drawing.Size(240, 20);
+            this.TxtCorreo.Size = new System.Drawing.Size(319, 22);
             this.TxtCorreo.TabIndex = 2;
             // 
             // TxtNombre
             // 
-            this.TxtNombre.Location = new System.Drawing.Point(44, 109);
+            this.TxtNombre.Location = new System.Drawing.Point(59, 134);
+            this.TxtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(240, 20);
+            this.TxtNombre.Size = new System.Drawing.Size(319, 22);
             this.TxtNombre.TabIndex = 2;
             // 
             // TxtClave
             // 
-            this.TxtClave.Location = new System.Drawing.Point(44, 255);
+            this.TxtClave.Location = new System.Drawing.Point(59, 314);
+            this.TxtClave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtClave.Name = "TxtClave";
             this.TxtClave.PasswordChar = '*';
-            this.TxtClave.Size = new System.Drawing.Size(240, 20);
+            this.TxtClave.Size = new System.Drawing.Size(319, 22);
             this.TxtClave.TabIndex = 2;
             // 
             // TxtSeleccionId
             // 
-            this.TxtSeleccionId.Location = new System.Drawing.Point(261, 26);
+            this.TxtSeleccionId.Location = new System.Drawing.Point(348, 32);
+            this.TxtSeleccionId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtSeleccionId.Name = "TxtSeleccionId";
-            this.TxtSeleccionId.Size = new System.Drawing.Size(23, 20);
+            this.TxtSeleccionId.Size = new System.Drawing.Size(29, 22);
             this.TxtSeleccionId.TabIndex = 2;
             this.TxtSeleccionId.Text = "0";
             this.TxtSeleccionId.Visible = false;
             // 
             // TxtDocumento
             // 
-            this.TxtDocumento.Location = new System.Drawing.Point(44, 59);
+            this.TxtDocumento.Location = new System.Drawing.Point(59, 73);
+            this.TxtDocumento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtDocumento.Name = "TxtDocumento";
-            this.TxtDocumento.Size = new System.Drawing.Size(240, 20);
+            this.TxtDocumento.Size = new System.Drawing.Size(319, 22);
             this.TxtDocumento.TabIndex = 2;
             // 
             // TxtConfClave
             // 
-            this.TxtConfClave.Location = new System.Drawing.Point(44, 303);
+            this.TxtConfClave.Location = new System.Drawing.Point(59, 373);
+            this.TxtConfClave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtConfClave.Name = "TxtConfClave";
             this.TxtConfClave.PasswordChar = '*';
-            this.TxtConfClave.Size = new System.Drawing.Size(240, 20);
+            this.TxtConfClave.Size = new System.Drawing.Size(319, 22);
             this.TxtConfClave.TabIndex = 2;
             // 
             // L_NroDocumento
@@ -348,9 +381,10 @@
             this.L_NroDocumento.AutoSize = true;
             this.L_NroDocumento.BackColor = System.Drawing.Color.Transparent;
             this.L_NroDocumento.ForeColor = System.Drawing.Color.White;
-            this.L_NroDocumento.Location = new System.Drawing.Point(41, 43);
+            this.L_NroDocumento.Location = new System.Drawing.Point(55, 53);
+            this.L_NroDocumento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.L_NroDocumento.Name = "L_NroDocumento";
-            this.L_NroDocumento.Size = new System.Drawing.Size(88, 13);
+            this.L_NroDocumento.Size = new System.Drawing.Size(107, 16);
             this.L_NroDocumento.TabIndex = 1;
             this.L_NroDocumento.Text = "Nro. Documento:";
             // 
@@ -358,9 +392,10 @@
             // 
             this.CBRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBRol.FormattingEnabled = true;
-            this.CBRol.Location = new System.Drawing.Point(44, 354);
+            this.CBRol.Location = new System.Drawing.Point(59, 436);
+            this.CBRol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CBRol.Name = "CBRol";
-            this.CBRol.Size = new System.Drawing.Size(240, 21);
+            this.CBRol.Size = new System.Drawing.Size(319, 24);
             this.CBRol.TabIndex = 3;
             // 
             // LEstado
@@ -368,9 +403,10 @@
             this.LEstado.AutoSize = true;
             this.LEstado.BackColor = System.Drawing.Color.Transparent;
             this.LEstado.ForeColor = System.Drawing.Color.White;
-            this.LEstado.Location = new System.Drawing.Point(41, 386);
+            this.LEstado.Location = new System.Drawing.Point(55, 475);
+            this.LEstado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LEstado.Name = "LEstado";
-            this.LEstado.Size = new System.Drawing.Size(43, 13);
+            this.LEstado.Size = new System.Drawing.Size(53, 16);
             this.LEstado.TabIndex = 1;
             this.LEstado.Text = "Estado:";
             // 
@@ -379,9 +415,10 @@
             this.LRol.AutoSize = true;
             this.LRol.BackColor = System.Drawing.Color.Transparent;
             this.LRol.ForeColor = System.Drawing.Color.White;
-            this.LRol.Location = new System.Drawing.Point(41, 338);
+            this.LRol.Location = new System.Drawing.Point(55, 416);
+            this.LRol.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LRol.Name = "LRol";
-            this.LRol.Size = new System.Drawing.Size(26, 13);
+            this.LRol.Size = new System.Drawing.Size(31, 16);
             this.LRol.TabIndex = 1;
             this.LRol.Text = "Rol:";
             // 
@@ -389,9 +426,10 @@
             // 
             this.CBEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBEstado.FormattingEnabled = true;
-            this.CBEstado.Location = new System.Drawing.Point(44, 402);
+            this.CBEstado.Location = new System.Drawing.Point(59, 495);
+            this.CBEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CBEstado.Name = "CBEstado";
-            this.CBEstado.Size = new System.Drawing.Size(240, 21);
+            this.CBEstado.Size = new System.Drawing.Size(319, 24);
             this.CBEstado.TabIndex = 3;
             // 
             // LConfirmarContrasenia
@@ -399,9 +437,10 @@
             this.LConfirmarContrasenia.AutoSize = true;
             this.LConfirmarContrasenia.BackColor = System.Drawing.Color.Transparent;
             this.LConfirmarContrasenia.ForeColor = System.Drawing.Color.White;
-            this.LConfirmarContrasenia.Location = new System.Drawing.Point(41, 287);
+            this.LConfirmarContrasenia.Location = new System.Drawing.Point(55, 353);
+            this.LConfirmarContrasenia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LConfirmarContrasenia.Name = "LConfirmarContrasenia";
-            this.LConfirmarContrasenia.Size = new System.Drawing.Size(110, 13);
+            this.LConfirmarContrasenia.Size = new System.Drawing.Size(137, 16);
             this.LConfirmarContrasenia.TabIndex = 1;
             this.LConfirmarContrasenia.Text = "Confirmar contraseña:";
             // 
@@ -410,9 +449,10 @@
             this.LNombre.AutoSize = true;
             this.LNombre.BackColor = System.Drawing.Color.Transparent;
             this.LNombre.ForeColor = System.Drawing.Color.White;
-            this.LNombre.Location = new System.Drawing.Point(41, 93);
+            this.LNombre.Location = new System.Drawing.Point(55, 114);
+            this.LNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LNombre.Name = "LNombre";
-            this.LNombre.Size = new System.Drawing.Size(47, 13);
+            this.LNombre.Size = new System.Drawing.Size(59, 16);
             this.LNombre.TabIndex = 1;
             this.LNombre.Text = "Nombre:";
             // 
@@ -421,9 +461,10 @@
             this.LContrasenia.AutoSize = true;
             this.LContrasenia.BackColor = System.Drawing.Color.Transparent;
             this.LContrasenia.ForeColor = System.Drawing.Color.White;
-            this.LContrasenia.Location = new System.Drawing.Point(41, 239);
+            this.LContrasenia.Location = new System.Drawing.Point(55, 294);
+            this.LContrasenia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LContrasenia.Name = "LContrasenia";
-            this.LContrasenia.Size = new System.Drawing.Size(64, 13);
+            this.LContrasenia.Size = new System.Drawing.Size(79, 16);
             this.LContrasenia.TabIndex = 1;
             this.LContrasenia.Text = "Contraseña:";
             // 
@@ -432,20 +473,22 @@
             this.LCorreo.AutoSize = true;
             this.LCorreo.BackColor = System.Drawing.Color.Transparent;
             this.LCorreo.ForeColor = System.Drawing.Color.White;
-            this.LCorreo.Location = new System.Drawing.Point(41, 191);
+            this.LCorreo.Location = new System.Drawing.Point(55, 235);
+            this.LCorreo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LCorreo.Name = "LCorreo";
-            this.LCorreo.Size = new System.Drawing.Size(93, 13);
+            this.LCorreo.Size = new System.Drawing.Size(150, 20);
             this.LCorreo.TabIndex = 1;
-            this.LCorreo.Text = "Correo electónico:";
+            this.LCorreo.Text = "Correo electrónico:";
             // 
             // LApellido
             // 
             this.LApellido.AutoSize = true;
             this.LApellido.BackColor = System.Drawing.Color.Transparent;
             this.LApellido.ForeColor = System.Drawing.Color.White;
-            this.LApellido.Location = new System.Drawing.Point(41, 142);
+            this.LApellido.Location = new System.Drawing.Point(55, 175);
+            this.LApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LApellido.Name = "LApellido";
-            this.LApellido.Size = new System.Drawing.Size(47, 13);
+            this.LApellido.Size = new System.Drawing.Size(60, 16);
             this.LApellido.TabIndex = 1;
             this.LApellido.Text = "Apellido:";
             // 
@@ -455,9 +498,10 @@
             this.LDetalleUsuario.BackColor = System.Drawing.Color.Transparent;
             this.LDetalleUsuario.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LDetalleUsuario.ForeColor = System.Drawing.Color.White;
-            this.LDetalleUsuario.Location = new System.Drawing.Point(39, 9);
+            this.LDetalleUsuario.Location = new System.Drawing.Point(52, 11);
+            this.LDetalleUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LDetalleUsuario.Name = "LDetalleUsuario";
-            this.LDetalleUsuario.Size = new System.Drawing.Size(171, 21);
+            this.LDetalleUsuario.Size = new System.Drawing.Size(206, 26);
             this.LDetalleUsuario.TabIndex = 1;
             this.LDetalleUsuario.Text = "Detalle de usuario";
             // 
@@ -489,15 +533,17 @@
             this.panelFormulario.Controls.Add(this.TxtCorreo);
             this.panelFormulario.Controls.Add(this.TxtApellido);
             this.panelFormulario.Location = new System.Drawing.Point(0, 0);
+            this.panelFormulario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelFormulario.Name = "panelFormulario";
-            this.panelFormulario.Size = new System.Drawing.Size(305, 569);
+            this.panelFormulario.Size = new System.Drawing.Size(405, 699);
             this.panelFormulario.TabIndex = 6;
             // 
             // TxtIndice
             // 
-            this.TxtIndice.Location = new System.Drawing.Point(232, 27);
+            this.TxtIndice.Location = new System.Drawing.Point(309, 33);
+            this.TxtIndice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtIndice.Name = "TxtIndice";
-            this.TxtIndice.Size = new System.Drawing.Size(23, 20);
+            this.TxtIndice.Size = new System.Drawing.Size(29, 22);
             this.TxtIndice.TabIndex = 5;
             this.TxtIndice.Text = "-1";
             this.TxtIndice.Visible = false;
@@ -514,9 +560,10 @@
             this.IBVaciar.IconColor = System.Drawing.Color.White;
             this.IBVaciar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBVaciar.IconSize = 16;
-            this.IBVaciar.Location = new System.Drawing.Point(43, 520);
+            this.IBVaciar.Location = new System.Drawing.Point(57, 640);
+            this.IBVaciar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.IBVaciar.Name = "IBVaciar";
-            this.IBVaciar.Size = new System.Drawing.Size(192, 28);
+            this.IBVaciar.Size = new System.Drawing.Size(256, 34);
             this.IBVaciar.TabIndex = 4;
             this.IBVaciar.Text = "Limpiar";
             this.IBVaciar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -536,9 +583,10 @@
             this.IBEliminar.IconColor = System.Drawing.Color.White;
             this.IBEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBEliminar.IconSize = 16;
-            this.IBEliminar.Location = new System.Drawing.Point(43, 488);
+            this.IBEliminar.Location = new System.Drawing.Point(57, 601);
+            this.IBEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.IBEliminar.Name = "IBEliminar";
-            this.IBEliminar.Size = new System.Drawing.Size(192, 28);
+            this.IBEliminar.Size = new System.Drawing.Size(256, 34);
             this.IBEliminar.TabIndex = 4;
             this.IBEliminar.Text = "Eliminar";
             this.IBEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -557,9 +605,10 @@
             this.IBGuardar.IconColor = System.Drawing.Color.White;
             this.IBGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBGuardar.IconSize = 16;
-            this.IBGuardar.Location = new System.Drawing.Point(44, 454);
+            this.IBGuardar.Location = new System.Drawing.Point(59, 559);
+            this.IBGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.IBGuardar.Name = "IBGuardar";
-            this.IBGuardar.Size = new System.Drawing.Size(192, 28);
+            this.IBGuardar.Size = new System.Drawing.Size(256, 34);
             this.IBGuardar.TabIndex = 4;
             this.IBGuardar.Text = "Guardar";
             this.IBGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -573,12 +622,13 @@
             // 
             // FormUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 569);
+            this.ClientSize = new System.Drawing.Size(1685, 700);
             this.Controls.Add(this.dataGridDatos);
             this.Controls.Add(this.panelBusqueda);
             this.Controls.Add(this.panelFormulario);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormUsuario";
             this.Text = "FormUsuario";
             this.Load += new System.EventHandler(this.FormUsuario_Load);

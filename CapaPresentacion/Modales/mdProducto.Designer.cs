@@ -71,7 +71,8 @@
             this.Stock,
             this.PrecioCompra,
             this.PrecioVenta});
-            this.dataGridDatos.Location = new System.Drawing.Point(11, 115);
+            this.dataGridDatos.Location = new System.Drawing.Point(15, 142);
+            this.dataGridDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridDatos.MultiSelect = false;
             this.dataGridDatos.Name = "dataGridDatos";
             this.dataGridDatos.ReadOnly = true;
@@ -88,7 +89,7 @@
             this.dataGridDatos.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridDatos.RowTemplate.Height = 28;
             this.dataGridDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridDatos.Size = new System.Drawing.Size(660, 375);
+            this.dataGridDatos.Size = new System.Drawing.Size(880, 462);
             this.dataGridDatos.TabIndex = 42;
             // 
             // Id
@@ -162,9 +163,10 @@
             this.panelBusqueda.Controls.Add(this.CBBusqueda);
             this.panelBusqueda.Controls.Add(this.LBuscarPor);
             this.panelBusqueda.Controls.Add(this.TxtBusqueda);
-            this.panelBusqueda.Location = new System.Drawing.Point(12, 12);
+            this.panelBusqueda.Location = new System.Drawing.Point(16, 15);
+            this.panelBusqueda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelBusqueda.Name = "panelBusqueda";
-            this.panelBusqueda.Size = new System.Drawing.Size(659, 84);
+            this.panelBusqueda.Size = new System.Drawing.Size(877, 102);
             this.panelBusqueda.TabIndex = 43;
             // 
             // IBLimpiar
@@ -178,9 +180,10 @@
             this.IBLimpiar.IconColor = System.Drawing.Color.Black;
             this.IBLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBLimpiar.IconSize = 16;
-            this.IBLimpiar.Location = new System.Drawing.Point(593, 44);
+            this.IBLimpiar.Location = new System.Drawing.Point(791, 54);
+            this.IBLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.IBLimpiar.Name = "IBLimpiar";
-            this.IBLimpiar.Size = new System.Drawing.Size(41, 28);
+            this.IBLimpiar.Size = new System.Drawing.Size(55, 34);
             this.IBLimpiar.TabIndex = 33;
             this.IBLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IBLimpiar.UseVisualStyleBackColor = false;
@@ -191,9 +194,10 @@
             this.LListaProducto.BackColor = System.Drawing.Color.Transparent;
             this.LListaProducto.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LListaProducto.ForeColor = System.Drawing.Color.White;
-            this.LListaProducto.Location = new System.Drawing.Point(3, 11);
+            this.LListaProducto.Location = new System.Drawing.Point(4, 14);
+            this.LListaProducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LListaProducto.Name = "LListaProducto";
-            this.LListaProducto.Size = new System.Drawing.Size(193, 23);
+            this.LListaProducto.Size = new System.Drawing.Size(242, 29);
             this.LListaProducto.TabIndex = 1;
             this.LListaProducto.Text = "Lista de productos";
             this.LListaProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -209,9 +213,10 @@
             this.IBBuscar.IconColor = System.Drawing.Color.Black;
             this.IBBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBBuscar.IconSize = 16;
-            this.IBBuscar.Location = new System.Drawing.Point(546, 44);
+            this.IBBuscar.Location = new System.Drawing.Point(728, 54);
+            this.IBBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.IBBuscar.Name = "IBBuscar";
-            this.IBBuscar.Size = new System.Drawing.Size(41, 28);
+            this.IBBuscar.Size = new System.Drawing.Size(55, 34);
             this.IBBuscar.TabIndex = 30;
             this.IBBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IBBuscar.UseVisualStyleBackColor = false;
@@ -220,9 +225,10 @@
             // 
             this.CBBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBBusqueda.FormattingEnabled = true;
-            this.CBBusqueda.Location = new System.Drawing.Point(169, 49);
+            this.CBBusqueda.Location = new System.Drawing.Point(225, 60);
+            this.CBBusqueda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CBBusqueda.Name = "CBBusqueda";
-            this.CBBusqueda.Size = new System.Drawing.Size(146, 21);
+            this.CBBusqueda.Size = new System.Drawing.Size(193, 24);
             this.CBBusqueda.TabIndex = 27;
             // 
             // LBuscarPor
@@ -230,27 +236,31 @@
             this.LBuscarPor.AutoSize = true;
             this.LBuscarPor.BackColor = System.Drawing.Color.Transparent;
             this.LBuscarPor.ForeColor = System.Drawing.Color.White;
-            this.LBuscarPor.Location = new System.Drawing.Point(102, 52);
+            this.LBuscarPor.Location = new System.Drawing.Point(136, 64);
+            this.LBuscarPor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBuscarPor.Name = "LBuscarPor";
-            this.LBuscarPor.Size = new System.Drawing.Size(61, 13);
+            this.LBuscarPor.Size = new System.Drawing.Size(75, 16);
             this.LBuscarPor.TabIndex = 16;
             this.LBuscarPor.Text = "Buscar por:";
             // 
             // TxtBusqueda
             // 
-            this.TxtBusqueda.Location = new System.Drawing.Point(344, 49);
+            this.TxtBusqueda.Location = new System.Drawing.Point(459, 60);
+            this.TxtBusqueda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtBusqueda.Name = "TxtBusqueda";
-            this.TxtBusqueda.Size = new System.Drawing.Size(183, 20);
+            this.TxtBusqueda.Size = new System.Drawing.Size(243, 22);
             this.TxtBusqueda.TabIndex = 25;
             // 
             // mdProducto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(685, 500);
+            this.ClientSize = new System.Drawing.Size(913, 615);
             this.Controls.Add(this.dataGridDatos);
             this.Controls.Add(this.panelBusqueda);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "mdProducto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "mdProducto";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDatos)).EndInit();
             this.panelBusqueda.ResumeLayout(false);
