@@ -50,27 +50,35 @@ namespace CapaPresentacion.Administrador
             string apellido = TxtApellido.Text;
             string nombre = TxtNombre.Text;
             string correo = TxtCorreo.Text;
+            string direccion = TxtDireccion.Text;
             string clave = TxtClave.Text;
             string ConfClave = TxtConfClave.Text;
 
             if (string.IsNullOrWhiteSpace(dni) || string.IsNullOrWhiteSpace(apellido) || string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(correo)
-                || string.IsNullOrWhiteSpace(clave) || string.IsNullOrWhiteSpace(ConfClave))
+                || string.IsNullOrWhiteSpace(direccion) || string.IsNullOrWhiteSpace(clave) || string.IsNullOrWhiteSpace(ConfClave))
             {
-                MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debe Completar todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             // Validación de que el DNI solo contenga números  
             if (!long.TryParse(dni, out _))
             {
-                MessageBox.Show("El DNI debe contener solo números", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El DNI debe contener solo números.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             // Validación de que el apellido y nombre solo contengan letras  
             if (!apellido.All(char.IsLetter) || !nombre.All(char.IsLetter))
             {
-                MessageBox.Show("El Apellido y el Nombre deben contener solo letras", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El Apellido y el Nombre deben contener solo letras.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Validación de que las clave debe coincidir con su confirmacion  
+            if (clave != ConfClave)
+            {
+                MessageBox.Show("La clave y su confirmacion no coinciden.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -83,6 +91,7 @@ namespace CapaPresentacion.Administrador
                 Nombre_usuario = TxtNombre.Text,
                 Apellido_usuario = TxtApellido.Text,
                 Correo_usuario = TxtCorreo.Text,
+                Direccion_usuario = TxtDireccion.Text,
                 Clave_usuario = TxtClave.Text,
                 objRol = new Rol() { ID_rol = Convert.ToInt32(((Opcion_combo)CBRol.SelectedItem).Valor) },
                 Estado_usuario = Convert.ToInt32(((Opcion_combo)CBEstado.SelectedItem).Valor) == 1 ? true : false,
@@ -101,7 +110,7 @@ namespace CapaPresentacion.Administrador
 
                 if (idUsuarioGenerado != 0)
                 {
-                    dataGridDatos.Rows.Add(new object[] {"", idUsuarioGenerado, TxtDocumento.Text, TxtNombre.Text, TxtApellido.Text, TxtCorreo.Text, TxtClave.Text,
+                    dataGridDatos.Rows.Add(new object[] {"", idUsuarioGenerado, TxtDocumento.Text, TxtNombre.Text, TxtApellido.Text, TxtCorreo.Text, TxtDireccion.Text, TxtClave.Text,
                     ((Opcion_combo)CBRol.SelectedItem).Valor.ToString(),
                     ((Opcion_combo)CBRol.SelectedItem).Texto.ToString(),
                     ((Opcion_combo)CBEstado.SelectedItem).Valor.ToString(),
@@ -116,7 +125,8 @@ namespace CapaPresentacion.Administrador
                 }
                 else
                 {
-                    MessageBox.Show(mensaje);
+                    MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                   // MessageBox.Show(mensaje);
                 }
             }
 
@@ -129,11 +139,12 @@ namespace CapaPresentacion.Administrador
             string apellido = TxtApellido.Text;
             string nombre = TxtNombre.Text;
             string correo = TxtCorreo.Text;
+            string direccion = TxtDireccion.Text;
             string clave = TxtClave.Text;
             string ConfClave = TxtConfClave.Text;
 
             if (string.IsNullOrWhiteSpace(dni) && string.IsNullOrWhiteSpace(apellido) && string.IsNullOrWhiteSpace(nombre) && string.IsNullOrWhiteSpace(correo)
-               && string.IsNullOrWhiteSpace(clave) && string.IsNullOrWhiteSpace(ConfClave))
+               && string.IsNullOrWhiteSpace(direccion) && string.IsNullOrWhiteSpace(clave) && string.IsNullOrWhiteSpace(ConfClave))
             {
                 MessageBox.Show("Los campos están vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -179,7 +190,7 @@ namespace CapaPresentacion.Administrador
 
             foreach (Usuario item in listaUsuario)
             {
-                dataGridDatos.Rows.Add(new object[] {"", item.Id_usuario, item.Documento_usuario, item.Nombre_usuario, item.Apellido_usuario, item.Correo_usuario, item.Clave_usuario,
+                dataGridDatos.Rows.Add(new object[] {"", item.Id_usuario, item.Documento_usuario, item.Nombre_usuario, item.Apellido_usuario, item.Correo_usuario, item.Direccion_usuario, item.Clave_usuario,
                     item.objRol.ID_rol, 
                     item.objRol.Descripcion_rol,
                     item.Estado_usuario == true ? 1 : 0,
@@ -195,6 +206,7 @@ namespace CapaPresentacion.Administrador
             TxtNombre.Clear();
             TxtApellido.Clear();
             TxtCorreo.Clear();
+            TxtDireccion.Clear();
             TxtClave.Clear();
             TxtConfClave.Clear();
             TxtSeleccionId.Text = "0";
@@ -216,6 +228,7 @@ namespace CapaPresentacion.Administrador
                     TxtNombre.Text = dataGridDatos.Rows[indice].Cells["Nombre"].Value.ToString();
                     TxtApellido.Text = dataGridDatos.Rows[indice].Cells["Apellido"].Value.ToString();
                     TxtCorreo.Text = dataGridDatos.Rows[indice].Cells["Correo"].Value.ToString();
+                    TxtDireccion.Text = dataGridDatos.Rows[indice].Cells["Direccion"].Value.ToString();
                     TxtClave.Text = dataGridDatos.Rows[indice].Cells["Clave"].Value.ToString();
                     TxtConfClave.Text = dataGridDatos.Rows[indice].Cells["Clave"].Value.ToString();
 

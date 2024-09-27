@@ -125,6 +125,12 @@
     <Compile Include="Gerente_Comercial\FormEstadisticas.Designer.cs">
       <DependentUpon>FormEstadisticas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gerente_Comercial\FormListarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerente_Comercial\FormListarProveedor.Designer.cs">
+      <DependentUpon>FormListarProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gerente_Comercial\FormReporteCompras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,18 @@
     <Compile Include="Vendedor\FormDetalleVenta.Designer.cs">
       <DependentUpon>FormDetalleVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vendedor\FormListarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vendedor\FormListarProductos.Designer.cs">
+      <DependentUpon>FormListarProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\FormMisVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vendedor\FormMisVentas.Designer.cs">
+      <DependentUpon>FormMisVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vendedor\FormVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gerente_Comercial\FormEstadisticas.resx">
       <DependentUpon>FormEstadisticas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerente_Comercial\FormListarProveedor.resx">
+      <DependentUpon>FormListarProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gerente_Comercial\FormReporteCompras.resx">
       <DependentUpon>FormReporteCompras.cs</DependentUpon>
@@ -260,6 +281,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vendedor\FormDetalleVenta.resx">
       <DependentUpon>FormDetalleVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vendedor\FormListarProductos.resx">
+      <DependentUpon>FormListarProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vendedor\FormMisVentas.resx">
+      <DependentUpon>FormMisVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vendedor\FormVentas.resx">
       <DependentUpon>FormVentas.cs</DependentUpon>

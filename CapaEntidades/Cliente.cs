@@ -13,6 +13,7 @@ namespace CapaEntidades
         public string Nombre_cliente { get; set; }
         public string Apellido_cliente { get; set; }
         public string Correo_cliente { get; set; }
+        public string Direccion_cliente { get; set; }
         public string Telefono_cliente { get; set; }
         public bool Estado_cliente { get; set; }
         public string FechaRegistro_cliente { get; set; }

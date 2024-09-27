@@ -147,7 +147,7 @@ namespace CapaPresentacion
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-           List<Permiso> ListaPermisos = new CN_Permiso().Listar(usuarioActual.Id_usuario);
+           /*List<Permiso> ListaPermisos = new CN_Permiso().Listar(usuarioActual.Id_usuario);
             foreach (IconMenuItem iconmenu in MenuInicio.Items)
             {
                 bool encontrado = ListaPermisos.Any(m => m.NombreMenu == iconmenu.Name);
@@ -155,11 +155,11 @@ namespace CapaPresentacion
                 {
                     iconmenu.Visible = false;
                 }
-            }
+            }*/
 
             LNomUsuario.Text = usuarioActual.Nombre_usuario + " " + usuarioActual.Apellido_usuario;
 
-            switch (usuarioActual.objRol.ID_rol)
+            /*switch (usuarioActual.objRol.ID_rol)
             {
                 case 1:
                     LRolUsuario.Text = "ADMINISTRADOR";
@@ -170,13 +170,28 @@ namespace CapaPresentacion
                 case 3:
                     LRolUsuario.Text = "GERENTE COMERCIAL";
                     break;
-            }
+            }*/
 
         }
 
         private void SubMenuGraficas_Click(object sender, EventArgs e)
         {
             abrirFormulario(menu_reportes, new FormEstadisticas());
+        }
+
+        private void menu_MisVentas_Click(object sender, EventArgs e)
+        {
+            abrirFormulario((IconMenuItem)sender, new FormMisVentas());
+        }
+
+        private void menu_verProductos_Click(object sender, EventArgs e)
+        {
+            abrirFormulario((IconMenuItem)sender, new FormListarProductos()); 
+        }
+
+        private void menu_verProveedor_Click(object sender, EventArgs e)
+        {
+            abrirFormulario((IconMenuItem)sender, new FormListarProveedor());
         }
     }
 }

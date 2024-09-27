@@ -113,5 +113,6 @@ namespace CapaPresentacion.Administrador
                 TxtBusqueda.Clear();
             }
         }
+
     }
 }

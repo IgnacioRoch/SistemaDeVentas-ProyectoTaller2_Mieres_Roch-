@@ -13,6 +13,7 @@ namespace CapaEntidades
         public string Nombre_usuario { get; set; }
         public string Apellido_usuario { get; set; }
         public string Correo_usuario { get; set; }
+        public string Direccion_usuario { get; set; }
         public string Clave_usuario { get; set; }
         public Rol objRol { get; set; }
         public bool Estado_usuario { get; set; } 

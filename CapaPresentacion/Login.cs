@@ -42,7 +42,7 @@ namespace CapaPresentacion
             }
             else
             {
-                MessageBox.Show("No se encontró el usuario", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("No se encontró el usuario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
         }

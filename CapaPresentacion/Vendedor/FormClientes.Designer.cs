@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.IBLimpiar = new FontAwesome.Sharp.IconButton();
             this.IBVaciar = new FontAwesome.Sharp.IconButton();
             this.IBEliminarCliente = new FontAwesome.Sharp.IconButton();
@@ -47,6 +47,8 @@
             this.LDetalleCliente = new System.Windows.Forms.Label();
             this.LApellido = new System.Windows.Forms.Label();
             this.TxtTelefono = new System.Windows.Forms.TextBox();
+            this.LDireccion = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.LCorreo = new System.Windows.Forms.Label();
             this.TxtCorreo = new System.Windows.Forms.TextBox();
             this.LTelefono = new System.Windows.Forms.Label();
@@ -62,6 +64,7 @@
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -100,7 +103,7 @@
             this.IBVaciar.IconColor = System.Drawing.Color.White;
             this.IBVaciar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBVaciar.IconSize = 16;
-            this.IBVaciar.Location = new System.Drawing.Point(43, 399);
+            this.IBVaciar.Location = new System.Drawing.Point(42, 440);
             this.IBVaciar.Name = "IBVaciar";
             this.IBVaciar.Size = new System.Drawing.Size(192, 28);
             this.IBVaciar.TabIndex = 32;
@@ -121,7 +124,7 @@
             this.IBEliminarCliente.IconColor = System.Drawing.Color.White;
             this.IBEliminarCliente.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBEliminarCliente.IconSize = 16;
-            this.IBEliminarCliente.Location = new System.Drawing.Point(43, 433);
+            this.IBEliminarCliente.Location = new System.Drawing.Point(42, 474);
             this.IBEliminarCliente.Name = "IBEliminarCliente";
             this.IBEliminarCliente.Size = new System.Drawing.Size(192, 28);
             this.IBEliminarCliente.TabIndex = 31;
@@ -160,7 +163,7 @@
             this.IBGuardar.IconColor = System.Drawing.Color.White;
             this.IBGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBGuardar.IconSize = 16;
-            this.IBGuardar.Location = new System.Drawing.Point(43, 365);
+            this.IBGuardar.Location = new System.Drawing.Point(42, 406);
             this.IBGuardar.Name = "IBGuardar";
             this.IBGuardar.Size = new System.Drawing.Size(192, 28);
             this.IBGuardar.TabIndex = 29;
@@ -248,6 +251,8 @@
             this.panelFormulario.Controls.Add(this.LDetalleCliente);
             this.panelFormulario.Controls.Add(this.LApellido);
             this.panelFormulario.Controls.Add(this.TxtTelefono);
+            this.panelFormulario.Controls.Add(this.LDireccion);
+            this.panelFormulario.Controls.Add(this.textBox1);
             this.panelFormulario.Controls.Add(this.LCorreo);
             this.panelFormulario.Controls.Add(this.TxtCorreo);
             this.panelFormulario.Controls.Add(this.LTelefono);
@@ -265,7 +270,7 @@
             // 
             this.CBEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBEstado.FormattingEnabled = true;
-            this.CBEstado.Location = new System.Drawing.Point(43, 313);
+            this.CBEstado.Location = new System.Drawing.Point(42, 354);
             this.CBEstado.Name = "CBEstado";
             this.CBEstado.Size = new System.Drawing.Size(240, 21);
             this.CBEstado.TabIndex = 26;
@@ -275,7 +280,7 @@
             this.LEstado.AutoSize = true;
             this.LEstado.BackColor = System.Drawing.Color.Transparent;
             this.LEstado.ForeColor = System.Drawing.Color.White;
-            this.LEstado.Location = new System.Drawing.Point(40, 297);
+            this.LEstado.Location = new System.Drawing.Point(39, 338);
             this.LEstado.Name = "LEstado";
             this.LEstado.Size = new System.Drawing.Size(43, 13);
             this.LEstado.TabIndex = 13;
@@ -306,10 +311,28 @@
             // 
             // TxtTelefono
             // 
-            this.TxtTelefono.Location = new System.Drawing.Point(42, 255);
+            this.TxtTelefono.Location = new System.Drawing.Point(41, 296);
             this.TxtTelefono.Name = "TxtTelefono";
             this.TxtTelefono.Size = new System.Drawing.Size(240, 20);
             this.TxtTelefono.TabIndex = 22;
+            // 
+            // LDireccion
+            // 
+            this.LDireccion.AutoSize = true;
+            this.LDireccion.BackColor = System.Drawing.Color.Transparent;
+            this.LDireccion.ForeColor = System.Drawing.Color.White;
+            this.LDireccion.Location = new System.Drawing.Point(39, 239);
+            this.LDireccion.Name = "LDireccion";
+            this.LDireccion.Size = new System.Drawing.Size(55, 13);
+            this.LDireccion.TabIndex = 17;
+            this.LDireccion.Text = "Dirección:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(42, 255);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(240, 20);
+            this.textBox1.TabIndex = 21;
             // 
             // LCorreo
             // 
@@ -334,7 +357,7 @@
             this.LTelefono.AutoSize = true;
             this.LTelefono.BackColor = System.Drawing.Color.Transparent;
             this.LTelefono.ForeColor = System.Drawing.Color.White;
-            this.LTelefono.Location = new System.Drawing.Point(40, 239);
+            this.LTelefono.Location = new System.Drawing.Point(39, 280);
             this.LTelefono.Name = "LTelefono";
             this.LTelefono.Size = new System.Drawing.Size(52, 13);
             this.LTelefono.TabIndex = 9;
@@ -387,15 +410,15 @@
             // 
             this.dataGridDatos.AllowUserToAddRows = false;
             this.dataGridDatos.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.BSeleccionar,
@@ -404,6 +427,7 @@
             this.Nombre,
             this.Apellido,
             this.Correo,
+            this.Direccion,
             this.Telefono,
             this.Estado,
             this.EstadoValor});
@@ -411,24 +435,24 @@
             this.dataGridDatos.MultiSelect = false;
             this.dataGridDatos.Name = "dataGridDatos";
             this.dataGridDatos.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridDatos.RowTemplate.Height = 28;
             this.dataGridDatos.Size = new System.Drawing.Size(932, 488);
             this.dataGridDatos.TabIndex = 34;
             // 
             // BSeleccionar
             // 
-            this.BSeleccionar.HeaderText = "";
+            this.BSeleccionar.HeaderText = "Editar";
             this.BSeleccionar.Name = "BSeleccionar";
             this.BSeleccionar.ReadOnly = true;
-            this.BSeleccionar.Width = 30;
+            this.BSeleccionar.Width = 50;
             // 
             // IdUsuario
             // 
@@ -464,6 +488,12 @@
             this.Correo.Name = "Correo";
             this.Correo.ReadOnly = true;
             this.Correo.Width = 150;
+            // 
+            // Direccion
+            // 
+            this.Direccion.HeaderText = "Dirección";
+            this.Direccion.Name = "Direccion";
+            this.Direccion.ReadOnly = true;
             // 
             // Telefono
             // 
@@ -533,12 +563,15 @@
         private System.Windows.Forms.Label LTelefono;
         private System.Windows.Forms.Label LCorreo;
         private System.Windows.Forms.Label LApellido;
+        private System.Windows.Forms.Label LDireccion;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridViewButtonColumn BSeleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Documento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoValor;

@@ -22,7 +22,7 @@ namespace CapaDatos
                 try
                 {
                     StringBuilder query = new StringBuilder();
-                    query.AppendLine("select  u.Id_usuario, u.Documento_usuario, u.Nombre_usuario, u.Apellido_usuario, u.Correo_usuario, u.Clave_usuario, u.Estado_usuario, r.Id_rol, r.Descripcion_rol from usuario u");
+                    query.AppendLine("select  u.Id_usuario, u.Documento_usuario, u.Nombre_usuario, u.Apellido_usuario, u.Correo_usuario, u.Direccion_usuario, u.Clave_usuario, u.Estado_usuario, r.Id_rol, r.Descripcion_rol from usuario u");
                     query.AppendLine("inner join rol r on r.Id_rol = u.Id_rol");
 
                     SqlCommand cmd = new SqlCommand(query.ToString(), oconexion);
@@ -41,6 +41,7 @@ namespace CapaDatos
                                 Nombre_usuario = dr["Nombre_usuario"].ToString(),
                                 Apellido_usuario = dr["Apellido_usuario"].ToString(),
                                 Correo_usuario = dr["Correo_usuario"].ToString(),
+                                Direccion_usuario = dr["Direccion_usuario"].ToString(),
                                 Clave_usuario = dr["Clave_usuario"].ToString(),
                                 Estado_usuario = Convert.ToBoolean(dr["Estado_usuario"]),
                                 objRol = new Rol() { ID_rol = Convert.ToInt32(dr["Id_rol"]), Descripcion_rol = dr["Descripcion_rol"].ToString()}
@@ -70,6 +71,7 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("Nombre_usuario", obj.Nombre_usuario);
                     cmd.Parameters.AddWithValue("Apellido_usuario", obj.Apellido_usuario);
                     cmd.Parameters.AddWithValue("Correo_usuario", obj.Correo_usuario);
+                    cmd.Parameters.AddWithValue("Direccion_usuario", obj.Direccion_usuario);
                     cmd.Parameters.AddWithValue("Clave_usuario", obj.Clave_usuario);
                     cmd.Parameters.AddWithValue("Id_rol", obj.objRol.ID_rol);
                     cmd.Parameters.AddWithValue("Estado_usuario", obj.Estado_usuario);
@@ -109,6 +111,7 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("Nombre_usuario", obj.Nombre_usuario);
                     cmd.Parameters.AddWithValue("Apellido_usuario", obj.Apellido_usuario);
                     cmd.Parameters.AddWithValue("Correo_usuario", obj.Correo_usuario);
+                    cmd.Parameters.AddWithValue("Direccion_usuario", obj.Direccion_usuario);
                     cmd.Parameters.AddWithValue("Clave_usuario", obj.Clave_usuario);
                     cmd.Parameters.AddWithValue("Id_rol", obj.objRol.ID_rol);
                     cmd.Parameters.AddWithValue("Estado_usuario", obj.Estado_usuario);

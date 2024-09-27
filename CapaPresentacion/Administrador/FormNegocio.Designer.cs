@@ -34,6 +34,7 @@
             this.TxtDireccion = new System.Windows.Forms.TextBox();
             this.TxtRuc = new System.Windows.Forms.TextBox();
             this.TxtNombreNegocio = new System.Windows.Forms.TextBox();
+            this.LInfoNegocio = new System.Windows.Forms.Label();
             this.LNombreNegocio = new System.Windows.Forms.Label();
             this.LRUC = new System.Windows.Forms.Label();
             this.LDireccion = new System.Windows.Forms.Label();
@@ -41,7 +42,6 @@
             this.LLogo = new System.Windows.Forms.Label();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.LDetalleNegocio = new System.Windows.Forms.Label();
-            this.LInfoNegocio = new System.Windows.Forms.Label();
             this.panelFormulario.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
@@ -120,6 +120,18 @@
             this.TxtNombreNegocio.Name = "TxtNombreNegocio";
             this.TxtNombreNegocio.Size = new System.Drawing.Size(293, 20);
             this.TxtNombreNegocio.TabIndex = 11;
+            // 
+            // LInfoNegocio
+            // 
+            this.LInfoNegocio.BackColor = System.Drawing.Color.Transparent;
+            this.LInfoNegocio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LInfoNegocio.ForeColor = System.Drawing.Color.White;
+            this.LInfoNegocio.Location = new System.Drawing.Point(6, 443);
+            this.LInfoNegocio.Name = "LInfoNegocio";
+            this.LInfoNegocio.Size = new System.Drawing.Size(613, 61);
+            this.LInfoNegocio.TabIndex = 6;
+            this.LInfoNegocio.Text = "El siguiente apartado modifica la información del negocio, la cual figurará en co" +
+    "mprobantes  y/o tickets.";
             // 
             // LNombreNegocio
             // 
@@ -205,18 +217,6 @@
             this.LDetalleNegocio.Size = new System.Drawing.Size(257, 23);
             this.LDetalleNegocio.TabIndex = 2;
             this.LDetalleNegocio.Text = "Detalle del Negocio";
-            // 
-            // LInfoNegocio
-            // 
-            this.LInfoNegocio.BackColor = System.Drawing.Color.Transparent;
-            this.LInfoNegocio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LInfoNegocio.ForeColor = System.Drawing.Color.White;
-            this.LInfoNegocio.Location = new System.Drawing.Point(6, 443);
-            this.LInfoNegocio.Name = "LInfoNegocio";
-            this.LInfoNegocio.Size = new System.Drawing.Size(613, 61);
-            this.LInfoNegocio.TabIndex = 6;
-            this.LInfoNegocio.Text = "El siguiente apartado modifica la informacion del negocio, la cual figurará en co" +
-    "mprobantes  y/o tickets.";
             // 
             // FormNegocio
             // 

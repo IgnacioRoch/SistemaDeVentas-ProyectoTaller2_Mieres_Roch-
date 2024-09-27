@@ -29,10 +29,10 @@ namespace CapaPresentacion.Vendedor
 
         private void FormClientes_Load(object sender, EventArgs e)
         {
-            if (usuarioActual.objRol.ID_rol == 2)
+            /*if (usuarioActual.objRol.ID_rol == 2)
             {
                 IBEliminarCliente.Visible = false; 
-            }
+            }*/
             
         }
     }
