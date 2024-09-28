@@ -42,6 +42,7 @@
             this.LLogo = new System.Windows.Forms.Label();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.LDetalleNegocio = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panelFormulario.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
@@ -99,6 +100,7 @@
             this.IBGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IBGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.IBGuardar.UseVisualStyleBackColor = false;
+            this.IBGuardar.Click += new System.EventHandler(this.IBGuardar_Click);
             // 
             // TxtDireccion
             // 
@@ -186,6 +188,7 @@
             this.IBSubir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IBSubir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.IBSubir.UseVisualStyleBackColor = false;
+            this.IBSubir.Click += new System.EventHandler(this.IBSubir_Click);
             // 
             // LLogo
             // 
@@ -217,6 +220,10 @@
             this.LDetalleNegocio.Size = new System.Drawing.Size(257, 23);
             this.LDetalleNegocio.TabIndex = 2;
             this.LDetalleNegocio.Text = "Detalle del Negocio";
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // FormNegocio
             // 
@@ -251,5 +258,6 @@
         private System.Windows.Forms.Label LRUC;
         private System.Windows.Forms.Label LDireccion;
         private System.Windows.Forms.Label LInfoNegocio;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

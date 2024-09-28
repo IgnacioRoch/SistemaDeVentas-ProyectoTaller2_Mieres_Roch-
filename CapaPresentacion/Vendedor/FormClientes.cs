@@ -92,6 +92,13 @@ namespace CapaPresentacion.Vendedor
                 return;
             }
 
+            // Validación de que el teléfono solo contenga números  
+            if (!long.TryParse(telefono, out _))
+            {
+                MessageBox.Show("El Teléfono debe contener solo números.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             // Validación de que el apellido y nombre solo contengan letras  
             if (!apellido.All(char.IsLetter) || !nombre.All(char.IsLetter))
             {
@@ -113,6 +120,7 @@ namespace CapaPresentacion.Vendedor
 
             // Mostrar mensaje de consulta sobre la inserción  
             DialogResult ask = MessageBox.Show("¿Seguro que desea insertar un nuevo cliente?", "Confirmar Inserción", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+
 
 
 
