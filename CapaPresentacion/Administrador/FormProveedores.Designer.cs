@@ -31,35 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridDatos = new System.Windows.Forms.DataGridView();
-            this.panelFormulario = new System.Windows.Forms.Panel();
-            this.CBEstado = new System.Windows.Forms.ComboBox();
-            this.IBVaciar = new FontAwesome.Sharp.IconButton();
-            this.LEstado = new System.Windows.Forms.Label();
-            this.IBEliminar = new FontAwesome.Sharp.IconButton();
-            this.TxtSeleccionId = new System.Windows.Forms.TextBox();
-            this.IBGuardar = new FontAwesome.Sharp.IconButton();
-            this.LDetalleProveedor = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.TxtTelefono = new System.Windows.Forms.TextBox();
-            this.LNombreContacto = new System.Windows.Forms.Label();
-            this.LCorreo = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.TxtCorreo = new System.Windows.Forms.TextBox();
-            this.LDireccion = new System.Windows.Forms.Label();
-            this.LTelefono = new System.Windows.Forms.Label();
-            this.LNombreLegal = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.LRazonSocial = new System.Windows.Forms.Label();
-            this.TxtRazonSocial = new System.Windows.Forms.TextBox();
-            this.L_NroDocumento = new System.Windows.Forms.Label();
-            this.TxtDocumento = new System.Windows.Forms.TextBox();
-            this.panelBusqueda = new System.Windows.Forms.Panel();
-            this.IBLimpiar = new FontAwesome.Sharp.IconButton();
-            this.LListaProveedor = new System.Windows.Forms.Label();
-            this.IBBuscar = new FontAwesome.Sharp.IconButton();
-            this.CBBusqueda = new System.Windows.Forms.ComboBox();
-            this.LBuscarPor = new System.Windows.Forms.Label();
-            this.TxtBusqueda = new System.Windows.Forms.TextBox();
             this.BSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.IdProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,6 +42,35 @@
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelFormulario = new System.Windows.Forms.Panel();
+            this.CBEstado = new System.Windows.Forms.ComboBox();
+            this.IBVaciar = new FontAwesome.Sharp.IconButton();
+            this.LEstado = new System.Windows.Forms.Label();
+            this.IBEliminar = new FontAwesome.Sharp.IconButton();
+            this.TxtSeleccionId = new System.Windows.Forms.TextBox();
+            this.IBGuardar = new FontAwesome.Sharp.IconButton();
+            this.LDetalleProveedor = new System.Windows.Forms.Label();
+            this.TxtDireccion = new System.Windows.Forms.TextBox();
+            this.TxtTelefono = new System.Windows.Forms.TextBox();
+            this.LNombreContacto = new System.Windows.Forms.Label();
+            this.LCorreo = new System.Windows.Forms.Label();
+            this.TxtNombreContacto = new System.Windows.Forms.TextBox();
+            this.TxtCorreo = new System.Windows.Forms.TextBox();
+            this.LDireccion = new System.Windows.Forms.Label();
+            this.LTelefono = new System.Windows.Forms.Label();
+            this.LNombreLegal = new System.Windows.Forms.Label();
+            this.TxtNombreLegal = new System.Windows.Forms.TextBox();
+            this.LRazonSocial = new System.Windows.Forms.Label();
+            this.TxtRazonSocial = new System.Windows.Forms.TextBox();
+            this.L_NroDocumento = new System.Windows.Forms.Label();
+            this.TxtDocumento = new System.Windows.Forms.TextBox();
+            this.panelBusqueda = new System.Windows.Forms.Panel();
+            this.IBLimpiar = new FontAwesome.Sharp.IconButton();
+            this.LListaProveedor = new System.Windows.Forms.Label();
+            this.IBBuscar = new FontAwesome.Sharp.IconButton();
+            this.CBBusqueda = new System.Windows.Forms.ComboBox();
+            this.LBuscarPor = new System.Windows.Forms.Label();
+            this.TxtBusqueda = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDatos)).BeginInit();
             this.panelFormulario.SuspendLayout();
             this.panelBusqueda.SuspendLayout();
@@ -119,6 +119,91 @@
             this.dataGridDatos.Size = new System.Drawing.Size(932, 488);
             this.dataGridDatos.TabIndex = 37;
             // 
+            // BSeleccionar
+            // 
+            this.BSeleccionar.HeaderText = "Editar";
+            this.BSeleccionar.MinimumWidth = 6;
+            this.BSeleccionar.Name = "BSeleccionar";
+            this.BSeleccionar.ReadOnly = true;
+            this.BSeleccionar.Width = 50;
+            // 
+            // IdProveedor
+            // 
+            this.IdProveedor.HeaderText = "IdProveedor";
+            this.IdProveedor.MinimumWidth = 6;
+            this.IdProveedor.Name = "IdProveedor";
+            this.IdProveedor.ReadOnly = true;
+            this.IdProveedor.Visible = false;
+            this.IdProveedor.Width = 125;
+            // 
+            // Documento
+            // 
+            this.Documento.HeaderText = "Nro. Documento";
+            this.Documento.MinimumWidth = 6;
+            this.Documento.Name = "Documento";
+            this.Documento.ReadOnly = true;
+            this.Documento.Width = 150;
+            // 
+            // NombreLegal
+            // 
+            this.NombreLegal.HeaderText = "NombreLegal";
+            this.NombreLegal.Name = "NombreLegal";
+            this.NombreLegal.ReadOnly = true;
+            // 
+            // NombreContacto
+            // 
+            this.NombreContacto.HeaderText = "NombreContacto";
+            this.NombreContacto.Name = "NombreContacto";
+            this.NombreContacto.ReadOnly = true;
+            this.NombreContacto.Width = 120;
+            // 
+            // RazonSocial
+            // 
+            this.RazonSocial.HeaderText = "Razon Social";
+            this.RazonSocial.MinimumWidth = 6;
+            this.RazonSocial.Name = "RazonSocial";
+            this.RazonSocial.ReadOnly = true;
+            this.RazonSocial.Width = 180;
+            // 
+            // Correo
+            // 
+            this.Correo.HeaderText = "Correo";
+            this.Correo.MinimumWidth = 6;
+            this.Correo.Name = "Correo";
+            this.Correo.ReadOnly = true;
+            this.Correo.Width = 150;
+            // 
+            // Direccion
+            // 
+            this.Direccion.HeaderText = "Dirección";
+            this.Direccion.Name = "Direccion";
+            this.Direccion.ReadOnly = true;
+            // 
+            // Telefono
+            // 
+            this.Telefono.HeaderText = "Telefono";
+            this.Telefono.MinimumWidth = 6;
+            this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
+            this.Telefono.Width = 125;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.MinimumWidth = 6;
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Width = 125;
+            // 
+            // EstadoValor
+            // 
+            this.EstadoValor.HeaderText = "Estado Valor";
+            this.EstadoValor.MinimumWidth = 6;
+            this.EstadoValor.Name = "EstadoValor";
+            this.EstadoValor.ReadOnly = true;
+            this.EstadoValor.Visible = false;
+            this.EstadoValor.Width = 125;
+            // 
             // panelFormulario
             // 
             this.panelFormulario.BackColor = System.Drawing.Color.White;
@@ -131,16 +216,16 @@
             this.panelFormulario.Controls.Add(this.TxtSeleccionId);
             this.panelFormulario.Controls.Add(this.IBGuardar);
             this.panelFormulario.Controls.Add(this.LDetalleProveedor);
-            this.panelFormulario.Controls.Add(this.textBox4);
+            this.panelFormulario.Controls.Add(this.TxtDireccion);
             this.panelFormulario.Controls.Add(this.TxtTelefono);
             this.panelFormulario.Controls.Add(this.LNombreContacto);
             this.panelFormulario.Controls.Add(this.LCorreo);
-            this.panelFormulario.Controls.Add(this.textBox2);
+            this.panelFormulario.Controls.Add(this.TxtNombreContacto);
             this.panelFormulario.Controls.Add(this.TxtCorreo);
             this.panelFormulario.Controls.Add(this.LDireccion);
             this.panelFormulario.Controls.Add(this.LTelefono);
             this.panelFormulario.Controls.Add(this.LNombreLegal);
-            this.panelFormulario.Controls.Add(this.textBox1);
+            this.panelFormulario.Controls.Add(this.TxtNombreLegal);
             this.panelFormulario.Controls.Add(this.LRazonSocial);
             this.panelFormulario.Controls.Add(this.TxtRazonSocial);
             this.panelFormulario.Controls.Add(this.L_NroDocumento);
@@ -256,12 +341,12 @@
             this.LDetalleProveedor.TabIndex = 15;
             this.LDetalleProveedor.Text = "Detalle Proveedor";
             // 
-            // textBox4
+            // TxtDireccion
             // 
-            this.textBox4.Location = new System.Drawing.Point(41, 288);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(240, 20);
-            this.textBox4.TabIndex = 22;
+            this.TxtDireccion.Location = new System.Drawing.Point(41, 288);
+            this.TxtDireccion.Name = "TxtDireccion";
+            this.TxtDireccion.Size = new System.Drawing.Size(240, 20);
+            this.TxtDireccion.TabIndex = 22;
             // 
             // TxtTelefono
             // 
@@ -292,12 +377,12 @@
             this.LCorreo.TabIndex = 17;
             this.LCorreo.Text = "Correo electrónico:";
             // 
-            // textBox2
+            // TxtNombreContacto
             // 
-            this.textBox2.Location = new System.Drawing.Point(41, 148);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(240, 20);
-            this.textBox2.TabIndex = 21;
+            this.TxtNombreContacto.Location = new System.Drawing.Point(41, 148);
+            this.TxtNombreContacto.Name = "TxtNombreContacto";
+            this.TxtNombreContacto.Size = new System.Drawing.Size(240, 20);
+            this.TxtNombreContacto.TabIndex = 21;
             // 
             // TxtCorreo
             // 
@@ -339,12 +424,12 @@
             this.LNombreLegal.TabIndex = 10;
             this.LNombreLegal.Text = "Nombre legal:";
             // 
-            // textBox1
+            // TxtNombreLegal
             // 
-            this.textBox1.Location = new System.Drawing.Point(42, 98);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(240, 20);
-            this.textBox1.TabIndex = 19;
+            this.TxtNombreLegal.Location = new System.Drawing.Point(42, 98);
+            this.TxtNombreLegal.Name = "TxtNombreLegal";
+            this.TxtNombreLegal.Size = new System.Drawing.Size(240, 20);
+            this.TxtNombreLegal.TabIndex = 19;
             // 
             // LRazonSocial
             // 
@@ -476,91 +561,6 @@
             this.TxtBusqueda.Size = new System.Drawing.Size(183, 20);
             this.TxtBusqueda.TabIndex = 25;
             // 
-            // BSeleccionar
-            // 
-            this.BSeleccionar.HeaderText = "Editar";
-            this.BSeleccionar.MinimumWidth = 6;
-            this.BSeleccionar.Name = "BSeleccionar";
-            this.BSeleccionar.ReadOnly = true;
-            this.BSeleccionar.Width = 50;
-            // 
-            // IdProveedor
-            // 
-            this.IdProveedor.HeaderText = "IdProveedor";
-            this.IdProveedor.MinimumWidth = 6;
-            this.IdProveedor.Name = "IdProveedor";
-            this.IdProveedor.ReadOnly = true;
-            this.IdProveedor.Visible = false;
-            this.IdProveedor.Width = 125;
-            // 
-            // Documento
-            // 
-            this.Documento.HeaderText = "Nro. Documento";
-            this.Documento.MinimumWidth = 6;
-            this.Documento.Name = "Documento";
-            this.Documento.ReadOnly = true;
-            this.Documento.Width = 150;
-            // 
-            // NombreLegal
-            // 
-            this.NombreLegal.HeaderText = "NombreLegal";
-            this.NombreLegal.Name = "NombreLegal";
-            this.NombreLegal.ReadOnly = true;
-            // 
-            // NombreContacto
-            // 
-            this.NombreContacto.HeaderText = "NombreContacto";
-            this.NombreContacto.Name = "NombreContacto";
-            this.NombreContacto.ReadOnly = true;
-            this.NombreContacto.Width = 120;
-            // 
-            // RazonSocial
-            // 
-            this.RazonSocial.HeaderText = "Razon Social";
-            this.RazonSocial.MinimumWidth = 6;
-            this.RazonSocial.Name = "RazonSocial";
-            this.RazonSocial.ReadOnly = true;
-            this.RazonSocial.Width = 180;
-            // 
-            // Correo
-            // 
-            this.Correo.HeaderText = "Correo";
-            this.Correo.MinimumWidth = 6;
-            this.Correo.Name = "Correo";
-            this.Correo.ReadOnly = true;
-            this.Correo.Width = 150;
-            // 
-            // Direccion
-            // 
-            this.Direccion.HeaderText = "Dirección";
-            this.Direccion.Name = "Direccion";
-            this.Direccion.ReadOnly = true;
-            // 
-            // Telefono
-            // 
-            this.Telefono.HeaderText = "Telefono";
-            this.Telefono.MinimumWidth = 6;
-            this.Telefono.Name = "Telefono";
-            this.Telefono.ReadOnly = true;
-            this.Telefono.Width = 125;
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.MinimumWidth = 6;
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Width = 125;
-            // 
-            // EstadoValor
-            // 
-            this.EstadoValor.HeaderText = "Estado Valor";
-            this.EstadoValor.MinimumWidth = 6;
-            this.EstadoValor.Name = "EstadoValor";
-            this.EstadoValor.ReadOnly = true;
-            this.EstadoValor.Visible = false;
-            this.EstadoValor.Width = 125;
-            // 
             // FormProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -606,12 +606,12 @@
         private System.Windows.Forms.ComboBox CBBusqueda;
         private System.Windows.Forms.Label LBuscarPor;
         private System.Windows.Forms.TextBox TxtBusqueda;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TxtDireccion;
         private System.Windows.Forms.Label LNombreContacto;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxtNombreContacto;
         private System.Windows.Forms.Label LDireccion;
         private System.Windows.Forms.Label LNombreLegal;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtNombreLegal;
         private System.Windows.Forms.DataGridViewButtonColumn BSeleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdProveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Documento;

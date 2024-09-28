@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -24,10 +25,13 @@ namespace CapaPresentacion.Administrador
             string razonSocial = TxtRazonSocial.Text;
             string correo = TxtCorreo.Text;
             string telefono = TxtTelefono.Text;
+            string nombreLegal = TxtNombreLegal.Text;
+            string nombreContacto = TxtNombreContacto.Text;
+            string direccion = TxtDireccion.Text;
 
 
-            if (string.IsNullOrWhiteSpace(dni) || string.IsNullOrWhiteSpace(razonSocial) || string.IsNullOrWhiteSpace(correo)
-               || string.IsNullOrWhiteSpace(telefono))
+            if (string.IsNullOrWhiteSpace(dni) || string.IsNullOrWhiteSpace(razonSocial) || string.IsNullOrWhiteSpace(correo) || string.IsNullOrWhiteSpace(direccion)
+               || string.IsNullOrWhiteSpace(telefono) || string.IsNullOrWhiteSpace(nombreLegal) || string.IsNullOrWhiteSpace(nombreContacto))
             {
                 MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -41,15 +45,30 @@ namespace CapaPresentacion.Administrador
             }
 
             // Validación de que la Razon social solo contengan letras  
-            if (!razonSocial.All(char.IsLetter))
+            if (!razonSocial.All(char.IsLetter) || !nombreContacto.All(char.IsLetter) || !nombreLegal.All(char.IsLetter))
             {
-                MessageBox.Show("El campo Razon Social debe contener solo letras", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El campo Razon Social, Nombre de contacto y Nombre legal debe contener solo letras", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!EsCorreoValido(correo))
+            {
+                // Si el correo no es válido
+                MessageBox.Show("Correo no válido. Asegúrate de que siga el formato '@.com'.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             // Mostrar mensaje de consulta sobre la inserción  
             DialogResult ask = MessageBox.Show("¿Seguro que desea insertar un nuevo Proveedor?", "Confirmar Inserción", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
 
+        }
+
+        // Función para validar si el correo sigue el formato '@.com'
+        private bool EsCorreoValido(string email)
+        {
+            // Expresión regular que asegura que el correo contenga '@' y termine con '.com'
+            string patron = @"^[^@\s]+@[^@\s]+\.com$";
+            return Regex.IsMatch(email, patron);
         }
 
         private void IBVaciar_Click(object sender, EventArgs e)
@@ -80,6 +99,9 @@ namespace CapaPresentacion.Administrador
             TxtRazonSocial.Clear();
             TxtCorreo.Clear();
             TxtTelefono.Clear();
+            TxtNombreLegal.Clear();
+            TxtNombreContacto.Clear();
+            TxtDireccion.Clear();
             TxtSeleccionId.Text = "0";
             //CBEstado.SelectedIndex = 0;
         }

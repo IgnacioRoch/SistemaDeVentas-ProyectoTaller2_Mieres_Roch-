@@ -107,15 +107,11 @@ namespace CapaPresentacion.Vendedor
             }
 
 
-            if (EsCorreoValido(correo))
-            {
-                // Si el correo es válido
-                MessageBox.Show("Correo válido.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
+            if (!EsCorreoValido(correo))
             {
                 // Si el correo no es válido
                 MessageBox.Show("Correo no válido. Asegúrate de que siga el formato '@.com'.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
 
             // Mostrar mensaje de consulta sobre la inserción  

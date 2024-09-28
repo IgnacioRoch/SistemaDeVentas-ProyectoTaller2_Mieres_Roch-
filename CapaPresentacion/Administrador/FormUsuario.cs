@@ -82,6 +82,16 @@ namespace CapaPresentacion.Administrador
                 return;
             }
 
+
+            if (!EsCorreoValido(correo))
+            {
+                // Si el correo no es válido
+                MessageBox.Show("Correo no válido. Asegúrate de que siga el formato '@.com'.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            
+
+
             string mensaje = string.Empty;
 
             Usuario objUsuario = new Usuario()
@@ -131,6 +141,8 @@ namespace CapaPresentacion.Administrador
             }
 
         }       
+
+
 
         private void IBVaciar_Click(object sender, EventArgs e)
         {
@@ -198,6 +210,14 @@ namespace CapaPresentacion.Administrador
                  });
             }
 
+        }
+
+        // Función para validar si el correo sigue el formato '@.com'
+        private bool EsCorreoValido(string email)
+        {
+            // Expresión regular que asegura que el correo contenga '@' y termine con '.com'
+            string patron = @"^[^@\s]+@[^@\s]+\.com$";
+            return Regex.IsMatch(email, patron);
         }
 
         private void limpar()
