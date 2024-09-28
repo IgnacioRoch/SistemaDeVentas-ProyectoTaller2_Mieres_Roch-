@@ -341,6 +341,7 @@
             this.IBLimpiar.TabIndex = 33;
             this.IBLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IBLimpiar.UseVisualStyleBackColor = false;
+            this.IBLimpiar.Click += new System.EventHandler(this.IBLimpiar_Click);
             // 
             // LBuscarPor
             // 
@@ -386,6 +387,7 @@
             this.IBBuscar.TabIndex = 30;
             this.IBBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IBBuscar.UseVisualStyleBackColor = false;
+            this.IBBuscar.Click += new System.EventHandler(this.IBBuscar_Click);
             // 
             // FormReporteCompras
             // 

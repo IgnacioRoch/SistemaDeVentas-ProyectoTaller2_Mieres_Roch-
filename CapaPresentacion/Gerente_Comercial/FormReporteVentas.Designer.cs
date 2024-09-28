@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.IBBuscarProveedorReporteCompra = new FontAwesome.Sharp.IconButton();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -39,12 +39,6 @@
             this.LReporteVentas = new System.Windows.Forms.Label();
             this.panelBusqueda = new System.Windows.Forms.Panel();
             this.dataGridDatos = new System.Windows.Forms.DataGridView();
-            this.BDescargarExcel = new System.Windows.Forms.Button();
-            this.IBLimpiar = new FontAwesome.Sharp.IconButton();
-            this.LBuscarPor = new System.Windows.Forms.Label();
-            this.TxtBusqueda = new System.Windows.Forms.TextBox();
-            this.CBBusqueda = new System.Windows.Forms.ComboBox();
-            this.IBBuscar = new FontAwesome.Sharp.IconButton();
             this.FechaRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NumeroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,6 +53,12 @@
             this.PrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BDescargarExcel = new System.Windows.Forms.Button();
+            this.IBLimpiar = new FontAwesome.Sharp.IconButton();
+            this.LBuscarPor = new System.Windows.Forms.Label();
+            this.TxtBusqueda = new System.Windows.Forms.TextBox();
+            this.CBBusqueda = new System.Windows.Forms.ComboBox();
+            this.IBBuscar = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panelBusqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDatos)).BeginInit();
@@ -164,15 +164,15 @@
             // 
             this.dataGridDatos.AllowUserToAddRows = false;
             this.dataGridDatos.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.FechaRegistro,
@@ -193,93 +193,17 @@
             this.dataGridDatos.MultiSelect = false;
             this.dataGridDatos.Name = "dataGridDatos";
             this.dataGridDatos.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridDatos.RowTemplate.Height = 28;
             this.dataGridDatos.Size = new System.Drawing.Size(1193, 407);
             this.dataGridDatos.TabIndex = 8;
-            // 
-            // BDescargarExcel
-            // 
-            this.BDescargarExcel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BDescargarExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BDescargarExcel.Image = global::CapaPresentacion.Properties.Resources.icons8_ms_excel_20;
-            this.BDescargarExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BDescargarExcel.Location = new System.Drawing.Point(16, 12);
-            this.BDescargarExcel.Name = "BDescargarExcel";
-            this.BDescargarExcel.Size = new System.Drawing.Size(143, 28);
-            this.BDescargarExcel.TabIndex = 34;
-            this.BDescargarExcel.Text = "Descargar Excel";
-            this.BDescargarExcel.UseVisualStyleBackColor = false;
-            // 
-            // IBLimpiar
-            // 
-            this.IBLimpiar.BackColor = System.Drawing.Color.White;
-            this.IBLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.IBLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.IBLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBLimpiar.ForeColor = System.Drawing.Color.Black;
-            this.IBLimpiar.IconChar = FontAwesome.Sharp.IconChar.Eraser;
-            this.IBLimpiar.IconColor = System.Drawing.Color.Black;
-            this.IBLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IBLimpiar.IconSize = 16;
-            this.IBLimpiar.Location = new System.Drawing.Point(1123, 12);
-            this.IBLimpiar.Name = "IBLimpiar";
-            this.IBLimpiar.Size = new System.Drawing.Size(41, 28);
-            this.IBLimpiar.TabIndex = 33;
-            this.IBLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.IBLimpiar.UseVisualStyleBackColor = false;
-            // 
-            // LBuscarPor
-            // 
-            this.LBuscarPor.AutoSize = true;
-            this.LBuscarPor.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.LBuscarPor.ForeColor = System.Drawing.Color.Black;
-            this.LBuscarPor.Location = new System.Drawing.Point(529, 20);
-            this.LBuscarPor.Name = "LBuscarPor";
-            this.LBuscarPor.Size = new System.Drawing.Size(61, 13);
-            this.LBuscarPor.TabIndex = 16;
-            this.LBuscarPor.Text = "Buscar por:";
-            // 
-            // TxtBusqueda
-            // 
-            this.TxtBusqueda.Location = new System.Drawing.Point(793, 17);
-            this.TxtBusqueda.Name = "TxtBusqueda";
-            this.TxtBusqueda.Size = new System.Drawing.Size(236, 20);
-            this.TxtBusqueda.TabIndex = 23;
-            // 
-            // CBBusqueda
-            // 
-            this.CBBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CBBusqueda.FormattingEnabled = true;
-            this.CBBusqueda.Location = new System.Drawing.Point(613, 17);
-            this.CBBusqueda.Name = "CBBusqueda";
-            this.CBBusqueda.Size = new System.Drawing.Size(146, 21);
-            this.CBBusqueda.TabIndex = 27;
-            // 
-            // IBBuscar
-            // 
-            this.IBBuscar.BackColor = System.Drawing.Color.Gold;
-            this.IBBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.IBBuscar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.IBBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBBuscar.ForeColor = System.Drawing.Color.Black;
-            this.IBBuscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.IBBuscar.IconColor = System.Drawing.Color.Black;
-            this.IBBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IBBuscar.IconSize = 16;
-            this.IBBuscar.Location = new System.Drawing.Point(1076, 12);
-            this.IBBuscar.Name = "IBBuscar";
-            this.IBBuscar.Size = new System.Drawing.Size(41, 28);
-            this.IBBuscar.TabIndex = 30;
-            this.IBBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.IBBuscar.UseVisualStyleBackColor = false;
             // 
             // FechaRegistro
             // 
@@ -365,6 +289,84 @@
             this.SubTotal.HeaderText = "Sub Total";
             this.SubTotal.Name = "SubTotal";
             this.SubTotal.ReadOnly = true;
+            // 
+            // BDescargarExcel
+            // 
+            this.BDescargarExcel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BDescargarExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BDescargarExcel.Image = global::CapaPresentacion.Properties.Resources.icons8_ms_excel_20;
+            this.BDescargarExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BDescargarExcel.Location = new System.Drawing.Point(16, 12);
+            this.BDescargarExcel.Name = "BDescargarExcel";
+            this.BDescargarExcel.Size = new System.Drawing.Size(143, 28);
+            this.BDescargarExcel.TabIndex = 34;
+            this.BDescargarExcel.Text = "Descargar Excel";
+            this.BDescargarExcel.UseVisualStyleBackColor = false;
+            // 
+            // IBLimpiar
+            // 
+            this.IBLimpiar.BackColor = System.Drawing.Color.White;
+            this.IBLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.IBLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.IBLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IBLimpiar.ForeColor = System.Drawing.Color.Black;
+            this.IBLimpiar.IconChar = FontAwesome.Sharp.IconChar.Eraser;
+            this.IBLimpiar.IconColor = System.Drawing.Color.Black;
+            this.IBLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IBLimpiar.IconSize = 16;
+            this.IBLimpiar.Location = new System.Drawing.Point(1123, 12);
+            this.IBLimpiar.Name = "IBLimpiar";
+            this.IBLimpiar.Size = new System.Drawing.Size(41, 28);
+            this.IBLimpiar.TabIndex = 33;
+            this.IBLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.IBLimpiar.UseVisualStyleBackColor = false;
+            this.IBLimpiar.Click += new System.EventHandler(this.IBLimpiar_Click);
+            // 
+            // LBuscarPor
+            // 
+            this.LBuscarPor.AutoSize = true;
+            this.LBuscarPor.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.LBuscarPor.ForeColor = System.Drawing.Color.Black;
+            this.LBuscarPor.Location = new System.Drawing.Point(529, 20);
+            this.LBuscarPor.Name = "LBuscarPor";
+            this.LBuscarPor.Size = new System.Drawing.Size(61, 13);
+            this.LBuscarPor.TabIndex = 16;
+            this.LBuscarPor.Text = "Buscar por:";
+            // 
+            // TxtBusqueda
+            // 
+            this.TxtBusqueda.Location = new System.Drawing.Point(793, 17);
+            this.TxtBusqueda.Name = "TxtBusqueda";
+            this.TxtBusqueda.Size = new System.Drawing.Size(236, 20);
+            this.TxtBusqueda.TabIndex = 23;
+            // 
+            // CBBusqueda
+            // 
+            this.CBBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBBusqueda.FormattingEnabled = true;
+            this.CBBusqueda.Location = new System.Drawing.Point(613, 17);
+            this.CBBusqueda.Name = "CBBusqueda";
+            this.CBBusqueda.Size = new System.Drawing.Size(146, 21);
+            this.CBBusqueda.TabIndex = 27;
+            // 
+            // IBBuscar
+            // 
+            this.IBBuscar.BackColor = System.Drawing.Color.Gold;
+            this.IBBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.IBBuscar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.IBBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IBBuscar.ForeColor = System.Drawing.Color.Black;
+            this.IBBuscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.IBBuscar.IconColor = System.Drawing.Color.Black;
+            this.IBBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IBBuscar.IconSize = 16;
+            this.IBBuscar.Location = new System.Drawing.Point(1076, 12);
+            this.IBBuscar.Name = "IBBuscar";
+            this.IBBuscar.Size = new System.Drawing.Size(41, 28);
+            this.IBBuscar.TabIndex = 30;
+            this.IBBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.IBBuscar.UseVisualStyleBackColor = false;
+            this.IBBuscar.Click += new System.EventHandler(this.IBBuscar_Click);
             // 
             // FormReporteVentas
             // 
