@@ -100,7 +100,7 @@ namespace CapaPresentacion.Administrador
             int idUsuarioGenerado = new CN_Usuario().Registrar_Usuario(objUsuario, out mensaje);
 
             // Mostrar mensaje de consulta sobre la inserción  
-            DialogResult ask = MessageBox.Show("¿Seguro que desea insertar un nuevo Cliente?", "Confirmar Inserción", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+            DialogResult ask = MessageBox.Show("¿Seguro que desea insertar un nuevo usuario?", "Confirmar Inserción", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
 
             // Verificar la respuesta del usuario  
             if (ask == DialogResult.Yes)
@@ -255,6 +255,36 @@ namespace CapaPresentacion.Administrador
                     }
 
                 }
+            }
+        }
+
+        private void IBLimpiar_Click(object sender, EventArgs e)
+        {
+            // Obtener los valores de los TextBox
+            string busqueda = TxtBusqueda.Text;
+
+
+            if (string.IsNullOrWhiteSpace(busqueda)
+               )
+            {
+                MessageBox.Show("El campo está vacio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (MessageBox.Show("¿Limpiar el campo de busqueda?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                TxtBusqueda.Clear();
+            }
+        }
+
+        private void IBBuscar_Click(object sender, EventArgs e)
+        {
+            string busqueda = TxtBusqueda.Text;
+
+            if (string.IsNullOrWhiteSpace(busqueda))
+            {
+                MessageBox.Show("Debe Completar el campo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
         }
     }

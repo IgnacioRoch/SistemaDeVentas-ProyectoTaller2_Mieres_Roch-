@@ -87,7 +87,7 @@ namespace CapaPresentacion.Administrador
             if (string.IsNullOrWhiteSpace(busqueda)
                )
             {
-                MessageBox.Show("el campo está vacio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El campo está vacio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
