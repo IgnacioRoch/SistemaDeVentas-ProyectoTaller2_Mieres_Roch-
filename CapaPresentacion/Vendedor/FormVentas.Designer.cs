@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PanelRegistrarVenta = new System.Windows.Forms.Panel();
             this.IBCrearVenta = new FontAwesome.Sharp.IconButton();
             this.IBAgregar = new FontAwesome.Sharp.IconButton();
@@ -46,17 +46,17 @@
             this.IBBuscarProducto = new FontAwesome.Sharp.IconButton();
             this.LCantidad = new System.Windows.Forms.Label();
             this.LStock = new System.Windows.Forms.Label();
-            this.TxtPrecioVenta = new System.Windows.Forms.TextBox();
+            this.TxtStock = new System.Windows.Forms.TextBox();
             this.LPrecio = new System.Windows.Forms.Label();
             this.TxtPrecioCompra = new System.Windows.Forms.TextBox();
             this.LProducto = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TxtProducto = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.LCodProducto = new System.Windows.Forms.Label();
             this.GBInfoCliente = new System.Windows.Forms.GroupBox();
             this.IBBuscarProveedor = new FontAwesome.Sharp.IconButton();
             this.LApellidoCliente = new System.Windows.Forms.Label();
-            this.TxtRazonSocial = new System.Windows.Forms.TextBox();
+            this.TxtApellido = new System.Windows.Forms.TextBox();
             this.TxtNroDocCliente = new System.Windows.Forms.TextBox();
             this.LNroDocCliente = new System.Windows.Forms.Label();
             this.GBInfoVenta = new System.Windows.Forms.GroupBox();
@@ -122,6 +122,7 @@
             this.IBCrearVenta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IBCrearVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.IBCrearVenta.UseVisualStyleBackColor = false;
+            this.IBCrearVenta.Click += new System.EventHandler(this.IBCrearVenta_Click);
             // 
             // IBAgregar
             // 
@@ -143,20 +144,21 @@
             this.IBAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IBAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.IBAgregar.UseVisualStyleBackColor = false;
+            this.IBAgregar.Click += new System.EventHandler(this.IBAgregar_Click_1);
             // 
             // dataGridDatos
             // 
             this.dataGridDatos.AllowUserToAddRows = false;
             this.dataGridDatos.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdProducto,
@@ -169,14 +171,14 @@
             this.dataGridDatos.MultiSelect = false;
             this.dataGridDatos.Name = "dataGridDatos";
             this.dataGridDatos.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridDatos.RowTemplate.Height = 28;
             this.dataGridDatos.Size = new System.Drawing.Size(857, 301);
             this.dataGridDatos.TabIndex = 7;
@@ -230,11 +232,11 @@
             this.GBInfoProducto.Controls.Add(this.IBBuscarProducto);
             this.GBInfoProducto.Controls.Add(this.LCantidad);
             this.GBInfoProducto.Controls.Add(this.LStock);
-            this.GBInfoProducto.Controls.Add(this.TxtPrecioVenta);
+            this.GBInfoProducto.Controls.Add(this.TxtStock);
             this.GBInfoProducto.Controls.Add(this.LPrecio);
             this.GBInfoProducto.Controls.Add(this.TxtPrecioCompra);
             this.GBInfoProducto.Controls.Add(this.LProducto);
-            this.GBInfoProducto.Controls.Add(this.textBox2);
+            this.GBInfoProducto.Controls.Add(this.TxtProducto);
             this.GBInfoProducto.Controls.Add(this.textBox3);
             this.GBInfoProducto.Controls.Add(this.LCodProducto);
             this.GBInfoProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -309,12 +311,12 @@
             this.LStock.TabIndex = 0;
             this.LStock.Text = "Stock:";
             // 
-            // TxtPrecioVenta
+            // TxtStock
             // 
-            this.TxtPrecioVenta.Location = new System.Drawing.Point(646, 42);
-            this.TxtPrecioVenta.Name = "TxtPrecioVenta";
-            this.TxtPrecioVenta.Size = new System.Drawing.Size(67, 20);
-            this.TxtPrecioVenta.TabIndex = 4;
+            this.TxtStock.Location = new System.Drawing.Point(646, 42);
+            this.TxtStock.Name = "TxtStock";
+            this.TxtStock.Size = new System.Drawing.Size(67, 20);
+            this.TxtStock.TabIndex = 4;
             // 
             // LPrecio
             // 
@@ -341,12 +343,12 @@
             this.LProducto.TabIndex = 0;
             this.LProducto.Text = "Producto:";
             // 
-            // textBox2
+            // TxtProducto
             // 
-            this.textBox2.Location = new System.Drawing.Point(221, 41);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(291, 20);
-            this.textBox2.TabIndex = 4;
+            this.TxtProducto.Location = new System.Drawing.Point(221, 41);
+            this.TxtProducto.Name = "TxtProducto";
+            this.TxtProducto.Size = new System.Drawing.Size(291, 20);
+            this.TxtProducto.TabIndex = 4;
             // 
             // textBox3
             // 
@@ -369,7 +371,7 @@
             this.GBInfoCliente.BackColor = System.Drawing.Color.Transparent;
             this.GBInfoCliente.Controls.Add(this.IBBuscarProveedor);
             this.GBInfoCliente.Controls.Add(this.LApellidoCliente);
-            this.GBInfoCliente.Controls.Add(this.TxtRazonSocial);
+            this.GBInfoCliente.Controls.Add(this.TxtApellido);
             this.GBInfoCliente.Controls.Add(this.TxtNroDocCliente);
             this.GBInfoCliente.Controls.Add(this.LNroDocCliente);
             this.GBInfoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -409,12 +411,12 @@
             this.LApellidoCliente.TabIndex = 0;
             this.LApellidoCliente.Text = "Apellido cliente:";
             // 
-            // TxtRazonSocial
+            // TxtApellido
             // 
-            this.TxtRazonSocial.Location = new System.Drawing.Point(246, 41);
-            this.TxtRazonSocial.Name = "TxtRazonSocial";
-            this.TxtRazonSocial.Size = new System.Drawing.Size(143, 20);
-            this.TxtRazonSocial.TabIndex = 4;
+            this.TxtApellido.Location = new System.Drawing.Point(246, 41);
+            this.TxtApellido.Name = "TxtApellido";
+            this.TxtApellido.Size = new System.Drawing.Size(143, 20);
+            this.TxtApellido.TabIndex = 4;
             // 
             // TxtNroDocCliente
             // 
@@ -576,14 +578,14 @@
         private System.Windows.Forms.GroupBox GBInfoCliente;
         private FontAwesome.Sharp.IconButton IBBuscarProveedor;
         private System.Windows.Forms.Label LApellidoCliente;
-        private System.Windows.Forms.TextBox TxtRazonSocial;
+        private System.Windows.Forms.TextBox TxtApellido;
         private System.Windows.Forms.TextBox TxtNroDocCliente;
         private System.Windows.Forms.Label LNroDocCliente;
         private System.Windows.Forms.NumericUpDown NUpDCantidad;
         private System.Windows.Forms.TextBox textBox1;
         private FontAwesome.Sharp.IconButton IBBuscarProducto;
         private System.Windows.Forms.Label LCantidad;
-        private System.Windows.Forms.TextBox TxtPrecioVenta;
+        private System.Windows.Forms.TextBox TxtStock;
         private System.Windows.Forms.Label LPrecio;
         private System.Windows.Forms.GroupBox GBInfoVenta;
         private System.Windows.Forms.ComboBox CBTipoDocVenta;
@@ -599,7 +601,7 @@
         private System.Windows.Forms.DataGridView dataGridDatos;
         private System.Windows.Forms.GroupBox GBInfoProducto;
         private System.Windows.Forms.Label LProducto;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxtProducto;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label LCodProducto;
         private System.Windows.Forms.Label LTotalAPagar;

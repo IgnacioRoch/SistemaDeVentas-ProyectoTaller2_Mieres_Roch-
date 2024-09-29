@@ -78,8 +78,8 @@ namespace CapaPresentacion.Vendedor
             string direccion = TxtDireccion.Text;
             string telefono = TxtTelefono.Text;
 
-            if (string.IsNullOrWhiteSpace(dni) && string.IsNullOrWhiteSpace(apellido) && string.IsNullOrWhiteSpace(nombre) && string.IsNullOrWhiteSpace(correo)
-               && string.IsNullOrWhiteSpace(direccion) && string.IsNullOrWhiteSpace(telefono))
+            if (string.IsNullOrWhiteSpace(dni) || string.IsNullOrWhiteSpace(apellido) || string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(correo)
+               && string.IsNullOrWhiteSpace(direccion) || string.IsNullOrWhiteSpace(telefono))
             {
                 MessageBox.Show("Los campos están vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

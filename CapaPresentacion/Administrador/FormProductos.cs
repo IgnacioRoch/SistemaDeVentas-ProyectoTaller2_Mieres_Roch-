@@ -24,10 +24,12 @@ namespace CapaPresentacion.Administrador
             string codigo = TxtCodigo.Text;
             string nombre = TxtNombre.Text;
             string descripcion = TxtDescripcion.Text;
+            string precioCompra = TxtPrecioCompra.Text;
+            string precioVenta = TxtPrecioVenta.Text;
 
 
             // Validación de que no se permite campos vacios
-            if (string.IsNullOrWhiteSpace(codigo) || string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(descripcion))
+            if (string.IsNullOrWhiteSpace(codigo) || string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(descripcion) || string.IsNullOrWhiteSpace(precioCompra) || string.IsNullOrWhiteSpace(precioVenta))
             {
                 MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -72,6 +74,8 @@ namespace CapaPresentacion.Administrador
             TxtCodigo.Clear();
             TxtNombre.Clear();
             TxtDescripcion.Clear();
+            TxtPrecioCompra.Clear();
+            TxtPrecioVenta.Clear();
             TxtSeleccionId.Text = "0";
             //CBCategoria.SelectedIndex = 0;
             //CBEstado.SelectedIndex = 0;
