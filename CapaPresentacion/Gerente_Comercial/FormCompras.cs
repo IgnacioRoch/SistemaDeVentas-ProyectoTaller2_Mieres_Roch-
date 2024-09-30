@@ -44,7 +44,7 @@ namespace CapaPresentacion.Gerente_Comercial
 
             if (string.IsNullOrWhiteSpace(fecha) || string.IsNullOrWhiteSpace(razonSocial) || string.IsNullOrWhiteSpace(nroDocumento))
             {
-                MessageBox.Show("Debe Completar todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debe completar todos los campos necesarios para agregar un producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -59,10 +59,15 @@ namespace CapaPresentacion.Gerente_Comercial
 
             if (string.IsNullOrWhiteSpace(producto) || string.IsNullOrWhiteSpace(precioCompra) || string.IsNullOrWhiteSpace(precioVenta) )
             {
-                MessageBox.Show("Debe Completar todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debe completar todos los campos antes de concretar la compra.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
+        }
+
+        private void FormCompras_Load(object sender, EventArgs e)
+        {
+            TxtFecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
     }
 }

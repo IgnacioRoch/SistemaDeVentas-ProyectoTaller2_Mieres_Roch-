@@ -63,16 +63,16 @@
             this.LEstado = new System.Windows.Forms.Label();
             this.CBEstado = new System.Windows.Forms.ComboBox();
             this.panelFormulario = new System.Windows.Forms.Panel();
+            this.LPrecioVenta = new System.Windows.Forms.Label();
+            this.TxtPrecioVenta = new System.Windows.Forms.TextBox();
+            this.LPrecioCompra = new System.Windows.Forms.Label();
+            this.TxtPrecioCompra = new System.Windows.Forms.TextBox();
             this.IBVaciar = new FontAwesome.Sharp.IconButton();
             this.IBEliminar = new FontAwesome.Sharp.IconButton();
             this.IBGuardar = new FontAwesome.Sharp.IconButton();
             this.panelBusqueda = new System.Windows.Forms.Panel();
             this.IBLimpiar = new FontAwesome.Sharp.IconButton();
             this.IBBuscar = new FontAwesome.Sharp.IconButton();
-            this.LPrecioCompra = new System.Windows.Forms.Label();
-            this.TxtPrecioCompra = new System.Windows.Forms.TextBox();
-            this.LPrecioVenta = new System.Windows.Forms.Label();
-            this.TxtPrecioVenta = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDatos)).BeginInit();
             this.panelFormulario.SuspendLayout();
             this.panelBusqueda.SuspendLayout();
@@ -433,6 +433,42 @@
             this.panelFormulario.Size = new System.Drawing.Size(305, 569);
             this.panelFormulario.TabIndex = 35;
             // 
+            // LPrecioVenta
+            // 
+            this.LPrecioVenta.AutoSize = true;
+            this.LPrecioVenta.BackColor = System.Drawing.Color.Transparent;
+            this.LPrecioVenta.ForeColor = System.Drawing.Color.White;
+            this.LPrecioVenta.Location = new System.Drawing.Point(41, 238);
+            this.LPrecioVenta.Name = "LPrecioVenta";
+            this.LPrecioVenta.Size = new System.Drawing.Size(68, 13);
+            this.LPrecioVenta.TabIndex = 35;
+            this.LPrecioVenta.Text = "Precio Venta";
+            // 
+            // TxtPrecioVenta
+            // 
+            this.TxtPrecioVenta.Location = new System.Drawing.Point(44, 254);
+            this.TxtPrecioVenta.Name = "TxtPrecioVenta";
+            this.TxtPrecioVenta.Size = new System.Drawing.Size(240, 20);
+            this.TxtPrecioVenta.TabIndex = 36;
+            // 
+            // LPrecioCompra
+            // 
+            this.LPrecioCompra.AutoSize = true;
+            this.LPrecioCompra.BackColor = System.Drawing.Color.Transparent;
+            this.LPrecioCompra.ForeColor = System.Drawing.Color.White;
+            this.LPrecioCompra.Location = new System.Drawing.Point(41, 191);
+            this.LPrecioCompra.Name = "LPrecioCompra";
+            this.LPrecioCompra.Size = new System.Drawing.Size(76, 13);
+            this.LPrecioCompra.TabIndex = 33;
+            this.LPrecioCompra.Text = "Precio Compra";
+            // 
+            // TxtPrecioCompra
+            // 
+            this.TxtPrecioCompra.Location = new System.Drawing.Point(44, 207);
+            this.TxtPrecioCompra.Name = "TxtPrecioCompra";
+            this.TxtPrecioCompra.Size = new System.Drawing.Size(240, 20);
+            this.TxtPrecioCompra.TabIndex = 34;
+            // 
             // IBVaciar
             // 
             this.IBVaciar.BackColor = System.Drawing.Color.CornflowerBlue;
@@ -552,42 +588,6 @@
             this.IBBuscar.UseVisualStyleBackColor = false;
             this.IBBuscar.Click += new System.EventHandler(this.IBBuscar_Click);
             // 
-            // LPrecioCompra
-            // 
-            this.LPrecioCompra.AutoSize = true;
-            this.LPrecioCompra.BackColor = System.Drawing.Color.Transparent;
-            this.LPrecioCompra.ForeColor = System.Drawing.Color.White;
-            this.LPrecioCompra.Location = new System.Drawing.Point(41, 191);
-            this.LPrecioCompra.Name = "LPrecioCompra";
-            this.LPrecioCompra.Size = new System.Drawing.Size(76, 13);
-            this.LPrecioCompra.TabIndex = 33;
-            this.LPrecioCompra.Text = "Precio Compra";
-            // 
-            // TxtPrecioCompra
-            // 
-            this.TxtPrecioCompra.Location = new System.Drawing.Point(44, 207);
-            this.TxtPrecioCompra.Name = "TxtPrecioCompra";
-            this.TxtPrecioCompra.Size = new System.Drawing.Size(240, 20);
-            this.TxtPrecioCompra.TabIndex = 34;
-            // 
-            // LPrecioVenta
-            // 
-            this.LPrecioVenta.AutoSize = true;
-            this.LPrecioVenta.BackColor = System.Drawing.Color.Transparent;
-            this.LPrecioVenta.ForeColor = System.Drawing.Color.White;
-            this.LPrecioVenta.Location = new System.Drawing.Point(41, 238);
-            this.LPrecioVenta.Name = "LPrecioVenta";
-            this.LPrecioVenta.Size = new System.Drawing.Size(68, 13);
-            this.LPrecioVenta.TabIndex = 35;
-            this.LPrecioVenta.Text = "Precio Venta";
-            // 
-            // TxtPrecioVenta
-            // 
-            this.TxtPrecioVenta.Location = new System.Drawing.Point(44, 254);
-            this.TxtPrecioVenta.Name = "TxtPrecioVenta";
-            this.TxtPrecioVenta.Size = new System.Drawing.Size(240, 20);
-            this.TxtPrecioVenta.TabIndex = 36;
-            // 
             // FormProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -598,6 +598,7 @@
             this.Controls.Add(this.panelBusqueda);
             this.Name = "FormProductos";
             this.Text = "FormProductos";
+            this.Load += new System.EventHandler(this.FormProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDatos)).EndInit();
             this.panelFormulario.ResumeLayout(false);
             this.panelFormulario.PerformLayout();

@@ -559,6 +559,7 @@
             this.Controls.Add(this.PanelRegistrarVenta);
             this.Name = "FormVentas";
             this.Text = "FormVentas";
+            this.Load += new System.EventHandler(this.FormVentas_Load);
             this.PanelRegistrarVenta.ResumeLayout(false);
             this.PanelRegistrarVenta.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDatos)).EndInit();

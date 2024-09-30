@@ -45,7 +45,7 @@ namespace CapaPresentacion.Vendedor
 
             if (string.IsNullOrWhiteSpace(fecha) || string.IsNullOrWhiteSpace(apellido) || string.IsNullOrWhiteSpace(nroDocumento))
             {
-                MessageBox.Show("Debe Completar todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debe completar todos los campos necesarios para agregar un producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -62,11 +62,16 @@ namespace CapaPresentacion.Vendedor
 
             if (string.IsNullOrWhiteSpace(producto) || string.IsNullOrWhiteSpace(precio) || string.IsNullOrWhiteSpace(stock) || string.IsNullOrWhiteSpace(pagaCon) || string.IsNullOrWhiteSpace(cambio))
             {
-                MessageBox.Show("Debe Completar todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debe completar todos los campos antes de concretar la venta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
 
+        }
+
+        private void FormVentas_Load(object sender, EventArgs e)
+        {
+            TxtFechaVenta.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
     }
 }

@@ -117,5 +117,11 @@ namespace CapaPresentacion.Administrador
             }
 
         }
+
+        private void FormProductos_Load(object sender, EventArgs e)
+        {
+            TxtPrecioCompra.Text = "0";
+            TxtPrecioVenta.Text = "0";
+        }
     }
 }
