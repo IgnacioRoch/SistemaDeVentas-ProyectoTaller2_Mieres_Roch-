@@ -21,6 +21,7 @@ namespace CapaPresentacion.Vendedor
 
         public FormClientes(Usuario objusuario = null)
         {
+            /*Funcion provisoria para trabajar sobre el sistema sin ingresar un usuario valido*/
             if (objusuario == null)
                 usuarioActual = new Usuario() { Nombre_usuario = "ADMIN PREDEFINIDO", Id_usuario = 1 };
             else
@@ -31,9 +32,16 @@ namespace CapaPresentacion.Vendedor
 
         private void FormClientes_Load(object sender, EventArgs e)
         {
+            /*Oculta el boton eliminar y editar si se trata de un usuario vendedor*/
             if (usuarioActual.objRol.ID_rol == 2)
             {
-                IBEliminarCliente.Visible = false; 
+                IBEliminarCliente.Visible = false;
+                IBEditar.Visible = false;
+            }
+            /*Oculta el boton guardar si se trata de un usuario distinto a vendedor*/
+            if (usuarioActual.objRol.ID_rol != 2)
+            {
+                IBGuardar.Visible = false;
             }
             
         }
@@ -167,6 +175,29 @@ namespace CapaPresentacion.Vendedor
             }
 
 
+        }
+
+        private void IBEditar_Click(object sender, EventArgs e)
+        {
+            // Obtener los valores de los TextBox  
+            string dni = TxtDocumento.Text;
+            string apellido = TxtApellido.Text;
+            string nombre = TxtNombre.Text;
+            string correo = TxtCorreo.Text;
+            string direccion = TxtDireccion.Text;
+            string telefono = TxtTelefono.Text;
+
+            if (string.IsNullOrWhiteSpace(dni) && string.IsNullOrWhiteSpace(apellido) && string.IsNullOrWhiteSpace(nombre) && string.IsNullOrWhiteSpace(correo)
+               && string.IsNullOrWhiteSpace(direccion) && string.IsNullOrWhiteSpace(telefono))
+            {
+                MessageBox.Show("Los campos están vacios, debe seleccionar el cliente a editar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (MessageBox.Show("¿Limpiar los campos del fomulario?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                limpar();
+            }
         }
     }
 }

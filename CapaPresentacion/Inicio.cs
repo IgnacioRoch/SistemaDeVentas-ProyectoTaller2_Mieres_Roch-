@@ -147,6 +147,7 @@ namespace CapaPresentacion
 
         private void Inicio_Load(object sender, EventArgs e)
         {
+            /*Permite recorrer la lista de permisos para determinar cuales menus son visble para cada usuario en el inicio*/
            List<Permiso> ListaPermisos = new CN_Permiso().Listar(usuarioActual.Id_usuario);
             foreach (IconMenuItem iconmenu in MenuInicio.Items)
             {
@@ -159,6 +160,7 @@ namespace CapaPresentacion
 
             LNomUsuario.Text = usuarioActual.Nombre_usuario + " " + usuarioActual.Apellido_usuario;
 
+            /*Agrega el texto al label que designa el rol del usuario actual*/
             switch (usuarioActual.objRol.ID_rol)
             {
                 case 1:
