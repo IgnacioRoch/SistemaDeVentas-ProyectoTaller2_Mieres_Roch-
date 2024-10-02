@@ -28,6 +28,24 @@ namespace CapaPresentacion
 
         private void BIngresar_Click(object sender, EventArgs e)
         {
+            string documento = TxtDocumento.Text;
+
+
+            // Validación de que no se permite campos vacios
+            if (string.IsNullOrWhiteSpace(documento) )
+            {
+                MessageBox.Show("No se permite campos vacíos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Validación de que el codigo solo contenga números  
+            if (!long.TryParse(documento, out _))
+            {
+                MessageBox.Show("El Documento debe contener solo números.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
             List<Usuario> TEST = new CN_Usuario().Listar();
 
             Usuario ousuario = new CN_Usuario().Listar().Where(u => u.Documento_usuario == TxtDocumento.Text && u.Clave_usuario == TxtClave.Text).FirstOrDefault();
