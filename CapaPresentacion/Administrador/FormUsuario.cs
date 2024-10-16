@@ -90,8 +90,6 @@ namespace CapaPresentacion.Administrador
                 return;
             }
             
-
-
             string mensaje = string.Empty;
 
             Usuario objUsuario = new Usuario()
@@ -107,20 +105,23 @@ namespace CapaPresentacion.Administrador
                 Estado_usuario = Convert.ToInt32(((Opcion_combo)CBEstado.SelectedItem).Valor) == 1 ? true : false,
             };
 
-            int idUsuarioGenerado = new CN_Usuario().Registrar_Usuario(objUsuario, out mensaje);
-
-            // Mostrar mensaje de consulta sobre la inserción  
-            DialogResult ask = MessageBox.Show("¿Seguro que desea insertar un nuevo usuario?", "Confirmar Inserción", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
-
-            // Verificar la respuesta del usuario  
-            if (ask == DialogResult.Yes)
+            if (objUsuario.Id_usuario == 0)
             {
-                // Aquí iría la lógica para insertar el nuevo cliente  
-                // Por ejemplo, llamar a una función para insertar en la base de datos
 
-                if (idUsuarioGenerado != 0)
+                int idUsuarioGenerado = new CN_Usuario().Registrar_Usuario(objUsuario, out mensaje);
+
+                // Mostrar mensaje de consulta sobre la inserción  
+                DialogResult ask = MessageBox.Show("¿Seguro que desea insertar un nuevo usuario?", "Confirmar Inserción", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+
+                // Verificar la respuesta del usuario  
+                if (ask == DialogResult.Yes)
                 {
-                    dataGridDatos.Rows.Add(new object[] {"", idUsuarioGenerado, TxtDocumento.Text, TxtNombre.Text, TxtApellido.Text, TxtCorreo.Text, TxtDireccion.Text, TxtClave.Text,
+                    // Aquí iría la lógica para insertar el nuevo cliente  
+                    // Por ejemplo, llamar a una función para insertar en la base de datos
+
+                    if (idUsuarioGenerado != 0)
+                    {
+                        dataGridDatos.Rows.Add(new object[] {"", idUsuarioGenerado, TxtDocumento.Text, TxtNombre.Text, TxtApellido.Text, TxtCorreo.Text, TxtDireccion.Text, TxtClave.Text,
                     ((Opcion_combo)CBRol.SelectedItem).Valor.ToString(),
                     ((Opcion_combo)CBRol.SelectedItem).Texto.ToString(),
                     ((Opcion_combo)CBEstado.SelectedItem).Valor.ToString(),
@@ -128,16 +129,59 @@ namespace CapaPresentacion.Administrador
                      });
 
 
-                    // Mostrar mensaje de información confirmando la inserción correcta  
-                    MessageBox.Show($"El Usuario se insertó correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        // Mostrar mensaje de información confirmando la inserción correcta  
+                        MessageBox.Show($"El Usuario se insertó correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    limpar();
+                        limpar();
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        // MessageBox.Show(mensaje);
+                    }
+
+
                 }
-                else
+
+
+            }
+            else
+            {
+                bool resultado = new CN_Usuario().Editar_Usuario(objUsuario, out mensaje);
+
+
+                // Mostrar mensaje de consulta sobre la inserción  
+                DialogResult ask = MessageBox.Show("¿Seguro que deseas modificar los datos?", "Confirmar Inserción", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+
+                if (ask == DialogResult.Yes)
                 {
-                    MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                   // MessageBox.Show(mensaje);
+                    if (resultado)
+                    {
+                        DataGridViewRow row = dataGridDatos.Rows[Convert.ToInt32(TxtIndice.Text)];
+                        row.Cells["Id"].Value = TxtSeleccionId.Text;
+                        row.Cells["Documento"].Value = TxtDocumento.Text;
+                        row.Cells["Nombre"].Value = TxtNombre.Text;
+                        row.Cells["Apellido"].Value = TxtApellido.Text;
+                        row.Cells["Correo"].Value = TxtCorreo.Text;
+                        row.Cells["Direccion"].Value = TxtDireccion.Text;
+                        row.Cells["Clave"].Value = TxtClave.Text;
+                        row.Cells["IdRol"].Value = ((Opcion_combo)CBRol.SelectedItem).Valor.ToString();
+                        row.Cells["Rol"].Value = ((Opcion_combo)CBRol.SelectedItem).Texto.ToString();
+                        row.Cells["EstadoValor"].Value = ((Opcion_combo)CBEstado.SelectedItem).Valor.ToString();
+                        row.Cells["Estado"].Value = ((Opcion_combo)CBEstado.SelectedItem).Texto.ToString();
+
+                        MessageBox.Show($"Los datos del usuario han sidos actualizados", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        limpar();
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        // MessageBox.Show(mensaje);
+                    }
                 }
+
+
             }
 
         }       
@@ -294,6 +338,10 @@ namespace CapaPresentacion.Administrador
             if (MessageBox.Show("¿Limpiar el campo de busqueda?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 TxtBusqueda.Clear();
+                foreach(DataGridViewRow row in dataGridDatos.Rows)
+                {
+                    row.Visible = true;
+                }
             }
         }
 
@@ -305,6 +353,69 @@ namespace CapaPresentacion.Administrador
             {
                 MessageBox.Show("Debe Completar el campo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
+            }
+
+            string columnaFiltro = ((Opcion_combo)CBBusqueda.SelectedItem).Valor.ToString();
+
+            if(dataGridDatos.Rows.Count > 0)
+            {
+                foreach(DataGridViewRow row in dataGridDatos.Rows)
+                {
+                    if (row.Cells[columnaFiltro].Value.ToString().ToUpper().Contains(TxtBusqueda.Text.Trim().ToUpper()))                   
+                        row.Visible = true;                   
+                    else                   
+                        row.Visible = false;
+                    
+                }
+            }
+        }
+
+        private void IBEliminar_Click(object sender, EventArgs e)
+        {
+            // Obtener los valores de los TextBox  
+            string dni = TxtDocumento.Text;
+            string apellido = TxtApellido.Text;
+            string nombre = TxtNombre.Text;
+            string correo = TxtCorreo.Text;
+            string direccion = TxtDireccion.Text;
+            string clave = TxtClave.Text;
+            string ConfClave = TxtConfClave.Text;
+
+            if (string.IsNullOrWhiteSpace(dni) && string.IsNullOrWhiteSpace(apellido) && string.IsNullOrWhiteSpace(nombre) && string.IsNullOrWhiteSpace(correo)
+               && string.IsNullOrWhiteSpace(direccion) && string.IsNullOrWhiteSpace(clave) && string.IsNullOrWhiteSpace(ConfClave))
+            {
+                MessageBox.Show("No se seleccionó un registro a eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (Convert.ToInt32(TxtIndice.Text) != 0)
+            {
+                DialogResult ask = MessageBox.Show("¿Seguro que deseas eliminar los datos?", "Confirmar Inserción", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+
+                if (ask == DialogResult.Yes)
+                {
+                    string mensaje = string.Empty;
+
+                    Usuario objUsuario = new Usuario()
+                    {
+                        Id_usuario = Convert.ToInt32(TxtSeleccionId.Text)                      
+                    };
+
+                    bool respuesta = new CN_Usuario().Eliminar_Usuario(objUsuario, out mensaje);
+
+                    if (respuesta)
+                    {
+                        dataGridDatos.Rows.RemoveAt(Convert.ToInt32(TxtIndice.Text));
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                    }
+
+                    MessageBox.Show($"Los datos del usuario han sidos eliminados", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    limpar();
+                }
             }
         }
     }

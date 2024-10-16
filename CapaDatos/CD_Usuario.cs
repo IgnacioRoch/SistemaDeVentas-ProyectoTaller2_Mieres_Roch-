@@ -115,7 +115,7 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("Clave_usuario", obj.Clave_usuario);
                     cmd.Parameters.AddWithValue("Id_rol", obj.objRol.ID_rol);
                     cmd.Parameters.AddWithValue("Estado_usuario", obj.Estado_usuario);
-                    cmd.Parameters.Add("respuesta", SqlDbType.VarChar).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("respuesta", SqlDbType.Int).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
                     cmd.CommandType = CommandType.StoredProcedure;
 
@@ -123,7 +123,7 @@ namespace CapaDatos
                     cmd.ExecuteNonQuery();
 
                     respuesta = Convert.ToBoolean(cmd.Parameters["respuesta"].Value);
-                    Mensaje = cmd.Parameters["Mansaje"].Value.ToString();
+                    Mensaje = cmd.Parameters["Mensaje"].Value.ToString();
                 }
 
             }
@@ -147,15 +147,15 @@ namespace CapaDatos
                 {
                     SqlCommand cmd = new SqlCommand("SP_EliminarUsuario", oconexion);
                     cmd.Parameters.AddWithValue("Id_Usuario", obj.Id_usuario);
-                    cmd.Parameters.Add("respuesta", SqlDbType.VarChar).Direction = ParameterDirection.Output;
-                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("respuesta", SqlDbType.Int).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     oconexion.Open();
                     cmd.ExecuteNonQuery();
 
                     respuesta = Convert.ToBoolean(cmd.Parameters["respuesta"].Value);
-                    Mensaje = cmd.Parameters["Mansaje"].Value.ToString();
+                    Mensaje = cmd.Parameters["Mensaje"].Value.ToString();
                 }
 
             }

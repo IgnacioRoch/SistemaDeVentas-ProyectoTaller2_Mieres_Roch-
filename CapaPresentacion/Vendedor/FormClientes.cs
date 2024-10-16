@@ -1,5 +1,6 @@
 ﻿using CapaEntidades;
 using CapaNegocio;
+using CapaPresentacion.Utilidades;
 using FontAwesome.Sharp;
 using System;
 using System.Collections.Generic;
@@ -43,7 +44,35 @@ namespace CapaPresentacion.Vendedor
             {
                 IBGuardar.Visible = false;
             }
-            
+
+            CBEstado.Items.Add(new Opcion_combo() { Valor = 1, Texto = "Activo" });
+            CBEstado.Items.Add(new Opcion_combo() { Valor = 0, Texto = "No activo" });
+            CBEstado.DisplayMember = "Texto";
+            CBEstado.ValueMember = "Valor";
+            CBEstado.SelectedIndex = 0;
+
+            foreach (DataGridViewColumn columna in dataGridDatos.Columns)
+            {
+                if (columna.Visible == true && columna.Name != "BSeleccionar")
+                {
+                    CBBusqueda.Items.Add(new Opcion_combo() { Valor = columna.Name, Texto = columna.HeaderText });
+                }
+            }
+
+            CBBusqueda.DisplayMember = "Texto";
+            CBBusqueda.ValueMember = "Valor";
+            CBBusqueda.SelectedIndex = 0;
+
+            //MOSTRAR TODOS LOS USUARIOS
+            List<Cliente> listaCliente = new CN_Cliente().Listar();
+
+            foreach (Cliente item in listaCliente)
+            {
+                dataGridDatos.Rows.Add(new object[] {"", item.Id_cliente, item.Documento_cliente, item.Nombre_cliente, item.Apellido_cliente, item.Correo_cliente, item.Direccion_cliente, item.Telefono_cliente,
+                    item.Estado_cliente == true ? 1 : 0,
+                    item.Estado_cliente == true ? "Activo" : "No activo"
+                 });
+            }
         }
 
         private void IBBuscar_Click(object sender, EventArgs e)
@@ -54,6 +83,20 @@ namespace CapaPresentacion.Vendedor
             {
                 MessageBox.Show("Debe Completar el campo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
+            }
+
+            string columnaFiltro = ((Opcion_combo)CBBusqueda.SelectedItem).Valor.ToString();
+
+            if (dataGridDatos.Rows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dataGridDatos.Rows)
+                {
+                    if (row.Cells[columnaFiltro].Value.ToString().ToUpper().Contains(TxtBusqueda.Text.Trim().ToUpper()))
+                        row.Visible = true;
+                    else
+                        row.Visible = false;
+
+                }
             }
         }
 
@@ -73,6 +116,10 @@ namespace CapaPresentacion.Vendedor
             if (MessageBox.Show("¿Limpiar el campo de busqueda?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 TxtBusqueda.Clear();
+                foreach (DataGridViewRow row in dataGridDatos.Rows)
+                {
+                    row.Visible = true;
+                }
             }
         }
 
@@ -122,13 +169,98 @@ namespace CapaPresentacion.Vendedor
                 return;
             }
 
-            // Mostrar mensaje de consulta sobre la inserción  
-            DialogResult ask = MessageBox.Show("¿Seguro que desea insertar un nuevo cliente?", "Confirmar Inserción", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+            string mensaje = string.Empty;
+
+            Cliente objCliente = new Cliente()
+            {
+                Id_cliente = Convert.ToInt32(TxtSeleccionId.Text),
+                Documento_cliente = TxtDocumento.Text,
+                Nombre_cliente = TxtNombre.Text,
+                Apellido_cliente = TxtApellido.Text,
+                Correo_cliente = TxtCorreo.Text,
+                Direccion_cliente = TxtDireccion.Text,
+                Telefono_cliente = TxtTelefono.Text,              
+                Estado_cliente = Convert.ToInt32(((Opcion_combo)CBEstado.SelectedItem).Valor) == 1 ? true : false
+            };
+
+            if (objCliente.Id_cliente == 0)
+            {
+
+                int idUsuarioGenerado = new CN_Cliente().Registrar_Cliente(objCliente, out mensaje);
+
+                // Mostrar mensaje de consulta sobre la inserción  
+                DialogResult ask = MessageBox.Show("¿Seguro que desea insertar un nuevo usuario?", "Confirmar Inserción", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+
+                // Verificar la respuesta del usuario  
+                if (ask == DialogResult.Yes)
+                {
+                    // Aquí iría la lógica para insertar el nuevo cliente  
+                    // Por ejemplo, llamar a una función para insertar en la base de datos
+
+                    if (idUsuarioGenerado != 0)
+                    {
+                        dataGridDatos.Rows.Add(new object[] {"", idUsuarioGenerado, TxtDocumento.Text, TxtNombre.Text, TxtApellido.Text, TxtCorreo.Text, TxtDireccion.Text, TxtClave.Text,
+                    ((Opcion_combo)CBRol.SelectedItem).Valor.ToString(),
+                    ((Opcion_combo)CBRol.SelectedItem).Texto.ToString(),
+                    ((Opcion_combo)CBEstado.SelectedItem).Valor.ToString(),
+                    ((Opcion_combo)CBEstado.SelectedItem).Texto.ToString()
+                     });
 
 
+                        // Mostrar mensaje de información confirmando la inserción correcta  
+                        MessageBox.Show($"El Usuario se insertó correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        limpar();
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        // MessageBox.Show(mensaje);
+                    }
 
 
+                }
 
+
+            }
+            else
+            {
+                bool resultado = new CN_Usuario().Editar_Usuario(objUsuario, out mensaje);
+
+
+                // Mostrar mensaje de consulta sobre la inserción  
+                DialogResult ask = MessageBox.Show("¿Seguro que deseas modificar los datos?", "Confirmar Inserción", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+
+                if (ask == DialogResult.Yes)
+                {
+                    if (resultado)
+                    {
+                        DataGridViewRow row = dataGridDatos.Rows[Convert.ToInt32(TxtIndice.Text)];
+                        row.Cells["Id"].Value = TxtSeleccionId.Text;
+                        row.Cells["Documento"].Value = TxtDocumento.Text;
+                        row.Cells["Nombre"].Value = TxtNombre.Text;
+                        row.Cells["Apellido"].Value = TxtApellido.Text;
+                        row.Cells["Correo"].Value = TxtCorreo.Text;
+                        row.Cells["Direccion"].Value = TxtDireccion.Text;
+                        row.Cells["Clave"].Value = TxtClave.Text;
+                        row.Cells["IdRol"].Value = ((Opcion_combo)CBRol.SelectedItem).Valor.ToString();
+                        row.Cells["Rol"].Value = ((Opcion_combo)CBRol.SelectedItem).Texto.ToString();
+                        row.Cells["EstadoValor"].Value = ((Opcion_combo)CBEstado.SelectedItem).Valor.ToString();
+                        row.Cells["Estado"].Value = ((Opcion_combo)CBEstado.SelectedItem).Texto.ToString();
+
+                        MessageBox.Show($"Los datos del usuario han sidos actualizados", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        limpar();
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        // MessageBox.Show(mensaje);
+                    }
+                }
+
+
+            }
         }
 
         private void limpar()
@@ -140,7 +272,8 @@ namespace CapaPresentacion.Vendedor
             TxtDireccion.Clear();
             TxtTelefono.Clear();
             TxtSeleccionId.Text = "0";
-            //CBEstado.SelectedIndex = 0;
+            TxtIndice.Text = "-1";
+            CBEstado.SelectedIndex = 0;
         }
 
 
@@ -197,6 +330,55 @@ namespace CapaPresentacion.Vendedor
             if (MessageBox.Show("¿Limpiar los campos del fomulario?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 limpar();
+            }
+        }
+
+        private void dataGridDatos_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.RowIndex < 0)
+                return;
+
+            if (e.ColumnIndex == 0)
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                var w = Properties.Resources.iconCheck.Width;
+                var h = Properties.Resources.iconCheck.Height;
+                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+
+                e.Graphics.DrawImage(Properties.Resources.iconCheck, new Rectangle(x, y, w, h));
+                e.Handled = true;
+            }
+        }
+
+        private void dataGridDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridDatos.Columns[e.ColumnIndex].Name == "BSeleccionar")
+            {
+                int indice = e.RowIndex;
+                if (indice >= 0)
+                {
+                    TxtIndice.Text = indice.ToString();
+                    TxtSeleccionId.Text = dataGridDatos.Rows[indice].Cells["Id"].Value.ToString();
+                    TxtDocumento.Text = dataGridDatos.Rows[indice].Cells["Documento"].Value.ToString();
+                    TxtNombre.Text = dataGridDatos.Rows[indice].Cells["Nombre"].Value.ToString();
+                    TxtApellido.Text = dataGridDatos.Rows[indice].Cells["Apellido"].Value.ToString();
+                    TxtCorreo.Text = dataGridDatos.Rows[indice].Cells["Correo"].Value.ToString();
+                    TxtDireccion.Text = dataGridDatos.Rows[indice].Cells["Direccion"].Value.ToString();                                  
+                    TxtTelefono.Text = dataGridDatos.Rows[indice].Cells["Telefono"].Value.ToString();                  
+
+                    //TOMA EL VALOR DE LA COLUMNA ESTADO DEL GRID PARA AGREGARLA AL FORMULARIO PRINCIPAL
+                    foreach (Opcion_combo oc in CBEstado.Items)
+                    {
+                        if (Convert.ToInt32(oc.Valor) == Convert.ToInt32(dataGridDatos.Rows[indice].Cells["EstadoValor"].Value))
+                        {
+                            int indice_combo = CBEstado.Items.IndexOf(oc);
+                            CBEstado.SelectedIndex = indice_combo;
+                            break;
+                        }
+                    }
+
+                }
             }
         }
     }

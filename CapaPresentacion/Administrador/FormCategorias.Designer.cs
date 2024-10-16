@@ -40,20 +40,20 @@
             this.LBuscarPor = new System.Windows.Forms.Label();
             this.LListaCategoria = new System.Windows.Forms.Label();
             this.dataGridDatos = new System.Windows.Forms.DataGridView();
+            this.BSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IBBuscar = new FontAwesome.Sharp.IconButton();
             this.CBEstado = new System.Windows.Forms.ComboBox();
-            this.TxtDocumento = new System.Windows.Forms.TextBox();
+            this.TxtDescripcion = new System.Windows.Forms.TextBox();
             this.LDetalleCategoria = new System.Windows.Forms.Label();
             this.LDescripcion = new System.Windows.Forms.Label();
             this.LEstado = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtIndice = new System.Windows.Forms.TextBox();
             this.panelFormulario = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.IdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDatos)).BeginInit();
             this.panelFormulario.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -120,6 +120,7 @@
             this.IBEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IBEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.IBEliminar.UseVisualStyleBackColor = false;
+            this.IBEliminar.Click += new System.EventHandler(this.IBEliminar_Click);
             // 
             // IBGuardar
             // 
@@ -207,10 +208,10 @@
             this.dataGridDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.BSeleccionar,
-            this.IdUsuario,
+            this.Id,
             this.Descripcion,
-            this.Estado,
-            this.EstadoValor});
+            this.EstadoValor,
+            this.Estado});
             this.dataGridDatos.Location = new System.Drawing.Point(321, 62);
             this.dataGridDatos.MultiSelect = false;
             this.dataGridDatos.Name = "dataGridDatos";
@@ -227,6 +228,50 @@
             this.dataGridDatos.RowTemplate.Height = 28;
             this.dataGridDatos.Size = new System.Drawing.Size(932, 347);
             this.dataGridDatos.TabIndex = 34;
+            this.dataGridDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridDatos_CellContentClick);
+            this.dataGridDatos.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridDatos_CellPainting);
+            // 
+            // BSeleccionar
+            // 
+            this.BSeleccionar.HeaderText = "Editar";
+            this.BSeleccionar.MinimumWidth = 6;
+            this.BSeleccionar.Name = "BSeleccionar";
+            this.BSeleccionar.ReadOnly = true;
+            this.BSeleccionar.Width = 50;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            this.Id.Width = 125;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.MinimumWidth = 6;
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 180;
+            // 
+            // EstadoValor
+            // 
+            this.EstadoValor.HeaderText = "Estado Valor";
+            this.EstadoValor.MinimumWidth = 6;
+            this.EstadoValor.Name = "EstadoValor";
+            this.EstadoValor.ReadOnly = true;
+            this.EstadoValor.Visible = false;
+            this.EstadoValor.Width = 150;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.MinimumWidth = 6;
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Width = 160;
             // 
             // IBBuscar
             // 
@@ -256,12 +301,12 @@
             this.CBEstado.Size = new System.Drawing.Size(240, 21);
             this.CBEstado.TabIndex = 27;
             // 
-            // TxtDocumento
+            // TxtDescripcion
             // 
-            this.TxtDocumento.Location = new System.Drawing.Point(44, 59);
-            this.TxtDocumento.Name = "TxtDocumento";
-            this.TxtDocumento.Size = new System.Drawing.Size(240, 20);
-            this.TxtDocumento.TabIndex = 18;
+            this.TxtDescripcion.Location = new System.Drawing.Point(44, 59);
+            this.TxtDescripcion.Name = "TxtDescripcion";
+            this.TxtDescripcion.Size = new System.Drawing.Size(240, 20);
+            this.TxtDescripcion.TabIndex = 18;
             // 
             // LDetalleCategoria
             // 
@@ -297,14 +342,14 @@
             this.LEstado.TabIndex = 12;
             this.LEstado.Text = "Estado:";
             // 
-            // textBox1
+            // TxtIndice
             // 
-            this.textBox1.Location = new System.Drawing.Point(232, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(23, 20);
-            this.textBox1.TabIndex = 23;
-            this.textBox1.Text = "0";
-            this.textBox1.Visible = false;
+            this.TxtIndice.Location = new System.Drawing.Point(232, 32);
+            this.TxtIndice.Name = "TxtIndice";
+            this.TxtIndice.Size = new System.Drawing.Size(23, 20);
+            this.TxtIndice.TabIndex = 23;
+            this.TxtIndice.Text = "0";
+            this.TxtIndice.Visible = false;
             // 
             // panelFormulario
             // 
@@ -317,10 +362,10 @@
             this.panelFormulario.Controls.Add(this.IBEliminar);
             this.panelFormulario.Controls.Add(this.LDescripcion);
             this.panelFormulario.Controls.Add(this.IBGuardar);
-            this.panelFormulario.Controls.Add(this.TxtDocumento);
+            this.panelFormulario.Controls.Add(this.TxtDescripcion);
             this.panelFormulario.Controls.Add(this.CBEstado);
             this.panelFormulario.Controls.Add(this.TxtSeleccionId);
-            this.panelFormulario.Controls.Add(this.textBox1);
+            this.panelFormulario.Controls.Add(this.TxtIndice);
             this.panelFormulario.Location = new System.Drawing.Point(0, 0);
             this.panelFormulario.Name = "panelFormulario";
             this.panelFormulario.Size = new System.Drawing.Size(305, 571);
@@ -342,48 +387,6 @@
             this.panel1.Size = new System.Drawing.Size(931, 47);
             this.panel1.TabIndex = 36;
             // 
-            // BSeleccionar
-            // 
-            this.BSeleccionar.HeaderText = "Editar";
-            this.BSeleccionar.MinimumWidth = 6;
-            this.BSeleccionar.Name = "BSeleccionar";
-            this.BSeleccionar.ReadOnly = true;
-            this.BSeleccionar.Width = 50;
-            // 
-            // IdUsuario
-            // 
-            this.IdUsuario.HeaderText = "Id";
-            this.IdUsuario.MinimumWidth = 6;
-            this.IdUsuario.Name = "IdUsuario";
-            this.IdUsuario.ReadOnly = true;
-            this.IdUsuario.Visible = false;
-            this.IdUsuario.Width = 125;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripción";
-            this.Descripcion.MinimumWidth = 6;
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 150;
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.MinimumWidth = 6;
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Width = 125;
-            // 
-            // EstadoValor
-            // 
-            this.EstadoValor.HeaderText = "Estado Valor";
-            this.EstadoValor.MinimumWidth = 6;
-            this.EstadoValor.Name = "EstadoValor";
-            this.EstadoValor.ReadOnly = true;
-            this.EstadoValor.Visible = false;
-            this.EstadoValor.Width = 125;
-            // 
             // FormCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -394,6 +397,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FormCategorias";
             this.Text = "FormCategorias";
+            this.Load += new System.EventHandler(this.FormCategorias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDatos)).EndInit();
             this.panelFormulario.ResumeLayout(false);
             this.panelFormulario.PerformLayout();
@@ -416,17 +420,17 @@
         private System.Windows.Forms.DataGridView dataGridDatos;
         private FontAwesome.Sharp.IconButton IBBuscar;
         private System.Windows.Forms.ComboBox CBEstado;
-        private System.Windows.Forms.TextBox TxtDocumento;
+        private System.Windows.Forms.TextBox TxtDescripcion;
         private System.Windows.Forms.Label LDetalleCategoria;
         private System.Windows.Forms.Label LDescripcion;
         private System.Windows.Forms.Label LEstado;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtIndice;
         private System.Windows.Forms.Panel panelFormulario;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewButtonColumn BSeleccionar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdUsuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoValor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
     }
 }

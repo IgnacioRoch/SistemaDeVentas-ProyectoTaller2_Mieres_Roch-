@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.IBLimpiar = new FontAwesome.Sharp.IconButton();
             this.IBVaciar = new FontAwesome.Sharp.IconButton();
             this.IBEliminarCliente = new FontAwesome.Sharp.IconButton();
@@ -44,6 +44,7 @@
             this.panelFormulario = new System.Windows.Forms.Panel();
             this.CBEstado = new System.Windows.Forms.ComboBox();
             this.LEstado = new System.Windows.Forms.Label();
+            this.IBEditar = new FontAwesome.Sharp.IconButton();
             this.LDetalleCliente = new System.Windows.Forms.Label();
             this.LApellido = new System.Windows.Forms.Label();
             this.TxtTelefono = new System.Windows.Forms.TextBox();
@@ -58,17 +59,17 @@
             this.L_NroDocumento = new System.Windows.Forms.Label();
             this.TxtDocumento = new System.Windows.Forms.TextBox();
             this.dataGridDatos = new System.Windows.Forms.DataGridView();
+            this.TxtIndice = new System.Windows.Forms.TextBox();
             this.BSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.IdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IBEditar = new FontAwesome.Sharp.IconButton();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelBusqueda.SuspendLayout();
             this.panelFormulario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDatos)).BeginInit();
@@ -251,6 +252,7 @@
             this.panelFormulario.Controls.Add(this.IBVaciar);
             this.panelFormulario.Controls.Add(this.LEstado);
             this.panelFormulario.Controls.Add(this.IBEliminarCliente);
+            this.panelFormulario.Controls.Add(this.TxtIndice);
             this.panelFormulario.Controls.Add(this.TxtSeleccionId);
             this.panelFormulario.Controls.Add(this.IBEditar);
             this.panelFormulario.Controls.Add(this.IBGuardar);
@@ -291,6 +293,28 @@
             this.LEstado.Size = new System.Drawing.Size(43, 13);
             this.LEstado.TabIndex = 13;
             this.LEstado.Text = "Estado:";
+            // 
+            // IBEditar
+            // 
+            this.IBEditar.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.IBEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.IBEditar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.IBEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IBEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IBEditar.ForeColor = System.Drawing.Color.White;
+            this.IBEditar.IconChar = FontAwesome.Sharp.IconChar.Check;
+            this.IBEditar.IconColor = System.Drawing.Color.White;
+            this.IBEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IBEditar.IconSize = 16;
+            this.IBEditar.Location = new System.Drawing.Point(42, 406);
+            this.IBEditar.Name = "IBEditar";
+            this.IBEditar.Size = new System.Drawing.Size(192, 28);
+            this.IBEditar.TabIndex = 29;
+            this.IBEditar.Text = "Guardar cambios";
+            this.IBEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.IBEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.IBEditar.UseVisualStyleBackColor = false;
+            this.IBEditar.Click += new System.EventHandler(this.IBEditar_Click);
             // 
             // LDetalleCliente
             // 
@@ -416,42 +440,53 @@
             // 
             this.dataGridDatos.AllowUserToAddRows = false;
             this.dataGridDatos.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.BSeleccionar,
-            this.IdUsuario,
+            this.Id,
             this.Documento,
             this.Nombre,
             this.Apellido,
             this.Correo,
             this.Direccion,
             this.Telefono,
-            this.Estado,
-            this.EstadoValor});
+            this.EstadoValor,
+            this.Estado});
             this.dataGridDatos.Location = new System.Drawing.Point(320, 62);
             this.dataGridDatos.MultiSelect = false;
             this.dataGridDatos.Name = "dataGridDatos";
             this.dataGridDatos.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridDatos.RowTemplate.Height = 28;
             this.dataGridDatos.Size = new System.Drawing.Size(932, 488);
             this.dataGridDatos.TabIndex = 34;
+            this.dataGridDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridDatos_CellContentClick);
+            this.dataGridDatos.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridDatos_CellPainting);
+            // 
+            // TxtIndice
+            // 
+            this.TxtIndice.Location = new System.Drawing.Point(230, 26);
+            this.TxtIndice.Name = "TxtIndice";
+            this.TxtIndice.Size = new System.Drawing.Size(23, 20);
+            this.TxtIndice.TabIndex = 24;
+            this.TxtIndice.Text = "-1";
+            this.TxtIndice.Visible = false;
             // 
             // BSeleccionar
             // 
@@ -460,12 +495,12 @@
             this.BSeleccionar.ReadOnly = true;
             this.BSeleccionar.Width = 50;
             // 
-            // IdUsuario
+            // Id
             // 
-            this.IdUsuario.HeaderText = "IdUsuario";
-            this.IdUsuario.Name = "IdUsuario";
-            this.IdUsuario.ReadOnly = true;
-            this.IdUsuario.Visible = false;
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
             // 
             // Documento
             // 
@@ -508,12 +543,6 @@
             this.Telefono.ReadOnly = true;
             this.Telefono.Visible = false;
             // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            // 
             // EstadoValor
             // 
             this.EstadoValor.HeaderText = "Estado Valor";
@@ -521,27 +550,11 @@
             this.EstadoValor.ReadOnly = true;
             this.EstadoValor.Visible = false;
             // 
-            // IBEditar
+            // Estado
             // 
-            this.IBEditar.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.IBEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.IBEditar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.IBEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IBEditar.ForeColor = System.Drawing.Color.White;
-            this.IBEditar.IconChar = FontAwesome.Sharp.IconChar.Check;
-            this.IBEditar.IconColor = System.Drawing.Color.White;
-            this.IBEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IBEditar.IconSize = 16;
-            this.IBEditar.Location = new System.Drawing.Point(42, 406);
-            this.IBEditar.Name = "IBEditar";
-            this.IBEditar.Size = new System.Drawing.Size(192, 28);
-            this.IBEditar.TabIndex = 29;
-            this.IBEditar.Text = "Guardar cambios";
-            this.IBEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.IBEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.IBEditar.UseVisualStyleBackColor = false;
-            this.IBEditar.Click += new System.EventHandler(this.IBEditar_Click);
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
             // 
             // FormClientes
             // 
@@ -593,16 +606,17 @@
         private System.Windows.Forms.Label LApellido;
         private System.Windows.Forms.Label LDireccion;
         private System.Windows.Forms.TextBox TxtDireccion;
+        private FontAwesome.Sharp.IconButton IBEditar;
+        private System.Windows.Forms.TextBox TxtIndice;
         private System.Windows.Forms.DataGridViewButtonColumn BSeleccionar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdUsuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Documento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoValor;
-        private FontAwesome.Sharp.IconButton IBEditar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
     }
 }

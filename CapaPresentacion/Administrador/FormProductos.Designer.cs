@@ -32,16 +32,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridDatos = new System.Windows.Forms.DataGridView();
             this.BSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.IdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id_categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CBMarca = new System.Windows.Forms.ComboBox();
@@ -70,12 +71,16 @@
             this.IBVaciar = new FontAwesome.Sharp.IconButton();
             this.IBEliminar = new FontAwesome.Sharp.IconButton();
             this.IBGuardar = new FontAwesome.Sharp.IconButton();
+            this.TxtIndice = new System.Windows.Forms.TextBox();
             this.panelBusqueda = new System.Windows.Forms.Panel();
             this.IBLimpiar = new FontAwesome.Sharp.IconButton();
             this.IBBuscar = new FontAwesome.Sharp.IconButton();
+            this.BExportarExcel = new System.Windows.Forms.Button();
+            this.PanelExcel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDatos)).BeginInit();
             this.panelFormulario.SuspendLayout();
             this.panelBusqueda.SuspendLayout();
+            this.PanelExcel.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridDatos
@@ -93,18 +98,20 @@
             this.dataGridDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.BSeleccionar,
-            this.IdProducto,
+            this.Id,
             this.Codigo,
             this.Nombre,
             this.Descripcion,
-            this.Id_categoria,
+            this.IdCategoria,
             this.Categoria,
+            this.IdMarca,
             this.Marca,
             this.Stock,
-            this.PrecioVenta,
             this.PrecioCompra,
+            this.PrecioVenta,
             this.EstadoValor,
             this.Estado});
+            this.dataGridDatos.Cursor = System.Windows.Forms.Cursors.Default;
             this.dataGridDatos.Location = new System.Drawing.Point(321, 62);
             this.dataGridDatos.MultiSelect = false;
             this.dataGridDatos.Name = "dataGridDatos";
@@ -121,6 +128,8 @@
             this.dataGridDatos.RowTemplate.Height = 28;
             this.dataGridDatos.Size = new System.Drawing.Size(932, 488);
             this.dataGridDatos.TabIndex = 34;
+            this.dataGridDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridDatos_CellContentClick);
+            this.dataGridDatos.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridDatos_CellPainting);
             // 
             // BSeleccionar
             // 
@@ -130,14 +139,14 @@
             this.BSeleccionar.ReadOnly = true;
             this.BSeleccionar.Width = 50;
             // 
-            // IdProducto
+            // Id
             // 
-            this.IdProducto.HeaderText = "Id";
-            this.IdProducto.MinimumWidth = 6;
-            this.IdProducto.Name = "IdProducto";
-            this.IdProducto.ReadOnly = true;
-            this.IdProducto.Visible = false;
-            this.IdProducto.Width = 125;
+            this.Id.HeaderText = "Id";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            this.Id.Width = 125;
             // 
             // Codigo
             // 
@@ -163,14 +172,14 @@
             this.Descripcion.ReadOnly = true;
             this.Descripcion.Width = 180;
             // 
-            // Id_categoria
+            // IdCategoria
             // 
-            this.Id_categoria.HeaderText = "Id Categoría";
-            this.Id_categoria.MinimumWidth = 6;
-            this.Id_categoria.Name = "Id_categoria";
-            this.Id_categoria.ReadOnly = true;
-            this.Id_categoria.Visible = false;
-            this.Id_categoria.Width = 125;
+            this.IdCategoria.HeaderText = "Id Categoría";
+            this.IdCategoria.MinimumWidth = 6;
+            this.IdCategoria.Name = "IdCategoria";
+            this.IdCategoria.ReadOnly = true;
+            this.IdCategoria.Visible = false;
+            this.IdCategoria.Width = 125;
             // 
             // Categoria
             // 
@@ -179,6 +188,13 @@
             this.Categoria.Name = "Categoria";
             this.Categoria.ReadOnly = true;
             this.Categoria.Width = 125;
+            // 
+            // IdMarca
+            // 
+            this.IdMarca.HeaderText = "IdMarca";
+            this.IdMarca.Name = "IdMarca";
+            this.IdMarca.ReadOnly = true;
+            this.IdMarca.Visible = false;
             // 
             // Marca
             // 
@@ -194,14 +210,6 @@
             this.Stock.ReadOnly = true;
             this.Stock.Width = 125;
             // 
-            // PrecioVenta
-            // 
-            this.PrecioVenta.HeaderText = "Precio Venta";
-            this.PrecioVenta.MinimumWidth = 6;
-            this.PrecioVenta.Name = "PrecioVenta";
-            this.PrecioVenta.ReadOnly = true;
-            this.PrecioVenta.Width = 125;
-            // 
             // PrecioCompra
             // 
             this.PrecioCompra.HeaderText = "Precio Compra";
@@ -209,6 +217,14 @@
             this.PrecioCompra.Name = "PrecioCompra";
             this.PrecioCompra.ReadOnly = true;
             this.PrecioCompra.Width = 125;
+            // 
+            // PrecioVenta
+            // 
+            this.PrecioVenta.HeaderText = "Precio Venta";
+            this.PrecioVenta.MinimumWidth = 6;
+            this.PrecioVenta.Name = "PrecioVenta";
+            this.PrecioVenta.ReadOnly = true;
+            this.PrecioVenta.Width = 125;
             // 
             // EstadoValor
             // 
@@ -427,6 +443,7 @@
             this.panelFormulario.Controls.Add(this.TxtDescripcion);
             this.panelFormulario.Controls.Add(this.TxtCodigo);
             this.panelFormulario.Controls.Add(this.TxtNombre);
+            this.panelFormulario.Controls.Add(this.TxtIndice);
             this.panelFormulario.Controls.Add(this.TxtSeleccionId);
             this.panelFormulario.Location = new System.Drawing.Point(0, 0);
             this.panelFormulario.Name = "panelFormulario";
@@ -511,6 +528,7 @@
             this.IBEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IBEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.IBEliminar.UseVisualStyleBackColor = false;
+            this.IBEliminar.Click += new System.EventHandler(this.IBEliminar_Click);
             // 
             // IBGuardar
             // 
@@ -533,6 +551,15 @@
             this.IBGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.IBGuardar.UseVisualStyleBackColor = false;
             this.IBGuardar.Click += new System.EventHandler(this.IBGuardar_Click);
+            // 
+            // TxtIndice
+            // 
+            this.TxtIndice.Location = new System.Drawing.Point(233, 26);
+            this.TxtIndice.Name = "TxtIndice";
+            this.TxtIndice.Size = new System.Drawing.Size(23, 20);
+            this.TxtIndice.TabIndex = 19;
+            this.TxtIndice.Text = "-1";
+            this.TxtIndice.Visible = false;
             // 
             // panelBusqueda
             // 
@@ -588,11 +615,36 @@
             this.IBBuscar.UseVisualStyleBackColor = false;
             this.IBBuscar.Click += new System.EventHandler(this.IBBuscar_Click);
             // 
+            // BExportarExcel
+            // 
+            this.BExportarExcel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BExportarExcel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BExportarExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BExportarExcel.Image = global::CapaPresentacion.Properties.Resources.icons8_ms_excel_20;
+            this.BExportarExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BExportarExcel.Location = new System.Drawing.Point(3, 3);
+            this.BExportarExcel.Name = "BExportarExcel";
+            this.BExportarExcel.Size = new System.Drawing.Size(143, 28);
+            this.BExportarExcel.TabIndex = 37;
+            this.BExportarExcel.Text = "Descargar Excel";
+            this.BExportarExcel.UseVisualStyleBackColor = false;
+            this.BExportarExcel.Click += new System.EventHandler(this.BExportarExcel_Click);
+            // 
+            // PanelExcel
+            // 
+            this.PanelExcel.BackColor = System.Drawing.Color.White;
+            this.PanelExcel.Controls.Add(this.BExportarExcel);
+            this.PanelExcel.Location = new System.Drawing.Point(1059, 556);
+            this.PanelExcel.Name = "PanelExcel";
+            this.PanelExcel.Size = new System.Drawing.Size(151, 34);
+            this.PanelExcel.TabIndex = 38;
+            // 
             // FormProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 569);
+            this.ClientSize = new System.Drawing.Size(1264, 616);
+            this.Controls.Add(this.PanelExcel);
             this.Controls.Add(this.dataGridDatos);
             this.Controls.Add(this.panelFormulario);
             this.Controls.Add(this.panelBusqueda);
@@ -604,6 +656,7 @@
             this.panelFormulario.PerformLayout();
             this.panelBusqueda.ResumeLayout(false);
             this.panelBusqueda.PerformLayout();
+            this.PanelExcel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -636,22 +689,26 @@
         private System.Windows.Forms.ComboBox CBEstado;
         private System.Windows.Forms.Panel panelFormulario;
         private System.Windows.Forms.Panel panelBusqueda;
-        private System.Windows.Forms.DataGridViewButtonColumn BSeleccionar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_categoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioVenta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioCompra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EstadoValor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.Label LPrecioVenta;
         private System.Windows.Forms.TextBox TxtPrecioVenta;
         private System.Windows.Forms.Label LPrecioCompra;
         private System.Windows.Forms.TextBox TxtPrecioCompra;
+        private System.Windows.Forms.TextBox TxtIndice;
+        private System.Windows.Forms.DataGridViewButtonColumn BSeleccionar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdCategoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdMarca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioCompra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioVenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EstadoValor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.Button BExportarExcel;
+        private System.Windows.Forms.Panel PanelExcel;
     }
 }
