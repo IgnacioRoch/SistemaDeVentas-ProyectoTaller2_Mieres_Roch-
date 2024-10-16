@@ -38,7 +38,7 @@ namespace CapaPresentacion
                 return;
             }
 
-            // Validación de que el codigo solo contenga números  
+            // Validación de que el documento solo contenga números  
             if (!long.TryParse(documento, out _))
             {
                 MessageBox.Show("El Documento debe contener solo números.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

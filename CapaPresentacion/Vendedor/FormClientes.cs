@@ -199,9 +199,7 @@ namespace CapaPresentacion.Vendedor
 
                     if (idUsuarioGenerado != 0)
                     {
-                        dataGridDatos.Rows.Add(new object[] {"", idUsuarioGenerado, TxtDocumento.Text, TxtNombre.Text, TxtApellido.Text, TxtCorreo.Text, TxtDireccion.Text, TxtClave.Text,
-                    ((Opcion_combo)CBRol.SelectedItem).Valor.ToString(),
-                    ((Opcion_combo)CBRol.SelectedItem).Texto.ToString(),
+                        dataGridDatos.Rows.Add(new object[] {"", idUsuarioGenerado, TxtDocumento.Text, TxtNombre.Text, TxtApellido.Text, TxtCorreo.Text, TxtDireccion.Text, TxtTelefono.Text,
                     ((Opcion_combo)CBEstado.SelectedItem).Valor.ToString(),
                     ((Opcion_combo)CBEstado.SelectedItem).Texto.ToString()
                      });
@@ -225,7 +223,7 @@ namespace CapaPresentacion.Vendedor
             }
             else
             {
-                bool resultado = new CN_Usuario().Editar_Usuario(objUsuario, out mensaje);
+                bool resultado = new CN_Cliente().Editar_Cliente(objCliente, out mensaje);
 
 
                 // Mostrar mensaje de consulta sobre la inserción  
@@ -242,13 +240,11 @@ namespace CapaPresentacion.Vendedor
                         row.Cells["Apellido"].Value = TxtApellido.Text;
                         row.Cells["Correo"].Value = TxtCorreo.Text;
                         row.Cells["Direccion"].Value = TxtDireccion.Text;
-                        row.Cells["Clave"].Value = TxtClave.Text;
-                        row.Cells["IdRol"].Value = ((Opcion_combo)CBRol.SelectedItem).Valor.ToString();
-                        row.Cells["Rol"].Value = ((Opcion_combo)CBRol.SelectedItem).Texto.ToString();
+                        row.Cells["Telefono"].Value = TxtTelefono.Text;
                         row.Cells["EstadoValor"].Value = ((Opcion_combo)CBEstado.SelectedItem).Valor.ToString();
                         row.Cells["Estado"].Value = ((Opcion_combo)CBEstado.SelectedItem).Texto.ToString();
 
-                        MessageBox.Show($"Los datos del usuario han sidos actualizados", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show($"Los datos del cliente han sidos actualizados", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         limpar();
                     }
