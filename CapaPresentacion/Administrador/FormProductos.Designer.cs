@@ -393,9 +393,9 @@
             this.LListaProductos.ForeColor = System.Drawing.Color.White;
             this.LListaProductos.Location = new System.Drawing.Point(3, 11);
             this.LListaProductos.Name = "LListaProductos";
-            this.LListaProductos.Size = new System.Drawing.Size(175, 21);
+            this.LListaProductos.Size = new System.Drawing.Size(185, 21);
             this.LListaProductos.TabIndex = 7;
-            this.LListaProductos.Text = "Lista de productos";
+            this.LListaProductos.Text = "Lista de productoss";
             this.LListaProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // LEstado
