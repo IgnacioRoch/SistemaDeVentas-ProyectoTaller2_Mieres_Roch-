@@ -179,17 +179,17 @@ namespace CapaPresentacion.Vendedor
                 Apellido_cliente = TxtApellido.Text,
                 Correo_cliente = TxtCorreo.Text,
                 Direccion_cliente = TxtDireccion.Text,
-                Telefono_cliente = TxtTelefono.Text,              
+                Telefono_cliente = TxtTelefono.Text,
                 Estado_cliente = Convert.ToInt32(((Opcion_combo)CBEstado.SelectedItem).Valor) == 1 ? true : false
             };
 
             if (objCliente.Id_cliente == 0)
             {
 
-                int idUsuarioGenerado = new CN_Cliente().Registrar_Cliente(objCliente, out mensaje);
+                int idGenerado = new CN_Cliente().Registrar_Cliente(objCliente, out mensaje);
 
                 // Mostrar mensaje de consulta sobre la inserción  
-                DialogResult ask = MessageBox.Show("¿Seguro que desea insertar un nuevo usuario?", "Confirmar Inserción", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+                DialogResult ask = MessageBox.Show("¿Seguro que desea insertar un nuevo cliente?", "Confirmar Inserción", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
 
                 // Verificar la respuesta del usuario  
                 if (ask == DialogResult.Yes)
@@ -197,16 +197,16 @@ namespace CapaPresentacion.Vendedor
                     // Aquí iría la lógica para insertar el nuevo cliente  
                     // Por ejemplo, llamar a una función para insertar en la base de datos
 
-                    if (idUsuarioGenerado != 0)
+                    if (idGenerado != 0)
                     {
-                        dataGridDatos.Rows.Add(new object[] {"", idUsuarioGenerado, TxtDocumento.Text, TxtNombre.Text, TxtApellido.Text, TxtCorreo.Text, TxtDireccion.Text, TxtTelefono.Text,
+                        dataGridDatos.Rows.Add(new object[] {"", idGenerado, TxtDocumento.Text, TxtNombre.Text, TxtApellido.Text, TxtCorreo.Text, TxtDireccion.Text, TxtTelefono.Text,
                     ((Opcion_combo)CBEstado.SelectedItem).Valor.ToString(),
                     ((Opcion_combo)CBEstado.SelectedItem).Texto.ToString()
                      });
 
 
                         // Mostrar mensaje de información confirmando la inserción correcta  
-                        MessageBox.Show($"El Usuario se insertó correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show($"El cliente se insertó correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         limpar();
                     }
@@ -215,11 +215,7 @@ namespace CapaPresentacion.Vendedor
                         MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         // MessageBox.Show(mensaje);
                     }
-
-
-                }
-
-
+                } 
             }
             else
             {
@@ -254,8 +250,6 @@ namespace CapaPresentacion.Vendedor
                         // MessageBox.Show(mensaje);
                     }
                 }
-
-
             }
         }
 
@@ -323,9 +317,57 @@ namespace CapaPresentacion.Vendedor
                 return;
             }
 
-            if (MessageBox.Show("¿Limpiar los campos del fomulario?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            string mensaje = string.Empty;
+
+            Cliente objCliente = new Cliente()
             {
-                limpar();
+                Id_cliente = Convert.ToInt32(TxtSeleccionId.Text),
+                Documento_cliente = TxtDocumento.Text,
+                Nombre_cliente = TxtNombre.Text,
+                Apellido_cliente = TxtApellido.Text,
+                Correo_cliente = TxtCorreo.Text,
+                Direccion_cliente = TxtDireccion.Text,
+                Telefono_cliente = TxtTelefono.Text,
+                Estado_cliente = Convert.ToInt32(((Opcion_combo)CBEstado.SelectedItem).Valor) == 1 ? true : false
+            };
+
+            if (objCliente.Id_cliente == 0)
+            {
+                MessageBox.Show("El cliente que desea editar no está registrado en el sistema", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                bool resultado = new CN_Cliente().Editar_Cliente(objCliente, out mensaje);
+
+
+                // Mostrar mensaje de consulta sobre la inserción  
+                DialogResult ask = MessageBox.Show("¿Seguro que deseas modificar los datos?", "Confirmar Inserción", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+
+                if (ask == DialogResult.Yes)
+                {
+                    if (resultado)
+                    {
+                        DataGridViewRow row = dataGridDatos.Rows[Convert.ToInt32(TxtIndice.Text)];
+                        row.Cells["Id"].Value = TxtSeleccionId.Text;
+                        row.Cells["Documento"].Value = TxtDocumento.Text;
+                        row.Cells["Nombre"].Value = TxtNombre.Text;
+                        row.Cells["Apellido"].Value = TxtApellido.Text;
+                        row.Cells["Correo"].Value = TxtCorreo.Text;
+                        row.Cells["Direccion"].Value = TxtDireccion.Text;
+                        row.Cells["Telefono"].Value = TxtTelefono.Text;
+                        row.Cells["EstadoValor"].Value = ((Opcion_combo)CBEstado.SelectedItem).Valor.ToString();
+                        row.Cells["Estado"].Value = ((Opcion_combo)CBEstado.SelectedItem).Texto.ToString();
+
+                        MessageBox.Show($"Los datos del cliente han sidos actualizados", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        limpar();
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        // MessageBox.Show(mensaje);
+                    }
+                }
             }
         }
 
@@ -374,6 +416,52 @@ namespace CapaPresentacion.Vendedor
                         }
                     }
 
+                }
+            }
+        }
+
+        private void IBEliminarCliente_Click(object sender, EventArgs e)
+        {
+            // Obtener los valores de los TextBox  
+            string dni = TxtDocumento.Text;
+            string apellido = TxtApellido.Text;
+            string nombre = TxtNombre.Text;
+            string correo = TxtCorreo.Text;
+            string direccion = TxtDireccion.Text;
+            string telefono = TxtTelefono.Text;
+
+            if (string.IsNullOrWhiteSpace(dni) && string.IsNullOrWhiteSpace(apellido) && string.IsNullOrWhiteSpace(nombre) && string.IsNullOrWhiteSpace(correo)
+               && string.IsNullOrWhiteSpace(direccion) && string.IsNullOrWhiteSpace(telefono))
+            {
+                MessageBox.Show("No se seleccionó un registro a eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (Convert.ToInt32(TxtIndice.Text) != 0)
+            {
+                DialogResult ask = MessageBox.Show("¿Seguro que deseas eliminar los datos?", "Confirmar Inserción", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+
+                if (ask == DialogResult.Yes)
+                {
+                    string mensaje = string.Empty;
+                    Cliente objCliente = new Cliente()
+                    {
+                        Id_cliente = Convert.ToInt32(TxtSeleccionId.Text)
+                    };
+
+                    bool respuesta = new CN_Cliente().Eliminar_Cliente(objCliente, out mensaje);
+
+                    if (respuesta)
+                    {
+                        dataGridDatos.Rows.RemoveAt(Convert.ToInt32(TxtIndice.Text));
+                        MessageBox.Show($"Los datos del cliente han sidos eliminados", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        limpar();
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                    }
                 }
             }
         }

@@ -207,6 +207,7 @@
             this.picLogo.Location = new System.Drawing.Point(17, 36);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(194, 174);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picLogo.TabIndex = 0;
             this.picLogo.TabStop = false;
             // 
@@ -233,6 +234,7 @@
             this.Controls.Add(this.panelFormulario);
             this.Name = "FormNegocio";
             this.Text = "FormNegocio";
+            this.Load += new System.EventHandler(this.FormNegocio_Load);
             this.panelFormulario.ResumeLayout(false);
             this.panelFormulario.PerformLayout();
             this.groupBox1.ResumeLayout(false);

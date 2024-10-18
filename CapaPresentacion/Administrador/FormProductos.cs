@@ -75,13 +75,21 @@ namespace CapaPresentacion.Administrador
 
                     if (idGenerado != 0)
                     {
-                        dataGridDatos.Rows.Add(new object[] {"", idGenerado, TxtCodigo.Text, TxtNombre.Text, TxtDescripcion.Text,
-                    ((Opcion_combo)CBCategoria.SelectedItem).Valor.ToString(),
-                    ((Opcion_combo)CBCategoria.SelectedItem).Texto.ToString(),
-                    ((Opcion_combo)CBMarca.SelectedItem).Valor.ToString(),
-                    ((Opcion_combo)CBMarca.SelectedItem).Texto.ToString(),
-                    ((Opcion_combo)CBEstado.SelectedItem).Valor.ToString(),
-                    ((Opcion_combo)CBEstado.SelectedItem).Texto.ToString()
+                        dataGridDatos.Rows.Add(new object[] {
+                            "", 
+                            idGenerado, 
+                            TxtCodigo.Text, 
+                            TxtNombre.Text, 
+                            TxtDescripcion.Text,
+                            ((Opcion_combo)CBCategoria.SelectedItem).Valor.ToString(),
+                            ((Opcion_combo)CBCategoria.SelectedItem).Texto.ToString(),
+                            ((Opcion_combo)CBMarca.SelectedItem).Valor.ToString(),
+                            ((Opcion_combo)CBMarca.SelectedItem).Texto.ToString(),
+                            "0",
+                            "0.00",
+                            "0.00",
+                            ((Opcion_combo)CBEstado.SelectedItem).Valor.ToString(),
+                            ((Opcion_combo)CBEstado.SelectedItem).Texto.ToString()
                      });
 
 

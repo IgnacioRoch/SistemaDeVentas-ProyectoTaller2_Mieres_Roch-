@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaEntidades;
+using CapaNegocio;
 
 namespace CapaPresentacion.Administrador
 {
@@ -28,37 +31,92 @@ namespace CapaPresentacion.Administrador
             string ruc = TxtRuc.Text;
             string direccion = TxtDireccion.Text;
 
-            if (string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(ruc) || string.IsNullOrWhiteSpace(direccion) || string.IsNullOrEmpty(imagePath))
+            if (string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(ruc) || string.IsNullOrWhiteSpace(direccion))
             {
                 MessageBox.Show("Debe Completar todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             // Validación de que el negocio y ruc y dirección solo contengan letras  
-            if (!nombre.All(char.IsLetter) || !ruc.All(char.IsLetter))
+            if (!nombre.All(char.IsLetter))
             {
-                MessageBox.Show("El Nombre del negocio y el RUC deben contener solo letras.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El Nombre del negocio deben contener solo letras.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
+            string mensaje = string.Empty;
+            Negocio obj = new Negocio()
+            {
+                Nombre_negocio = TxtNombreNegocio.Text,
+                RUC_negocio = TxtRuc.Text,
+                Direccion_negocio = TxtDireccion.Text
+            };
+
             // Mostrar mensaje de consulta sobre la inserción  
             DialogResult ask = MessageBox.Show("¿Seguro que desea insertar una nueva información de negocio?", "Confirmar Inserción", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+            // Verificar la respuesta del usuario  
+            if (ask == DialogResult.Yes)
+            {
+                bool respuesta = new CN_Negocio().GuardarDatos(obj, out mensaje);
 
-
-
+                if (respuesta)
+                {
+                    MessageBox.Show($"Los datos fueron guardados", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo guardar los datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void IBSubir_Click(object sender, EventArgs e)
         {
-            using (openFileDialog1)
+            string mensaje = string.Empty;
+
+            OpenFileDialog oOpenFileDialog = new OpenFileDialog();
+            oOpenFileDialog.FileName = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+
+            if (oOpenFileDialog.ShowDialog() == DialogResult.OK)
             {
-                openFileDialog1.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
-                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                byte[] byteImage = File.ReadAllBytes(oOpenFileDialog.FileName);
+                bool respuesta = new CN_Negocio().ActualizarLogo(byteImage, out mensaje);
+
+                if (respuesta)
                 {
-                    imagePath = openFileDialog1.FileName;
-                    picLogo.Image = Image.FromFile(imagePath);
+                    picLogo.Image = ByterToImage(byteImage);
+                }
+                else
+                {
+                    MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        public Image ByterToImage(byte[] imageBytes)
+        {
+            MemoryStream ms = new MemoryStream();
+            ms.Write(imageBytes, 0, imageBytes.Length);
+            Image imagen = new Bitmap(ms);
+
+            return imagen;
+        }
+
+        private void FormNegocio_Load(object sender, EventArgs e)
+        {
+            bool obtenido = true;
+            byte[] byteImagen = new CN_Negocio().ObtenerLogo(out obtenido);
+
+            if (obtenido)
+            {
+                picLogo.Image = ByterToImage(byteImagen);
+            }
+
+            Negocio datos = new CN_Negocio().ObtenerDatos();
+
+            TxtNombreNegocio.Text = datos.Nombre_negocio;
+            TxtRuc.Text = datos.RUC_negocio;
+            TxtDireccion.Text = datos.Direccion_negocio;
         }
     }
 }

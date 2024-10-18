@@ -393,9 +393,9 @@
             this.LListaProductos.ForeColor = System.Drawing.Color.White;
             this.LListaProductos.Location = new System.Drawing.Point(3, 11);
             this.LListaProductos.Name = "LListaProductos";
-            this.LListaProductos.Size = new System.Drawing.Size(185, 21);
+            this.LListaProductos.Size = new System.Drawing.Size(175, 21);
             this.LListaProductos.TabIndex = 7;
-            this.LListaProductos.Text = "Lista de productoss";
+            this.LListaProductos.Text = "Lista de productos";
             this.LListaProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // LEstado
@@ -694,6 +694,8 @@
         private System.Windows.Forms.Label LPrecioCompra;
         private System.Windows.Forms.TextBox TxtPrecioCompra;
         private System.Windows.Forms.TextBox TxtIndice;
+        private System.Windows.Forms.Button BExportarExcel;
+        private System.Windows.Forms.Panel PanelExcel;
         private System.Windows.Forms.DataGridViewButtonColumn BSeleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
@@ -708,7 +710,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoValor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-        private System.Windows.Forms.Button BExportarExcel;
-        private System.Windows.Forms.Panel PanelExcel;
     }
 }
