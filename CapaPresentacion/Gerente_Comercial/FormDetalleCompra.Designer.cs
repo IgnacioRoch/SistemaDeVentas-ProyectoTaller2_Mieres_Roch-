@@ -33,18 +33,15 @@
             this.panelDetalleCompra = new System.Windows.Forms.Panel();
             this.BDescaergarPdf = new System.Windows.Forms.Button();
             this.dataGridDatos = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GBInformacionProveedor = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.TxtRazonSocial = new System.Windows.Forms.TextBox();
-            this.LRazonSocial = new System.Windows.Forms.Label();
             this.TxtNroDocumento = new System.Windows.Forms.TextBox();
+            this.TxtRazonSocialProv = new System.Windows.Forms.TextBox();
+            this.LRazonSocial = new System.Windows.Forms.Label();
+            this.TxtNroDocumentoProv = new System.Windows.Forms.TextBox();
             this.LNroDocumento = new System.Windows.Forms.Label();
             this.LMontototal = new System.Windows.Forms.Label();
             this.TxtMontoTotal = new System.Windows.Forms.TextBox();
@@ -58,9 +55,8 @@
             this.IBLimpiar = new FontAwesome.Sharp.IconButton();
             this.LDetalleCompra = new System.Windows.Forms.Label();
             this.IBBuscar = new FontAwesome.Sharp.IconButton();
-            this.TxtBusqueda = new System.Windows.Forms.TextBox();
+            this.TxtBusquedaDoc = new System.Windows.Forms.TextBox();
             this.LNuevoDocumento = new System.Windows.Forms.Label();
-            this.CBNroDocumento = new System.Windows.Forms.ComboBox();
             this.panelDetalleCompra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDatos)).BeginInit();
             this.GBInformacionProveedor.SuspendLayout();
@@ -81,9 +77,8 @@
             this.panelDetalleCompra.Controls.Add(this.IBLimpiar);
             this.panelDetalleCompra.Controls.Add(this.LDetalleCompra);
             this.panelDetalleCompra.Controls.Add(this.IBBuscar);
-            this.panelDetalleCompra.Controls.Add(this.TxtBusqueda);
+            this.panelDetalleCompra.Controls.Add(this.TxtBusquedaDoc);
             this.panelDetalleCompra.Controls.Add(this.LNuevoDocumento);
-            this.panelDetalleCompra.Controls.Add(this.CBNroDocumento);
             this.panelDetalleCompra.Location = new System.Drawing.Point(229, 12);
             this.panelDetalleCompra.Name = "panelDetalleCompra";
             this.panelDetalleCompra.Size = new System.Drawing.Size(782, 611);
@@ -92,6 +87,7 @@
             // BDescaergarPdf
             // 
             this.BDescaergarPdf.BackColor = System.Drawing.Color.White;
+            this.BDescaergarPdf.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BDescaergarPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BDescaergarPdf.Image = global::CapaPresentacion.Properties.Resources.icons8_pdf_20;
             this.BDescaergarPdf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -119,13 +115,10 @@
             this.dataGridDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.Codigo,
-            this.Nombre,
-            this.Categoria,
-            this.Stock,
+            this.Producto,
             this.PrecioCompra,
-            this.PrecioVenta});
+            this.Cantidad,
+            this.SubTotal});
             this.dataGridDatos.Location = new System.Drawing.Point(8, 261);
             this.dataGridDatos.MultiSelect = false;
             this.dataGridDatos.Name = "dataGridDatos";
@@ -146,47 +139,13 @@
             this.dataGridDatos.Size = new System.Drawing.Size(698, 295);
             this.dataGridDatos.TabIndex = 43;
             // 
-            // Id
+            // Producto
             // 
-            this.Id.HeaderText = "Id";
-            this.Id.MinimumWidth = 6;
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
-            this.Id.Width = 125;
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Código";
-            this.Codigo.MinimumWidth = 6;
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            this.Codigo.Width = 150;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 125;
-            // 
-            // Categoria
-            // 
-            this.Categoria.HeaderText = "Categoria";
-            this.Categoria.MinimumWidth = 6;
-            this.Categoria.Name = "Categoria";
-            this.Categoria.ReadOnly = true;
-            this.Categoria.Width = 180;
-            // 
-            // Stock
-            // 
-            this.Stock.HeaderText = "Stock";
-            this.Stock.MinimumWidth = 6;
-            this.Stock.Name = "Stock";
-            this.Stock.ReadOnly = true;
-            this.Stock.Visible = false;
-            this.Stock.Width = 150;
+            this.Producto.HeaderText = "Producto";
+            this.Producto.MinimumWidth = 6;
+            this.Producto.Name = "Producto";
+            this.Producto.ReadOnly = true;
+            this.Producto.Width = 125;
             // 
             // PrecioCompra
             // 
@@ -194,25 +153,31 @@
             this.PrecioCompra.MinimumWidth = 6;
             this.PrecioCompra.Name = "PrecioCompra";
             this.PrecioCompra.ReadOnly = true;
-            this.PrecioCompra.Visible = false;
             this.PrecioCompra.Width = 125;
             // 
-            // PrecioVenta
+            // Cantidad
             // 
-            this.PrecioVenta.HeaderText = "Precio Venta";
-            this.PrecioVenta.MinimumWidth = 6;
-            this.PrecioVenta.Name = "PrecioVenta";
-            this.PrecioVenta.ReadOnly = true;
-            this.PrecioVenta.Visible = false;
-            this.PrecioVenta.Width = 125;
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.MinimumWidth = 6;
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            this.Cantidad.Width = 150;
+            // 
+            // SubTotal
+            // 
+            this.SubTotal.HeaderText = "SubTotal";
+            this.SubTotal.MinimumWidth = 6;
+            this.SubTotal.Name = "SubTotal";
+            this.SubTotal.ReadOnly = true;
+            this.SubTotal.Width = 125;
             // 
             // GBInformacionProveedor
             // 
             this.GBInformacionProveedor.BackColor = System.Drawing.Color.Transparent;
-            this.GBInformacionProveedor.Controls.Add(this.textBox4);
-            this.GBInformacionProveedor.Controls.Add(this.TxtRazonSocial);
-            this.GBInformacionProveedor.Controls.Add(this.LRazonSocial);
             this.GBInformacionProveedor.Controls.Add(this.TxtNroDocumento);
+            this.GBInformacionProveedor.Controls.Add(this.TxtRazonSocialProv);
+            this.GBInformacionProveedor.Controls.Add(this.LRazonSocial);
+            this.GBInformacionProveedor.Controls.Add(this.TxtNroDocumentoProv);
             this.GBInformacionProveedor.Controls.Add(this.LNroDocumento);
             this.GBInformacionProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GBInformacionProveedor.ForeColor = System.Drawing.Color.White;
@@ -223,22 +188,22 @@
             this.GBInformacionProveedor.TabStop = false;
             this.GBInformacionProveedor.Text = "Información Proveedor";
             // 
-            // textBox4
+            // TxtNroDocumento
             // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.Location = new System.Drawing.Point(635, 54);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(57, 20);
-            this.textBox4.TabIndex = 1;
-            this.textBox4.Visible = false;
+            this.TxtNroDocumento.BackColor = System.Drawing.Color.White;
+            this.TxtNroDocumento.Location = new System.Drawing.Point(635, 54);
+            this.TxtNroDocumento.Name = "TxtNroDocumento";
+            this.TxtNroDocumento.Size = new System.Drawing.Size(57, 20);
+            this.TxtNroDocumento.TabIndex = 1;
+            this.TxtNroDocumento.Visible = false;
             // 
-            // TxtRazonSocial
+            // TxtRazonSocialProv
             // 
-            this.TxtRazonSocial.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtRazonSocial.Location = new System.Drawing.Point(212, 42);
-            this.TxtRazonSocial.Name = "TxtRazonSocial";
-            this.TxtRazonSocial.Size = new System.Drawing.Size(171, 20);
-            this.TxtRazonSocial.TabIndex = 1;
+            this.TxtRazonSocialProv.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TxtRazonSocialProv.Location = new System.Drawing.Point(212, 42);
+            this.TxtRazonSocialProv.Name = "TxtRazonSocialProv";
+            this.TxtRazonSocialProv.Size = new System.Drawing.Size(171, 20);
+            this.TxtRazonSocialProv.TabIndex = 1;
             // 
             // LRazonSocial
             // 
@@ -249,13 +214,13 @@
             this.LRazonSocial.TabIndex = 0;
             this.LRazonSocial.Text = "Razón social:";
             // 
-            // TxtNroDocumento
+            // TxtNroDocumentoProv
             // 
-            this.TxtNroDocumento.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtNroDocumento.Location = new System.Drawing.Point(21, 42);
-            this.TxtNroDocumento.Name = "TxtNroDocumento";
-            this.TxtNroDocumento.Size = new System.Drawing.Size(171, 20);
-            this.TxtNroDocumento.TabIndex = 1;
+            this.TxtNroDocumentoProv.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TxtNroDocumentoProv.Location = new System.Drawing.Point(21, 42);
+            this.TxtNroDocumentoProv.Name = "TxtNroDocumentoProv";
+            this.TxtNroDocumentoProv.Size = new System.Drawing.Size(171, 20);
+            this.TxtNroDocumentoProv.TabIndex = 1;
             // 
             // LNroDocumento
             // 
@@ -406,32 +371,23 @@
             this.IBBuscar.UseVisualStyleBackColor = false;
             this.IBBuscar.Click += new System.EventHandler(this.IBBuscar_Click);
             // 
-            // TxtBusqueda
+            // TxtBusquedaDoc
             // 
-            this.TxtBusqueda.Location = new System.Drawing.Point(368, 46);
-            this.TxtBusqueda.Name = "TxtBusqueda";
-            this.TxtBusqueda.Size = new System.Drawing.Size(183, 20);
-            this.TxtBusqueda.TabIndex = 6;
+            this.TxtBusquedaDoc.Location = new System.Drawing.Point(307, 46);
+            this.TxtBusquedaDoc.Name = "TxtBusquedaDoc";
+            this.TxtBusquedaDoc.Size = new System.Drawing.Size(240, 20);
+            this.TxtBusquedaDoc.TabIndex = 6;
             // 
             // LNuevoDocumento
             // 
             this.LNuevoDocumento.AutoSize = true;
             this.LNuevoDocumento.BackColor = System.Drawing.Color.Transparent;
             this.LNuevoDocumento.ForeColor = System.Drawing.Color.White;
-            this.LNuevoDocumento.Location = new System.Drawing.Point(93, 49);
+            this.LNuevoDocumento.Location = new System.Drawing.Point(203, 49);
             this.LNuevoDocumento.Name = "LNuevoDocumento";
             this.LNuevoDocumento.Size = new System.Drawing.Size(98, 13);
             this.LNuevoDocumento.TabIndex = 5;
             this.LNuevoDocumento.Text = "Nuevo documento:";
-            // 
-            // CBNroDocumento
-            // 
-            this.CBNroDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CBNroDocumento.FormattingEnabled = true;
-            this.CBNroDocumento.Location = new System.Drawing.Point(197, 46);
-            this.CBNroDocumento.Name = "CBNroDocumento";
-            this.CBNroDocumento.Size = new System.Drawing.Size(146, 21);
-            this.CBNroDocumento.TabIndex = 7;
             // 
             // FormDetalleCompra
             // 
@@ -459,9 +415,8 @@
         private System.Windows.Forms.Label LDetalleCompra;
         private FontAwesome.Sharp.IconButton IBLimpiar;
         private FontAwesome.Sharp.IconButton IBBuscar;
-        private System.Windows.Forms.TextBox TxtBusqueda;
+        private System.Windows.Forms.TextBox TxtBusquedaDoc;
         private System.Windows.Forms.Label LNuevoDocumento;
-        private System.Windows.Forms.ComboBox CBNroDocumento;
         private System.Windows.Forms.GroupBox GBInformacionCompra;
         private System.Windows.Forms.TextBox TxtUsuario;
         private System.Windows.Forms.Label LUsuario;
@@ -470,21 +425,18 @@
         private System.Windows.Forms.TextBox TxtFecha;
         private System.Windows.Forms.Label LFecha;
         private System.Windows.Forms.GroupBox GBInformacionProveedor;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox TxtRazonSocial;
-        private System.Windows.Forms.Label LRazonSocial;
         private System.Windows.Forms.TextBox TxtNroDocumento;
+        private System.Windows.Forms.TextBox TxtRazonSocialProv;
+        private System.Windows.Forms.Label LRazonSocial;
+        private System.Windows.Forms.TextBox TxtNroDocumentoProv;
         private System.Windows.Forms.Label LNroDocumento;
         private System.Windows.Forms.DataGridView dataGridDatos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioCompra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioVenta;
         private System.Windows.Forms.Label LMontototal;
         private System.Windows.Forms.TextBox TxtMontoTotal;
         private System.Windows.Forms.Button BDescaergarPdf;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioCompra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
     }
 }

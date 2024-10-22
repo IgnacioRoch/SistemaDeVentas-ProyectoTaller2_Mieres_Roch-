@@ -78,9 +78,6 @@ namespace CapaPresentacion.Administrador
 
             if (objProveedor.Id_proveedor == 0)
             {
-
-                int idGenerado = new CN_Proveedor().Registrar_Proveedor(objProveedor, out mensaje);
-
                 // Mostrar mensaje de consulta sobre la inserción  
                 DialogResult ask = MessageBox.Show("¿Seguro que desea insertar un nuevo proveedor?", "Confirmar Inserción", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
 
@@ -89,6 +86,8 @@ namespace CapaPresentacion.Administrador
                 {
                     // Aquí iría la lógica para insertar el nuevo cliente  
                     // Por ejemplo, llamar a una función para insertar en la base de datos
+
+                    int idGenerado = new CN_Proveedor().Registrar_Proveedor(objProveedor, out mensaje);
 
                     if (idGenerado != 0)
                     {
@@ -121,14 +120,13 @@ namespace CapaPresentacion.Administrador
             }
             else
             {
-                bool resultado = new CN_Proveedor().Editar_Proveedor(objProveedor, out mensaje);
-
-
                 // Mostrar mensaje de consulta sobre la inserción  
                 DialogResult ask = MessageBox.Show("¿Seguro que deseas modificar los datos?", "Confirmar Inserción", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
 
                 if (ask == DialogResult.Yes)
                 {
+                    bool resultado = new CN_Proveedor().Editar_Proveedor(objProveedor, out mensaje);
+
                     if (resultado)
                     {
                         DataGridViewRow row = dataGridDatos.Rows[Convert.ToInt32(TxtIndice.Text)];

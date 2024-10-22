@@ -50,9 +50,6 @@ namespace CapaPresentacion.Administrador
 
             if (objCategoria.Id_categoria == 0)
             {
-
-                int idGenerado = new CN_Categoria().Registrar_Categoria(objCategoria, out mensaje);
-
                 // Mostrar mensaje de consulta sobre la inserción  
                 DialogResult ask = MessageBox.Show("¿Seguro que desea insertar una nueva categoria?", "Confirmar Inserción", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
 
@@ -61,6 +58,8 @@ namespace CapaPresentacion.Administrador
                 {
                     // Aquí iría la lógica para insertar el nuevo cliente  
                     // Por ejemplo, llamar a una función para insertar en la base de datos
+
+                    int idGenerado = new CN_Categoria().Registrar_Categoria(objCategoria, out mensaje);
 
                     if (idGenerado != 0)
                     {
@@ -84,14 +83,14 @@ namespace CapaPresentacion.Administrador
             }
             else
             {
-                bool resultado = new CN_Categoria().Editar_Categoria(objCategoria, out mensaje);
-
 
                 // Mostrar mensaje de consulta sobre la inserción  
                 DialogResult ask = MessageBox.Show("¿Seguro que deseas modificar los datos?", "Confirmar Inserción", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
 
                 if (ask == DialogResult.Yes)
                 {
+                    bool resultado = new CN_Categoria().Editar_Categoria(objCategoria, out mensaje);
+
                     if (resultado)
                     {
                         DataGridViewRow row = dataGridDatos.Rows[Convert.ToInt32(TxtIndice.Text)];

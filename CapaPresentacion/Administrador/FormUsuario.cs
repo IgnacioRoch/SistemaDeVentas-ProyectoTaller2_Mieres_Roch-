@@ -108,7 +108,7 @@ namespace CapaPresentacion.Administrador
             if (objUsuario.Id_usuario == 0)
             {
 
-                int idUsuarioGenerado = new CN_Usuario().Registrar_Usuario(objUsuario, out mensaje);
+                //vacio//
 
                 // Mostrar mensaje de consulta sobre la inserción  
                 DialogResult ask = MessageBox.Show("¿Seguro que desea insertar un nuevo usuario?", "Confirmar Inserción", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
@@ -118,6 +118,8 @@ namespace CapaPresentacion.Administrador
                 {
                     // Aquí iría la lógica para insertar el nuevo cliente  
                     // Por ejemplo, llamar a una función para insertar en la base de datos
+
+                    int idUsuarioGenerado = new CN_Usuario().Registrar_Usuario(objUsuario, out mensaje);
 
                     if (idUsuarioGenerado != 0)
                     {
@@ -147,14 +149,14 @@ namespace CapaPresentacion.Administrador
             }
             else
             {
-                bool resultado = new CN_Usuario().Editar_Usuario(objUsuario, out mensaje);
-
-
+                
                 // Mostrar mensaje de consulta sobre la inserción  
                 DialogResult ask = MessageBox.Show("¿Seguro que deseas modificar los datos?", "Confirmar Inserción", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
 
                 if (ask == DialogResult.Yes)
                 {
+                    bool resultado = new CN_Usuario().Editar_Usuario(objUsuario, out mensaje);
+
                     if (resultado)
                     {
                         DataGridViewRow row = dataGridDatos.Rows[Convert.ToInt32(TxtIndice.Text)];

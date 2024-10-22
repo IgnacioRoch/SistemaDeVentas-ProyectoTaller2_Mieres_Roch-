@@ -186,8 +186,6 @@ namespace CapaPresentacion.Vendedor
             if (objCliente.Id_cliente == 0)
             {
 
-                int idGenerado = new CN_Cliente().Registrar_Cliente(objCliente, out mensaje);
-
                 // Mostrar mensaje de consulta sobre la inserción  
                 DialogResult ask = MessageBox.Show("¿Seguro que desea insertar un nuevo cliente?", "Confirmar Inserción", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
 
@@ -196,6 +194,8 @@ namespace CapaPresentacion.Vendedor
                 {
                     // Aquí iría la lógica para insertar el nuevo cliente  
                     // Por ejemplo, llamar a una función para insertar en la base de datos
+
+                    int idGenerado = new CN_Cliente().Registrar_Cliente(objCliente, out mensaje);
 
                     if (idGenerado != 0)
                     {
@@ -219,14 +219,13 @@ namespace CapaPresentacion.Vendedor
             }
             else
             {
-                bool resultado = new CN_Cliente().Editar_Cliente(objCliente, out mensaje);
-
 
                 // Mostrar mensaje de consulta sobre la inserción  
                 DialogResult ask = MessageBox.Show("¿Seguro que deseas modificar los datos?", "Confirmar Inserción", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
 
                 if (ask == DialogResult.Yes)
                 {
+                    bool resultado = new CN_Cliente().Editar_Cliente(objCliente, out mensaje);
                     if (resultado)
                     {
                         DataGridViewRow row = dataGridDatos.Rows[Convert.ToInt32(TxtIndice.Text)];
@@ -337,14 +336,13 @@ namespace CapaPresentacion.Vendedor
             }
             else
             {
-                bool resultado = new CN_Cliente().Editar_Cliente(objCliente, out mensaje);
-
-
+                
                 // Mostrar mensaje de consulta sobre la inserción  
                 DialogResult ask = MessageBox.Show("¿Seguro que deseas modificar los datos?", "Confirmar Inserción", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
 
                 if (ask == DialogResult.Yes)
                 {
+                    bool resultado = new CN_Cliente().Editar_Cliente(objCliente, out mensaje);
                     if (resultado)
                     {
                         DataGridViewRow row = dataGridDatos.Rows[Convert.ToInt32(TxtIndice.Text)];
