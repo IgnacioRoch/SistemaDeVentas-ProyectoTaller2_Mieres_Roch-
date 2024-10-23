@@ -32,6 +32,29 @@ namespace CapaPresentacion.Modales
                 MessageBox.Show("Debe Completar el campo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            if (string.IsNullOrWhiteSpace(busqueda))
+            {
+                MessageBox.Show("Debe Completar el campo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string columnaFiltro = ((Opcion_combo)CBBusqueda.SelectedItem).Valor.ToString();
+
+            if (dataGridDatos.Rows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dataGridDatos.Rows)
+                {
+                    if (row.Cells[columnaFiltro].Value.ToString().ToUpper().Contains(TxtBusqueda.Text.Trim().ToUpper()))
+                        row.Visible = true;
+                    else
+                        row.Visible = false;
+
+                }
+            }
+
+
+
         }
 
         private void IBLimpiar_Click(object sender, EventArgs e)
@@ -50,6 +73,10 @@ namespace CapaPresentacion.Modales
             if (MessageBox.Show("¿Limpiar el campo de busqueda?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 TxtBusqueda.Clear();
+                foreach (DataGridViewRow row in dataGridDatos.Rows)
+                {
+                    row.Visible = true;
+                }
             }
         }
 
