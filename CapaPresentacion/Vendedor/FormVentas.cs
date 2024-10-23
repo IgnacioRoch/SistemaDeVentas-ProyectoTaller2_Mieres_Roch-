@@ -1,4 +1,5 @@
 ﻿using CapaPresentacion.Modales;
+using CapaPresentacion.Utilidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,16 +27,7 @@ namespace CapaPresentacion.Vendedor
                 var result = modal.ShowDialog();
             }
         }
-
-        private void IBBuscarProveedor_Click(object sender, EventArgs e)
-        {
-            using (var modal = new mdCliente())
-            {
-                var result = modal.ShowDialog();
-            }
-        }
-
-
+        
         private void IBAgregar_Click_1(object sender, EventArgs e)
         {
             // Obtener los valores de los TextBox
@@ -71,7 +63,27 @@ namespace CapaPresentacion.Vendedor
 
         private void FormVentas_Load(object sender, EventArgs e)
         {
+
+            CBTipoDocVenta.Items.Add(new Opcion_combo() { Valor = "Boleta", Texto = "Boleta" });
+            CBTipoDocVenta.Items.Add(new Opcion_combo() { Valor = "Fectura", Texto = "Fectura" });
+            CBTipoDocVenta.DisplayMember = "Texto";
+            CBTipoDocVenta.ValueMember = "Valor";
+            CBTipoDocVenta.SelectedIndex = 0;
+
             TxtFechaVenta.Text = DateTime.Now.ToString("dd/MM/yyyy");
+
+            TextIdProducto.Text = "0";
+            TxtPagacon.Text = "";
+            TxtCambio.Text = "";
+            TxtTotalPagar.Text = "0";
+        }
+
+        private void IBBuscarCliente_Click(object sender, EventArgs e)
+        {
+            using (var modal = new mdCliente())
+            {
+                var result = modal.ShowDialog();
+            }
         }
     }
 }

@@ -42,7 +42,7 @@
             this.BEliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.GBInfoProducto = new System.Windows.Forms.GroupBox();
             this.NUpDCantidad = new System.Windows.Forms.NumericUpDown();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TextIdProducto = new System.Windows.Forms.TextBox();
             this.IBBuscarProducto = new FontAwesome.Sharp.IconButton();
             this.LCantidad = new System.Windows.Forms.Label();
             this.LStock = new System.Windows.Forms.Label();
@@ -54,7 +54,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.LCodProducto = new System.Windows.Forms.Label();
             this.GBInfoCliente = new System.Windows.Forms.GroupBox();
-            this.IBBuscarProveedor = new FontAwesome.Sharp.IconButton();
+            this.IBBuscarCliente = new FontAwesome.Sharp.IconButton();
             this.LApellidoCliente = new System.Windows.Forms.Label();
             this.TxtApellido = new System.Windows.Forms.TextBox();
             this.TxtNroDocCliente = new System.Windows.Forms.TextBox();
@@ -70,7 +70,7 @@
             this.LTotalAPagar = new System.Windows.Forms.Label();
             this.TxtCambio = new System.Windows.Forms.TextBox();
             this.TxtPagacon = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TxtTotalPagar = new System.Windows.Forms.TextBox();
             this.PanelRegistrarVenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDatos)).BeginInit();
             this.GBInfoProducto.SuspendLayout();
@@ -96,7 +96,7 @@
             this.PanelRegistrarVenta.Controls.Add(this.LTotalAPagar);
             this.PanelRegistrarVenta.Controls.Add(this.TxtCambio);
             this.PanelRegistrarVenta.Controls.Add(this.TxtPagacon);
-            this.PanelRegistrarVenta.Controls.Add(this.textBox4);
+            this.PanelRegistrarVenta.Controls.Add(this.TxtTotalPagar);
             this.PanelRegistrarVenta.Location = new System.Drawing.Point(111, 12);
             this.PanelRegistrarVenta.Name = "PanelRegistrarVenta";
             this.PanelRegistrarVenta.Size = new System.Drawing.Size(1012, 547);
@@ -228,7 +228,7 @@
             // 
             this.GBInfoProducto.BackColor = System.Drawing.Color.Transparent;
             this.GBInfoProducto.Controls.Add(this.NUpDCantidad);
-            this.GBInfoProducto.Controls.Add(this.textBox1);
+            this.GBInfoProducto.Controls.Add(this.TextIdProducto);
             this.GBInfoProducto.Controls.Add(this.IBBuscarProducto);
             this.GBInfoProducto.Controls.Add(this.LCantidad);
             this.GBInfoProducto.Controls.Add(this.LStock);
@@ -265,14 +265,14 @@
             0,
             0});
             // 
-            // textBox1
+            // TextIdProducto
             // 
-            this.textBox1.Location = new System.Drawing.Point(129, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(23, 20);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.Text = "0";
-            this.textBox1.Visible = false;
+            this.TextIdProducto.Location = new System.Drawing.Point(129, 19);
+            this.TextIdProducto.Name = "TextIdProducto";
+            this.TextIdProducto.Size = new System.Drawing.Size(23, 20);
+            this.TextIdProducto.TabIndex = 5;
+            this.TextIdProducto.Text = "0";
+            this.TextIdProducto.Visible = false;
             // 
             // IBBuscarProducto
             // 
@@ -369,7 +369,7 @@
             // GBInfoCliente
             // 
             this.GBInfoCliente.BackColor = System.Drawing.Color.Transparent;
-            this.GBInfoCliente.Controls.Add(this.IBBuscarProveedor);
+            this.GBInfoCliente.Controls.Add(this.IBBuscarCliente);
             this.GBInfoCliente.Controls.Add(this.LApellidoCliente);
             this.GBInfoCliente.Controls.Add(this.TxtApellido);
             this.GBInfoCliente.Controls.Add(this.TxtNroDocCliente);
@@ -383,24 +383,24 @@
             this.GBInfoCliente.TabStop = false;
             this.GBInfoCliente.Text = "Información Cliente";
             // 
-            // IBBuscarProveedor
+            // IBBuscarCliente
             // 
-            this.IBBuscarProveedor.BackColor = System.Drawing.Color.Gainsboro;
-            this.IBBuscarProveedor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.IBBuscarProveedor.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.IBBuscarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBBuscarProveedor.ForeColor = System.Drawing.Color.Black;
-            this.IBBuscarProveedor.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.IBBuscarProveedor.IconColor = System.Drawing.Color.Black;
-            this.IBBuscarProveedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IBBuscarProveedor.IconSize = 16;
-            this.IBBuscarProveedor.Location = new System.Drawing.Point(158, 41);
-            this.IBBuscarProveedor.Name = "IBBuscarProveedor";
-            this.IBBuscarProveedor.Size = new System.Drawing.Size(35, 20);
-            this.IBBuscarProveedor.TabIndex = 5;
-            this.IBBuscarProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.IBBuscarProveedor.UseVisualStyleBackColor = false;
-            this.IBBuscarProveedor.Click += new System.EventHandler(this.IBBuscarProveedor_Click);
+            this.IBBuscarCliente.BackColor = System.Drawing.Color.Gainsboro;
+            this.IBBuscarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.IBBuscarCliente.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.IBBuscarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IBBuscarCliente.ForeColor = System.Drawing.Color.Black;
+            this.IBBuscarCliente.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.IBBuscarCliente.IconColor = System.Drawing.Color.Black;
+            this.IBBuscarCliente.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IBBuscarCliente.IconSize = 16;
+            this.IBBuscarCliente.Location = new System.Drawing.Point(158, 41);
+            this.IBBuscarCliente.Name = "IBBuscarCliente";
+            this.IBBuscarCliente.Size = new System.Drawing.Size(35, 20);
+            this.IBBuscarCliente.TabIndex = 5;
+            this.IBBuscarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.IBBuscarCliente.UseVisualStyleBackColor = false;
+            this.IBBuscarCliente.Click += new System.EventHandler(this.IBBuscarCliente_Click);
             // 
             // LApellidoCliente
             // 
@@ -543,13 +543,13 @@
             this.TxtPagacon.Size = new System.Drawing.Size(107, 20);
             this.TxtPagacon.TabIndex = 4;
             // 
-            // textBox4
+            // TxtTotalPagar
             // 
-            this.textBox4.Location = new System.Drawing.Point(893, 299);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(107, 20);
-            this.textBox4.TabIndex = 4;
-            this.textBox4.Text = "0";
+            this.TxtTotalPagar.Location = new System.Drawing.Point(893, 299);
+            this.TxtTotalPagar.Name = "TxtTotalPagar";
+            this.TxtTotalPagar.Size = new System.Drawing.Size(107, 20);
+            this.TxtTotalPagar.TabIndex = 4;
+            this.TxtTotalPagar.Text = "0";
             // 
             // FormVentas
             // 
@@ -577,13 +577,13 @@
         #endregion
 
         private System.Windows.Forms.GroupBox GBInfoCliente;
-        private FontAwesome.Sharp.IconButton IBBuscarProveedor;
+        private FontAwesome.Sharp.IconButton IBBuscarCliente;
         private System.Windows.Forms.Label LApellidoCliente;
         private System.Windows.Forms.TextBox TxtApellido;
         private System.Windows.Forms.TextBox TxtNroDocCliente;
         private System.Windows.Forms.Label LNroDocCliente;
         private System.Windows.Forms.NumericUpDown NUpDCantidad;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TextIdProducto;
         private FontAwesome.Sharp.IconButton IBBuscarProducto;
         private System.Windows.Forms.Label LCantidad;
         private System.Windows.Forms.TextBox TxtStock;
@@ -594,7 +594,7 @@
         private System.Windows.Forms.Label LTipoDocVenta;
         private System.Windows.Forms.Label LFechaVenta;
         private System.Windows.Forms.Label LRegistrarVenta;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TxtTotalPagar;
         private System.Windows.Forms.TextBox TxtPrecioCompra;
         private System.Windows.Forms.Panel PanelRegistrarVenta;
         private FontAwesome.Sharp.IconButton IBCrearVenta;

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using CapaEntidades;
+using CapaNegocio;
+using CapaPresentacion.Utilidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +15,9 @@ namespace CapaPresentacion.Modales
 {
     public partial class mdCliente : Form
     {
+
+        public Cliente _Cliente {get; set;}
+
         public mdCliente()
         {
             InitializeComponent();
@@ -46,5 +52,58 @@ namespace CapaPresentacion.Modales
                 TxtBusqueda.Clear();
             }
         }
+
+        private void mdCliente_Load(object sender, EventArgs e)
+        {
+            foreach (DataGridViewColumn columna in dataGridDatos.Columns)
+            {
+                if (columna.Visible == true)
+                {
+                    CBBusqueda.Items.Add(new Opcion_combo() { Valor = columna.Name, Texto = columna.HeaderText });
+                }
+            }
+            CBBusqueda.DisplayMember = "Texto";
+            CBBusqueda.ValueMember = "Valor";
+            CBBusqueda.SelectedIndex = 0;
+
+            //MOSTRAR TODOS LOS USUARIOS
+            List<Cliente> lista = new CN_Cliente().Listar();
+
+            foreach (Cliente item in lista)
+            {
+                dataGridDatos.Rows.Add(new object[] {
+                    item.Id_cliente,
+                    item.Documento_cliente,
+                    item.Nombre_cliente,
+                    item.Apellido_cliente,
+                    item.Correo_cliente,
+                    item.Direccion_cliente,
+                    item.Telefono_cliente
+                 });
+            }
+        }
+
+        private void dataGridDatos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int iRow = e.RowIndex;
+            int iColum = e.ColumnIndex;
+
+            if (iRow >= 0 && iColum > 0)
+            {
+                _Cliente = new Cliente()
+                {
+                    Id_cliente = Convert.ToInt32(dataGridDatos.Rows[iRow].Cells["Id"].Value.ToString()),
+                    Documento_cliente = dataGridDatos.Rows[iRow].Cells["Documento"].Value.ToString(),
+                    Nombre_cliente = dataGridDatos.Rows[iRow].Cells["Nombre"].Value.ToString(),
+                    Apellido_cliente = dataGridDatos.Rows[iRow].Cells["Apellido"].Value.ToString(),
+                    Correo_cliente = dataGridDatos.Rows[iRow].Cells["Correo"].Value.ToString()
+                };
+
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+        }
+
+
     }
 }
