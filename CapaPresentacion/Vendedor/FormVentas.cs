@@ -94,17 +94,28 @@ namespace CapaPresentacion.Vendedor
 
             if (!producto_existe)
             {
-                dataGridDatos.Rows.Add(new object[]
+
+                bool respuesta = new CN_Venta().RestarStock(
+                    Convert.ToInt32(TextIdProducto.Text),
+                    Convert.ToInt32(TxtCantidad.Value.ToString())
+                    );
+
+                if (respuesta)
                 {
-                    TextIdProducto.Text,
-                    TxtProducto.Text,
-                    precio.ToString("0.00"),
-                    TxtCantidad.Value.ToString(),
-                    (TxtCantidad.Value * precio).ToString("0.00")
-                });
-                calcularTotal();
-                limpiarProducto();
-                TextCodProducto.Select();
+                    dataGridDatos.Rows.Add(new object[] {
+                        TextIdProducto.Text,
+                        TxtProducto.Text,
+                        precio.ToString("0.00"),
+                        TxtCantidad.Value.ToString(),
+                        (TxtCantidad.Value * precio).ToString("0.00")
+                    });
+                    calcularTotal();
+                    limpiarProducto();
+                    TextCodProducto.Select();
+
+                }
+
+                
             }
 
         }
@@ -136,19 +147,81 @@ namespace CapaPresentacion.Vendedor
 
         private void IBCrearVenta_Click(object sender, EventArgs e)
         {
-           // Obtener los valores de los TextBox
-           string producto = TxtProducto.Text;
-           string precio = TxtProducto.Text;
-           string stock = TxtStock.Text;
-           string pagaCon = TxtPagacon.Text;
-           string cambio = TxtCambio.Text;
+            // Obtener los valores de los TextBox
+            string fecha = TxtFechaVenta.Text;
+            string nroDocumento = TxtNroDocCliente.Text;
+            string apellido = TxtApellido.Text;
 
-            if (string.IsNullOrWhiteSpace(producto) || string.IsNullOrWhiteSpace(precio) || string.IsNullOrWhiteSpace(stock) || string.IsNullOrWhiteSpace(pagaCon) || string.IsNullOrWhiteSpace(cambio))
+            if (string.IsNullOrWhiteSpace(fecha) || string.IsNullOrWhiteSpace(apellido) || string.IsNullOrWhiteSpace(nroDocumento))
             {
-                MessageBox.Show("Debe completar todos los campos antes de concretar la venta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debe completar todos los campos necesarios para agregar un producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
+
+            if (dataGridDatos.Rows.Count < 1)
+            {
+                MessageBox.Show("Debe ingresar productos a la venta", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+            DataTable detalle_venta = new DataTable();
+
+            detalle_venta.Columns.Add("Id_Producto", typeof(int));
+            detalle_venta.Columns.Add("PrecioVenta", typeof(decimal));
+            detalle_venta.Columns.Add("Cantidad", typeof(int));
+            detalle_venta.Columns.Add("SubTotal", typeof(decimal));
+
+
+            foreach (DataGridViewRow row in dataGridDatos.Rows)
+            {
+                detalle_venta.Rows.Add(new object[] {
+                    row.Cells["IdProducto"].Value.ToString(),
+                    row.Cells["Precio"].Value.ToString(),
+                    row.Cells["Cantidad"].Value.ToString(),
+                    row.Cells["SubTotal"].Value.ToString(),
+                });
+
+            }
+
+            int idcorrelativo = new CN_Venta().ObtenerCorrelativo();
+            string numeroDocumento = string.Format("{0:000000}", idcorrelativo);
+            calcularcambio();
+
+            Venta OVenta = new Venta()
+            {
+               
+                objUsuario = new Usuario() { Id_usuario = _Usuario.Id_usuario },
+                TipoDocumento = ((Opcion_combo)CBTipoDocVenta.SelectedItem).Texto,
+                NumeroDocumento = numeroDocumento,
+                DocumentoCliente = TxtNroDocCliente.Text,
+                NombreCliente = TxtNroDocCliente.Text,
+                MontoPago = Convert.ToDecimal(TxtPagacon.Text),
+                MontoCambio= Convert.ToDecimal(TxtCambio.Text),
+                MontoTotal = Convert.ToDecimal(TxtTotalPagar.Text),
+            };
+
+
+            string mensaje = string.Empty;
+            bool respuesta = new CN_Venta().Registrar_Venta(OVenta, detalle_venta, out mensaje);
+
+            if (respuesta)
+            {
+                var result = MessageBox.Show("Numero de venta generada:\n" + numeroDocumento + "\n\n¿Desea copiar el portapapeles?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                if (result == DialogResult.Yes)
+                    Clipboard.SetText(numeroDocumento);
+
+                TxtNroDocCliente.Text = "";
+                TxtApellido.Text = "";
+                dataGridDatos.Rows.Clear();
+                calcularTotal();
+                TxtPagacon.Text = "";
+                TxtCambio.Text = "";
+            }
+            else
+            {
+                MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
 
         }
 
@@ -241,8 +314,16 @@ namespace CapaPresentacion.Vendedor
                 int indice = e.RowIndex;
                 if (indice >= 0)
                 {
-                    dataGridDatos.Rows.RemoveAt(indice);
-                    calcularTotal();
+                    bool respuesta = new CN_Venta().SumarStock(
+                        Convert.ToInt32(dataGridDatos.Rows[indice].Cells["IdProducto"].Value.ToString()),
+                        Convert.ToInt32(dataGridDatos.Rows[indice].Cells["Cantidad"].Value.ToString()));
+
+                    if (respuesta)
+                    {
+                        dataGridDatos.Rows.RemoveAt(indice);
+                        calcularTotal();
+                    }
+                    
                 }
             }
         }
