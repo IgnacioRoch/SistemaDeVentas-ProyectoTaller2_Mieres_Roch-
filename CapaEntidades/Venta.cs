@@ -18,6 +18,6 @@ namespace CapaEntidades
         public decimal MontoCambio {  get; set; }
         public decimal MontoTotal {  get; set; }
         public List<Detalle_Venta> objDetalleVenta { get; set; }
-        public DateTime FechaRegistro {  get; set; }
+        public string FechaRegistro {  get; set; }
     }
 }

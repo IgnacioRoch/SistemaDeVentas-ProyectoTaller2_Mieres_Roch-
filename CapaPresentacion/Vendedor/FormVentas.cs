@@ -158,7 +158,6 @@ namespace CapaPresentacion.Vendedor
                 return;
             }
 
-
             if (dataGridDatos.Rows.Count < 1)
             {
                 MessageBox.Show("Debe ingresar productos a la venta", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

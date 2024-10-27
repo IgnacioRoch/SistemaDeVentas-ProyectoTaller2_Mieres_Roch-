@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaEntidades;
+using CapaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,6 +28,32 @@ namespace CapaPresentacion.Vendedor
                 MessageBox.Show("Debe Completar el campo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+
+            Venta oVenta = new CN_Venta().ObtenerVenta(TxtBusqueda.Text);
+            if (oVenta.Id_venta !=0)
+            {
+                TxtNroDocumento.Text = oVenta.NumeroDocumento;
+                TxtFecha.Text = oVenta.FechaRegistro;
+                TxtTipoDocumento.Text = oVenta.TipoDocumento;
+                TxtUsuario.Text = oVenta.objUsuario.Nombre_usuario + " " + oVenta.objUsuario.Apellido_usuario;
+                TxtNroDocCliente.Text = oVenta.DocumentoCliente;
+                TxtNombreCliente.Text = oVenta.NombreCliente;
+                dataGridDatos.Rows.Clear();
+
+                foreach (Detalle_Venta dv in oVenta.objDetalleVenta)
+                {
+                    dataGridDatos.Rows.Add(new object[]
+                    {
+                        dv.objProducto.n ,dv.PrecioVenta ,dv.Cantidad , dv.SubTotal
+                    });
+                }
+
+
+            }
+
+
+
         }
 
         private void IBLimpiar_Click(object sender, EventArgs e)
@@ -53,7 +81,7 @@ namespace CapaPresentacion.Vendedor
             string fecha = TxtFecha.Text;
             string tipoDocumento = TxtTipoDocumento.Text;
             string usuario = TxtUsuario.Text;
-            string nroDocumento = TxtNroDocumento.Text;
+            string nroDocumento = TxtNroDocCliente.Text;
             string nombreCliente =  TxtNombreCliente.Text;
             string montoTotal = TxtMontoTotal.Text;
 

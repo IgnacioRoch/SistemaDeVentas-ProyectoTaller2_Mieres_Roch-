@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TxtMontoTotal = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TxtNroDocumento = new System.Windows.Forms.TextBox();
             this.TxtNombreCliente = new System.Windows.Forms.TextBox();
             this.LNombreCliente = new System.Windows.Forms.Label();
-            this.TxtNroDocumento = new System.Windows.Forms.TextBox();
+            this.TxtNroDocCliente = new System.Windows.Forms.TextBox();
             this.TxtUsuario = new System.Windows.Forms.TextBox();
             this.LUsuario = new System.Windows.Forms.Label();
             this.GBInformacionCompra = new System.Windows.Forms.GroupBox();
@@ -56,13 +56,13 @@
             this.subTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LMontototal = new System.Windows.Forms.Label();
             this.panelDetalleCompra = new System.Windows.Forms.Panel();
+            this.LBMontoCambio = new System.Windows.Forms.Label();
+            this.TxtMontoCambio = new System.Windows.Forms.TextBox();
+            this.LBMontoPago = new System.Windows.Forms.Label();
+            this.TxtMontoPago = new System.Windows.Forms.TextBox();
             this.BDescaergarPdf = new System.Windows.Forms.Button();
             this.IBLimpiar = new FontAwesome.Sharp.IconButton();
             this.IBBuscar = new FontAwesome.Sharp.IconButton();
-            this.LBMontoPago = new System.Windows.Forms.Label();
-            this.TxtMontoPago = new System.Windows.Forms.TextBox();
-            this.LBMontoCambio = new System.Windows.Forms.Label();
-            this.TxtMontoCambio = new System.Windows.Forms.TextBox();
             this.GBInformacionCompra.SuspendLayout();
             this.GBInformacionCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDatos)).BeginInit();
@@ -78,14 +78,14 @@
             this.TxtMontoTotal.TabIndex = 1;
             this.TxtMontoTotal.Text = "0";
             // 
-            // textBox4
+            // TxtNroDocumento
             // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.Location = new System.Drawing.Point(635, 54);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(57, 20);
-            this.textBox4.TabIndex = 1;
-            this.textBox4.Visible = false;
+            this.TxtNroDocumento.BackColor = System.Drawing.Color.White;
+            this.TxtNroDocumento.Location = new System.Drawing.Point(635, 54);
+            this.TxtNroDocumento.Name = "TxtNroDocumento";
+            this.TxtNroDocumento.Size = new System.Drawing.Size(57, 20);
+            this.TxtNroDocumento.TabIndex = 1;
+            this.TxtNroDocumento.Visible = false;
             // 
             // TxtNombreCliente
             // 
@@ -104,13 +104,13 @@
             this.LNombreCliente.TabIndex = 0;
             this.LNombreCliente.Text = "Nombre Cliente:";
             // 
-            // TxtNroDocumento
+            // TxtNroDocCliente
             // 
-            this.TxtNroDocumento.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtNroDocumento.Location = new System.Drawing.Point(21, 42);
-            this.TxtNroDocumento.Name = "TxtNroDocumento";
-            this.TxtNroDocumento.Size = new System.Drawing.Size(171, 20);
-            this.TxtNroDocumento.TabIndex = 1;
+            this.TxtNroDocCliente.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TxtNroDocCliente.Location = new System.Drawing.Point(21, 42);
+            this.TxtNroDocCliente.Name = "TxtNroDocCliente";
+            this.TxtNroDocCliente.Size = new System.Drawing.Size(171, 20);
+            this.TxtNroDocCliente.TabIndex = 1;
             // 
             // TxtUsuario
             // 
@@ -221,10 +221,10 @@
             // GBInformacionCliente
             // 
             this.GBInformacionCliente.BackColor = System.Drawing.Color.Transparent;
-            this.GBInformacionCliente.Controls.Add(this.textBox4);
+            this.GBInformacionCliente.Controls.Add(this.TxtNroDocumento);
             this.GBInformacionCliente.Controls.Add(this.TxtNombreCliente);
             this.GBInformacionCliente.Controls.Add(this.LNombreCliente);
-            this.GBInformacionCliente.Controls.Add(this.TxtNroDocumento);
+            this.GBInformacionCliente.Controls.Add(this.TxtNroDocCliente);
             this.GBInformacionCliente.Controls.Add(this.LNroDocumentoCliente);
             this.GBInformacionCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GBInformacionCliente.ForeColor = System.Drawing.Color.White;
@@ -250,15 +250,15 @@
             // 
             this.dataGridDatos.AllowUserToAddRows = false;
             this.dataGridDatos.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -270,14 +270,14 @@
             this.dataGridDatos.MultiSelect = false;
             this.dataGridDatos.Name = "dataGridDatos";
             this.dataGridDatos.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridDatos.RowHeadersWidth = 51;
             this.dataGridDatos.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
             this.dataGridDatos.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
@@ -364,6 +364,46 @@
             this.panelDetalleCompra.Size = new System.Drawing.Size(782, 611);
             this.panelDetalleCompra.TabIndex = 1;
             // 
+            // LBMontoCambio
+            // 
+            this.LBMontoCambio.AutoSize = true;
+            this.LBMontoCambio.BackColor = System.Drawing.Color.Transparent;
+            this.LBMontoCambio.ForeColor = System.Drawing.Color.White;
+            this.LBMontoCambio.Location = new System.Drawing.Point(410, 575);
+            this.LBMontoCambio.Name = "LBMontoCambio";
+            this.LBMontoCambio.Size = new System.Drawing.Size(78, 13);
+            this.LBMontoCambio.TabIndex = 46;
+            this.LBMontoCambio.Text = "Monto Cambio:";
+            // 
+            // TxtMontoCambio
+            // 
+            this.TxtMontoCambio.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TxtMontoCambio.Location = new System.Drawing.Point(494, 572);
+            this.TxtMontoCambio.Name = "TxtMontoCambio";
+            this.TxtMontoCambio.Size = new System.Drawing.Size(66, 20);
+            this.TxtMontoCambio.TabIndex = 47;
+            this.TxtMontoCambio.Text = "0";
+            // 
+            // LBMontoPago
+            // 
+            this.LBMontoPago.AutoSize = true;
+            this.LBMontoPago.BackColor = System.Drawing.Color.Transparent;
+            this.LBMontoPago.ForeColor = System.Drawing.Color.White;
+            this.LBMontoPago.Location = new System.Drawing.Point(229, 575);
+            this.LBMontoPago.Name = "LBMontoPago";
+            this.LBMontoPago.Size = new System.Drawing.Size(68, 13);
+            this.LBMontoPago.TabIndex = 44;
+            this.LBMontoPago.Text = "Monto Pago:";
+            // 
+            // TxtMontoPago
+            // 
+            this.TxtMontoPago.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TxtMontoPago.Location = new System.Drawing.Point(302, 572);
+            this.TxtMontoPago.Name = "TxtMontoPago";
+            this.TxtMontoPago.Size = new System.Drawing.Size(66, 20);
+            this.TxtMontoPago.TabIndex = 45;
+            this.TxtMontoPago.Text = "0";
+            // 
             // BDescaergarPdf
             // 
             this.BDescaergarPdf.BackColor = System.Drawing.Color.White;
@@ -419,53 +459,13 @@
             this.IBBuscar.UseVisualStyleBackColor = false;
             this.IBBuscar.Click += new System.EventHandler(this.IBBuscar_Click);
             // 
-            // LBMontoPago
-            // 
-            this.LBMontoPago.AutoSize = true;
-            this.LBMontoPago.BackColor = System.Drawing.Color.Transparent;
-            this.LBMontoPago.ForeColor = System.Drawing.Color.White;
-            this.LBMontoPago.Location = new System.Drawing.Point(229, 575);
-            this.LBMontoPago.Name = "LBMontoPago";
-            this.LBMontoPago.Size = new System.Drawing.Size(68, 13);
-            this.LBMontoPago.TabIndex = 44;
-            this.LBMontoPago.Text = "Monto Pago:";
-            // 
-            // TxtMontoPago
-            // 
-            this.TxtMontoPago.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtMontoPago.Location = new System.Drawing.Point(302, 572);
-            this.TxtMontoPago.Name = "TxtMontoPago";
-            this.TxtMontoPago.Size = new System.Drawing.Size(66, 20);
-            this.TxtMontoPago.TabIndex = 45;
-            this.TxtMontoPago.Text = "0";
-            // 
-            // LBMontoCambio
-            // 
-            this.LBMontoCambio.AutoSize = true;
-            this.LBMontoCambio.BackColor = System.Drawing.Color.Transparent;
-            this.LBMontoCambio.ForeColor = System.Drawing.Color.White;
-            this.LBMontoCambio.Location = new System.Drawing.Point(410, 575);
-            this.LBMontoCambio.Name = "LBMontoCambio";
-            this.LBMontoCambio.Size = new System.Drawing.Size(78, 13);
-            this.LBMontoCambio.TabIndex = 46;
-            this.LBMontoCambio.Text = "Monto Cambio:";
-            // 
-            // TxtMontoCambio
-            // 
-            this.TxtMontoCambio.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtMontoCambio.Location = new System.Drawing.Point(494, 572);
-            this.TxtMontoCambio.Name = "TxtMontoCambio";
-            this.TxtMontoCambio.Size = new System.Drawing.Size(66, 20);
-            this.TxtMontoCambio.TabIndex = 47;
-            this.TxtMontoCambio.Text = "0";
-            // 
             // FormDetalleVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1170, 649);
             this.Controls.Add(this.panelDetalleCompra);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormDetalleVenta";
             this.Text = "FormDetalleVenta";
             this.GBInformacionCompra.ResumeLayout(false);
@@ -482,10 +482,10 @@
         #endregion
 
         private System.Windows.Forms.TextBox TxtMontoTotal;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TxtNroDocumento;
         private System.Windows.Forms.TextBox TxtNombreCliente;
         private System.Windows.Forms.Label LNombreCliente;
-        private System.Windows.Forms.TextBox TxtNroDocumento;
+        private System.Windows.Forms.TextBox TxtNroDocCliente;
         private System.Windows.Forms.TextBox TxtUsuario;
         private System.Windows.Forms.Label LUsuario;
         private System.Windows.Forms.GroupBox GBInformacionCompra;
