@@ -44,7 +44,6 @@
             this.LFecha = new System.Windows.Forms.Label();
             this.LDetalleVentas = new System.Windows.Forms.Label();
             this.TxtBusqueda = new System.Windows.Forms.TextBox();
-            this.CBNroDocumento = new System.Windows.Forms.ComboBox();
             this.LNroDocumentoCliente = new System.Windows.Forms.Label();
             this.GBInformacionCliente = new System.Windows.Forms.GroupBox();
             this.LNuevoDocumento = new System.Windows.Forms.Label();
@@ -195,19 +194,10 @@
             // 
             // TxtBusqueda
             // 
-            this.TxtBusqueda.Location = new System.Drawing.Point(368, 46);
+            this.TxtBusqueda.Location = new System.Drawing.Point(260, 46);
             this.TxtBusqueda.Name = "TxtBusqueda";
-            this.TxtBusqueda.Size = new System.Drawing.Size(183, 20);
+            this.TxtBusqueda.Size = new System.Drawing.Size(291, 20);
             this.TxtBusqueda.TabIndex = 6;
-            // 
-            // CBNroDocumento
-            // 
-            this.CBNroDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CBNroDocumento.FormattingEnabled = true;
-            this.CBNroDocumento.Location = new System.Drawing.Point(197, 46);
-            this.CBNroDocumento.Name = "CBNroDocumento";
-            this.CBNroDocumento.Size = new System.Drawing.Size(146, 21);
-            this.CBNroDocumento.TabIndex = 7;
             // 
             // LNroDocumentoCliente
             // 
@@ -240,7 +230,7 @@
             this.LNuevoDocumento.AutoSize = true;
             this.LNuevoDocumento.BackColor = System.Drawing.Color.Transparent;
             this.LNuevoDocumento.ForeColor = System.Drawing.Color.White;
-            this.LNuevoDocumento.Location = new System.Drawing.Point(93, 49);
+            this.LNuevoDocumento.Location = new System.Drawing.Point(156, 49);
             this.LNuevoDocumento.Name = "LNuevoDocumento";
             this.LNuevoDocumento.Size = new System.Drawing.Size(98, 13);
             this.LNuevoDocumento.TabIndex = 5;
@@ -358,7 +348,6 @@
             this.panelDetalleCompra.Controls.Add(this.IBBuscar);
             this.panelDetalleCompra.Controls.Add(this.TxtBusqueda);
             this.panelDetalleCompra.Controls.Add(this.LNuevoDocumento);
-            this.panelDetalleCompra.Controls.Add(this.CBNroDocumento);
             this.panelDetalleCompra.Location = new System.Drawing.Point(229, 12);
             this.panelDetalleCompra.Name = "panelDetalleCompra";
             this.panelDetalleCompra.Size = new System.Drawing.Size(782, 611);
@@ -497,7 +486,6 @@
         private System.Windows.Forms.Label LDetalleVentas;
         private FontAwesome.Sharp.IconButton IBBuscar;
         private System.Windows.Forms.TextBox TxtBusqueda;
-        private System.Windows.Forms.ComboBox CBNroDocumento;
         private System.Windows.Forms.Label LNroDocumentoCliente;
         private System.Windows.Forms.GroupBox GBInformacionCliente;
         private System.Windows.Forms.Label LNuevoDocumento;

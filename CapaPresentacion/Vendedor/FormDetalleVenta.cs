@@ -45,7 +45,7 @@ namespace CapaPresentacion.Vendedor
                 {
                     dataGridDatos.Rows.Add(new object[]
                     {
-                        dv.objProducto.n ,dv.PrecioVenta ,dv.Cantidad , dv.SubTotal
+                       dv.objProducto.Nombre_producto ,dv.PrecioVenta ,dv.Cantidad , dv.SubTotal
                     });
                 }
 

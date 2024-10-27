@@ -9,10 +9,10 @@ namespace CapaEntidades
     public class Detalle_Venta
     {
         //El id Venta ya esta referenciado en la tabla venta
-        public Object objProducto {  get; set; }
+        public Producto objProducto {  get; set; }
         public decimal PrecioVenta {  get; set; }
         public int Cantidad {  get; set; }
         public decimal SubTotal {  get; set; }
-        public DateTime FechaRegistro {  get; set; }
+        public string FechaRegistro {  get; set; }
     }
 }
