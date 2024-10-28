@@ -183,7 +183,7 @@ namespace CapaPresentacion
 
         private void menu_MisVentas_Click(object sender, EventArgs e)
         {
-            abrirFormulario((IconMenuItem)sender, new FormMisVentas());
+            abrirFormulario((IconMenuItem)sender, new FormMisVentas(usuarioActual));
         }
 
         private void menu_verProductos_Click(object sender, EventArgs e)

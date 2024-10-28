@@ -48,7 +48,6 @@
             this.GBInformacionCliente = new System.Windows.Forms.GroupBox();
             this.LNuevoDocumento = new System.Windows.Forms.Label();
             this.dataGridDatos = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -91,7 +90,7 @@
             this.TxtNombreCliente.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtNombreCliente.Location = new System.Drawing.Point(212, 42);
             this.TxtNombreCliente.Name = "TxtNombreCliente";
-            this.TxtNombreCliente.Size = new System.Drawing.Size(171, 20);
+            this.TxtNombreCliente.Size = new System.Drawing.Size(222, 20);
             this.TxtNombreCliente.TabIndex = 1;
             // 
             // LNombreCliente
@@ -251,7 +250,6 @@
             this.dataGridDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
             this.Producto,
             this.Precio,
             this.Cantidad,
@@ -275,15 +273,6 @@
             this.dataGridDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridDatos.Size = new System.Drawing.Size(698, 295);
             this.dataGridDatos.TabIndex = 43;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.MinimumWidth = 6;
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
-            this.Id.Width = 125;
             // 
             // Producto
             // 
@@ -396,6 +385,7 @@
             // BDescaergarPdf
             // 
             this.BDescaergarPdf.BackColor = System.Drawing.Color.White;
+            this.BDescaergarPdf.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BDescaergarPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BDescaergarPdf.Image = global::CapaPresentacion.Properties.Resources.icons8_pdf_20;
             this.BDescaergarPdf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -457,6 +447,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormDetalleVenta";
             this.Text = "FormDetalleVenta";
+            this.Load += new System.EventHandler(this.FormDetalleVenta_Load);
             this.GBInformacionCompra.ResumeLayout(false);
             this.GBInformacionCompra.PerformLayout();
             this.GBInformacionCliente.ResumeLayout(false);
@@ -493,14 +484,13 @@
         private System.Windows.Forms.DataGridView dataGridDatos;
         private System.Windows.Forms.Label LMontototal;
         private System.Windows.Forms.Panel panelDetalleCompra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subTotal;
         private System.Windows.Forms.Label LBMontoCambio;
         private System.Windows.Forms.TextBox TxtMontoCambio;
         private System.Windows.Forms.Label LBMontoPago;
         private System.Windows.Forms.TextBox TxtMontoPago;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subTotal;
     }
 }

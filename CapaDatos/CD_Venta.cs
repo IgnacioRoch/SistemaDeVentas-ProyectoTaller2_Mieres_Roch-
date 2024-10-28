@@ -146,7 +146,7 @@ namespace CapaDatos
                     oconexion.Open();
                     StringBuilder query = new StringBuilder();
              
-                    query.AppendLine("SELECT v.Id_venta, u.Nombre_usuario,");
+                    query.AppendLine("SELECT v.Id_venta, u.Nombre_usuario, u.Apellido_usuario,");
                     query.AppendLine("v.DocumentoCliente, v.NombreCliente,");
                     query.AppendLine("v.TipoDocumento, v.NumeroDocumento,");
                     query.AppendLine("v.MontoPago, v.MontoCambio, v.MontoTotal,");
@@ -198,9 +198,9 @@ namespace CapaDatos
                 {
                     conexion.Open();
                     StringBuilder query = new StringBuilder();
-                    query.AppendLine("SELECT p.Nombre_producto, dv.PrecioVenta, dv.Cantidad, dv.SubTotal FROM DETALLE_VENTA dv\r\n");
+                    query.AppendLine("SELECT p.Nombre_producto, dv.PrecioVenta, dv.Cantidad, dv.SubTotal FROM DETALLE_VENTA dv");
                     query.AppendLine("inner join PRODUCTO p on p.Id_producto = dv.Id_producto");
-                    query.AppendLine("where dv.Id_venta = @idVenta\r\n");
+                    query.AppendLine("where dv.Id_venta = @idVenta");
 
                     SqlCommand cmd = new SqlCommand(query.ToString(), conexion);
                     cmd.Parameters.AddWithValue("@idVenta", idVenta);

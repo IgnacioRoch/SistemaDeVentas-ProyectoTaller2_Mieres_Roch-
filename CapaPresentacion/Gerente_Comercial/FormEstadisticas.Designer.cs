@@ -53,26 +53,26 @@
             this.NroValor1 = new System.Windows.Forms.Label();
             this.LCantVentas = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.LVentas = new System.Windows.Forms.Label();
-            this.ChartTopVentas = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.LProductosPreferidos = new System.Windows.Forms.Label();
-            this.ChartTopProductos = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.ChartCantProductos = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.LCantidadProductos = new System.Windows.Forms.Label();
             this.dateTPVentaFin = new System.Windows.Forms.DateTimePicker();
+            this.LVentas = new System.Windows.Forms.Label();
             this.dateTPVentaInicio = new System.Windows.Forms.DateTimePicker();
+            this.ChartTopVentas = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.LFechaHastaVenta = new System.Windows.Forms.Label();
             this.LFechaInicioVenta = new System.Windows.Forms.Label();
-            this.LFechaInicioCantProd = new System.Windows.Forms.Label();
-            this.LFechaFinCantProd = new System.Windows.Forms.Label();
-            this.dateTPCantPInicio = new System.Windows.Forms.DateTimePicker();
-            this.dateTPCantPFin = new System.Windows.Forms.DateTimePicker();
-            this.LFechaFinProdFav = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.dateTPProdFavFin = new System.Windows.Forms.DateTimePicker();
+            this.LProductosPreferidos = new System.Windows.Forms.Label();
+            this.ChartTopProductos = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.LFechaInicioProdFav = new System.Windows.Forms.Label();
             this.dateTPProdFavInicio = new System.Windows.Forms.DateTimePicker();
-            this.dateTPProdFavFin = new System.Windows.Forms.DateTimePicker();
+            this.LFechaFinProdFav = new System.Windows.Forms.Label();
+            this.ChartCantProductos = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.dateTPCantPFin = new System.Windows.Forms.DateTimePicker();
+            this.LCantidadProductos = new System.Windows.Forms.Label();
+            this.dateTPCantPInicio = new System.Windows.Forms.DateTimePicker();
+            this.LFechaInicioCantProd = new System.Windows.Forms.Label();
+            this.LFechaFinCantProd = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ChartTopVentas)).BeginInit();
@@ -337,6 +337,14 @@
             this.panel2.Size = new System.Drawing.Size(534, 310);
             this.panel2.TabIndex = 1;
             // 
+            // dateTPVentaFin
+            // 
+            this.dateTPVentaFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTPVentaFin.Location = new System.Drawing.Point(353, 3);
+            this.dateTPVentaFin.Name = "dateTPVentaFin";
+            this.dateTPVentaFin.Size = new System.Drawing.Size(102, 20);
+            this.dateTPVentaFin.TabIndex = 5;
+            // 
             // LVentas
             // 
             this.LVentas.AutoSize = true;
@@ -347,6 +355,14 @@
             this.LVentas.Size = new System.Drawing.Size(55, 16);
             this.LVentas.TabIndex = 0;
             this.LVentas.Text = "Ventas";
+            // 
+            // dateTPVentaInicio
+            // 
+            this.dateTPVentaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTPVentaInicio.Location = new System.Drawing.Point(159, 3);
+            this.dateTPVentaInicio.Name = "dateTPVentaInicio";
+            this.dateTPVentaInicio.Size = new System.Drawing.Size(102, 20);
+            this.dateTPVentaInicio.TabIndex = 6;
             // 
             // ChartTopVentas
             // 
@@ -370,6 +386,24 @@
             this.ChartTopVentas.TabIndex = 1;
             this.ChartTopVentas.Text = "chart2";
             // 
+            // LFechaHastaVenta
+            // 
+            this.LFechaHastaVenta.AutoSize = true;
+            this.LFechaHastaVenta.Location = new System.Drawing.Point(280, 3);
+            this.LFechaHastaVenta.Name = "LFechaHastaVenta";
+            this.LFechaHastaVenta.Size = new System.Drawing.Size(69, 13);
+            this.LFechaHastaVenta.TabIndex = 3;
+            this.LFechaHastaVenta.Text = "Fecha hasta:";
+            // 
+            // LFechaInicioVenta
+            // 
+            this.LFechaInicioVenta.AutoSize = true;
+            this.LFechaInicioVenta.Location = new System.Drawing.Point(86, 3);
+            this.LFechaInicioVenta.Name = "LFechaInicioVenta";
+            this.LFechaInicioVenta.Size = new System.Drawing.Size(67, 13);
+            this.LFechaInicioVenta.TabIndex = 4;
+            this.LFechaInicioVenta.Text = "Fecha inicio:";
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -384,6 +418,14 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(534, 301);
             this.panel3.TabIndex = 1;
+            // 
+            // dateTPProdFavFin
+            // 
+            this.dateTPProdFavFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTPProdFavFin.Location = new System.Drawing.Point(423, 16);
+            this.dateTPProdFavFin.Name = "dateTPProdFavFin";
+            this.dateTPProdFavFin.Size = new System.Drawing.Size(102, 20);
+            this.dateTPProdFavFin.TabIndex = 5;
             // 
             // LProductosPreferidos
             // 
@@ -416,6 +458,32 @@
             this.ChartTopProductos.Size = new System.Drawing.Size(485, 251);
             this.ChartTopProductos.TabIndex = 1;
             this.ChartTopProductos.Text = "chart2";
+            // 
+            // LFechaInicioProdFav
+            // 
+            this.LFechaInicioProdFav.AutoSize = true;
+            this.LFechaInicioProdFav.Location = new System.Drawing.Point(156, 16);
+            this.LFechaInicioProdFav.Name = "LFechaInicioProdFav";
+            this.LFechaInicioProdFav.Size = new System.Drawing.Size(67, 13);
+            this.LFechaInicioProdFav.TabIndex = 4;
+            this.LFechaInicioProdFav.Text = "Fecha inicio:";
+            // 
+            // dateTPProdFavInicio
+            // 
+            this.dateTPProdFavInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTPProdFavInicio.Location = new System.Drawing.Point(229, 16);
+            this.dateTPProdFavInicio.Name = "dateTPProdFavInicio";
+            this.dateTPProdFavInicio.Size = new System.Drawing.Size(102, 20);
+            this.dateTPProdFavInicio.TabIndex = 6;
+            // 
+            // LFechaFinProdFav
+            // 
+            this.LFechaFinProdFav.AutoSize = true;
+            this.LFechaFinProdFav.Location = new System.Drawing.Point(350, 16);
+            this.LFechaFinProdFav.Name = "LFechaFinProdFav";
+            this.LFechaFinProdFav.Size = new System.Drawing.Size(69, 13);
+            this.LFechaFinProdFav.TabIndex = 3;
+            this.LFechaFinProdFav.Text = "Fecha hasta:";
             // 
             // ChartCantProductos
             // 
@@ -453,6 +521,14 @@
             this.panel4.Size = new System.Drawing.Size(382, 617);
             this.panel4.TabIndex = 0;
             // 
+            // dateTPCantPFin
+            // 
+            this.dateTPCantPFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTPCantPFin.Location = new System.Drawing.Point(273, 35);
+            this.dateTPCantPFin.Name = "dateTPCantPFin";
+            this.dateTPCantPFin.Size = new System.Drawing.Size(102, 20);
+            this.dateTPCantPFin.TabIndex = 5;
+            // 
             // LCantidadProductos
             // 
             this.LCantidadProductos.AutoSize = true;
@@ -464,39 +540,13 @@
             this.LCantidadProductos.TabIndex = 0;
             this.LCantidadProductos.Text = "Cantidad de productos por categoría";
             // 
-            // dateTPVentaFin
+            // dateTPCantPInicio
             // 
-            this.dateTPVentaFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTPVentaFin.Location = new System.Drawing.Point(353, 3);
-            this.dateTPVentaFin.Name = "dateTPVentaFin";
-            this.dateTPVentaFin.Size = new System.Drawing.Size(102, 20);
-            this.dateTPVentaFin.TabIndex = 5;
-            // 
-            // dateTPVentaInicio
-            // 
-            this.dateTPVentaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTPVentaInicio.Location = new System.Drawing.Point(159, 3);
-            this.dateTPVentaInicio.Name = "dateTPVentaInicio";
-            this.dateTPVentaInicio.Size = new System.Drawing.Size(102, 20);
-            this.dateTPVentaInicio.TabIndex = 6;
-            // 
-            // LFechaHastaVenta
-            // 
-            this.LFechaHastaVenta.AutoSize = true;
-            this.LFechaHastaVenta.Location = new System.Drawing.Point(280, 3);
-            this.LFechaHastaVenta.Name = "LFechaHastaVenta";
-            this.LFechaHastaVenta.Size = new System.Drawing.Size(69, 13);
-            this.LFechaHastaVenta.TabIndex = 3;
-            this.LFechaHastaVenta.Text = "Fecha hasta:";
-            // 
-            // LFechaInicioVenta
-            // 
-            this.LFechaInicioVenta.AutoSize = true;
-            this.LFechaInicioVenta.Location = new System.Drawing.Point(86, 3);
-            this.LFechaInicioVenta.Name = "LFechaInicioVenta";
-            this.LFechaInicioVenta.Size = new System.Drawing.Size(67, 13);
-            this.LFechaInicioVenta.TabIndex = 4;
-            this.LFechaInicioVenta.Text = "Fecha inicio:";
+            this.dateTPCantPInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTPCantPInicio.Location = new System.Drawing.Point(79, 35);
+            this.dateTPCantPInicio.Name = "dateTPCantPInicio";
+            this.dateTPCantPInicio.Size = new System.Drawing.Size(102, 20);
+            this.dateTPCantPInicio.TabIndex = 6;
             // 
             // LFechaInicioCantProd
             // 
@@ -515,56 +565,6 @@
             this.LFechaFinCantProd.Size = new System.Drawing.Size(69, 13);
             this.LFechaFinCantProd.TabIndex = 3;
             this.LFechaFinCantProd.Text = "Fecha hasta:";
-            // 
-            // dateTPCantPInicio
-            // 
-            this.dateTPCantPInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTPCantPInicio.Location = new System.Drawing.Point(79, 35);
-            this.dateTPCantPInicio.Name = "dateTPCantPInicio";
-            this.dateTPCantPInicio.Size = new System.Drawing.Size(102, 20);
-            this.dateTPCantPInicio.TabIndex = 6;
-            // 
-            // dateTPCantPFin
-            // 
-            this.dateTPCantPFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTPCantPFin.Location = new System.Drawing.Point(273, 35);
-            this.dateTPCantPFin.Name = "dateTPCantPFin";
-            this.dateTPCantPFin.Size = new System.Drawing.Size(102, 20);
-            this.dateTPCantPFin.TabIndex = 5;
-            // 
-            // LFechaFinProdFav
-            // 
-            this.LFechaFinProdFav.AutoSize = true;
-            this.LFechaFinProdFav.Location = new System.Drawing.Point(350, 16);
-            this.LFechaFinProdFav.Name = "LFechaFinProdFav";
-            this.LFechaFinProdFav.Size = new System.Drawing.Size(69, 13);
-            this.LFechaFinProdFav.TabIndex = 3;
-            this.LFechaFinProdFav.Text = "Fecha hasta:";
-            // 
-            // LFechaInicioProdFav
-            // 
-            this.LFechaInicioProdFav.AutoSize = true;
-            this.LFechaInicioProdFav.Location = new System.Drawing.Point(156, 16);
-            this.LFechaInicioProdFav.Name = "LFechaInicioProdFav";
-            this.LFechaInicioProdFav.Size = new System.Drawing.Size(67, 13);
-            this.LFechaInicioProdFav.TabIndex = 4;
-            this.LFechaInicioProdFav.Text = "Fecha inicio:";
-            // 
-            // dateTPProdFavInicio
-            // 
-            this.dateTPProdFavInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTPProdFavInicio.Location = new System.Drawing.Point(229, 16);
-            this.dateTPProdFavInicio.Name = "dateTPProdFavInicio";
-            this.dateTPProdFavInicio.Size = new System.Drawing.Size(102, 20);
-            this.dateTPProdFavInicio.TabIndex = 6;
-            // 
-            // dateTPProdFavFin
-            // 
-            this.dateTPProdFavFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTPProdFavFin.Location = new System.Drawing.Point(423, 16);
-            this.dateTPProdFavFin.Name = "dateTPProdFavFin";
-            this.dateTPProdFavFin.Size = new System.Drawing.Size(102, 20);
-            this.dateTPProdFavFin.TabIndex = 5;
             // 
             // FormEstadisticas
             // 

@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.IBBuscarProveedorReporteCompra = new FontAwesome.Sharp.IconButton();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.IBBuscarReporteVenta = new FontAwesome.Sharp.IconButton();
+            this.TxtFechaFin = new System.Windows.Forms.DateTimePicker();
+            this.TxtFechaInicio = new System.Windows.Forms.DateTimePicker();
             this.LFechaHasta = new System.Windows.Forms.Label();
             this.LFechaInicio = new System.Windows.Forms.Label();
             this.LReporteVentas = new System.Windows.Forms.Label();
@@ -68,9 +68,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.IBBuscarProveedorReporteCompra);
-            this.panel1.Controls.Add(this.dateTimePicker2);
-            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.IBBuscarReporteVenta);
+            this.panel1.Controls.Add(this.TxtFechaFin);
+            this.panel1.Controls.Add(this.TxtFechaInicio);
             this.panel1.Controls.Add(this.LFechaHasta);
             this.panel1.Controls.Add(this.LFechaInicio);
             this.panel1.Controls.Add(this.LReporteVentas);
@@ -79,42 +79,43 @@
             this.panel1.Size = new System.Drawing.Size(1224, 81);
             this.panel1.TabIndex = 38;
             // 
-            // IBBuscarProveedorReporteCompra
+            // IBBuscarReporteVenta
             // 
-            this.IBBuscarProveedorReporteCompra.BackColor = System.Drawing.Color.LightGray;
-            this.IBBuscarProveedorReporteCompra.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.IBBuscarProveedorReporteCompra.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.IBBuscarProveedorReporteCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBBuscarProveedorReporteCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IBBuscarProveedorReporteCompra.ForeColor = System.Drawing.Color.Black;
-            this.IBBuscarProveedorReporteCompra.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.IBBuscarProveedorReporteCompra.IconColor = System.Drawing.Color.Black;
-            this.IBBuscarProveedorReporteCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IBBuscarProveedorReporteCompra.IconSize = 16;
-            this.IBBuscarProveedorReporteCompra.Location = new System.Drawing.Point(402, 39);
-            this.IBBuscarProveedorReporteCompra.Name = "IBBuscarProveedorReporteCompra";
-            this.IBBuscarProveedorReporteCompra.Size = new System.Drawing.Size(90, 29);
-            this.IBBuscarProveedorReporteCompra.TabIndex = 9;
-            this.IBBuscarProveedorReporteCompra.Text = "Buscar";
-            this.IBBuscarProveedorReporteCompra.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.IBBuscarProveedorReporteCompra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.IBBuscarProveedorReporteCompra.UseVisualStyleBackColor = false;
+            this.IBBuscarReporteVenta.BackColor = System.Drawing.Color.LightGray;
+            this.IBBuscarReporteVenta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.IBBuscarReporteVenta.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.IBBuscarReporteVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IBBuscarReporteVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IBBuscarReporteVenta.ForeColor = System.Drawing.Color.Black;
+            this.IBBuscarReporteVenta.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.IBBuscarReporteVenta.IconColor = System.Drawing.Color.Black;
+            this.IBBuscarReporteVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IBBuscarReporteVenta.IconSize = 16;
+            this.IBBuscarReporteVenta.Location = new System.Drawing.Point(402, 39);
+            this.IBBuscarReporteVenta.Name = "IBBuscarReporteVenta";
+            this.IBBuscarReporteVenta.Size = new System.Drawing.Size(90, 29);
+            this.IBBuscarReporteVenta.TabIndex = 9;
+            this.IBBuscarReporteVenta.Text = "Buscar";
+            this.IBBuscarReporteVenta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.IBBuscarReporteVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.IBBuscarReporteVenta.UseVisualStyleBackColor = false;
+            this.IBBuscarReporteVenta.Click += new System.EventHandler(this.IBBuscarReporteVenta_Click);
             // 
-            // dateTimePicker2
+            // TxtFechaFin
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(280, 47);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(102, 20);
-            this.dateTimePicker2.TabIndex = 2;
+            this.TxtFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TxtFechaFin.Location = new System.Drawing.Point(280, 47);
+            this.TxtFechaFin.Name = "TxtFechaFin";
+            this.TxtFechaFin.Size = new System.Drawing.Size(102, 20);
+            this.TxtFechaFin.TabIndex = 2;
             // 
-            // dateTimePicker1
+            // TxtFechaInicio
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(86, 47);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(102, 20);
-            this.dateTimePicker1.TabIndex = 2;
+            this.TxtFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TxtFechaInicio.Location = new System.Drawing.Point(86, 47);
+            this.TxtFechaInicio.Name = "TxtFechaInicio";
+            this.TxtFechaInicio.Size = new System.Drawing.Size(102, 20);
+            this.TxtFechaInicio.TabIndex = 2;
             // 
             // LFechaHasta
             // 
@@ -164,15 +165,15 @@
             // 
             this.dataGridDatos.AllowUserToAddRows = false;
             this.dataGridDatos.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.FechaRegistro,
@@ -193,14 +194,14 @@
             this.dataGridDatos.MultiSelect = false;
             this.dataGridDatos.Name = "dataGridDatos";
             this.dataGridDatos.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridDatos.RowTemplate.Height = 28;
             this.dataGridDatos.Size = new System.Drawing.Size(1193, 407);
             this.dataGridDatos.TabIndex = 8;
@@ -293,6 +294,7 @@
             // BDescargarExcel
             // 
             this.BDescargarExcel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BDescargarExcel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BDescargarExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BDescargarExcel.Image = global::CapaPresentacion.Properties.Resources.icons8_ms_excel_20;
             this.BDescargarExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -302,6 +304,7 @@
             this.BDescargarExcel.TabIndex = 34;
             this.BDescargarExcel.Text = "Descargar Excel";
             this.BDescargarExcel.UseVisualStyleBackColor = false;
+            this.BDescargarExcel.Click += new System.EventHandler(this.BDescargarExcel_Click);
             // 
             // IBLimpiar
             // 
@@ -377,6 +380,7 @@
             this.Controls.Add(this.panelBusqueda);
             this.Name = "FormReporteVentas";
             this.Text = "FormReporteVentas";
+            this.Load += new System.EventHandler(this.FormReporteVentas_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelBusqueda.ResumeLayout(false);
@@ -389,9 +393,9 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private FontAwesome.Sharp.IconButton IBBuscarProveedorReporteCompra;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private FontAwesome.Sharp.IconButton IBBuscarReporteVenta;
+        private System.Windows.Forms.DateTimePicker TxtFechaFin;
+        private System.Windows.Forms.DateTimePicker TxtFechaInicio;
         private System.Windows.Forms.Label LFechaHasta;
         private System.Windows.Forms.Label LFechaInicio;
         private System.Windows.Forms.Label LReporteVentas;
