@@ -47,6 +47,9 @@ namespace CapaNegocio
 
         }
 
-
+        public List<Venta> TopVentas(string fechainicio, string fechafin)
+        {
+            return objcd_venta.TopVentas(fechainicio, fechafin);
+        }
     }
 }

@@ -172,5 +172,62 @@ namespace CapaDatos
             return respuesta;
         }
 
+        public DataTable ProductosPreferidos(string fechainicio, string fechafin)
+        {
+            DataTable tabla = new DataTable();
+
+            using (SqlConnection oconexion = new SqlConnection(Conexion.cadena))
+            {
+                try
+                {
+                    using (SqlCommand cmd = new SqlCommand("sp_ProductoPreferidos", oconexion))
+                    {
+                        cmd.Parameters.AddWithValue("FechaInicio", fechainicio);
+                        cmd.Parameters.AddWithValue("FechaFin", fechafin);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        oconexion.Open();
+
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            adapter.Fill(tabla);
+                        }
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    tabla = new DataTable();
+                }
+            }
+            return tabla;
+        }
+
+        public DataTable ProductosPorCategoria()
+        {
+            DataTable tabla = new DataTable();
+
+            using (SqlConnection oconexion = new SqlConnection(Conexion.cadena))
+            {
+                try
+                {
+                    using (SqlCommand cmd = new SqlCommand("sp_FiltrarProductoCategoria", oconexion))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        oconexion.Open();
+
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            adapter.Fill(tabla);
+                        }
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    tabla = new DataTable();
+                }
+            }
+            return tabla;
+        }
     }
 }

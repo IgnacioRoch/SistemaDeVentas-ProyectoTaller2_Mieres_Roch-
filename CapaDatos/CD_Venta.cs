@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CapaEntidades;
 using System.Collections;
+using System.ComponentModel.Design;
 
 namespace CapaDatos
 {
@@ -225,12 +226,43 @@ namespace CapaDatos
                     oLista = new List<Detalle_Venta>();
                 }
             }
-
-
                 return oLista;
         }
 
+        public List<Venta> TopVentas(string fechainicio, string fechafin)
+        {
+            List<Venta> lista = new List<Venta>();
 
+            using (SqlConnection oconexion = new SqlConnection(Conexion.cadena))
+            {
+                try
+                {
+                    StringBuilder query = new StringBuilder();
+                    SqlCommand cmd = new SqlCommand("sp_ObtenerTopVentas", oconexion);
+                    cmd.Parameters.AddWithValue("FechaInicio", fechainicio);
+                    cmd.Parameters.AddWithValue("FechaFin", fechafin);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    oconexion.Open();
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            lista.Add(new Venta()
+                            {
+                                NumeroDocumento = dr["NumeroDocumento"].ToString(),
+                                MontoTotal = Convert.ToDecimal(dr["MontoTotal"].ToString())
+                            });
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    lista = new List<Venta>();
+                }
+            }
+            return lista;
+        }
 
     }
 }

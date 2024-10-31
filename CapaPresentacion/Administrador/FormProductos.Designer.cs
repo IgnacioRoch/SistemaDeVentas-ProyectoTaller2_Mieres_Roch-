@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridDatos = new System.Windows.Forms.DataGridView();
             this.BSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,10 +64,6 @@
             this.LEstado = new System.Windows.Forms.Label();
             this.CBEstado = new System.Windows.Forms.ComboBox();
             this.panelFormulario = new System.Windows.Forms.Panel();
-            this.LPrecioVenta = new System.Windows.Forms.Label();
-            this.TxtPrecioVenta = new System.Windows.Forms.TextBox();
-            this.LPrecioCompra = new System.Windows.Forms.Label();
-            this.TxtPrecioCompra = new System.Windows.Forms.TextBox();
             this.IBVaciar = new FontAwesome.Sharp.IconButton();
             this.IBEliminar = new FontAwesome.Sharp.IconButton();
             this.IBGuardar = new FontAwesome.Sharp.IconButton();
@@ -86,15 +82,15 @@
             // dataGridDatos
             // 
             this.dataGridDatos.AllowUserToAddRows = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.BSeleccionar,
@@ -116,14 +112,14 @@
             this.dataGridDatos.MultiSelect = false;
             this.dataGridDatos.Name = "dataGridDatos";
             this.dataGridDatos.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridDatos.RowHeadersWidth = 51;
             this.dataGridDatos.RowTemplate.Height = 28;
             this.dataGridDatos.Size = new System.Drawing.Size(932, 488);
@@ -247,7 +243,7 @@
             // 
             this.CBMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBMarca.FormattingEnabled = true;
-            this.CBMarca.Location = new System.Drawing.Point(45, 335);
+            this.CBMarca.Location = new System.Drawing.Point(44, 244);
             this.CBMarca.Name = "CBMarca";
             this.CBMarca.Size = new System.Drawing.Size(240, 21);
             this.CBMarca.TabIndex = 28;
@@ -265,7 +261,7 @@
             // 
             this.CBCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBCategoria.FormattingEnabled = true;
-            this.CBCategoria.Location = new System.Drawing.Point(45, 287);
+            this.CBCategoria.Location = new System.Drawing.Point(44, 196);
             this.CBCategoria.Name = "CBCategoria";
             this.CBCategoria.Size = new System.Drawing.Size(240, 21);
             this.CBCategoria.TabIndex = 26;
@@ -346,7 +342,7 @@
             this.LMarca.AutoSize = true;
             this.LMarca.BackColor = System.Drawing.Color.Transparent;
             this.LMarca.ForeColor = System.Drawing.Color.White;
-            this.LMarca.Location = new System.Drawing.Point(43, 319);
+            this.LMarca.Location = new System.Drawing.Point(42, 228);
             this.LMarca.Name = "LMarca";
             this.LMarca.Size = new System.Drawing.Size(40, 13);
             this.LMarca.TabIndex = 14;
@@ -357,7 +353,7 @@
             this.LCategoria.AutoSize = true;
             this.LCategoria.BackColor = System.Drawing.Color.Transparent;
             this.LCategoria.ForeColor = System.Drawing.Color.White;
-            this.LCategoria.Location = new System.Drawing.Point(42, 271);
+            this.LCategoria.Location = new System.Drawing.Point(41, 180);
             this.LCategoria.Name = "LCategoria";
             this.LCategoria.Size = new System.Drawing.Size(57, 13);
             this.LCategoria.TabIndex = 13;
@@ -403,7 +399,7 @@
             this.LEstado.AutoSize = true;
             this.LEstado.BackColor = System.Drawing.Color.Transparent;
             this.LEstado.ForeColor = System.Drawing.Color.White;
-            this.LEstado.Location = new System.Drawing.Point(42, 369);
+            this.LEstado.Location = new System.Drawing.Point(41, 278);
             this.LEstado.Name = "LEstado";
             this.LEstado.Size = new System.Drawing.Size(43, 13);
             this.LEstado.TabIndex = 14;
@@ -413,7 +409,7 @@
             // 
             this.CBEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBEstado.FormattingEnabled = true;
-            this.CBEstado.Location = new System.Drawing.Point(45, 385);
+            this.CBEstado.Location = new System.Drawing.Point(44, 294);
             this.CBEstado.Name = "CBEstado";
             this.CBEstado.Size = new System.Drawing.Size(240, 21);
             this.CBEstado.TabIndex = 28;
@@ -423,10 +419,6 @@
             this.panelFormulario.BackColor = System.Drawing.Color.White;
             this.panelFormulario.BackgroundImage = global::CapaPresentacion.Properties.Resources.PanelDetalle;
             this.panelFormulario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelFormulario.Controls.Add(this.LPrecioVenta);
-            this.panelFormulario.Controls.Add(this.TxtPrecioVenta);
-            this.panelFormulario.Controls.Add(this.LPrecioCompra);
-            this.panelFormulario.Controls.Add(this.TxtPrecioCompra);
             this.panelFormulario.Controls.Add(this.LDetalleProducto);
             this.panelFormulario.Controls.Add(this.IBVaciar);
             this.panelFormulario.Controls.Add(this.LDescripcion);
@@ -450,42 +442,6 @@
             this.panelFormulario.Size = new System.Drawing.Size(305, 569);
             this.panelFormulario.TabIndex = 35;
             // 
-            // LPrecioVenta
-            // 
-            this.LPrecioVenta.AutoSize = true;
-            this.LPrecioVenta.BackColor = System.Drawing.Color.Transparent;
-            this.LPrecioVenta.ForeColor = System.Drawing.Color.White;
-            this.LPrecioVenta.Location = new System.Drawing.Point(41, 216);
-            this.LPrecioVenta.Name = "LPrecioVenta";
-            this.LPrecioVenta.Size = new System.Drawing.Size(68, 13);
-            this.LPrecioVenta.TabIndex = 35;
-            this.LPrecioVenta.Text = "Precio Venta";
-            // 
-            // TxtPrecioVenta
-            // 
-            this.TxtPrecioVenta.Location = new System.Drawing.Point(44, 232);
-            this.TxtPrecioVenta.Name = "TxtPrecioVenta";
-            this.TxtPrecioVenta.Size = new System.Drawing.Size(240, 20);
-            this.TxtPrecioVenta.TabIndex = 36;
-            // 
-            // LPrecioCompra
-            // 
-            this.LPrecioCompra.AutoSize = true;
-            this.LPrecioCompra.BackColor = System.Drawing.Color.Transparent;
-            this.LPrecioCompra.ForeColor = System.Drawing.Color.White;
-            this.LPrecioCompra.Location = new System.Drawing.Point(41, 169);
-            this.LPrecioCompra.Name = "LPrecioCompra";
-            this.LPrecioCompra.Size = new System.Drawing.Size(76, 13);
-            this.LPrecioCompra.TabIndex = 33;
-            this.LPrecioCompra.Text = "Precio Compra";
-            // 
-            // TxtPrecioCompra
-            // 
-            this.TxtPrecioCompra.Location = new System.Drawing.Point(44, 185);
-            this.TxtPrecioCompra.Name = "TxtPrecioCompra";
-            this.TxtPrecioCompra.Size = new System.Drawing.Size(240, 20);
-            this.TxtPrecioCompra.TabIndex = 34;
-            // 
             // IBVaciar
             // 
             this.IBVaciar.BackColor = System.Drawing.Color.CornflowerBlue;
@@ -498,7 +454,7 @@
             this.IBVaciar.IconColor = System.Drawing.Color.White;
             this.IBVaciar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBVaciar.IconSize = 16;
-            this.IBVaciar.Location = new System.Drawing.Point(45, 497);
+            this.IBVaciar.Location = new System.Drawing.Point(45, 392);
             this.IBVaciar.Name = "IBVaciar";
             this.IBVaciar.Size = new System.Drawing.Size(192, 28);
             this.IBVaciar.TabIndex = 32;
@@ -520,7 +476,7 @@
             this.IBEliminar.IconColor = System.Drawing.Color.White;
             this.IBEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBEliminar.IconSize = 16;
-            this.IBEliminar.Location = new System.Drawing.Point(45, 531);
+            this.IBEliminar.Location = new System.Drawing.Point(45, 426);
             this.IBEliminar.Name = "IBEliminar";
             this.IBEliminar.Size = new System.Drawing.Size(192, 28);
             this.IBEliminar.TabIndex = 31;
@@ -542,7 +498,7 @@
             this.IBGuardar.IconColor = System.Drawing.Color.White;
             this.IBGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBGuardar.IconSize = 16;
-            this.IBGuardar.Location = new System.Drawing.Point(45, 463);
+            this.IBGuardar.Location = new System.Drawing.Point(45, 358);
             this.IBGuardar.Name = "IBGuardar";
             this.IBGuardar.Size = new System.Drawing.Size(192, 28);
             this.IBGuardar.TabIndex = 29;
@@ -689,10 +645,6 @@
         private System.Windows.Forms.ComboBox CBEstado;
         private System.Windows.Forms.Panel panelFormulario;
         private System.Windows.Forms.Panel panelBusqueda;
-        private System.Windows.Forms.Label LPrecioVenta;
-        private System.Windows.Forms.TextBox TxtPrecioVenta;
-        private System.Windows.Forms.Label LPrecioCompra;
-        private System.Windows.Forms.TextBox TxtPrecioCompra;
         private System.Windows.Forms.TextBox TxtIndice;
         private System.Windows.Forms.Button BExportarExcel;
         private System.Windows.Forms.Panel PanelExcel;

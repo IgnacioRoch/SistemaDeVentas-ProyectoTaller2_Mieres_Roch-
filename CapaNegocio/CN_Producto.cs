@@ -2,6 +2,7 @@
 using CapaEntidades;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -80,5 +81,13 @@ namespace CapaNegocio
             return objcd_Producto.Eliminar(obj, out mensaje); //listar la misma lista que tiene cd_Producto
         }
 
+        public DataTable ProductosPreferidos(string fechainicio, string fechafin)
+        {
+            return objcd_Producto.ProductosPreferidos(fechainicio, fechafin);
+        }
+        public DataTable ProductosPorCategoria()
+        {
+            return objcd_Producto.ProductosPorCategoria();
+        }
     }
 }
