@@ -1,5 +1,6 @@
 ﻿using CapaEntidades;
 using CapaNegocio;
+using CapaPresentacion.Modales;
 using CapaPresentacion.Utilidades;
 using ClosedXML.Excel;
 using System;
@@ -92,10 +93,16 @@ namespace CapaPresentacion.Vendedor
             );
 
             dataGridDatos.Rows.Clear();
+
+            List<string> codigosUnicos = new List<string>();
+
             foreach (ReporteVentas rv in lista)
             {
-                if (rv.Documento_usuario == usuarioActual.Documento_usuario)
+                if (rv.Documento_usuario == usuarioActual.Documento_usuario && !codigosUnicos.Contains(rv.NumeroDocumento))
                 {
+                    // Agrega el número de documento a la lista para evitar repeticiones
+                    codigosUnicos.Add(rv.NumeroDocumento);
+
                     dataGridDatos.Rows.Add(new object[]
                     {
                     rv.FechaRegistro,
@@ -175,6 +182,14 @@ namespace CapaPresentacion.Vendedor
                         MessageBox.Show("Error al exportar reporte", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+            }
+        }
+
+        private void BVerDetalle_Click(object sender, EventArgs e)
+        {
+            using (var modal = new mdDetalleVenta())
+            {
+                var result = modal.ShowDialog();
             }
         }
     }

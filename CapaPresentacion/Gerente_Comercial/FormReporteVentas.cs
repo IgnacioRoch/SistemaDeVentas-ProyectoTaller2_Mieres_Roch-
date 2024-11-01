@@ -1,5 +1,6 @@
 ﻿using CapaEntidades;
 using CapaNegocio;
+using CapaPresentacion.Modales;
 using CapaPresentacion.Utilidades;
 using ClosedXML.Excel;
 using System;
@@ -88,25 +89,35 @@ namespace CapaPresentacion.Gerente_Comercial
             );
 
             dataGridDatos.Rows.Clear();
+
+            List<string> codigosUnicos = new List<string>();
+
             foreach (ReporteVentas rv in lista)
             {
-                dataGridDatos.Rows.Add(new object[]
+
+                if (!codigosUnicos.Contains(rv.NumeroDocumento))
                 {
-                    rv.FechaRegistro,
-                    rv.TipoDocumento,
-                    rv.NumeroDocumento,
-                    rv.MontoTotal,
-                    rv.Nombre_usuario + " " + rv.Apellido_usuario,
-                    rv.Documento_cliente,
-                    rv.Nombre_cliente,
-                    rv.Codigo_producto,
-                    rv.Nombre_producto,
-                    rv.Descripcion_categoria,
-                    rv.Descripcion_marca,
-                    rv.PrecioVenta,
-                    rv.Cantidad,
-                    rv.SubTotal
-                });
+                    // Agrega el número de documento a la lista para evitar repeticiones
+                    codigosUnicos.Add(rv.NumeroDocumento);
+
+                        dataGridDatos.Rows.Add(new object[]
+                    {
+                        rv.FechaRegistro,
+                        rv.TipoDocumento,
+                        rv.NumeroDocumento,
+                        rv.MontoTotal,
+                        rv.Nombre_usuario + " " + rv.Apellido_usuario,
+                        rv.Documento_cliente,
+                        rv.Nombre_cliente,
+                        rv.Codigo_producto,
+                        rv.Nombre_producto,
+                        rv.Descripcion_categoria,
+                        rv.Descripcion_marca,
+                        rv.PrecioVenta,
+                        rv.Cantidad,
+                        rv.SubTotal
+                    });
+                }
             }
         }
 
@@ -167,6 +178,14 @@ namespace CapaPresentacion.Gerente_Comercial
                         MessageBox.Show("Error al exportar reporte", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+            }
+        }
+
+        private void BVerDetalleVenta_Click(object sender, EventArgs e)
+        {
+            using (var modal = new mdDetalleVenta())
+            {
+                var result = modal.ShowDialog();
             }
         }
     }

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PanelReporteComprasSuperior = new System.Windows.Forms.Panel();
             this.IBBuscarProveedorReporteCompra = new FontAwesome.Sharp.IconButton();
             this.CBProveedorReporteCompra = new System.Windows.Forms.ComboBox();
@@ -40,13 +40,6 @@
             this.LFechaInicio = new System.Windows.Forms.Label();
             this.LReporteCompras = new System.Windows.Forms.Label();
             this.dataGridDatos = new System.Windows.Forms.DataGridView();
-            this.panelBusquedaInferior = new System.Windows.Forms.Panel();
-            this.BDescargarExcel = new System.Windows.Forms.Button();
-            this.IBLimpiar = new FontAwesome.Sharp.IconButton();
-            this.LBuscarPor = new System.Windows.Forms.Label();
-            this.TxtBusqueda = new System.Windows.Forms.TextBox();
-            this.CBBusqueda = new System.Windows.Forms.ComboBox();
-            this.IBBuscar = new FontAwesome.Sharp.IconButton();
             this.FechaRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NumeroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,6 +55,14 @@
             this.PrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelBusquedaInferior = new System.Windows.Forms.Panel();
+            this.BDescargarExcel = new System.Windows.Forms.Button();
+            this.IBLimpiar = new FontAwesome.Sharp.IconButton();
+            this.LBuscarPor = new System.Windows.Forms.Label();
+            this.TxtBusqueda = new System.Windows.Forms.TextBox();
+            this.CBBusqueda = new System.Windows.Forms.ComboBox();
+            this.IBBuscar = new FontAwesome.Sharp.IconButton();
+            this.BVerDetalleCompra = new FontAwesome.Sharp.IconButton();
             this.PanelReporteComprasSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDatos)).BeginInit();
             this.panelBusquedaInferior.SuspendLayout();
@@ -71,6 +72,7 @@
             // 
             this.PanelReporteComprasSuperior.BackColor = System.Drawing.Color.White;
             this.PanelReporteComprasSuperior.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.PanelReporteComprasSuperior.Controls.Add(this.BVerDetalleCompra);
             this.PanelReporteComprasSuperior.Controls.Add(this.IBBuscarProveedorReporteCompra);
             this.PanelReporteComprasSuperior.Controls.Add(this.CBProveedorReporteCompra);
             this.PanelReporteComprasSuperior.Controls.Add(this.TxtFechaFin);
@@ -79,9 +81,10 @@
             this.PanelReporteComprasSuperior.Controls.Add(this.LFechaHasta);
             this.PanelReporteComprasSuperior.Controls.Add(this.LFechaInicio);
             this.PanelReporteComprasSuperior.Controls.Add(this.LReporteCompras);
-            this.PanelReporteComprasSuperior.Location = new System.Drawing.Point(12, 5);
+            this.PanelReporteComprasSuperior.Location = new System.Drawing.Point(16, 6);
+            this.PanelReporteComprasSuperior.Margin = new System.Windows.Forms.Padding(4);
             this.PanelReporteComprasSuperior.Name = "PanelReporteComprasSuperior";
-            this.PanelReporteComprasSuperior.Size = new System.Drawing.Size(1224, 78);
+            this.PanelReporteComprasSuperior.Size = new System.Drawing.Size(1631, 95);
             this.PanelReporteComprasSuperior.TabIndex = 0;
             // 
             // IBBuscarProveedorReporteCompra
@@ -96,9 +99,10 @@
             this.IBBuscarProveedorReporteCompra.IconColor = System.Drawing.Color.Black;
             this.IBBuscarProveedorReporteCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBBuscarProveedorReporteCompra.IconSize = 16;
-            this.IBBuscarProveedorReporteCompra.Location = new System.Drawing.Point(613, 40);
+            this.IBBuscarProveedorReporteCompra.Location = new System.Drawing.Point(817, 49);
+            this.IBBuscarProveedorReporteCompra.Margin = new System.Windows.Forms.Padding(4);
             this.IBBuscarProveedorReporteCompra.Name = "IBBuscarProveedorReporteCompra";
-            this.IBBuscarProveedorReporteCompra.Size = new System.Drawing.Size(90, 30);
+            this.IBBuscarProveedorReporteCompra.Size = new System.Drawing.Size(120, 37);
             this.IBBuscarProveedorReporteCompra.TabIndex = 9;
             this.IBBuscarProveedorReporteCompra.Text = "Buscar";
             this.IBBuscarProveedorReporteCompra.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -109,51 +113,57 @@
             // CBProveedorReporteCompra
             // 
             this.CBProveedorReporteCompra.FormattingEnabled = true;
-            this.CBProveedorReporteCompra.Location = new System.Drawing.Point(469, 46);
+            this.CBProveedorReporteCompra.Location = new System.Drawing.Point(625, 57);
+            this.CBProveedorReporteCompra.Margin = new System.Windows.Forms.Padding(4);
             this.CBProveedorReporteCompra.Name = "CBProveedorReporteCompra";
-            this.CBProveedorReporteCompra.Size = new System.Drawing.Size(121, 21);
+            this.CBProveedorReporteCompra.Size = new System.Drawing.Size(160, 24);
             this.CBProveedorReporteCompra.TabIndex = 3;
             // 
             // TxtFechaFin
             // 
             this.TxtFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TxtFechaFin.Location = new System.Drawing.Point(280, 47);
+            this.TxtFechaFin.Location = new System.Drawing.Point(373, 58);
+            this.TxtFechaFin.Margin = new System.Windows.Forms.Padding(4);
             this.TxtFechaFin.Name = "TxtFechaFin";
-            this.TxtFechaFin.Size = new System.Drawing.Size(102, 20);
+            this.TxtFechaFin.Size = new System.Drawing.Size(135, 22);
             this.TxtFechaFin.TabIndex = 2;
             // 
             // TxtFechaInicio
             // 
             this.TxtFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TxtFechaInicio.Location = new System.Drawing.Point(86, 47);
+            this.TxtFechaInicio.Location = new System.Drawing.Point(115, 58);
+            this.TxtFechaInicio.Margin = new System.Windows.Forms.Padding(4);
             this.TxtFechaInicio.Name = "TxtFechaInicio";
-            this.TxtFechaInicio.Size = new System.Drawing.Size(102, 20);
+            this.TxtFechaInicio.Size = new System.Drawing.Size(135, 22);
             this.TxtFechaInicio.TabIndex = 2;
             // 
             // LProveedorReporte
             // 
             this.LProveedorReporte.AutoSize = true;
-            this.LProveedorReporte.Location = new System.Drawing.Point(404, 47);
+            this.LProveedorReporte.Location = new System.Drawing.Point(539, 58);
+            this.LProveedorReporte.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LProveedorReporte.Name = "LProveedorReporte";
-            this.LProveedorReporte.Size = new System.Drawing.Size(59, 13);
+            this.LProveedorReporte.Size = new System.Drawing.Size(74, 16);
             this.LProveedorReporte.TabIndex = 1;
             this.LProveedorReporte.Text = "Proveedor:";
             // 
             // LFechaHasta
             // 
             this.LFechaHasta.AutoSize = true;
-            this.LFechaHasta.Location = new System.Drawing.Point(207, 47);
+            this.LFechaHasta.Location = new System.Drawing.Point(276, 58);
+            this.LFechaHasta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LFechaHasta.Name = "LFechaHasta";
-            this.LFechaHasta.Size = new System.Drawing.Size(69, 13);
+            this.LFechaHasta.Size = new System.Drawing.Size(84, 16);
             this.LFechaHasta.TabIndex = 1;
             this.LFechaHasta.Text = "Fecha hasta:";
             // 
             // LFechaInicio
             // 
             this.LFechaInicio.AutoSize = true;
-            this.LFechaInicio.Location = new System.Drawing.Point(13, 47);
+            this.LFechaInicio.Location = new System.Drawing.Point(17, 58);
+            this.LFechaInicio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LFechaInicio.Name = "LFechaInicio";
-            this.LFechaInicio.Size = new System.Drawing.Size(67, 13);
+            this.LFechaInicio.Size = new System.Drawing.Size(82, 16);
             this.LFechaInicio.TabIndex = 1;
             this.LFechaInicio.Text = "Fecha inicio:";
             // 
@@ -161,9 +171,10 @@
             // 
             this.LReporteCompras.AutoSize = true;
             this.LReporteCompras.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LReporteCompras.Location = new System.Drawing.Point(13, 12);
+            this.LReporteCompras.Location = new System.Drawing.Point(17, 15);
+            this.LReporteCompras.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LReporteCompras.Name = "LReporteCompras";
-            this.LReporteCompras.Size = new System.Drawing.Size(142, 18);
+            this.LReporteCompras.Size = new System.Drawing.Size(173, 24);
             this.LReporteCompras.TabIndex = 0;
             this.LReporteCompras.Text = "Reporte Compras";
             // 
@@ -171,15 +182,15 @@
             // 
             this.dataGridDatos.AllowUserToAddRows = false;
             this.dataGridDatos.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.FechaRegistro,
@@ -197,21 +208,151 @@
             this.PrecioVenta,
             this.Cantidad,
             this.SubTotal});
-            this.dataGridDatos.Location = new System.Drawing.Point(16, 44);
+            this.dataGridDatos.Location = new System.Drawing.Point(21, 54);
+            this.dataGridDatos.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridDatos.MultiSelect = false;
             this.dataGridDatos.Name = "dataGridDatos";
             this.dataGridDatos.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridDatos.RowHeadersWidth = 51;
             this.dataGridDatos.RowTemplate.Height = 28;
-            this.dataGridDatos.Size = new System.Drawing.Size(1193, 406);
+            this.dataGridDatos.Size = new System.Drawing.Size(1591, 500);
             this.dataGridDatos.TabIndex = 8;
+            // 
+            // FechaRegistro
+            // 
+            this.FechaRegistro.HeaderText = "Fecha Registro";
+            this.FechaRegistro.MinimumWidth = 6;
+            this.FechaRegistro.Name = "FechaRegistro";
+            this.FechaRegistro.ReadOnly = true;
+            this.FechaRegistro.Width = 125;
+            // 
+            // TipoDocumento
+            // 
+            this.TipoDocumento.HeaderText = "Tipo Documento";
+            this.TipoDocumento.MinimumWidth = 6;
+            this.TipoDocumento.Name = "TipoDocumento";
+            this.TipoDocumento.ReadOnly = true;
+            this.TipoDocumento.Width = 125;
+            // 
+            // NumeroDocumento
+            // 
+            this.NumeroDocumento.HeaderText = "NumeroDocumento";
+            this.NumeroDocumento.MinimumWidth = 6;
+            this.NumeroDocumento.Name = "NumeroDocumento";
+            this.NumeroDocumento.ReadOnly = true;
+            this.NumeroDocumento.Width = 125;
+            // 
+            // MontoTotal
+            // 
+            this.MontoTotal.HeaderText = "Monto Total";
+            this.MontoTotal.MinimumWidth = 6;
+            this.MontoTotal.Name = "MontoTotal";
+            this.MontoTotal.ReadOnly = true;
+            this.MontoTotal.Width = 125;
+            // 
+            // UsuarioRegistro
+            // 
+            this.UsuarioRegistro.HeaderText = "Usuario Registro";
+            this.UsuarioRegistro.MinimumWidth = 6;
+            this.UsuarioRegistro.Name = "UsuarioRegistro";
+            this.UsuarioRegistro.ReadOnly = true;
+            this.UsuarioRegistro.Width = 125;
+            // 
+            // DocumentoProveedor
+            // 
+            this.DocumentoProveedor.HeaderText = "Documento Proveedor";
+            this.DocumentoProveedor.MinimumWidth = 6;
+            this.DocumentoProveedor.Name = "DocumentoProveedor";
+            this.DocumentoProveedor.ReadOnly = true;
+            this.DocumentoProveedor.Width = 125;
+            // 
+            // RazonSocial
+            // 
+            this.RazonSocial.HeaderText = "Razon Social";
+            this.RazonSocial.MinimumWidth = 6;
+            this.RazonSocial.Name = "RazonSocial";
+            this.RazonSocial.ReadOnly = true;
+            this.RazonSocial.Width = 125;
+            // 
+            // CodigoProducto
+            // 
+            this.CodigoProducto.HeaderText = "Codigo Producto";
+            this.CodigoProducto.MinimumWidth = 6;
+            this.CodigoProducto.Name = "CodigoProducto";
+            this.CodigoProducto.ReadOnly = true;
+            this.CodigoProducto.Visible = false;
+            this.CodigoProducto.Width = 125;
+            // 
+            // NombreProducto
+            // 
+            this.NombreProducto.HeaderText = "Nombre Producto";
+            this.NombreProducto.MinimumWidth = 6;
+            this.NombreProducto.Name = "NombreProducto";
+            this.NombreProducto.ReadOnly = true;
+            this.NombreProducto.Visible = false;
+            this.NombreProducto.Width = 125;
+            // 
+            // Categoria
+            // 
+            this.Categoria.HeaderText = "Categoría";
+            this.Categoria.MinimumWidth = 6;
+            this.Categoria.Name = "Categoria";
+            this.Categoria.ReadOnly = true;
+            this.Categoria.Visible = false;
+            this.Categoria.Width = 125;
+            // 
+            // Marca
+            // 
+            this.Marca.HeaderText = "Marca";
+            this.Marca.MinimumWidth = 6;
+            this.Marca.Name = "Marca";
+            this.Marca.ReadOnly = true;
+            this.Marca.Visible = false;
+            this.Marca.Width = 125;
+            // 
+            // PrecioCompra
+            // 
+            this.PrecioCompra.HeaderText = "Precio Compra";
+            this.PrecioCompra.MinimumWidth = 6;
+            this.PrecioCompra.Name = "PrecioCompra";
+            this.PrecioCompra.ReadOnly = true;
+            this.PrecioCompra.Visible = false;
+            this.PrecioCompra.Width = 125;
+            // 
+            // PrecioVenta
+            // 
+            this.PrecioVenta.HeaderText = "Precio Venta";
+            this.PrecioVenta.MinimumWidth = 6;
+            this.PrecioVenta.Name = "PrecioVenta";
+            this.PrecioVenta.ReadOnly = true;
+            this.PrecioVenta.Visible = false;
+            this.PrecioVenta.Width = 125;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.MinimumWidth = 6;
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            this.Cantidad.Visible = false;
+            this.Cantidad.Width = 150;
+            // 
+            // SubTotal
+            // 
+            this.SubTotal.HeaderText = "Sub Total";
+            this.SubTotal.MinimumWidth = 6;
+            this.SubTotal.Name = "SubTotal";
+            this.SubTotal.ReadOnly = true;
+            this.SubTotal.Visible = false;
+            this.SubTotal.Width = 125;
             // 
             // panelBusquedaInferior
             // 
@@ -224,9 +365,10 @@
             this.panelBusquedaInferior.Controls.Add(this.TxtBusqueda);
             this.panelBusquedaInferior.Controls.Add(this.CBBusqueda);
             this.panelBusquedaInferior.Controls.Add(this.IBBuscar);
-            this.panelBusquedaInferior.Location = new System.Drawing.Point(12, 89);
+            this.panelBusquedaInferior.Location = new System.Drawing.Point(16, 110);
+            this.panelBusquedaInferior.Margin = new System.Windows.Forms.Padding(4);
             this.panelBusquedaInferior.Name = "panelBusquedaInferior";
-            this.panelBusquedaInferior.Size = new System.Drawing.Size(1224, 482);
+            this.panelBusquedaInferior.Size = new System.Drawing.Size(1631, 592);
             this.panelBusquedaInferior.TabIndex = 37;
             // 
             // BDescargarExcel
@@ -236,9 +378,10 @@
             this.BDescargarExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BDescargarExcel.Image = global::CapaPresentacion.Properties.Resources.icons8_ms_excel_20;
             this.BDescargarExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BDescargarExcel.Location = new System.Drawing.Point(16, 12);
+            this.BDescargarExcel.Location = new System.Drawing.Point(21, 15);
+            this.BDescargarExcel.Margin = new System.Windows.Forms.Padding(4);
             this.BDescargarExcel.Name = "BDescargarExcel";
-            this.BDescargarExcel.Size = new System.Drawing.Size(143, 28);
+            this.BDescargarExcel.Size = new System.Drawing.Size(191, 34);
             this.BDescargarExcel.TabIndex = 34;
             this.BDescargarExcel.Text = "Descargar Excel";
             this.BDescargarExcel.UseVisualStyleBackColor = false;
@@ -255,9 +398,10 @@
             this.IBLimpiar.IconColor = System.Drawing.Color.Black;
             this.IBLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBLimpiar.IconSize = 16;
-            this.IBLimpiar.Location = new System.Drawing.Point(1123, 12);
+            this.IBLimpiar.Location = new System.Drawing.Point(1497, 15);
+            this.IBLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.IBLimpiar.Name = "IBLimpiar";
-            this.IBLimpiar.Size = new System.Drawing.Size(41, 28);
+            this.IBLimpiar.Size = new System.Drawing.Size(55, 34);
             this.IBLimpiar.TabIndex = 33;
             this.IBLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IBLimpiar.UseVisualStyleBackColor = false;
@@ -268,26 +412,29 @@
             this.LBuscarPor.AutoSize = true;
             this.LBuscarPor.BackColor = System.Drawing.Color.LightSteelBlue;
             this.LBuscarPor.ForeColor = System.Drawing.Color.Black;
-            this.LBuscarPor.Location = new System.Drawing.Point(529, 20);
+            this.LBuscarPor.Location = new System.Drawing.Point(705, 25);
+            this.LBuscarPor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBuscarPor.Name = "LBuscarPor";
-            this.LBuscarPor.Size = new System.Drawing.Size(61, 13);
+            this.LBuscarPor.Size = new System.Drawing.Size(75, 16);
             this.LBuscarPor.TabIndex = 16;
             this.LBuscarPor.Text = "Buscar por:";
             // 
             // TxtBusqueda
             // 
-            this.TxtBusqueda.Location = new System.Drawing.Point(793, 17);
+            this.TxtBusqueda.Location = new System.Drawing.Point(1057, 21);
+            this.TxtBusqueda.Margin = new System.Windows.Forms.Padding(4);
             this.TxtBusqueda.Name = "TxtBusqueda";
-            this.TxtBusqueda.Size = new System.Drawing.Size(236, 20);
+            this.TxtBusqueda.Size = new System.Drawing.Size(313, 22);
             this.TxtBusqueda.TabIndex = 23;
             // 
             // CBBusqueda
             // 
             this.CBBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBBusqueda.FormattingEnabled = true;
-            this.CBBusqueda.Location = new System.Drawing.Point(613, 17);
+            this.CBBusqueda.Location = new System.Drawing.Point(817, 21);
+            this.CBBusqueda.Margin = new System.Windows.Forms.Padding(4);
             this.CBBusqueda.Name = "CBBusqueda";
-            this.CBBusqueda.Size = new System.Drawing.Size(146, 21);
+            this.CBBusqueda.Size = new System.Drawing.Size(193, 24);
             this.CBBusqueda.TabIndex = 27;
             // 
             // IBBuscar
@@ -301,112 +448,46 @@
             this.IBBuscar.IconColor = System.Drawing.Color.Black;
             this.IBBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBBuscar.IconSize = 16;
-            this.IBBuscar.Location = new System.Drawing.Point(1076, 12);
+            this.IBBuscar.Location = new System.Drawing.Point(1435, 15);
+            this.IBBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.IBBuscar.Name = "IBBuscar";
-            this.IBBuscar.Size = new System.Drawing.Size(41, 28);
+            this.IBBuscar.Size = new System.Drawing.Size(55, 34);
             this.IBBuscar.TabIndex = 30;
             this.IBBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IBBuscar.UseVisualStyleBackColor = false;
             this.IBBuscar.Click += new System.EventHandler(this.IBBuscar_Click);
             // 
-            // FechaRegistro
+            // BVerDetalleCompra
             // 
-            this.FechaRegistro.HeaderText = "Fecha Registro";
-            this.FechaRegistro.Name = "FechaRegistro";
-            this.FechaRegistro.ReadOnly = true;
-            // 
-            // TipoDocumento
-            // 
-            this.TipoDocumento.HeaderText = "Tipo Documento";
-            this.TipoDocumento.Name = "TipoDocumento";
-            this.TipoDocumento.ReadOnly = true;
-            // 
-            // NumeroDocumento
-            // 
-            this.NumeroDocumento.HeaderText = "NumeroDocumento";
-            this.NumeroDocumento.Name = "NumeroDocumento";
-            this.NumeroDocumento.ReadOnly = true;
-            // 
-            // MontoTotal
-            // 
-            this.MontoTotal.HeaderText = "Monto Total";
-            this.MontoTotal.Name = "MontoTotal";
-            this.MontoTotal.ReadOnly = true;
-            // 
-            // UsuarioRegistro
-            // 
-            this.UsuarioRegistro.HeaderText = "Usuario Registro";
-            this.UsuarioRegistro.Name = "UsuarioRegistro";
-            this.UsuarioRegistro.ReadOnly = true;
-            // 
-            // DocumentoProveedor
-            // 
-            this.DocumentoProveedor.HeaderText = "Documento Proveedor";
-            this.DocumentoProveedor.Name = "DocumentoProveedor";
-            this.DocumentoProveedor.ReadOnly = true;
-            // 
-            // RazonSocial
-            // 
-            this.RazonSocial.HeaderText = "Razon Social";
-            this.RazonSocial.Name = "RazonSocial";
-            this.RazonSocial.ReadOnly = true;
-            // 
-            // CodigoProducto
-            // 
-            this.CodigoProducto.HeaderText = "Codigo Producto";
-            this.CodigoProducto.Name = "CodigoProducto";
-            this.CodigoProducto.ReadOnly = true;
-            // 
-            // NombreProducto
-            // 
-            this.NombreProducto.HeaderText = "Nombre Producto";
-            this.NombreProducto.Name = "NombreProducto";
-            this.NombreProducto.ReadOnly = true;
-            // 
-            // Categoria
-            // 
-            this.Categoria.HeaderText = "Categoría";
-            this.Categoria.Name = "Categoria";
-            this.Categoria.ReadOnly = true;
-            // 
-            // Marca
-            // 
-            this.Marca.HeaderText = "Marca";
-            this.Marca.Name = "Marca";
-            this.Marca.ReadOnly = true;
-            // 
-            // PrecioCompra
-            // 
-            this.PrecioCompra.HeaderText = "Precio Compra";
-            this.PrecioCompra.Name = "PrecioCompra";
-            this.PrecioCompra.ReadOnly = true;
-            // 
-            // PrecioVenta
-            // 
-            this.PrecioVenta.HeaderText = "Precio Venta";
-            this.PrecioVenta.Name = "PrecioVenta";
-            this.PrecioVenta.ReadOnly = true;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            this.Cantidad.Width = 150;
-            // 
-            // SubTotal
-            // 
-            this.SubTotal.HeaderText = "Sub Total";
-            this.SubTotal.Name = "SubTotal";
-            this.SubTotal.ReadOnly = true;
+            this.BVerDetalleCompra.BackColor = System.Drawing.Color.LightGray;
+            this.BVerDetalleCompra.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BVerDetalleCompra.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.BVerDetalleCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BVerDetalleCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BVerDetalleCompra.ForeColor = System.Drawing.Color.Black;
+            this.BVerDetalleCompra.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.BVerDetalleCompra.IconColor = System.Drawing.Color.Black;
+            this.BVerDetalleCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BVerDetalleCompra.IconSize = 16;
+            this.BVerDetalleCompra.Location = new System.Drawing.Point(979, 49);
+            this.BVerDetalleCompra.Margin = new System.Windows.Forms.Padding(4);
+            this.BVerDetalleCompra.Name = "BVerDetalleCompra";
+            this.BVerDetalleCompra.Size = new System.Drawing.Size(229, 37);
+            this.BVerDetalleCompra.TabIndex = 9;
+            this.BVerDetalleCompra.Text = "Ver detalle específico";
+            this.BVerDetalleCompra.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BVerDetalleCompra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BVerDetalleCompra.UseVisualStyleBackColor = false;
+            this.BVerDetalleCompra.Click += new System.EventHandler(this.BVerDetalleCompra_Click);
             // 
             // FormReporteCompras
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1326, 644);
+            this.ClientSize = new System.Drawing.Size(1768, 793);
             this.Controls.Add(this.PanelReporteComprasSuperior);
             this.Controls.Add(this.panelBusquedaInferior);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormReporteCompras";
             this.Text = "FormReporteCompras";
             this.Load += new System.EventHandler(this.FormReporteCompras_Load);
@@ -453,5 +534,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
+        private FontAwesome.Sharp.IconButton BVerDetalleCompra;
     }
 }

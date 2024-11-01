@@ -1,5 +1,6 @@
 ﻿using CapaEntidades;
 using CapaNegocio;
+using CapaPresentacion.Modales;
 using CapaPresentacion.Utilidades;
 using ClosedXML.Excel;
 using DocumentFormat.OpenXml.Office.CustomUI;
@@ -104,28 +105,38 @@ namespace CapaPresentacion.Gerente_Comercial
                 );
 
             dataGridDatos.Rows.Clear();
-            foreach (ReporteCompra rc in lista)
-            {
-                dataGridDatos.Rows.Add(new object[]
-                {
-                    rc.FechaRegistro,
-                    rc.TipoDocumento_compra,
-                    rc.NumeroDocumento_compra,
-                    rc.MontoTotal_compra,
-                    rc.Nombre_usuario + " " + rc.Apellido_usuario, 
-                    rc.Documento_proveedor,
-                    rc.RazonSocial_proveedor,
-                    rc.Codigo_producto, 
-                    rc.Nombre_producto,
-                    rc.Descripcion_categoria,
-                    rc.Descripcion_marca,
-                    rc.PrecioCompra,
-                    rc.PrecioVenta,
-                    rc.Cantidad,
-                    rc.MontoTotal
 
-                });
-            }
+            List<string> codigosUnicos = new List<string>();
+      
+                foreach (ReporteCompra rc in lista)
+                {
+                    if (!codigosUnicos.Contains(rc.NumeroDocumento_compra))
+                    {
+                        // Agrega el número de documento a la lista para evitar repeticiones
+                        codigosUnicos.Add(rc.NumeroDocumento_compra);
+
+                        dataGridDatos.Rows.Add(new object[]
+                        {
+                        rc.FechaRegistro,
+                        rc.TipoDocumento_compra,
+                        rc.NumeroDocumento_compra,
+                        rc.MontoTotal_compra,
+                        rc.Nombre_usuario + " " + rc.Apellido_usuario,
+                        rc.Documento_proveedor,
+                        rc.RazonSocial_proveedor,
+                        rc.Codigo_producto,
+                        rc.Nombre_producto,
+                        rc.Descripcion_categoria,
+                        rc.Descripcion_marca,
+                        rc.PrecioCompra,
+                        rc.PrecioVenta,
+                        rc.Cantidad,
+                        rc.MontoTotal
+
+                        });
+                    }
+                } 
+            
         }
 
         private void BDescargarExcel_Click(object sender, EventArgs e)
@@ -186,6 +197,14 @@ namespace CapaPresentacion.Gerente_Comercial
                         MessageBox.Show("Error al exportar reporte", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+            }
+        }
+
+        private void BVerDetalleCompra_Click(object sender, EventArgs e)
+        {
+            using (var modal = new mdDetalleCompra())
+            {
+                var result = modal.ShowDialog();
             }
         }
     }

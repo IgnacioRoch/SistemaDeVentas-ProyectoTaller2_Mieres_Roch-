@@ -229,39 +229,34 @@ namespace CapaDatos
                 return oLista;
         }
 
-        public List<Venta> TopVentas(string fechainicio, string fechafin)
+        public DataTable TopVentas(string fechainicio, string fechafin)
         {
-            List<Venta> lista = new List<Venta>();
+            DataTable tabla = new DataTable();
 
             using (SqlConnection oconexion = new SqlConnection(Conexion.cadena))
             {
                 try
                 {
-                    StringBuilder query = new StringBuilder();
-                    SqlCommand cmd = new SqlCommand("sp_ObtenerTopVentas", oconexion);
-                    cmd.Parameters.AddWithValue("FechaInicio", fechainicio);
-                    cmd.Parameters.AddWithValue("FechaFin", fechafin);
-                    cmd.CommandType = CommandType.StoredProcedure;
-
-                    oconexion.Open();
-                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    using (SqlCommand cmd = new SqlCommand("sp_ObtenerTopVentas", oconexion))
                     {
-                        while (dr.Read())
+                        cmd.Parameters.AddWithValue("FechaInicio", fechainicio);
+                        cmd.Parameters.AddWithValue("FechaFin", fechafin);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        oconexion.Open();
+
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
                         {
-                            lista.Add(new Venta()
-                            {
-                                NumeroDocumento = dr["NumeroDocumento"].ToString(),
-                                MontoTotal = Convert.ToDecimal(dr["MontoTotal"].ToString())
-                            });
+                            adapter.Fill(tabla);
                         }
                     }
+
                 }
                 catch (Exception ex)
                 {
-                    lista = new List<Venta>();
+                    tabla = new DataTable();
                 }
             }
-            return lista;
+            return tabla;
         }
 
     }

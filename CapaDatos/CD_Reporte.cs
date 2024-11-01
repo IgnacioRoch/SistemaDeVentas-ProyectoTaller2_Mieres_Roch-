@@ -37,18 +37,18 @@ namespace CapaDatos
                                 FechaRegistro = dr["FechaRegistro"].ToString(),
                                 TipoDocumento_compra = dr["TipoDocumento_compra"].ToString(),
                                 NumeroDocumento_compra = dr["NumeroDocumento_compra"].ToString(),
-                                MontoTotal = dr["MontoTotal"].ToString(),
+                                /*MontoTotal = dr["MontoTotal"].ToString(),*/
                                 Nombre_usuario = dr["Nombre_usuario"].ToString(),
                                 Apellido_usuario = dr["Apellido_usuario"].ToString(),
                                 Documento_proveedor = dr["Documento_proveedor"].ToString(),
                                 RazonSocial_proveedor = dr["RazonSocial_proveedor"].ToString(),
-                                Codigo_producto = dr["Codigo_producto"].ToString(),
+                                /*Codigo_producto = dr["Codigo_producto"].ToString(),
                                 Nombre_producto = dr["Nombre_producto"].ToString(),
                                 Descripcion_categoria = dr["Descripcion_categoria"].ToString(),
                                 Descripcion_marca = dr["Descripcion_marca"].ToString(),
                                 PrecioCompra = dr["PrecioCompra"].ToString(),
                                 PrecioVenta = dr["PrecioVenta"].ToString(),
-                                Cantidad = dr["Cantidad"].ToString(),
+                                Cantidad = dr["Cantidad"].ToString(),*/
                                 MontoTotal_compra = dr["MontoTotal_compra"].ToString(),
                             });
                         }

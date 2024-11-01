@@ -36,20 +36,25 @@ namespace CapaPresentacion.Gerente_Comercial
 
         private void BGenerarGraficaVenta_Click(object sender, EventArgs e)
         {
-            List<Venta> lista = new List<Venta>();
+            DataTable tabla = new DataTable();
 
-            lista = new CN_Venta().TopVentas(
+            tabla = new CN_Venta().TopVentas(
                 TxtTPVentaInicio.Value.ToString(),
                 TxtTPVentaFin.Value.ToString()
                 );
 
+
             ChartTopVentas.Series["Ventas"].Points.Clear(); //Limpiamos el chart antes de volver a graficar
 
             int index = 1;
-            foreach (var dato in lista)
+            foreach (DataRow fila in tabla.Rows)
             {
-                ChartTopVentas.Series["Ventas"].Points.AddXY(index, dato.MontoTotal);
+                string nombre = fila["Descripcion_categoria"].ToString();
+                decimal totalVendido = Convert.ToDecimal(fila["total_vendido"].ToString());
+
+                ChartTopVentas.Series["Ventas"].Points.AddXY(nombre, totalVendido);
                 index++;
+                //series.Points.AddXY(dato.MontoTotal);
             }
 
         }
