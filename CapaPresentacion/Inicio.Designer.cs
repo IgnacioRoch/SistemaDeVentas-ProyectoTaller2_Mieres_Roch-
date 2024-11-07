@@ -53,6 +53,7 @@
             this.menu_verProductos = new FontAwesome.Sharp.IconMenuItem();
             this.menu_verProveedor = new FontAwesome.Sharp.IconMenuItem();
             this.menu_informacion = new FontAwesome.Sharp.IconMenuItem();
+            this.menu_BackupBD = new FontAwesome.Sharp.IconMenuItem();
             this.menuTitulo = new System.Windows.Forms.MenuStrip();
             this.contenedor = new System.Windows.Forms.Panel();
             this.LUsuario = new System.Windows.Forms.Label();
@@ -98,11 +99,12 @@
             this.menu_MisVentas,
             this.menu_verProductos,
             this.menu_verProveedor,
+            this.menu_BackupBD,
             this.menu_informacion});
             this.MenuInicio.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
             this.MenuInicio.Location = new System.Drawing.Point(0, 90);
             this.MenuInicio.Name = "MenuInicio";
-            this.MenuInicio.Size = new System.Drawing.Size(1257, 84);
+            this.MenuInicio.Size = new System.Drawing.Size(1257, 164);
             this.MenuInicio.TabIndex = 2;
             this.MenuInicio.Text = "menuStrip2";
             // 
@@ -408,6 +410,22 @@
             this.menu_informacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.menu_informacion.Click += new System.EventHandler(this.menu_informacion_Click);
             // 
+            // menu_BackupBD
+            // 
+            this.menu_BackupBD.AutoSize = false;
+            this.menu_BackupBD.Font = new System.Drawing.Font("OCR A Extended", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menu_BackupBD.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.menu_BackupBD.IconChar = FontAwesome.Sharp.IconChar.Database;
+            this.menu_BackupBD.IconColor = System.Drawing.Color.Black;
+            this.menu_BackupBD.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.menu_BackupBD.IconSize = 55;
+            this.menu_BackupBD.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.menu_BackupBD.Name = "menu_BackupBD";
+            this.menu_BackupBD.Size = new System.Drawing.Size(100, 80);
+            this.menu_BackupBD.Text = " Datos";
+            this.menu_BackupBD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menu_BackupBD.Click += new System.EventHandler(this.menu_BackupBD_Click);
+            // 
             // menuTitulo
             // 
             this.menuTitulo.AutoSize = false;
@@ -422,9 +440,9 @@
             // contenedor
             // 
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contenedor.Location = new System.Drawing.Point(0, 174);
+            this.contenedor.Location = new System.Drawing.Point(0, 254);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(1257, 628);
+            this.contenedor.Size = new System.Drawing.Size(1257, 548);
             this.contenedor.TabIndex = 5;
             // 
             // LUsuario
@@ -617,6 +635,7 @@
         private FontAwesome.Sharp.IconMenuItem menu_MisVentas;
         private FontAwesome.Sharp.IconMenuItem menu_verProductos;
         private FontAwesome.Sharp.IconMenuItem menu_verProveedor;
+        private FontAwesome.Sharp.IconMenuItem menu_BackupBD;
     }
 }
 

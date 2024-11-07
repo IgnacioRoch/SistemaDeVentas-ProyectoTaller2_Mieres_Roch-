@@ -249,6 +249,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrador\FormBaseDeDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\FormBaseDeDatos.Designer.cs">
+      <DependentUpon>FormBaseDeDatos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrador\FormCategorias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -402,6 +408,9 @@
     <Compile Include="Vendedor\FormVentas.Designer.cs">
       <DependentUpon>FormVentas.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Administrador\FormBaseDeDatos.resx">
+      <DependentUpon>FormBaseDeDatos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administrador\FormCategorias.resx">
       <DependentUpon>FormCategorias.cs</DependentUpon>
     </EmbeddedResource>
@@ -523,6 +532,7 @@
     <None Include="Resources\iconCheck.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\20160602w13.jpg" />
     <Content Include="Resources\fondoCompra.jpg" />
     <None Include="Resources\PlantillaVenta.html" />
     <None Include="Resources\PlantillaCompra.html" />

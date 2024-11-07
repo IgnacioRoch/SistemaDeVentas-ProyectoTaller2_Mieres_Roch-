@@ -195,5 +195,10 @@ namespace CapaPresentacion
         {
             abrirFormulario((IconMenuItem)sender, new FormListarProveedor());
         }
+
+        private void menu_BackupBD_Click(object sender, EventArgs e)
+        {
+            abrirFormulario((IconMenuItem)sender, new FormBaseDeDatos());
+        }
     }
 }
