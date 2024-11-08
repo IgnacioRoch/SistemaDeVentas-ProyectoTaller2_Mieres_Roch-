@@ -124,14 +124,17 @@ namespace CapaPresentacion.Gerente_Comercial
                         rc.Nombre_usuario + " " + rc.Apellido_usuario,
                         rc.Documento_proveedor,
                         rc.RazonSocial_proveedor,
-                        rc.Codigo_producto,
+                        BDetalle.Text = "Mostrar detalle"
+
+
+                        /*rc.Codigo_producto,
                         rc.Nombre_producto,
                         rc.Descripcion_categoria,
                         rc.Descripcion_marca,
                         rc.PrecioCompra,
                         rc.PrecioVenta,
                         rc.Cantidad,
-                        rc.MontoTotal
+                        rc.MontoTotal*/
 
                         });
                     }
@@ -165,15 +168,16 @@ namespace CapaPresentacion.Gerente_Comercial
                             row.Cells[3].Value.ToString(),
                             row.Cells[4].Value.ToString(),
                             row.Cells[5].Value.ToString(),
-                            row.Cells[6].Value.ToString(),
-                            row.Cells[7].Value.ToString(),
+                            row.Cells[6].Value.ToString(), 
+
+                            /*row.Cells[7].Value.ToString(),
                             row.Cells[8].Value.ToString(),
                             row.Cells[9].Value.ToString(),         
                             row.Cells[10].Value.ToString(),
                             row.Cells[11].Value.ToString(),
                             row.Cells[12].Value.ToString(),
                             row.Cells[13].Value.ToString(),
-                            row.Cells[14].Value.ToString()
+                            row.Cells[14].Value.ToString()*/
                         });
                     }
                 }
@@ -202,9 +206,28 @@ namespace CapaPresentacion.Gerente_Comercial
 
         private void BVerDetalleCompra_Click(object sender, EventArgs e)
         {
-            using (var modal = new mdDetalleCompra())
+            /*using (var modal = new mdDetalleCompra())
             {
                 var result = modal.ShowDialog();
+            }*/
+        }
+
+        private void dataGridDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string codigoCompra;
+
+            if (dataGridDatos.Columns[e.ColumnIndex].Name == "BDetalle")
+            {
+                int indice = e.RowIndex;
+                if (indice >= 0)
+                {
+                    codigoCompra = dataGridDatos.Rows[indice].Cells["NumeroDocumento"].Value.ToString();
+
+                    using (var modal = new mdDetalleCompra(codigoCompra))
+                    {
+                        var result = modal.ShowDialog();
+                    }
+                }
             }
         }
     }

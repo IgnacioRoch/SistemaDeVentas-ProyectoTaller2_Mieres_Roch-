@@ -112,14 +112,15 @@ namespace CapaPresentacion.Vendedor
                     rv.Nombre_usuario + " " + rv.Apellido_usuario,
                     rv.Documento_cliente,
                     rv.Nombre_cliente,
-                    rv.Codigo_producto,
+                    BDetalle.Text = "Ver detalle"
+                   /* rv.Codigo_producto,
                     rv.Nombre_producto,
                     rv.Descripcion_categoria,
                     rv.Descripcion_marca,
                     rv.PrecioVenta,
                     rv.Cantidad,
                     rv.SubTotal,
-                    rv.Documento_usuario
+                    rv.Documento_usuario*/
                     });
                 }
             }
@@ -152,13 +153,13 @@ namespace CapaPresentacion.Vendedor
                             row.Cells[4].Value.ToString(),
                             row.Cells[5].Value.ToString(),
                             row.Cells[6].Value.ToString(),
-                            row.Cells[7].Value.ToString(),
+                            /*row.Cells[7].Value.ToString(),
                             row.Cells[8].Value.ToString(),
                             row.Cells[9].Value.ToString(),
                             row.Cells[10].Value.ToString(),
                             row.Cells[11].Value.ToString(),
                             row.Cells[12].Value.ToString(),
-                            row.Cells[13].Value.ToString()
+                            row.Cells[13].Value.ToString()*/
                         });
                     }
                 }
@@ -187,9 +188,28 @@ namespace CapaPresentacion.Vendedor
 
         private void BVerDetalle_Click(object sender, EventArgs e)
         {
-            using (var modal = new mdDetalleVenta())
+            /*using (var modal = new mdDetalleVenta())
             {
                 var result = modal.ShowDialog();
+            }*/
+        }
+
+        private void dataGridDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string codigoventa;
+
+            if (dataGridDatos.Columns[e.ColumnIndex].Name == "BDetalle")
+            {
+                int indice = e.RowIndex;
+                if (indice >= 0)
+                {
+                    codigoventa = dataGridDatos.Rows[indice].Cells["NumeroDocumento"].Value.ToString();
+
+                    using (var modal = new mdDetalleVenta(codigoventa))
+                    {
+                        var result = modal.ShowDialog();
+                    }
+                }
             }
         }
     }

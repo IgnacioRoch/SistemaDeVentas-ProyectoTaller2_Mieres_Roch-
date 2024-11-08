@@ -14,9 +14,10 @@ namespace CapaPresentacion.Modales
 {
     public partial class mdDetalleCompra : Form
     {
-        public mdDetalleCompra()
+        public mdDetalleCompra(string codigoCompra)
         {
             InitializeComponent();
+            TxtBusqueda.Text = codigoCompra;
         }
 
         private void IBBuscar_Click(object sender, EventArgs e)
