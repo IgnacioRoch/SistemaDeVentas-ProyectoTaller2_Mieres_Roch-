@@ -24,15 +24,15 @@ namespace CapaPresentacion.Administrador
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Archivos de Backup (*.bak)|*.bak"; // Filtrar para que solo se elijan archivos .bak
             saveFileDialog.Title = "Seleccionar ubicación para guardar el backup";
-            saveFileDialog.FileName = "BackUpDatos.bak"; // Nombre predeterminado del archivo
-
+            saveFileDialog.FileName = string.Format("BackUpDatos_{0}.bak", DateTime.Now.ToString("ddMMyyyyHHmmss")); // Nombre predeterminado del archivo
+           
             // Mostrar el cuadro de diálogo
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string backupPath = saveFileDialog.FileName; // Ruta donde el usuario desea guardar el archivo de backup
-                string connectionString = "Data Source=DESKTOP-T4VL56Q\\SQLEXPRESS;Initial Catalog=DBSITEMA_VENTA;Integrated Security=True"; // Ajusta según tu configuración
+                string connectionString = "Data Source = LAPTOP-B245KG0M\\SQLEXPRESS; Initial Catalog = DBSITEMA_VENTA; Integrated Security=True"; // Ajusta según tu configuración
                 string backupCommand = $"BACKUP DATABASE DBSITEMA_VENTA TO DISK = '{backupPath}'"; // Comando SQL para el backup
-
+                
                 try
                 {
                     // Conexión a la base de datos
