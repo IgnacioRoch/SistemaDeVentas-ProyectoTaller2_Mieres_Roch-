@@ -26,6 +26,13 @@ namespace CapaPresentacion.Administrador
 
         private void IBGuardar_Click(object sender, EventArgs e)
         {
+            Negocio datos = new CN_Negocio().ObtenerDatos();
+
+            // Obtener los valores predeterminados (por ejemplo, los que estaban al cargar la ventana o formulario)
+            string nombrePredeterminado = datos.Nombre_negocio;
+            string rucPredeterminado = datos.RUC_negocio;
+            string direccionPredeterminada = datos.Direccion_negocio;
+
             // Obtener los valores de los TextBox  
             string nombre = TxtNombreNegocio.Text;
             string ruc = TxtRuc.Text;
@@ -41,6 +48,13 @@ namespace CapaPresentacion.Administrador
             if (!nombre.All(char.IsLetter))
             {
                 MessageBox.Show("El Nombre del negocio deben contener solo letras.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Verificar si el usuario ha realizado cambios en los TextBox
+            if (TxtNombreNegocio.Text == nombrePredeterminado && TxtRuc.Text == rucPredeterminado && TxtDireccion.Text == direccionPredeterminada)
+            {
+                MessageBox.Show("No se ha realizado ningún cambio. Para editar, modifique los valores.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 

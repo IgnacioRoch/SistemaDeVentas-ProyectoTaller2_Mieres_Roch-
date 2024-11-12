@@ -33,7 +33,7 @@ namespace CapaPresentacion.Administrador
             }
 
             // Validación de que el descripcion solo contenga letras  
-            if (!descripcion.All(char.IsLetter))
+            if (!descripcion.All(c => char.IsLetter(c) || char.IsWhiteSpace(c)))
             {
                 MessageBox.Show("El campo descripción deben contener solo letras", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

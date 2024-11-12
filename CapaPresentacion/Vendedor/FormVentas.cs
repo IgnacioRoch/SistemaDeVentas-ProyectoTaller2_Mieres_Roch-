@@ -162,6 +162,7 @@ namespace CapaPresentacion.Vendedor
             if (dataGridDatos.Rows.Count < 1)
             {
                 MessageBox.Show("Debe ingresar productos a la venta", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
             }
 
             DialogResult ask = MessageBox.Show("¿Seguro que desea registrar la vanta?", "Confirmar Inserción", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
