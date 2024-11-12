@@ -138,7 +138,10 @@ namespace CapaPresentacion.Vendedor
 
                 foreach (DataGridViewColumn columna in dataGridDatos.Columns)
                 {
-                    dt.Columns.Add(columna.HeaderText, typeof(string));
+                    if (columna.HeaderText != "Detalle venta")
+                    {
+                        dt.Columns.Add(columna.HeaderText, typeof(string));
+                    }
                 }
                 foreach (DataGridViewRow row in dataGridDatos.Rows)
                 {

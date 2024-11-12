@@ -154,7 +154,10 @@ namespace CapaPresentacion.Gerente_Comercial
 
                 foreach (DataGridViewColumn columna in dataGridDatos.Columns)
                 {
-                      dt.Columns.Add(columna.HeaderText, typeof(string));            
+                    if (columna.HeaderText != "Detalle Compra")
+                    {
+                        dt.Columns.Add(columna.HeaderText, typeof(string));
+                    }
                 }
                 foreach (DataGridViewRow row in dataGridDatos.Rows)
                 {
@@ -168,7 +171,7 @@ namespace CapaPresentacion.Gerente_Comercial
                             row.Cells[3].Value.ToString(),
                             row.Cells[4].Value.ToString(),
                             row.Cells[5].Value.ToString(),
-                            row.Cells[6].Value.ToString(), 
+                            row.Cells[6].Value.ToString() 
 
                             /*row.Cells[7].Value.ToString(),
                             row.Cells[8].Value.ToString(),

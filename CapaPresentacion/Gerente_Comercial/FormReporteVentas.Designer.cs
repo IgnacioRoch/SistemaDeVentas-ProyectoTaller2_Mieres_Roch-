@@ -359,7 +359,7 @@
             // 
             // BDetalle
             // 
-            this.BDetalle.HeaderText = "Detallle Venta";
+            this.BDetalle.HeaderText = "Detalle Venta";
             this.BDetalle.Name = "BDetalle";
             this.BDetalle.ReadOnly = true;
             // 
